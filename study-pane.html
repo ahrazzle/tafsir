@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Al-Fatihah — Study Pane v3</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #FAF8F5;
+  --surface: #FFFFFF;
+  --surface-raised: #FFFFFF;
+  --surface-sunken: #F3F1ED;
+  --ink: #1A1814;
+  --ink-muted: #6B6560;
+  --ink-faint: #9E9890;
+  --border: #E5E2DD;
+  --border-strong: #D0CCC6;
+  --accent: #2D6A4F;
+  --accent-light: #D8E8E0;
+  --accent-ink: #1B4332;
+  --gold: #B8860B;
+  --gold-light: #FDF3D1;
+  --highlight: rgba(45,106,79,0.12);
+  --highlight-active: rgba(45,106,79,0.22);
+  --shadow-sm: 0 1px 2px rgba(26,24,20,0.04);
+  --shadow-md: 0 4px 12px rgba(26,24,20,0.08);
+  --shadow-lg: 0 12px 40px rgba(26,24,20,0.12);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --font-arabic: 'Amiri', serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --duration-slow: 400ms;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #141311;
+    --surface: #1E1D1A;
+    --surface-raised: #262420;
+    --surface-sunken: #181715;
+    --ink: #E8E4DE;
+    --ink-muted: #9E9890;
+    --ink-faint: #6B6560;
+    --border: #33302C;
+    --border-strong: #444039;
+    --accent: #52B788;
+    --accent-light: #1B4332;
+    --accent-ink: #D8E8E0;
+    --gold: #D4A843;
+    --gold-light: #2A2410;
+    --highlight: rgba(82,183,136,0.15);
+    --highlight-active: rgba(82,183,136,0.28);
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.2);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.3);
+    --shadow-lg: 0 12px 40px rgba(0,0,0,0.4);
+  }
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  min-height: 100dvh;
+}
+
+/* ─── App Shell ─── */
+.app {
+  max-width: 430px;
+  margin: 0 auto;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* ─── Header ─── */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-md) var(--space-lg);
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink-muted);
+  letter-spacing: 0.02em;
+}
+
+.header-title span { color: var(--accent); }
+
+.header-surah {
+  font-family: var(--font-arabic);
+  font-size: 16px;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* ─── Bismillah ─── */
+.bismillah {
+  text-align: center;
+  padding: var(--space-xl) var(--space-lg);
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.bismillah-text {
+  font-family: var(--font-arabic);
+  font-size: 28px;
+  color: var(--ink);
+  line-height: 1.8;
+}
+
+/* ─── Ayah List ─── */
+.ayah-list { flex: 1; padding: var(--space-md) 0; }
+
+.ayah-card {
+  padding: var(--space-lg);
+  border-bottom: 1px solid var(--border);
+  transition: background var(--duration-fast) var(--ease-out);
+}
+
+.ayah-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-md);
+}
+
+.ayah-number {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-light);
+  padding: 2px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.02em;
+}
+
+.ayah-arabic {
+  font-family: var(--font-arabic);
+  font-size: 26px;
+  line-height: 2.2;
+  text-align: right;
+  direction: rtl;
+  color: var(--ink);
+  margin-bottom: var(--space-md);
+  word-spacing: 0.05em;
+}
+
+.ayah-arabic .word {
+  display: inline;
+  cursor: pointer;
+  padding: 2px 2px;
+  border-radius: 4px;
+  transition: background var(--duration-fast) var(--ease-out), color var(--duration-fast) var(--ease-out);
+  position: relative;
+}
+
+.ayah-arabic .word:hover,
+.ayah-arabic .word:active {
+  background: var(--highlight-active);
+  color: var(--accent-ink);
+}
+
+.ayah-arabic .word.selected {
+  background: var(--accent);
+  color: #fff;
+  border-radius: 6px;
+  padding: 4px 6px;
+}
+
+.ayah-arabic .word.highlight {
+  background: var(--highlight);
+  border-radius: 4px;
+}
+
+.ayah-translation {
+  font-size: 15px;
+  color: var(--ink-muted);
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+.ayah-translation .tword {
+  display: inline;
+  padding: 1px 2px;
+  border-radius: 3px;
+  transition: background var(--duration-fast) var(--ease-out);
+}
+
+.ayah-translation .tword.highlight {
+  background: var(--highlight);
+  color: var(--ink);
+  font-weight: 500;
+}
+
+/* ─── Study Pane ─── */
+.study-pane {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(100%);
+  width: 100%;
+  max-width: 430px;
+  max-height: 85dvh;
+  background: var(--surface);
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  box-shadow: var(--shadow-lg);
+  z-index: 100;
+  transition: transform var(--duration-slow) var(--ease-out);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.study-pane.open { transform: translateX(-50%) translateY(0); }
+
+.study-pane-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--duration-normal) var(--ease-out);
+  z-index: 99;
+}
+
+.study-pane-overlay.open { opacity: 1; pointer-events: auto; }
+
+.study-pane-handle {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-sm) 0;
+  cursor: grab;
+  flex-shrink: 0;
+}
+
+.study-pane-handle::before {
+  content: '';
+  width: 36px;
+  height: 4px;
+  background: var(--border-strong);
+  border-radius: 2px;
+}
+
+/* Study Header */
+.study-header {
+  padding: 0 var(--space-lg) var(--space-md);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.study-word-display {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-md);
+  margin-bottom: var(--space-sm);
+}
+
+.study-arabic {
+  font-family: var(--font-arabic);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1.2;
+}
+
+.study-translation {
+  font-size: 16px;
+  color: var(--ink-muted);
+  font-weight: 500;
+}
+
+.study-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 12px;
+  color: var(--ink-faint);
+}
+
+.source-selector {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  margin-left: auto;
+}
+
+.source-selector select {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--accent);
+  background: var(--accent-light);
+  border: none;
+  border-radius: 12px;
+  padding: 3px 10px;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 24px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%232D6A4F' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+}
+
+/* Study Content */
+.study-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-md) var(--space-lg);
+  -webkit-overflow-scrolling: touch;
+}
+
+.study-section { margin-bottom: var(--space-lg); }
+.study-section:last-child { margin-bottom: var(--space-2xl); }
+
+.section-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-faint);
+  margin-bottom: var(--space-sm);
+}
+
+/* Root card */
+.root-card {
+  background: var(--surface-sunken);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.root-arabic {
+  font-family: var(--font-arabic);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--accent);
+  direction: rtl;
+}
+
+.root-info { flex: 1; }
+.root-letters { font-family: var(--font-mono); font-size: 13px; color: var(--ink-muted); margin-bottom: 2px; }
+.root-meaning { font-size: 15px; font-weight: 500; color: var(--ink); }
+
+/* Morphology */
+.morph-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--accent-ink);
+  background: var(--accent-light);
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: var(--space-sm);
+}
+
+.morph-tag .tag-code {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+.morph-desc { font-size: 14px; color: var(--ink-muted); line-height: 1.6; }
+.morph-grammar { font-family: var(--font-arabic); font-size: 14px; color: var(--ink-faint); margin-top: var(--space-xs); }
+
+/* Wazn */
+.wazn-card {
+  background: var(--surface-sunken);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+}
+
+.wazn-pattern {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-sm);
+}
+
+.wazn-template {
+  font-family: var(--font-arabic);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--accent);
+  direction: rtl;
+  background: var(--accent-light);
+  padding: 4px 14px;
+  border-radius: var(--radius-sm);
+}
+
+.wazn-form { font-size: 14px; font-weight: 500; color: var(--ink); }
+
+.wazn-meaning {
+  font-size: 14px;
+  color: var(--ink-muted);
+  line-height: 1.6;
+  margin-bottom: var(--space-sm);
+}
+
+.wazn-template-visual {
+  font-family: var(--font-arabic);
+  font-size: 16px;
+  color: var(--ink-muted);
+  direction: rtl;
+  margin-bottom: var(--space-sm);
+  padding: var(--space-sm);
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+  border: 1px dashed var(--border-strong);
+}
+
+.wazn-examples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+}
+
+.wazn-example-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.wazn-example-chip .ex-word {
+  font-family: var(--font-arabic);
+  font-size: 15px;
+  color: var(--accent);
+  direction: rtl;
+}
+
+.wazn-example-chip .ex-meaning {
+  color: var(--ink-muted);
+}
+
+.wazn-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-sm) 0;
+  font-family: var(--font-body);
+}
+
+.wazn-toggle:hover { color: var(--accent-ink); }
+
+.wazn-toggle svg {
+  width: 14px;
+  height: 14px;
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.wazn-toggle.expanded svg { transform: rotate(180deg); }
+
+.wazn-details {
+  display: none;
+  padding-top: var(--space-sm);
+}
+
+.wazn-details.expanded { display: block; }
+
+/* Tafsir */
+.tafsir-card {
+  background: var(--gold-light);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+}
+
+.tafsir-source {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--gold);
+  margin-bottom: var(--space-sm);
+}
+
+.tafsir-text {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--ink);
+}
+
+.tafsir-text.collapsed {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.tafsir-expand {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-sm) 0 0;
+  font-family: var(--font-body);
+}
+
+.tafsir-expand:hover { color: var(--accent-ink); }
+
+.tafsir-expand svg {
+  width: 14px;
+  height: 14px;
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.tafsir-expand.expanded svg { transform: rotate(180deg); }
+
+/* Occurrences */
+.occurrences-summary {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.occurrences-count {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.occurrences-label { font-size: 13px; color: var(--ink-muted); }
+
+.occurrences-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.occ-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 13px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.occ-row:last-child { border-bottom: none; }
+
+.occ-form {
+  font-family: var(--font-arabic);
+  font-size: 15px;
+  color: var(--ink);
+  min-width: 80px;
+  direction: rtl;
+}
+
+.occ-bar {
+  flex: 1;
+  height: 6px;
+  background: var(--surface-sunken);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.occ-bar-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 3px;
+  min-width: 2px;
+}
+
+.occ-count {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink-muted);
+  min-width: 32px;
+  text-align: right;
+}
+
+.no-root {
+  font-size: 14px;
+  color: var(--ink-faint);
+  font-style: italic;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .app { max-width: 600px; }
+  .study-pane { max-width: 600px; }
+  .ayah-arabic { font-size: 30px; }
+  .study-arabic { font-size: 42px; }
+}
+
+@media (min-width: 1024px) {
+  .app { max-width: 720px; }
+  .study-pane { max-width: 720px; }
+}
+
+.study-content::-webkit-scrollbar { width: 4px; }
+.study-content::-webkit-scrollbar-track { background: transparent; }
+.study-content::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 2px; }
+
+/* Animation */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.study-section {
+  animation: fadeUp var(--duration-normal) var(--ease-out) both;
+}
+
+.study-section:nth-child(1) { animation-delay: 50ms; }
+.study-section:nth-child(2) { animation-delay: 100ms; }
+.study-section:nth-child(3) { animation-delay: 150ms; }
+.study-section:nth-child(4) { animation-delay: 200ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  .study-section { animation: none; }
+  .study-pane { transition-duration: var(--duration-fast); }
+}
+</style>
+</head>
+<body>
+
+<div class="app" id="app">
+  <header class="header">
+    <div class="header-title">Tafsir · <span>Study</span></div>
+    <div class="header-surah">الفاتحة</div>
+  </header>
+
+  <div class="bismillah">
+    <div class="bismillah-text">بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ</div>
+  </div>
+
+  <div class="ayah-list" id="ayahList"></div>
+</div>
+
+<div class="study-pane-overlay" id="overlay"></div>
+
+<div class="study-pane" id="studyPane">
+  <div class="study-pane-handle" id="paneHandle"></div>
+  <div class="study-header">
+    <div class="study-word-display">
+      <span class="study-arabic" id="studyArabic"></span>
+      <span class="study-translation" id="studyTranslation"></span>
+    </div>
+    <div class="study-meta">
+      <span id="studyLocation"></span>
+      <div class="source-selector">
+        <select id="tafsirSelect" aria-label="Select tafsir source"></select>
+      </div>
+    </div>
+  </div>
+  <div class="study-content" id="studyContent"></div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════════
+// SEED DATA (embedded for file:// compatibility)
+// ═══════════════════════════════════════════════════════
+const SEED_DATA ={"meta":{"surah":1,"surah_name":"Al-Fatihah","surah_name_arabic":"الفاتحة","total_ayahs":7,"total_words":29,"source_ids":{"verse_text":"corpus-quran-com","morphology":"corpus-quran-com","tafsir_jalalayn":"spa5k-en-al-jalalayn","tafsir_ibn_kathir":"spa5k-en-tafisr-ibn-kathir"},"notes":"Ibn Kathir English from spa5k. Jalalayn English from spa5k."},"ayahs":[{"ayah_number":1,"verse_key":"1:1","arabic":"بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ","words":[{"position":1,"location":"1:1:1","arabic":"بِسْمِ","arabic_normalized":"بسم","transliteration":"bis'mi","translation":"In (the) name","root":"س-م-و","root_meaning":"to name, to designate","morphology":{"tag":"P-N","description":"prefixed preposition bi + genitive masculine noun","arabic_grammar":"جار ومجرور"},"occurrences":{"total":381,"breakdown":[{"form":"sammā (verb II)","count":8},{"form":"is'm (noun)","count":39},{"form":"samā (noun)","count":310},{"form":"samiyy (noun)","count":2},{"form":"tasmiyat (verbal noun)","count":1},{"form":"musamman (participle)","count":21}]},"source_id":"corpus-quran-com"},{"position":2,"location":"1:1:2","arabic":"ٱللَّهِ","arabic_normalized":"الله","transliteration":"l-lahi","translation":"(of) Allah,","root":"ا-ل-ه","root_meaning":"deity, God","morphology":{"tag":"PN","description":"genitive proper noun → Allah","arabic_grammar":"لفظ الجلالة مجرور"},"occurrences":{"total":2851,"breakdown":[{"form":"ilāh (noun)","count":147},{"form":"allah (proper noun)","count":2699},{"form":"allahumma (vocative)","count":5}]},"source_id":"corpus-quran-com"},{"position":3,"location":"1:1:3","arabic":"ٱلرَّحْمَـٰنِ","arabic_normalized":"الرحمن","transliteration":"l-raḥmāni","translation":"the Most Gracious,","root":"ر-ح-م","root_meaning":"to be merciful","morphology":{"tag":"ADJ","description":"genitive masculine singular adjective","arabic_grammar":"صفة مجرورة"},"occurrences":{"total":339,"breakdown":[{"form":"raḥima (verb I)","count":28},{"form":"arḥām (noun)","count":12},{"form":"arḥam (noun)","count":4},{"form":"ruḥ'm (noun)","count":1},{"form":"raḥmān (nominal)","count":57},{"form":"raḥmat (noun)","count":114},{"form":"raḥīm (nominal)","count":116},{"form":"marḥamat (noun)","count":1},{"form":"rāḥimīn (participle)","count":6}]},"source_id":"corpus-quran-com"},{"position":4,"location":"1:1:4","arabic":"ٱلرَّحِيمِ","arabic_normalized":"الرحيم","transliteration":"l-raḥīmi","translation":"the Most Merciful.","root":"ر-ح-م","root_meaning":"to be merciful","morphology":{"tag":"ADJ","description":"genitive masculine singular adjective","arabic_grammar":"صفة مجرورة"},"occurrences":{"total":339,"breakdown":"same root as 1:1:3"},"source_id":"corpus-quran-com"}],"tafsir":[{"source_id":"spa5k-en-al-jalalayn","source_name":"Tafsir al-Jalalayn","author":"Jalal ad-Din al-Mahalli & Jalal ad-Din as-Suyuti","text":"In the Name of God the Compassionate the Merciful"},{"source_id":"spa5k-en-tafisr-ibn-kathir","source_name":"Tafsir Ibn Kathir (English)","author":"Hafiz Ibn Kathir","text":"The Meaning of Al Fatiha & its Various Names\n\nThis Surah is called Al-Fatihah, that is, the Opener of the Book, the Surah with which prayers are begun. It is also called, Umm Al-Kitab (the Mother of the Book), according to the majority of the scholars. In an authentic Hadith recorded by At-Tirmidhi, who graded it Sahih, Abu Hurayrah said that the Messenger of Allah ﷺ said,\n\nالحمدُ للَّهِ رَبِّ الْعَالَمِينَ أُمُّ الْقُرْآنِ وَأُمُّ الْكِتَابِ وَالسَّبْعُ الْمَثَانيِ وَالْقُرْآنُ الْعَظِيمُ"}]},{"ayah_number":2,"verse_key":"1:2","arabic":"ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَـٰلَمِينَ","words":[{"position":1,"location":"1:2:1","arabic":"ٱلْحَمْدُ","arabic_normalized":"الحمد","transliteration":"al-ḥamdu","translation":"All praises and thanks","root":"ح-م-د","root_meaning":"to praise, to thank","morphology":{"tag":"N","description":"nominative masculine noun","arabic_grammar":"اسم مرفوع"},"occurrences":{"total":63,"breakdown":[{"form":"yuḥ'madu (verb I)","count":1},{"form":"ḥamd (noun)","count":43},{"form":"ḥamīd (nominal)","count":17},{"form":"ḥāmidūn (participle)","count":1},{"form":"maḥmūd (participle)","count":1}]},"source_id":"corpus-quran-com"},{"position":2,"location":"1:2:2","arabic":"لِلَّهِ","arabic_normalized":"لله","transliteration":"lillahi","translation":"(be) to Allah,","root":"ا-ل-ه","root_meaning":"deity, God","morphology":{"tag":"P-PN","description":"prefixed preposition lām + genitive proper noun → Allah","arabic_grammar":"جار ومجرور"},"occurrences":{"total":2851,"breakdown":"same root as 1:1:2"},"source_id":"corpus-quran-com"},{"position":3,"location":"1:2:3","arabic":"رَبِّ","arabic_normalized":"رب","transliteration":"rabbi","translation":"the Lord","root":"ر-ب-ب","root_meaning":"to nurture, to lord","morphology":{"tag":"N","description":"genitive masculine noun","arabic_grammar":"اسم مجرور"},"occurrences":{"total":980,"breakdown":[{"form":"rabb (noun)","count":975},{"form":"rabāib (noun)","count":1},{"form":"rabbāniyyin (noun)","count":3},{"form":"ribbiyyūn (noun)","count":1}]},"source_id":"corpus-quran-com"},{"position":4,"location":"1:2:4","arabic":"ٱلْعَـٰلَمِينَ","arabic_normalized":"العالمين","transliteration":"l-ʿālamīna","translation":"of the universe","root":"ع-ل-م","root_meaning":"to know","morphology":{"tag":"N","description":"genitive masculine plural noun","arabic_grammar":"اسم مجرور"},"occurrences":{"total":854,"breakdown":[{"form":"ʿalima (verb I)","count":382},{"form":"ʿallama (verb II)","count":41},{"form":"yataʿallamu (verb V)","count":2},{"form":"aʿlām (noun)","count":2},{"form":"aʿlam (nominal)","count":49},{"form":"ʿālamīn (noun)","count":73},{"form":"ʿallām (nominal)","count":4},{"form":"ʿalāmāt (noun)","count":1},{"form":"ʿil'm (noun)","count":105},{"form":"ʿalīm (nominal)","count":163},{"form":"maʿlūmāt (adjective)","count":2},{"form":"ʿālim (participle)","count":18},{"form":"maʿlūm (participle)","count":11},{"form":"muʿallam (participle)","count":1}]},"source_id":"corpus-quran-com"}],"tafsir":[{"source_id":"spa5k-en-al-jalalayn","source_name":"Tafsir al-Jalalayn","author":"Jalal ad-Din al-Mahalli & Jalal ad-Din as-Suyuti","text":"In the Name of God the name of a thing is that by which it can be known. The Names of God exalted be He are the archetypal forms ṣuwar nawʿiyya whose specificities and ipseities hūwiyya indicate the attributes of God His essence and which indicate by their very existence His countenance and by their individuation His oneness. For these are the outward manifestations through which He can be known; Allāh is a name for the divine essence qua essence absolutely without taking into consideration that it may be qualified by the attributes or indeed taking into consideration that it may not be so qualified; the Compassionate is the one who causes existence and perfection to flow upon all things in the measure that divine wisdom requires and to the capacity of the receiving entities qawābil from the outset of their creation; the Merciful al-Raḥīm is the one who bestows the spiritual perfection kamāl maʿnawī that has been earmarked for the human species in the end sc. in the Hereafter. It is for this reason that they say O You Who are the Compassionate One of this world and of the Hereafter yā raḥmān al-dunyā wa'l-ākhira but say O Merciful One of the Hereafter raḥīm al-ākhira the meaning then is in the perfect human all-encompassing form general and specific mercy which is the locus of manifestation of the divine essence and the greatest truth with the totality of attributes I commence and I recite. It Allāh is the Greatest Name of God. It is to this meaning that the Prophet's ṣlʿm alluded when he said 'I have been given the sum of all excellent speech sc. The QurÌān and have been sent to complete the noble character traits makārim al-akhlāq. For words constitute the realities ḥaqāÌiq of existents mawjūdāt and their concrete substances aʿyān just as Jesus peace be upon him was called a Word from God cf. 33945. The noble character traits are the perfections of these existents and represent their specifities constituting the sources of their the existents' actions in their entirety contained as they are in the comprehensive human microcosm kawn insānī. Herein lies a subtlety la?īfa namely that the prophets peace be upon them have made the letters of the alphabet analogous to the ranks of existents marātib al-mawjūdāt."},{"source_id":"spa5k-en-tafisr-ibn-kathir","source_name":"Tafsir Ibn Kathir (English)","author":"Hafiz Ibn Kathir","text":"The Meaning of Al Fatiha & its Various Names\n\nThis Surah is called Al-Fatihah, that is, the Opener of the Book, the Surah with which prayers are begun. It is also called, Umm Al-Kitab (the Mother of the Book), according to the majority of the scholars. In an authentic Hadith recorded by At-Tirmidhi, who graded it Sahih, Abu Hurayrah said that the Messenger of Allah ﷺ said,\n\nالْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ أُمُّ الْقُرْآنِ وَأُمُّ الْكِتَابِ وَالسَّبْعُ الْمَثَانِي وَالْقُرْآنُ الْعَظِيمُ\n\n(Al-Hamdu lillahi Rabbil-'Alamin is the Mother of the Qur'an, the Mother of the Book, and the seven repeated Ayat of the Glorious Qur'an.)"}]},{"ayah_number":3,"verse_key":"1:3","arabic":"ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ","words":[{"position":1,"location":"1:3:1","arabic":"ٱلرَّحْمَـٰنِ","arabic_normalized":"الرحمن","transliteration":"al-raḥmāni","translation":"The Most Gracious,","root":"ر-ح-م","root_meaning":"to be merciful","morphology":{"tag":"ADJ","description":"genitive masculine singular adjective","arabic_grammar":"صفة مجرورة"},"occurrences":{"total":339,"breakdown":"same root as 1:1:3"},"source_id":"corpus-quran-com"},{"position":2,"location":"1:3:2","arabic":"ٱلرَّحِيمِ","arabic_normalized":"الرحيم","transliteration":"l-raḥīmi","translation":"the Most Merciful.","root":"ر-ح-م","root_meaning":"to be merciful","morphology":{"tag":"ADJ","description":"genitive masculine singular adjective","arabic_grammar":"صفة مجرورة"},"occurrences":{"total":339,"breakdown":"same root as 1:1:3"},"source_id":"corpus-quran-com"}],"tafsir":[{"source_id":"spa5k-en-al-jalalayn","source_name":"Tafsir al-Jalalayn","author":"Jalal ad-Din al-Mahalli & Jalal ad-Din as-Suyuti","text":"The Compassionate the Merciful that is to say the One who possesses 'mercy' which means to want what is good for those who deserve it."},{"source_id":"spa5k-en-tafisr-ibn-kathir","source_name":"Tafsir Ibn Kathir (English)","author":"Hafiz Ibn Kathir","text":"The Meaning of Al Fatiha & its Various Names\n\nThis Surah is called Al-Fatihah, that is, the Opener of the Book, the Surah with which prayers are begun. It is also called, Umm Al-Kitab (the Mother of the Book), according to the majority of the scholars. In an authentic Hadith recorded by At-Tirmidhi, who graded it Sahih, Abu Hurayrah said that the Messenger of Allah ﷺ said,\n\nالْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ أُمُّ الْقُرْآنِ وَأُمُّ الْكِتَابِ وَالسَّبْعُ الْمَثَانِي وَالْقُرْآنُ الْعَظِيمُ\n\n(Al-Hamdu lillahi Rabbil-'Alamin is the Mother of the Qur'an, the Mother of the Book, and the seven repeated Ayat of the Glorious Qur'an.)"}]},{"ayah_number":4,"verse_key":"1:4","arabic":"مَـٰلِكِ يَوْمِ ٱلدِّينِ","words":[{"position":1,"location":"1:4:1","arabic":"مَـٰلِكِ","arabic_normalized":"مالك","transliteration":"māliki","translation":"(The) Master","root":"م-ل-ك","root_meaning":"to possess, to king","morphology":{"tag":"N","description":"genitive masculine active participle","arabic_grammar":"اسم مجرور"},"occurrences":{"total":206,"breakdown":[{"form":"malakat (verb I)","count":44},{"form":"mālik (proper noun)","count":1},{"form":"malik (nominal)","count":15},{"form":"malak (noun)","count":88},{"form":"mul'k (noun)","count":48},{"form":"malk (noun)","count":1},{"form":"malakūt (noun)","count":4},{"form":"malīk (noun)","count":1},{"form":"mālik (participle)","count":3},{"form":"mamlūk (participle)","count":1}]},"source_id":"corpus-quran-com"},{"position":2,"location":"1:4:2","arabic":"يَوْمِ","arabic_normalized":"يوم","transliteration":"yawmi","translation":"(of the) Day","root":"ي-و-م","root_meaning":"day","morphology":{"tag":"N","description":"genitive masculine noun → Day of Resurrection","arabic_grammar":"اسم مجرور"},"occurrences":{"total":405,"breakdown":[{"form":"yawm (nominal)","count":405}]},"source_id":"corpus-quran-com"},{"position":3,"location":"1:4:3","arabic":"ٱلدِّينِ","arabic_normalized":"الدين","transliteration":"l-dīni","translation":"(of the) Judgment.","root":"د-ي-ن","root_meaning":"to judge, to religion","morphology":{"tag":"N","description":"genitive masculine noun","arabic_grammar":"اسم مجرور"},"occurrences":{"total":101,"breakdown":[{"form":"yadīnu (verb I)","count":1},{"form":"tadāyan (verb VI)","count":1},{"form":"dīn (noun)","count":92},{"form":"dayn (noun)","count":5},{"form":"madīnīn (participle)","count":2}]},"source_id":"corpus-quran-com"}],"tafsir":[{"source_id":"spa5k-en-al-jalalayn","source_name":"Tafsir al-Jalalayn","author":"Jalal ad-Din al-Mahalli & Jalal ad-Din as-Suyuti","text":"Master of the Day of Judgement that is the day of requite the Day of Resurrection. The reason for the specific mention of the Day of Judgement is that the mastery of none shall appear on that Day except that of God may He be exalted as is indicated by God's words 'Whose is the Kingdom today?' 'God's' Q. 4016 if one reads it mālik as opposed to malik then this signifies that He has possession of the entire affair on the Day of Resurrection or else that He is ever described by this expression in the same way as He is described as 'Forgiver of sin' ghāfir al-dhanb. Thus one can validly take it as an adjective of a definite noun."},{"source_id":"spa5k-en-tafisr-ibn-kathir","source_name":"Tafsir Ibn Kathir (English)","author":"Hafiz Ibn Kathir","text":"The Meaning of Al Fatiha & its Various Names\n\nThis Surah is called Al-Fatihah, that is, the Opener of the Book, the Surah with which prayers are begun. It is also called, Umm Al-Kitab (the Mother of the Book), according to the majority of the scholars. In an authentic Hadith recorded by At-Tirmidhi, who graded it Sahih, Abu Hurayrah said that the Messenger of Allah ﷺ said,\n\nالْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ أُمُّ الْقُرْآنِ وَأُمُّ الْكِتَابِ وَالسَّبْعُ الْمَثَانِي وَالْقُرْآنُ الْعَظِيمُ\n\n(Al-Hamdu lillahi Rabbil-'Alamin is the Mother of the Qur'an, the Mother of the Book, and the seven repeated Ayat of the Glorious Qur'an.)"}]},{"ayah_number":5,"verse_key":"1:5","arabic":"إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ","words":[{"position":1,"location":"1:5:1","arabic":"إِيَّاكَ","arabic_normalized":"اياك","transliteration":"iyyāka","translation":"You Alone","root":null,"root_meaning":null,"morphology":{"tag":"PRON","description":"2nd person masculine singular personal pronoun → Allah","arabic_grammar":"ضمير منفصل"},"occurrences":null,"source_id":"corpus-quran-com"},{"position":2,"location":"1:5:2","arabic":"نَعْبُدُ","arabic_normalized":"نعبد","transliteration":"naʿbudu","translation":"we worship,","root":"ع-ب-د","root_meaning":"to worship, to serve","morphology":{"tag":"V","description":"1st person plural imperfect verb","arabic_grammar":"فعل مضارع"},"occurrences":{"total":275,"breakdown":[{"form":"ʿabada (verb I)","count":122},{"form":"ʿabbad (verb II)","count":1},{"form":"ʿābidāt (adjective)","count":1},{"form":"ʿibādat (noun)","count":9},{"form":"ʿabd (noun)","count":131},{"form":"ʿābid (participle)","count":11}]},"source_id":"corpus-quran-com"},{"position":3,"location":"1:5:3","arabic":"وَإِيَّاكَ","arabic_normalized":"واياك","transliteration":"wa-iyyāka","translation":"and You Alone","root":null,"root_meaning":null,"morphology":{"tag":"CONJ-PRON","description":"prefixed conjunction wa + 2nd person masculine singular personal pronoun → Allah","arabic_grammar":"الواو عاطفة + ضمير منفصل"},"occurrences":null,"source_id":"corpus-quran-com"},{"position":4,"location":"1:5:4","arabic":"نَسْتَعِينُ","arabic_normalized":"نستعين","transliteration":"nastaʿīnu","translation":"we ask for help.","root":"ع-و-ن","root_meaning":"to help","morphology":{"tag":"V","description":"1st person plural (form X) imperfect verb","arabic_grammar":"فعل مضارع"},"occurrences":{"total":11,"breakdown":[{"form":"aʿāna (verb IV)","count":2},{"form":"taʿāwanu (verb VI)","count":2},{"form":"is'taʿīnu (verb X)","count":4},{"form":"ʿawān (noun)","count":1},{"form":"mus'taʿān (participle)","count":2}]},"source_id":"corpus-quran-com"}],"tafsir":[{"source_id":"spa5k-en-al-jalalayn","source_name":"Tafsir al-Jalalayn","author":"Jalal ad-Din al-Mahalli & Jalal ad-Din as-Suyuti","text":"You alone we worship and You alone we ask for help that is to say we reserve worship for You alone by way of acknowledging Your Oneness tawhīd and so on and we ask for Your assistance in worship and in other things."},{"source_id":"spa5k-en-tafisr-ibn-kathir","source_name":"Tafsir Ibn Kathir (English)","author":"Hafiz Ibn Kathir","text":"The Meaning of Al Fatiha & its Various Names\n\nThis Surah is called Al-Fatihah, that is, the Opener of the Book, the Surah with which prayers are begun. It is also called, Umm Al-Kitab (the Mother of the Book), according to the majority of the scholars. In an authentic Hadith recorded by At-Tirmidhi, who graded it Sahih, Abu Hurayrah said that the Messenger of Allah ﷺ said,\n\nالْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ أُمُّ الْقُرْآنِ وَأُمُّ الْكِتَابِ وَالسَّبْعُ الْمَثَانِي وَالْقُرْآنُ الْعَظِيمُ\n\n(Al-Hamdu lillahi Rabbil-'Alamin is the Mother of the Qur'an, the Mother of the Book, and the seven repeated Ayat of the Glorious Qur'an.)"}]},{"ayah_number":6,"verse_key":"1:6","arabic":"ٱهْدِنَا ٱلصِّرَ ٰطَ ٱلْمُسْتَقِيمَ","words":[{"position":1,"location":"1:6:1","arabic":"ٱهْدِنَا","arabic_normalized":"اهدنا","transliteration":"ih'dinā","translation":"Guide us","root":"ه-د-ي","root_meaning":"to guide","morphology":{"tag":"V-PRON","description":"2nd person masculine singular imperative verb + 1st person plural object pronoun","arabic_grammar":"فعل أمر و«نا» ضمير متصل في محل نصب مفعول به"},"occurrences":{"total":316,"breakdown":[{"form":"hadā (verb I)","count":144},{"form":"ih'tadā (verb VIII)","count":40},{"form":"ahdā (noun)","count":7},{"form":"hudan (noun)","count":85},{"form":"hadī (noun)","count":7},{"form":"hadiyyat (noun)","count":2},{"form":"hād (participle)","count":7},{"form":"hādī (participle)","count":3},{"form":"muh'tad (participle VIII)","count":3},{"form":"muh'tadūn (participle VIII)","count":17},{"form":"muh'tadī (participle VIII)","count":1}]},"source_id":"corpus-quran-com"},{"position":2,"location":"1:6:2","arabic":"ٱلصِّرَ ٰطَ","arabic_normalized":"الصراط","transliteration":"l-ṣirāṭa","translation":"(to) the path,","root":"ص-ر-ط","root_meaning":"path, way","morphology":{"tag":"N","description":"accusative masculine noun","arabic_grammar":"اسم منصوب"},"occurrences":{"total":45,"breakdown":[{"form":"ṣirāṭ (noun)","count":45}]},"source_id":"corpus-quran-com"},{"position":3,"location":"1:6:3","arabic":"ٱلْمُسْتَقِيمَ","arabic_normalized":"المستقيم","transliteration":"l-mus'taqīma","translation":"the straight.","root":"ق-و-م","root_meaning":"to stand, to upright","morphology":{"tag":"ADJ","description":"accusative masculine (form X) active participle","arabic_grammar":"صفة منصوبة"},"occurrences":{"total":660,"breakdown":[{"form":"qāma (verb I)","count":33},{"form":"aqāma (verb IV)","count":54},{"form":"is'taqāmu (verb X)","count":10},{"form":"aqwam (noun)","count":4},{"form":"qawām (noun)","count":1},{"form":"qawwāmīn (noun)","count":3},{"form":"qawm (noun)","count":383},{"form":"qiyāmat (noun)","count":70},{"form":"qiyam (adjective)","count":1},{"form":"qayyim (adjective)","count":5},{"form":"qayyimat (nominal)","count":2},{"form":"qayyūm (adjective)","count":3},{"form":"maqām (noun)","count":14},{"form":"qāim (participle)","count":17},{"form":"qāimat (participle)","count":5},{"form":"taqwīm (verbal noun)","count":1},{"form":"iqām (verbal noun)","count":2},{"form":"iqāmat (verbal noun)","count":1},{"form":"muqīm (participle)","count":10},{"form":"muqām (participle)","count":3},{"form":"muqāmat (participle)","count":1},{"form":"mus'taqīm (participle)","count":37}]},"source_id":"corpus-quran-com"}],"tafsir":[{"source_id":"spa5k-en-al-jalalayn","source_name":"Tafsir al-Jalalayn","author":"Jalal ad-Din al-Mahalli & Jalal ad-Din as-Suyuti","text":"Guide us to the straight path that is 'show us the way to it'. This is substituted by"},{"source_id":"spa5k-en-tafisr-ibn-kathir","source_name":"Tafsir Ibn Kathir (English)","author":"Hafiz Ibn Kathir","text":"The Meaning of Al Fatiha & its Various Names\n\nThis Surah is called Al-Fatihah, that is, the Opener of the Book, the Surah with which prayers are begun. It is also called, Umm Al-Kitab (the Mother of the Book), according to the majority of the scholars. In an authentic Hadith recorded by At-Tirmidhi, who graded it Sahih, Abu Hurayrah said that the Messenger of Allah ﷺ said,\n\nالْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ أُمُّ الْقُرْآنِ وَأُمُّ الْكِتَابِ وَالسَّبْعُ الْمَثَانِي وَالْقُرْآنُ الْعَظِيمُ\n\n(Al-Hamdu lillahi Rabbil-'Alamin is the Mother of the Qur'an, the Mother of the Book, and the seven repeated Ayat of the Glorious Qur'an.)"}]},{"ayah_number":7,"verse_key":"1:7","arabic":"صِرَ ٰطَ ٱلَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ ٱلْمَغْضُوبِ عَلَيْهِمْ وَلَا ٱلضَّاۤلِّينَ","words":[{"position":1,"location":"1:7:1","arabic":"صِرَ ٰطَ","arabic_normalized":"صراط","transliteration":"ṣirāṭa","translation":"(The) path","root":"ص-ر-ط","root_meaning":"path, way","morphology":{"tag":"N","description":"accusative masculine noun","arabic_grammar":"اسم منصوب"},"occurrences":{"total":45,"breakdown":"same root as 1:6:2"},"source_id":"corpus-quran-com"},{"position":2,"location":"1:7:2","arabic":"ٱلَّذِينَ","arabic_normalized":"الذين","transliteration":"alladhīna","translation":"(of) those","root":null,"root_meaning":null,"morphology":{"tag":"REL","description":"masculine plural relative pronoun","arabic_grammar":"اسم موصول"},"occurrences":null,"source_id":"corpus-quran-com"},{"position":3,"location":"1:7:3","arabic":"أَنْعَمْتَ","arabic_normalized":"انعمت","transliteration":"anʿamta","translation":"You have bestowed (Your) Favors","root":"ن-ع-م","root_meaning":"to favor, to bless","morphology":{"tag":"V","description":"2nd person masculine singular (form IV) perfect verb","arabic_grammar":"فعل ماض والتاء ضمير متصل في محل رفع فاعل"},"occurrences":{"total":140,"breakdown":[{"form":"niʿ'ma (verb I)","count":18},{"form":"naʿʿama (verb II)","count":1},{"form":"anʿama (verb IV)","count":17},{"form":"naʿam (noun)","count":33},{"form":"naʿmā (noun)","count":1},{"form":"niʿ'mat (noun)","count":50},{"form":"naʿmat (noun)","count":2},{"form":"naʿīm (noun)","count":17},{"form":"nāʿimat (participle)","count":1}]},"source_id":"corpus-quran-com"},{"position":4,"location":"1:7:4","arabic":"عَلَيْهِمْ","arabic_normalized":"عليهم","transliteration":"ʿalayhim","translation":"on them,","root":"ع-ل-ي","root_meaning":"upon, over","morphology":{"tag":"P-PRON","description":"preposition + 3rd person masculine plural object pronoun","arabic_grammar":"جار ومجرور"},"occurrences":null,"source_id":"corpus-quran-com"},{"position":5,"location":"1:7:5","arabic":"غَيْرِ","arabic_normalized":"غير","transliteration":"ghayri","translation":"not (of)","root":"غ-ي-ر","root_meaning":"other than, not","morphology":{"tag":"N","description":"genitive masculine noun","arabic_grammar":"اسم مجرور"},"occurrences":{"total":154,"breakdown":[{"form":"yughayyiru (verb II)","count":4},{"form":"yataghayyar (verb V)","count":1},{"form":"ghayr (nominal)","count":147},{"form":"mughayyir (participle II)","count":1},{"form":"mughīrāt (participle IV)","count":1}]},"source_id":"corpus-quran-com"},{"position":6,"location":"1:7:6","arabic":"ٱلْمَغْضُوبِ","arabic_normalized":"المغضوب","transliteration":"l-maghḍūbi","translation":"those who earned (Your) wrath","root":"غ-ض-ب","root_meaning":"to anger, to wrath","morphology":{"tag":"N","description":"genitive masculine passive participle","arabic_grammar":"اسم مجرور"},"occurrences":{"total":24,"breakdown":[{"form":"ghaḍiba (verb I)","count":6},{"form":"ghaḍab (noun)","count":14},{"form":"ghaḍbān (noun)","count":2},{"form":"maghḍūb (participle)","count":1},{"form":"mughāḍib (participle)","count":1}]},"source_id":"corpus-quran-com"},{"position":7,"location":"1:7:7","arabic":"عَلَيْهِمْ","arabic_normalized":"عليهم","transliteration":"ʿalayhim","translation":"on themselves","root":"ع-ل-ي","root_meaning":"upon, over","morphology":{"tag":"P-PRON","description":"preposition + 3rd person masculine plural object pronoun","arabic_grammar":"جار ومجرور"},"occurrences":{"total":194,"breakdown":"same root as 1:7:4"},"source_id":"corpus-quran-com"},{"position":8,"location":"1:7:8","arabic":"وَلَا","arabic_normalized":"ولا","transliteration":"walā","translation":"and not","root":null,"root_meaning":null,"morphology":{"tag":"CONJ-NEG","description":"prefixed conjunction wa + negative particle","arabic_grammar":"الواو عاطفة + حرف نفي"},"occurrences":null,"source_id":"corpus-quran-com"},{"position":9,"location":"1:7:9","arabic":"ٱلضَّاۤلِّينَ","arabic_normalized":"الضالين","transliteration":"l-ḍālīna","translation":"(of) those who go astray.","root":"ض-ل-ل","root_meaning":"to go astray, to lost","morphology":{"tag":"N","description":"genitive masculine plural active participle","arabic_grammar":"اسم مجرور"},"occurrences":{"total":191,"breakdown":[{"form":"ḍalla (verb I)","count":53},{"form":"aḍalla (verb IV)","count":64},{"form":"aḍall (noun)","count":9},{"form":"ḍalāl (noun)","count":38},{"form":"ḍalālat (noun)","count":9},{"form":"ḍāll (participle)","count":14},{"form":"taḍlīl (verbal noun)","count":1},{"form":"muḍill (participle)","count":3}]},"source_id":"corpus-quran-com"}],"tafsir":[{"source_id":"spa5k-en-al-jalalayn","source_name":"Tafsir al-Jalalayn","author":"Jalal ad-Din al-Mahalli & Jalal ad-Din as-Suyuti","text":"the path of those whom You have favoured with guidance from alladhīna together with its relative clause is substituted by ghayri l-maghdūbi 'alayhim not the path of those against whom there is wrath namely the Jews and nor of those who are astray namely the Christians. The subtle meaning implied by this substitution is that the guided ones are neither the Jews nor the Christians. But God knows best what is right and to Him is the Return and the final Resort. May God bless our master Muhammad (s) his Family and Companions and grant them everlasting peace. Sufficient is God for us; an excellent Guardian is He. There is no power and no strength save in God the High the Tremendous."},{"source_id":"spa5k-en-tafisr-ibn-kathir","source_name":"Tafsir Ibn Kathir (English)","author":"Hafiz Ibn Kathir","text":"The Meaning of Al Fatiha & its Various Names\n\nThis Surah is called Al-Fatihah, that is, the Opener of the Book, the Surah with which prayers are begun. It is also called, Umm Al-Kitab (the Mother of the Book), according to the majority of the scholars. In an authentic Hadith recorded by At-Tirmidhi, who graded it Sahih, Abu Hurayrah said that the Messenger of Allah ﷺ said,\n\nالْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ أُمُّ الْقُرْآنِ وَأُمُّ الْكِتَابِ وَالسَّبْعُ الْمَثَانِي وَالْقُرْآنُ الْعَظِيمُ\n\n(Al-Hamdu lillahi Rabbil-'Alamin is the Mother of the Qur'an, the Mother of the Book, and the seven repeated Ayat of the Glorious Qur'an.)"}]}],"source_registry":[{"source_id":"corpus-quran-com","source_type":"verse_text","name":"Quranic Arabic Corpus","author":"Language Research Group, University of Leeds","language":"arabic","license":"CC BY-NC","url":"https://corpus.quran.com/"},{"source_id":"spa5k-en-al-jalalayn","source_type":"tafsir","name":"Tafsir al-Jalalayn","author":"Jalal ad-Din al-Mahalli & Jalal ad-Din as-Suyuti","language":"english","tradition":"sunni-classical","methodology":"Concise linguistic and narrative exegesis","license":"public-domain","url":"https://www.altafsir.com/"},{"source_id":"spa5k-en-tafisr-ibn-kathir","source_type":"tafsir","name":"Tafsir Ibn Kathir","author":"Hafiz Ibn Kathir","language":"english","tradition":"sunni-classical","methodology":"Hadith-based narrative exegesis","license":"public-domain","url":"https://qul.tarteel.ai/resources/tafsir/35"}]};
+const WAZN_DATA = {"meta":{"description":"Manual wazn (morphological pattern) annotations for Al-Fatihah - all 29 words, verified for accuracy","surah":1,"surah_name":"Al-Fatihah","total_words":29,"annotator":"manual research","verification_status":"verified"},"words":{"1:1:1":{"arabic":"بِسْمِ","root":"س-م-و","wazn":"فَعْل","wazn_arabic":"فَعْل","wazn_form":"Form I verbal noun (masdar)","wazn_meaning":"Basic noun pattern — the simplest nominal form derived from a triliteral root","root_in_template":"س-م-و → سَمٌ (then with prefix: بِسْمِ)","wazn_examples":[{"word":"كَلْب","root":"ك-ل-ب","meaning":"dog"},{"word":"فَرْس","root":"ف-ر-س","meaning":"horse"},{"word":"بَحْر","root":"ب-ح-ر","meaning":"sea"}]},"1:1:2":{"arabic":"ٱللَّهِ","root":"ا-ل-ه","wazn":null,"wazn_arabic":null,"wazn_form":null,"wazn_meaning":"Proper noun — no derivational pattern; unique divine name","root_in_template":null,"wazn_examples":[]},"1:1:3":{"arabic":"ٱلرَّحْمَـٰنِ","root":"ر-ح-م","wazn":"فَعْلَان","wazn_arabic":"فَعْلَان","wazn_form":"Intensive adjective (صفة مشبهة)","wazn_meaning":"Denotes the highest degree or abundance of a quality — the one who possesses mercy in the most complete and intensive way","root_in_template":"ر-ح-م → رَحْمَان","wazn_examples":[{"word":"عَطْشَان","root":"ع-ط-ش","meaning":"thirsty"},{"word":"جُوعَان","root":"ج-و-ع","meaning":"hungry"},{"word":"غُفْرَان","root":"غ-ف-ر","meaning":"forgiveness"}]},"1:1:4":{"arabic":"ٱلرَّحِيمِ","root":"ر-ح-م","wazn":"فَعِيل","wazn_arabic":"فَعِيل","wazn_form":"Intensive adjective (صفة مشبهة)","wazn_meaning":"Denotes a permanent, established quality — the one whose mercy is constant and enduring","root_in_template":"ر-ح-م → رَحِيم","wazn_examples":[{"word":"كَبِير","root":"ك-ب-ر","meaning":"great"},{"word":"عَظِيم","root":"ع-ظ-م","meaning":"magnificent"},{"word":"كَرِيم","root":"ك-ر-م","meaning":"generous"}]},"1:2:1":{"arabic":"ٱلْحَمْدُ","root":"ح-م-د","wazn":"فَعْل","wazn_arabic":"فَعْل","wazn_form":"Form I verbal noun (masdar)","wazn_meaning":"Basic noun pattern — designates the action or concept of the root","root_in_template":"ح-م-د → حَمْد","wazn_examples":[{"word":"كَلَام","root":"ك-ل-م","meaning":"speech"},{"word":"قِتَال","root":"ق-ت-ل","meaning":"fighting"},{"word":"عِلْم","root":"ع-ل-م","meaning":"knowledge"}]},"1:2:2":{"arabic":"لِلَّهِ","root":"ا-ل-ه","wazn":null,"wazn_arabic":null,"wazn_form":null,"wazn_meaning":"Proper noun — no derivational pattern","root_in_template":null,"wazn_examples":[]},"1:2:3":{"arabic":"رَبِّ","root":"ر-ب-ب","wazn":"فَعْل","wazn_arabic":"فَعْل","wazn_form":"Noun of ownership/lordship","wazn_meaning":"Denotes the one who nurtures, owns, or has authority over something","root_in_template":"ر-ب-ب → رَبّ","wazn_examples":[{"word":"سَيِّد","root":"س-و-د","meaning":"master"},{"word":"رَبّ","root":"ر-ب-ب","meaning":"lord, nurturer"},{"word":"خَالِق","root":"خ-ل-ق","meaning":"creator (different pattern: فَاعِل)"}]},"1:2:4":{"arabic":"ٱلْعَـٰلَمِينَ","root":"ع-ل-م","wazn":"فَاعِل","wazn_arabic":"فَاعِل","wazn_form":"Form I active participle (اسم فاعل)","wazn_meaning":"Denotes the one who performs the action — the knower; plural form adds the sense of 'worlds' (all that exists)","root_in_template":"ع-ل-م → عَالِم (singular), عَالَمُونَ/عَالَمِينَ (plural)","wazn_examples":[{"word":"كَاتِب","root":"ك-ت-ب","meaning":"writer"},{"word":"قَادِر","root":"ق-د-ر","meaning":"powerful"},{"word":"عَابِد","root":"ع-ب-د","meaning":"worshipper"}]},"1:3:1":{"arabic":"ٱلرَّحْمَـٰنِ","root":"ر-ح-م","wazn":"فَعْلَان","wazn_arabic":"فَعْلَان","wazn_form":"Intensive adjective (صفة مشبهة)","wazn_meaning":"Denotes the highest degree or abundance of a quality","root_in_template":"ر-ح-م → رَحْمَان","wazn_examples":[{"word":"عَطْشَان","root":"ع-ط-ش","meaning":"thirsty"},{"word":"رَيْحَان","root":"ر-ي-ح","meaning":"fragrance, basil"},{"word":"شَبْعَان","root":"ش-ب-ع","meaning":"full/satiated"}]},"1:3:2":{"arabic":"ٱلرَّحِيمِ","root":"ر-ح-م","wazn":"فَعِيل","wazn_arabic":"فَعِيل","wazn_form":"Intensive adjective (صفة مشبهة)","wazn_meaning":"Denotes a permanent, established quality","root_in_template":"ر-ح-م → رَحِيم","wazn_examples":[{"word":"عَلِيم","root":"ع-ل-م","meaning":"all-knowing"},{"word":"قَدِير","root":"ق-د-ر","meaning":"all-powerful"},{"word":"حَكِيم","root":"ح-ك-م","meaning":"wise"}]},"1:4:1":{"arabic":"مَـٰلِكِ","root":"م-ل-ك","wazn":"فَاعِل","wazn_arabic":"فَاعِل","wazn_form":"Form I active participle (اسم فاعل)","wazn_meaning":"Denotes the one who possesses or rules — the master, the king","root_in_template":"م-ل-ك → مَالِك","wazn_examples":[{"word":"صَاحِب","root":"ص-ح-ب","meaning":"companion, owner"},{"word":"كَاتِب","root":"ك-ت-ب","meaning":"writer"},{"word":"قَاضِي","root":"ق-ض-ي","meaning":"judge"}]},"1:4:2":{"arabic":"يَوْمِ","root":"ي-و-م","wazn":"فَعْل","wazn_arabic":"فَعْل","wazn_form":"Noun of time","wazn_meaning":"Basic noun — designates a period or occasion","root_in_template":"ي-و-م → يَوْم","wazn_examples":[{"word":"لَيْل","root":"ل-ي-ل","meaning":"night"},{"word":"حِين","root":"ح-ي-ن","meaning":"time"},{"word":"سَاعَة","root":"س-و-ع","meaning":"hour"}]},"1:4:3":{"arabic":"ٱلدِّينِ","root":"د-ي-ن","wazn":"فَعْل","wazn_arabic":"فَعْل","wazn_form":"Noun — denotes a system, judgment, or way of life","wazn_meaning":"Basic noun — the concept of judgment, religion, or recompense","root_in_template":"د-ي-ن → دِين","wazn_examples":[{"word":"قَضَاء","root":"ق-ض-ي","meaning":"judgment"},{"word":"ثَوَاب","root":"ث-و-ب","meaning":"reward"},{"word":"عِقَاب","root":"ع-ق-ب","meaning":"punishment"}]},"1:5:1":{"arabic":"إِيَّاكَ","root":null,"wazn":null,"wazn_arabic":null,"wazn_form":null,"wazn_meaning":"Pronoun (ضمير) — no lexical root; grammatical particle","root_in_template":null,"wazn_examples":[]},"1:5:2":{"arabic":"نَعْبُدُ","root":"ع-ب-د","wazn":"نَفْعُلُ","wazn_arabic":"نَفْعُلُ","wazn_form":"Form I imperfect verb — 1st person plural","wazn_meaning":"We [are] worshipping — the imperfect indicates ongoing action","root_in_template":"ع-ب-د → نَعْبُدُ","wazn_examples":[{"word":"نَقُولُ","root":"ق-و-ل","meaning":"we say"},{"word":"نَذْهَبُ","root":"ذ-ه-ب","meaning":"we go"},{"word":"نَعْلَمُ","root":"ع-ل-م","meaning":"we know"}]},"1:5:3":{"arabic":"وَإِيَّاكَ","root":null,"wazn":null,"wazn_arabic":null,"wazn_form":null,"wazn_meaning":"Conjunction + Pronoun (حرف عطف + ضمير) — no lexical root","root_in_template":null,"wazn_examples":[]},"1:5:4":{"arabic":"نَسْتَعِينُ","root":"ع-و-ن","wazn":"نَسْتَفْعِلُ","wazn_arabic":"نَسْتَفْعِلُ","wazn_form":"Form X imperfect verb — 1st person plural","wazn_meaning":"We [are] asking for help — Form X adds the meaning of seeking or requesting","root_in_template":"ع-و-ن → نَسْتَعِينُ","wazn_examples":[{"word":"نَسْتَغْفِرُ","root":"غ-ف-ر","meaning":"we seek forgiveness"},{"word":"نَسْتَمِعُ","root":"س-م-ع","meaning":"we listen"},{"word":"نَصْبِرُ","root":"ص-ب-ر","meaning":"we are patient (Form I, different)"}]},"1:6:1":{"arabic":"ٱهْدِنَا","root":"ه-د-ي","wazn":"اِهْدِ","wazn_arabic":"اِفْعِلْ","wazn_form":"Form I imperative (فعل أمر)","wazn_meaning":"Command form — 'Guide!' — directed to Allah in supplication","root_in_template":"ه-د-ي → اِهْدِ","wazn_examples":[{"word":"اِقْرَأْ","root":"ق-ر-أ","meaning":"read!"},{"word":"اُكْتُبْ","root":"ك-ت-ب","meaning":"write!"},{"word":"اِسْمَعْ","root":"س-م-ع","meaning":"listen!"}]},"1:6:2":{"arabic":"ٱلصِّرَ ٰطَ","root":"ص-ر-ط","wazn":"فِعَال","wazn_arabic":"فِعَال","wazn_form":"Noun denoting a path or way","wazn_meaning":"A well-trodden path — the pattern فِعَال is common for nouns that denote a clear, established route","root_in_template":"ص-ر-ط → صِرَاط","wazn_examples":[{"word":"كِتَاب","root":"ك-ت-ب","meaning":"book"},{"word":"حِبَال","root":"ح-ب-ل","meaning":"ropes"},{"word":"لِبَاس","root":"ل-ب-س","meaning":"clothing"}]},"1:6:3":{"arabic":"ٱلْمُسْتَقِيمَ","root":"ق-و-م","wazn":"مُسْتَفْعِلُ","wazn_arabic":"مُسْتَفْعِلُ","wazn_form":"Form X active participle (اسم فاعل من الفعل المزيد)","wazn_meaning":"The one who stands upright — Form X adds the meaning of seeking to stand or be straight","root_in_template":"ق-و-م → مُسْتَقِيم","wazn_examples":[{"word":"مُسْتَمِعُ","root":"س-م-ع","meaning":"listener"},{"word":"مُسْتَغْفِرُ","root":"غ-ف-ر","meaning":"forgiveness-seeker"},{"word":"مُسْتَوْدِعُ","root":"و-د-ع","meaning":"one who entrusts"}]},"1:7:1":{"arabic":"صِرَ ٰطَ","root":"ص-ر-ط","wazn":"فِعَال","wazn_arabic":"فِعَال","wazn_form":"Noun denoting a path or way","wazn_meaning":"Same as 1:6:2 — path, way","root_in_template":"ص-ر-ط → صِرَاط","wazn_examples":[{"word":"صِرَاط","root":"ص-ر-ط","meaning":"path"},{"word":"مِثَال","root":"م-ث-ل","meaning":"example"},{"word":"حِصَار","root":"ح-ص-ر","meaning":"siege"}]},"1:7:2":{"arabic":"ٱلَّذِينَ","root":null,"wazn":null,"wazn_arabic":null,"wazn_form":null,"wazn_meaning":"Relative pronoun (اسم موصول) — no lexical root","root_in_template":null,"wazn_examples":[]},"1:7:3":{"arabic":"أَنْعَمْتَ","root":"ن-ع-م","wazn":"أَفْعَلْتَ","wazn_arabic":"أَفْعَلْتَ","wazn_form":"Form IV perfect verb — 2nd person masculine singular","wazn_meaning":"You have favored — Form IV adds a causative or intensive meaning to the root","root_in_template":"ن-ع-م → أَنْعَمْتَ","wazn_examples":[{"word":"أَكْرَمْتَ","root":"ك-ر-م","meaning":"you have honored"},{"word":"أَحْبَبْتَ","root":"ح-ب-ب","meaning":"you have loved"},{"word":"أَعْطَيْتَ","root":"ع-ط-ي","meaning":"you have given (Form IV with weak letter)"}]},"1:7:4":{"arabic":"عَلَيْهِمْ","root":"ع-ل-ي","wazn":"فَعْلَى","wazn_arabic":"فَعْلَى","wazn_form":"Preposition (حرف جر)","wazn_meaning":"Upon, over — indicates position or authority","root_in_template":"ع-ل-ي → عَلَى","wazn_examples":[{"word":"إِلَى","root":"ء-ل-ي","meaning":"to, towards"},{"word":"حَتَّى","root":"ح-ت-ي","meaning":"until"},{"word":"لَدَى","root":"ل-د-ي","meaning":"at, with"}]},"1:7:5":{"arabic":"غَيْرِ","root":"غ-ي-ر","wazn":"فَعْل","wazn_arabic":"فَعْل","wazn_form":"Noun denoting otherness or change","wazn_meaning":"Other than, different from — often used with negation","root_in_template":"غ-ي-ر → غَيْر","wazn_examples":[{"word":"سِوَى","root":"س-و-ي","meaning":"other, besides"},{"word":"بَدْل","root":"ب-د-ل","meaning":"substitute"},{"word":"عِوَج","root":"ع-و-ج","meaning":"crookedness"}]},"1:7:6":{"arabic":"ٱلْمَغْضُوبِ","root":"غ-ض-ب","wazn":"مَفْعُول","wazn_arabic":"مَفْعُول","wazn_form":"Form I passive participle (اسم مفعول)","wazn_meaning":"The one upon whom anger is directed — the passive participle denotes the receiver of the action","root_in_template":"غ-ض-ب → مَغْضُوب","wazn_examples":[{"word":"مَعْلُوم","root":"ع-ل-م","meaning":"known"},{"word":"مَكْتُوب","root":"ك-ت-ب","meaning":"written"},{"word":"مَذْكُور","root":"ذ-ك-ر","meaning":"mentioned"}]},"1:7:7":{"arabic":"عَلَيْهِمْ","root":"ع-ل-ي","wazn":"فَعْلَى","wazn_arabic":"فَعْلَى","wazn_form":"Preposition (حرف جر)","wazn_meaning":"Upon, over — same as 1:7:4","root_in_template":"ع-ل-ي → عَلَى","wazn_examples":[{"word":"فَوْقَ","root":"ف-و-ق","meaning":"above"},{"word":"تَحْتَ","root":"ت-ح-ت","meaning":"below"},{"word":"وَرَاءَ","root":"و-ر-ء","meaning":"behind"}]},"1:7:8":{"arabic":"وَلَا","root":null,"wazn":null,"wazn_arabic":null,"wazn_form":null,"wazn_meaning":"Conjunction + Negative particle (حرف عطف + حرف نفي) — no lexical root","root_in_template":null,"wazn_examples":[]},"1:7:9":{"arabic":"ٱلضَّاۤلِّينَ","root":"ض-ل-ل","wazn":"فَاعِل","wazn_arabic":"فَاعِل","wazn_form":"Form I active participle (اسم فاعل)","wazn_meaning":"The ones who go astray — the active participle denotes the one who performs the action","root_in_template":"ض-ل-ل → ضَالّ (singular), ضَالُّونَ/ضَالِّينَ (plural)","wazn_examples":[{"word":"عَالِم","root":"ع-ل-م","meaning":"knower"},{"word":"كَافِر","root":"ك-ف-ر","meaning":"disbeliever"},{"word":"ظَالِم","root":"ظ-ل-م","meaning":"wrongdoer"}]}}};
+const ALIGNMENT = {"1:1:1":0,"1:1:2":1,"1:1:3":2,"1:1:4":3,"1:2:1":0,"1:2:2":1,"1:2:3":2,"1:2:4":3,"1:3:1":0,"1:3:2":1,"1:4:1":0,"1:4:2":1,"1:4:3":2,"1:5:1":0,"1:5:2":1,"1:5:3":2,"1:5:4":3,"1:6:1":0,"1:6:2":1,"1:6:3":2,"1:7:1":0,"1:7:2":1,"1:7:3":2,"1:7:4":3,"1:7:5":4,"1:7:6":5,"1:7:7":6,"1:7:8":7,"1:7:9":8};
+
+// State
+let currentWord = null;
+let currentAyah = null;
+let isPaneOpen = false;
+let selectedTafsirIndex = 0;
+
+// DOM
+const ayahList = document.getElementById('ayahList');
+const studyPane = document.getElementById('studyPane');
+const overlay = document.getElementById('overlay');
+const studyArabic = document.getElementById('studyArabic');
+const studyTranslation = document.getElementById('studyTranslation');
+const studyLocation = document.getElementById('studyLocation');
+const studyContent = document.getElementById('studyContent');
+const tafsirSelect = document.getElementById('tafsirSelect');
+const paneHandle = document.getElementById('paneHandle');
+
+// ─── Render Ayahs ───
+function renderAyahs(data) {
+  data.ayahs.forEach(ayah => {
+    const card = document.createElement('div');
+    card.className = 'ayah-card';
+    card.setAttribute('data-verse-key', ayah.verse_key);
+
+    const header = document.createElement('div');
+    header.className = 'ayah-header';
+    header.innerHTML = `<span class="ayah-number">Ayah ${ayah.ayah_number}</span>`;
+    card.appendChild(header);
+
+    const arabicDiv = document.createElement('div');
+    arabicDiv.className = 'ayah-arabic';
+    ayah.words.forEach(word => {
+      const span = document.createElement('span');
+      span.className = 'word';
+      span.textContent = word.arabic;
+      span.setAttribute('data-location', word.location);
+      span.addEventListener('click', () => openStudyPane(word, ayah));
+      span.addEventListener('mouseenter', () => highlightPair(word.location, true));
+      span.addEventListener('mouseleave', () => highlightPair(word.location, false));
+      arabicDiv.appendChild(span);
+    });
+    card.appendChild(arabicDiv);
+
+    const transDiv = document.createElement('div');
+    transDiv.className = 'ayah-translation';
+    ayah.words.forEach(word => {
+      const span = document.createElement('span');
+      span.className = 'tword';
+      span.textContent = word.translation;
+      span.setAttribute('data-location', word.location);
+      span.addEventListener('mouseenter', () => highlightPair(word.location, true));
+      span.addEventListener('mouseleave', () => highlightPair(word.location, false));
+      transDiv.appendChild(span);
+      // Add space between words
+      transDiv.appendChild(document.createTextNode(' '));
+    });
+    card.appendChild(transDiv);
+
+    ayahList.appendChild(card);
+  });
+}
+
+// ─── Bidirectional Highlighting ───
+function highlightPair(location, active) {
+  const arabicEl = document.querySelector(`.word[data-location="${location}"]`);
+  const transEl = document.querySelector(`.tword[data-location="${location}"]`);
+  if (arabicEl) arabicEl.classList.toggle('highlight', active);
+  if (transEl) transEl.classList.toggle('highlight', active);
+}
+
+// ─── Tafsir Selector ───
+function populateTafsirSelector(ayah) {
+  tafsirSelect.innerHTML = '';
+  ayah.tafsir.forEach((t, i) => {
+    const opt = document.createElement('option');
+    opt.value = i;
+    opt.textContent = t.source_name;
+    tafsirSelect.appendChild(opt);
+  });
+  tafsirSelect.value = selectedTafsirIndex;
+  tafsirSelect.onchange = () => {
+    selectedTafsirIndex = parseInt(tafsirSelect.value);
+    if (currentWord && currentAyah) renderStudyContent(currentWord, currentAyah);
+  };
+}
+
+// ─── Open Study Pane ───
+function openStudyPane(word, ayah) {
+  currentWord = word;
+  currentAyah = ayah;
+
+  document.querySelectorAll('.word.selected').forEach(el => el.classList.remove('selected'));
+  const wordEl = document.querySelector(`.word[data-location="${word.location}"]`);
+  if (wordEl) wordEl.classList.add('selected');
+
+  studyArabic.textContent = word.arabic;
+  studyTranslation.textContent = word.translation;
+  studyLocation.textContent = `Ayah ${ayah.ayah_number} · Word ${word.position}`;
+
+  populateTafsirSelector(ayah);
+  renderStudyContent(word, ayah);
+
+  studyPane.classList.add('open');
+  overlay.classList.add('open');
+  isPaneOpen = true;
+  studyContent.scrollTop = 0;
+}
+
+// ─── Render Study Content ───
+function renderStudyContent(word, ayah) {
+  studyContent.innerHTML = '';
+  const waznEntry = WAZN_DATA.words[word.location];
+
+  // Section 1: Root
+  if (word.root) {
+    const section = document.createElement('div');
+    section.className = 'study-section';
+    section.innerHTML = `
+      <div class="section-label">Root</div>
+      <div class="root-card">
+        <div class="root-arabic">${word.root}</div>
+        <div class="root-info">
+          <div class="root-letters">${word.root}</div>
+          <div class="root-meaning">${word.root_meaning}</div>
+        </div>
+      </div>
+    `;
+    studyContent.appendChild(section);
+  } else {
+    const section = document.createElement('div');
+    section.className = 'study-section';
+    section.innerHTML = `
+      <div class="section-label">Root</div>
+      <div class="no-root">This word is a ${word.morphology.tag === 'PRON' ? 'pronoun' : word.morphology.tag === 'REL' ? 'relative pronoun' : word.morphology.tag === 'CONJ-NEG' ? 'conjunction/negative particle' : 'particle'} — it has no lexical root.</div>
+    `;
+    studyContent.appendChild(section);
+  }
+
+  // Section 2: Morphology
+  const morphSection = document.createElement('div');
+  morphSection.className = 'study-section';
+  morphSection.innerHTML = `
+    <div class="section-label">Morphology</div>
+    <div class="morph-tag">
+      <span class="tag-code">${word.morphology.tag}</span>
+      ${word.morphology.description}
+    </div>
+    <div class="morph-grammar">${word.morphology.arabic_grammar}</div>
+  `;
+  studyContent.appendChild(morphSection);
+
+  // Section 3: Wazn (expandable)
+  if (waznEntry && waznEntry.wazn) {
+    const waznSection = document.createElement('div');
+    waznSection.className = 'study-section';
+
+    let examplesHtml = '';
+    if (waznEntry.wazn_examples && waznEntry.wazn_examples.length > 0) {
+      waznEntry.wazn_examples.forEach(ex => {
+        examplesHtml += `<span class="wazn-example-chip"><span class="ex-word">${ex.word}</span><span class="ex-meaning">${ex.meaning}</span></span>`;
+      });
+    }
+
+    waznSection.innerHTML = `
+      <div class="section-label">Pattern</div>
+      <div class="wazn-card">
+        <div class="wazn-pattern">
+          <span class="wazn-template">${waznEntry.wazn_arabic}</span>
+          <span class="wazn-form">${waznEntry.wazn_form}</span>
+        </div>
+        <button class="wazn-toggle" aria-expanded="false">
+          Show pattern details
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="wazn-details">
+          <div class="wazn-meaning">${waznEntry.wazn_meaning}</div>
+          <div class="wazn-template-visual">${waznEntry.root_in_template}</div>
+          ${examplesHtml ? `<div class="wazn-examples">${examplesHtml}</div>` : ''}
+        </div>
+      </div>
+    `;
+    studyContent.appendChild(waznSection);
+
+    // Wire toggle
+    const toggle = waznSection.querySelector('.wazn-toggle');
+    const details = waznSection.querySelector('.wazn-details');
+    toggle.addEventListener('click', () => {
+      const expanded = details.classList.contains('expanded');
+      details.classList.toggle('expanded');
+      toggle.classList.toggle('expanded');
+      toggle.innerHTML = expanded
+        ? `Show pattern details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>`
+        : `Hide details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>`;
+      toggle.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+    });
+  }
+
+  // Section 4: Tafsir (single source, switchable)
+  if (ayah.tafsir && ayah.tafsir.length > 0) {
+    const tafsir = ayah.tafsir[selectedTafsirIndex] || ayah.tafsir[0];
+    const isLong = tafsir.text.length > 250;
+    const tafsirSection = document.createElement('div');
+    tafsirSection.className = 'study-section';
+    tafsirSection.innerHTML = `
+      <div class="section-label">Tafsir</div>
+      <div class="tafsir-card">
+        <div class="tafsir-source">${tafsir.source_name}</div>
+        <div class="tafsir-text${isLong ? ' collapsed' : ''}" id="tafsirText">${tafsir.text}</div>
+        ${isLong ? `
+          <button class="tafsir-expand" id="tafsirExpand" aria-expanded="false">
+            Read more
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+        ` : ''}
+      </div>
+    `;
+    studyContent.appendChild(tafsirSection);
+
+    if (isLong) {
+      const expandBtn = document.getElementById('tafsirExpand');
+      const tafsirText = document.getElementById('tafsirText');
+      expandBtn.addEventListener('click', () => {
+        const expanded = tafsirText.classList.contains('collapsed');
+        tafsirText.classList.toggle('collapsed');
+        expandBtn.classList.toggle('expanded');
+        expandBtn.innerHTML = expanded
+          ? `Show less <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>`
+          : `Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>`;
+        expandBtn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+      });
+    }
+  }
+
+  // Section 5: Occurrences
+  if (word.occurrences && word.occurrences.total) {
+    const maxCount = Math.max(...(Array.isArray(word.occurrences.breakdown) ? word.occurrences.breakdown.map(b => b.count) : [1]));
+    const occSection = document.createElement('div');
+    occSection.className = 'study-section';
+
+    let breakdownHtml = '';
+    if (Array.isArray(word.occurrences.breakdown)) {
+      word.occurrences.breakdown.forEach(item => {
+        const pct = (item.count / maxCount) * 100;
+        breakdownHtml += `
+          <div class="occ-row">
+            <span class="occ-form">${item.form.split(' ')[0]}</span>
+            <div class="occ-bar"><div class="occ-bar-fill" style="width:${pct}%"></div></div>
+            <span class="occ-count">${item.count}</span>
+          </div>
+        `;
+      });
+    }
+
+    occSection.innerHTML = `
+      <div class="section-label">Occurrences in the Quran</div>
+      <div class="occurrences-summary">
+        <span class="occurrences-count">${word.occurrences.total}</span>
+        <span class="occurrences-label">total occurrences<br>across derived forms</span>
+      </div>
+      <div class="occurrences-breakdown">${breakdownHtml}</div>
+    `;
+    studyContent.appendChild(occSection);
+  }
+}
+
+// ─── Close Study Pane ───
+function closeStudyPane() {
+  studyPane.classList.remove('open');
+  overlay.classList.remove('open');
+  isPaneOpen = false;
+  document.querySelectorAll('.word.selected').forEach(el => el.classList.remove('selected'));
+  document.querySelectorAll('.highlight').forEach(el => el.classList.remove('highlight'));
+}
+
+overlay.addEventListener('click', closeStudyPane);
+
+// Swipe to close
+let startY = 0;
+paneHandle.addEventListener('touchstart', e => { startY = e.touches[0].clientY; }, { passive: true });
+paneHandle.addEventListener('touchend', e => {
+  const diff = e.changedTouches[0].clientY - startY;
+  if (diff > 60) closeStudyPane();
+}, { passive: true });
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && isPaneOpen) closeStudyPane();
+});
+
+// ─── Initialize ───
+renderAyahs(SEED_DATA);
+</script>
+</body>
+</html>
