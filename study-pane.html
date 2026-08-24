@@ -337,6 +337,138 @@ body {
   background-position: right 8px center;
 }
 
+/* Complexity Level Selector */
+.complexity-selector {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-left: auto;
+  background: var(--surface-sunken);
+  border-radius: 12px;
+  padding: 2px;
+}
+
+.complexity-btn {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--ink-muted);
+  background: none;
+  border: none;
+  border-radius: 10px;
+  padding: 4px 8px;
+  cursor: pointer;
+  transition: background var(--duration-fast) var(--ease-out), color var(--duration-fast) var(--ease-out);
+}
+
+.complexity-btn:hover {
+  color: var(--ink);
+}
+
+.complexity-btn.active {
+  background: var(--surface);
+  color: var(--accent);
+  font-weight: 600;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Level-specific sections */
+.level-section {
+  display: none;
+}
+
+.level-section.visible {
+  display: block;
+}
+
+/* Level 3: Explore */
+.explore-card {
+  background: var(--surface-sunken);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.explore-card:last-child {
+  margin-bottom: 0;
+}
+
+.explore-card-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-faint);
+  margin-bottom: var(--space-sm);
+}
+
+.explore-card-content {
+  font-size: 14px;
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+.explore-card-placeholder {
+  font-size: 13px;
+  color: var(--ink-faint);
+  font-style: italic;
+}
+
+/* Level 4: Deep */
+.deep-section {
+  background: var(--surface-sunken);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.deep-section:last-child {
+  margin-bottom: 0;
+}
+
+.deep-section-title {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-faint);
+  margin-bottom: var(--space-sm);
+}
+
+.deep-tafsir-text {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--ink);
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.deep-compare-table {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.deep-compare-row {
+  display: flex;
+  gap: var(--space-sm);
+  padding: var(--space-sm);
+  background: var(--surface);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+}
+
+.deep-compare-source {
+  font-weight: 600;
+  color: var(--accent);
+  min-width: 80px;
+  flex-shrink: 0;
+}
+
+.deep-compare-text {
+  color: var(--ink);
+}
+
 /* Study Content */
 .study-content {
   flex: 1;
@@ -701,6 +833,12 @@ body {
       <div class="source-selector">
         <select id="tafsirSelect" aria-label="Select tafsir source"></select>
       </div>
+      <div class="complexity-selector">
+        <button class="complexity-btn active" data-level="1">Read</button>
+        <button class="complexity-btn" data-level="2">Study</button>
+        <button class="complexity-btn" data-level="3">Explore</button>
+        <button class="complexity-btn" data-level="4">Deep</button>
+      </div>
     </div>
   </div>
   <div class="study-content" id="studyContent"></div>
@@ -719,6 +857,7 @@ let currentWord = null;
 let currentAyah = null;
 let isPaneOpen = false;
 let selectedTafsirIndex = 0;
+let currentComplexityLevel = parseInt(localStorage.getItem('tafsir_complexity') || '1');
 
 // DOM
 const ayahList = document.getElementById('ayahList');
@@ -730,6 +869,21 @@ const studyLocation = document.getElementById('studyLocation');
 const studyContent = document.getElementById('studyContent');
 const tafsirSelect = document.getElementById('tafsirSelect');
 const paneHandle = document.getElementById('paneHandle');
+const complexityBtns = document.querySelectorAll('.complexity-btn');
+
+// ─── Complexity Level ───
+function setComplexityLevel(level) {
+  currentComplexityLevel = level;
+  localStorage.setItem('tafsir_complexity', level);
+  complexityBtns.forEach(btn => {
+    btn.classList.toggle('active', parseInt(btn.dataset.level) === level);
+  });
+  if (currentWord && currentAyah) renderStudyContent(currentWord, currentAyah);
+}
+
+complexityBtns.forEach(btn => {
+  btn.addEventListener('click', () => setComplexityLevel(parseInt(btn.dataset.level)));
+});
 
 // ─── Render Ayahs ───
 function renderAyahs(data) {
@@ -827,7 +981,7 @@ function renderStudyContent(word, ayah) {
   studyContent.innerHTML = '';
   const waznEntry = WAZN_DATA.words[word.location];
 
-  // Section 1: Root
+  // Section 1: Root — Level 1+
   if (word.root) {
     const section = document.createElement('div');
     section.className = 'study-section';
@@ -865,8 +1019,8 @@ function renderStudyContent(word, ayah) {
   `;
   studyContent.appendChild(morphSection);
 
-  // Section 3: Wazn (expandable)
-  if (waznEntry && waznEntry.wazn) {
+  // Section 3: Wazn (expandable) — Level 2+
+  if (currentComplexityLevel >= 2 && waznEntry && waznEntry.wazn) {
     const waznSection = document.createElement('div');
     waznSection.className = 'study-section';
 
@@ -911,8 +1065,8 @@ function renderStudyContent(word, ayah) {
     });
   }
 
-  // Section 4: Tafsir (single source, switchable)
-  if (ayah.tafsir && ayah.tafsir.length > 0) {
+  // Section 4: Tafsir (single source, switchable) — Level 2+
+  if (currentComplexityLevel >= 2 && ayah.tafsir && ayah.tafsir.length > 0) {
     const tafsir = ayah.tafsir[selectedTafsirIndex] || ayah.tafsir[0];
     const isLong = tafsir.text.length > 250;
     const tafsirSection = document.createElement('div');
@@ -947,8 +1101,65 @@ function renderStudyContent(word, ayah) {
     }
   }
 
-  // Section 5: Occurrences
-  if (word.occurrences && word.occurrences.total) {
+  // Section 5: Explore (Level 3+)
+  if (currentComplexityLevel >= 3) {
+    const exploreSection = document.createElement('div');
+    exploreSection.className = 'level-section visible';
+    exploreSection.innerHTML = `
+      <div class="explore-card">
+        <div class="explore-card-label">Historical Context</div>
+        <div class="explore-card-content">
+          <span class="explore-card-placeholder">No authenticated occasion of revelation is recorded for this verse.</span>
+        </div>
+      </div>
+      <div class="explore-card">
+        <div class="explore-card-label">Cross-References</div>
+        <div class="explore-card-content">
+          <span class="explore-card-placeholder">Cross-reference data will be available in a future update.</span>
+        </div>
+      </div>
+      <div class="explore-card">
+        <div class="explore-card-label">Themes</div>
+        <div class="explore-card-content">
+          <span class="explore-card-placeholder">Thematic analysis will be available in a future update.</span>
+        </div>
+      </div>
+    `;
+    studyContent.appendChild(exploreSection);
+  }
+
+  // Section 6: Deep (Level 4)
+  if (currentComplexityLevel >= 4) {
+    const deepSection = document.createElement('div');
+    deepSection.className = 'level-section visible';
+    deepSection.innerHTML = `
+      <div class="deep-section">
+        <div class="deep-section-title">Full Tafsir</div>
+        <div class="deep-tafsir-text">${(ayah.tafsir[selectedTafsirIndex] || ayah.tafsir[0]).text}</div>
+      </div>
+      <div class="deep-section">
+        <div class="deep-section-title">Multi-Edition Comparison</div>
+        <div class="deep-compare-table">
+          ${ayah.tafsir.map(t => `<div class="deep-compare-row"><span class="deep-compare-source">${t.source_name}</span><span class="deep-compare-text">${t.text}</span></div>`).join('')}
+        </div>
+      </div>
+      <div class="deep-section">
+        <div class="deep-section-title">Detailed Grammar</div>
+        <div class="explore-card-content">
+          <p><strong>Arabic:</strong> ${word.arabic}</p>
+          <p><strong>Transliteration:</strong> ${word.transliteration}</p>
+          <p><strong>Root:</strong> ${word.root || 'N/A'}</p>
+          <p><strong>Morphology:</strong> ${word.morphology.description}</p>
+          <p><strong>Grammar:</strong> ${word.morphology.arabic_grammar}</p>
+          <p><strong>Wazn:</strong> ${waznEntry && waznEntry.wazn ? waznEntry.wazn_arabic : 'N/A'}</p>
+        </div>
+      </div>
+    `;
+    studyContent.appendChild(deepSection);
+  }
+
+  // Section 7: Occurrences — Level 2+
+  if (currentComplexityLevel >= 2 && word.occurrences && word.occurrences.total) {
     const maxCount = Math.max(...(Array.isArray(word.occurrences.breakdown) ? word.occurrences.breakdown.map(b => b.count) : [1]));
     const occSection = document.createElement('div');
     occSection.className = 'study-section';
@@ -1003,6 +1214,7 @@ document.addEventListener('keydown', e => {
 });
 
 // ─── Initialize ───
+setComplexityLevel(currentComplexityLevel);
 renderAyahs(SEED_DATA);
 </script>
 </body>
