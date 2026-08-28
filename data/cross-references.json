@@ -1,0 +1,12 @@
+{
+  "meta": {
+    "description": "Cross-references: related Quran verses, Hadith, and scholarly works",
+    "scope": "verse",
+    "source_ids": ["munim-sirry-crossref", "iqsaweb-crossref"],
+    "verification_status": "sourced",
+    "complexity_level": 3,
+    "status": "partial_data",
+    "instructions": "Structured data only for now. Harder content (scraping, PDF processing) deferred to roadmap."
+  },
+  "cross_references": []
+}

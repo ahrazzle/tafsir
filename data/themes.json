@@ -1,0 +1,12 @@
+{
+  "meta": {
+    "description": "Thematic tags linking verses to contemporary themes",
+    "scope": "verse",
+    "source_ids": ["qul-mutashabihat", "thematic-annotation-dataset"],
+    "verification_status": "sourced",
+    "complexity_level": 3,
+    "status": "partial_data",
+    "instructions": "Themes are curated tags that connect classical tafsir to contemporary ethical/philosophical inquiry. Each verse can have multiple themes. Themes are presented as user-selectable filters in the Explore view."
+  },
+  "themes": []
+}
