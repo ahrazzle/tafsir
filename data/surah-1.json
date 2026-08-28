@@ -1,0 +1,1994 @@
+{
+  "meta": {
+    "surah": 1,
+    "surah_name": "Al-Fatihah",
+    "surah_name_arabic": "الفاتحة",
+    "revelation_type": "Meccan",
+    "juz": [
+      1
+    ],
+    "ayahs_in_juz1": 7,
+    "total_ayahs": 7,
+    "verification_status": {
+      "verse_text": "verified",
+      "morphology": "verified",
+      "wazn": "verified"
+    }
+  },
+  "ayahs": [
+    {
+      "ayah_number": 1,
+      "verse_key": "1:1",
+      "arabic": "بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ",
+      "juz": 1,
+      "page": 1,
+      "manzil": 1,
+      "ruku": 1,
+      "hizb_quarter": 1,
+      "sajda": false,
+      "words": [
+        {
+          "position": 1,
+          "location": "1:1:1",
+          "arabic": "بِسْمِ",
+          "arabic_normalized": "بسم",
+          "transliteration": "bis'mi",
+          "translation": "In (the) name",
+          "root": "س-م-و",
+          "root_meaning": "to name, to designate",
+          "morphology": {
+            "tag": "P-N",
+            "description": "prefixed preposition bi + genitive masculine noun",
+            "arabic_grammar": "جار ومجرور"
+          },
+          "occurrences": {
+            "total": 381,
+            "breakdown": [
+              {
+                "form": "sammā (verb II)",
+                "count": 8
+              },
+              {
+                "form": "is'm (noun)",
+                "count": 39
+              },
+              {
+                "form": "samā (noun)",
+                "count": 310
+              },
+              {
+                "form": "samiyy (noun)",
+                "count": 2
+              },
+              {
+                "form": "tasmiyat (verbal noun)",
+                "count": 1
+              },
+              {
+                "form": "musamman (participle)",
+                "count": 21
+              }
+            ]
+          },
+          "source_id": "corpus-quran-com",
+          "verification_status": "verified",
+          "wazn": {
+            "pattern": "فَعْل",
+            "pattern_arabic": "فَعْل",
+            "form": "Form I verbal noun (masdar)",
+            "meaning": "Basic noun pattern — the simplest nominal form derived from a triliteral root",
+            "root_in_template": "س-م-و → سَمٌ (then with prefix: بِسْمِ)",
+            "examples": [
+              {
+                "word": "كَلْب",
+                "root": "ك-ل-ب",
+                "meaning": "dog"
+              },
+              {
+                "word": "فَرْس",
+                "root": "ف-ر-س",
+                "meaning": "horse"
+              },
+              {
+                "word": "بَحْر",
+                "root": "ب-ح-ر",
+                "meaning": "sea"
+              }
+            ]
+          },
+          "complexity_level": 2
+        },
+        {
+          "position": 2,
+          "location": "1:1:2",
+          "arabic": "ٱللَّهِ",
+          "arabic_normalized": "الله",
+          "transliteration": "l-lahi",
+          "translation": "(of) Allah,",
+          "root": "ا-ل-ه",
+          "root_meaning": "deity, God",
+          "morphology": {
+            "tag": "PN",
+            "description": "genitive proper noun → Allah",
+            "arabic_grammar": "لفظ الجلالة مجرور"
+          },
+          "occurrences": {
+            "total": 2851,
+            "breakdown": [
+              {
+                "form": "ilāh (noun)",
+                "count": 147
+              },
+              {
+                "form": "allah (proper noun)",
+                "count": 2699
+              },
+              {
+                "form": "allahumma (vocative)",
+                "count": 5
+              }
+            ]
+          },
+          "source_id": "corpus-quran-com",
+          "verification_status": "verified",
+          "wazn": {
+            "pattern": null,
+            "pattern_arabic": null,
+            "form": null,
+            "meaning": "Proper noun — no derivational pattern; unique divine name",
+            "root_in_template": null,
+            "examples": []
+          },
+          "complexity_level": 2
+        },
+        {
+          "position": 3,
+          "location": "1:1:3",
+          "arabic": "ٱلرَّحْمَـٰنِ",
+          "arabic_normalized": "الرحمن",
+          "transliteration": "l-raḥmāni",
+          "translation": "the Most Gracious,",
+          "root": "ر-ح-م",
+          "root_meaning": "to be merciful",
+          "morphology": {
+            "tag": "ADJ",
+            "description": "genitive masculine singular adjective",
+            "arabic_grammar": "صفة مجرورة"
+          },
+          "occurrences": {
+            "total": 339,
+            "breakdown": [
+              {
+                "form": "raḥima (verb I)",
+                "count": 28
+              },
+              {
+                "form": "arḥām (noun)",
+                "count": 12
+              },
+              {
+                "form": "arḥam (noun)",
+                "count": 4
+              },
+              {
+                "form": "ruḥ'm (noun)",
+                "count": 1
+              },
+              {
+                "form": "raḥmān (nominal)",
+                "count": 57
+              },
+              {
+                "form": "raḥmat (noun)",
+                "count": 114
+              },
+              {
+                "form": "raḥīm (nominal)",
+                "count": 116
+              },
+              {
+                "form": "marḥamat (noun)",
+                "count": 1
+              },
+              {
+                "form": "rāḥimīn (participle)",
+                "count": 6
+              }
+            ]
+          },
+          "source_id": "corpus-quran-com",
+          "verification_status": "verified",
+          "wazn": {
+            "pattern": "فَعْلَان",
+            "pattern_arabic": "فَعْلَان",
+            "form": "Intensive adjective (صفة مشبهة)",
+            "meaning": "Denotes the highest degree or abundance of a quality — the one who possesses mercy in the most complete and intensive way",
+            "root_in_template": "ر-ح-م → رَحْمَان",
+            "examples": [
+              {
+                "word": "عَطْشَان",
+                "root": "ع-ط-ش",
+                "meaning": "thirsty"
+              },
+              {
+                "word": "جُوعَان",
+                "root": "ج-و-ع",
+                "meaning": "hungry"
+              },
+              {
+                "word": "غُفْرَان",
+                "root": "غ-ف-ر",
+                "meaning": "forgiveness"
+              }
+            ]
+          },
+          "complexity_level": 2
+        },
+        {
+          "position": 4,
+          "location": "1:1:4",
+          "arabic": "ٱلرَّحِيمِ",
+          "arabic_normalized": "الرحيم",
+          "transliteration": "l-raḥīmi",
+          "translation": "the Most Merciful.",
+          "root": "ر-ح-م",
+          "root_meaning": "to be merciful",
+          "morphology": {
+            "tag": "ADJ",
+            "description": "genitive masculine singular adjective",
+            "arabic_grammar": "صفة مجرورة"
+          },
+          "occurrences": {
+            "total": 339,
+            "breakdown": "same root as 1:1:3"
+          },
+          "source_id": "corpus-quran-com",
+          "verification_status": "verified",
+          "wazn": {
+            "pattern": "فَعِيل",
+            "pattern_arabic": "فَعِيل",
+            "form": "Intensive adjective (صفة مشبهة)",
+            "meaning": "Denotes a permanent, established quality — the one whose mercy is constant and enduring",
+            "root_in_template": "ر-ح-م → رَحِيم",
+            "examples": [
+              {
+                "word": "كَبِير",
+                "root": "ك-ب-ر",
+                "meaning": "great"
+              },
+              {
+                "word": "عَظِيم",
+                "root": "ع-ظ-م",
+                "meaning": "magnificent"
+              },
+              {
+                "word": "كَرِيم",
+                "root": "ك-ر-م",
+                "meaning": "generous"
+              }
+            ]
+          },
+          "complexity_level": 2
+        }
+      ],
+      "tafsir": [
+        {
+          "source_id": "spa5k-en-al-jalalayn",
+          "source_name": "Tafsir al-Jalalayn",
+          "author": "Jalal ad-Din al-Mahalli & Jalal ad-Din as-Suyuti",
+          "text": "In the Name of God the Compassionate the Merciful",
+          "verification_status": "sourced",
+          "complexity_level": 2
+        },
+        {
+          "source_id": "spa5k-en-tafisr-ibn-kathir",
+          "source_name": "Tafsir Ibn Kathir (English)",
+          "author": "Hafiz Ibn Kathir",
+          "text": "The Meaning of Al Fatiha & its Various Names\n\nThis Surah is called Al-Fatihah, that is, the Opener of the Book, the Surah with which prayers are begun. It is also called, Umm Al-Kitab (the Mother of the Book), according to the majority of the scholars. In an authentic Hadith recorded by At-Tirmidhi, who graded it Sahih, Abu Hurayrah said that the Messenger of Allah ﷺ said,\n\nالحمدُ للَّهِ رَبِّ الْعَالَمِينَ أُمُّ الْقُرْآنِ وَأُمُّ الْكِتَابِ وَالسَّبْعُ الْمَثَانيِ وَالْقُرْآنُ الْعَظِيمُ",
+          "verification_status": "sourced",
+          "complexity_level": 2
+        }
+      ]
+    },
+    {
+      "ayah_number": 2,
+      "verse_key": "1:2",
+      "arabic": "ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَـٰلَمِينَ",
+      "juz": 1,
+      "page": 1,
+      "manzil": 1,
+      "ruku": 2,
+      "hizb_quarter": 1,
+      "sajda": false,
+      "words": [
+        {
+          "position": 1,
+          "location": "1:2:1",
+          "arabic": "ٱلْحَمْدُ",
+          "arabic_normalized": "الحمد",
+          "transliteration": "al-ḥamdu",
+          "translation": "All praises and thanks",
+          "root": "ح-م-د",
+          "root_meaning": "to praise, to thank",
+          "morphology": {
+            "tag": "N",
+            "description": "nominative masculine noun",
+            "arabic_grammar": "اسم مرفوع"
+          },
+          "occurrences": {
+            "total": 63,
+            "breakdown": [
+              {
+                "form": "yuḥ'madu (verb I)",
+                "count": 1
+              },
+              {
+                "form": "ḥamd (noun)",
+                "count": 43
+              },
+              {
+                "form": "ḥamīd (nominal)",
+                "count": 17
+              },
+              {
+                "form": "ḥāmidūn (participle)",
+                "count": 1
+              },
+              {
+                "form": "maḥmūd (participle)",
+                "count": 1
+              }
+            ]
+          },
+          "source_id": "corpus-quran-com",
+          "verification_status": "verified",
+          "wazn": {
+            "pattern": "فَعْل",
+            "pattern_arabic": "فَعْل",
+            "form": "Form I verbal noun (masdar)",
+            "meaning": "Basic noun pattern — designates the action or concept of the root",
+            "root_in_template": "ح-م-د → حَمْد",
+            "examples": [
+              {
+                "word": "كَلَام",
+                "root": "ك-ل-م",
+                "meaning": "speech"
+              },
+              {
+                "word": "قِتَال",
+                "root": "ق-ت-ل",
+                "meaning": "fighting"
+              },
+              {
+                "word": "عِلْم",
+                "root": "ع-ل-م",
+                "meaning": "knowledge"
+              }
+            ]
+          },
+          "complexity_level": 2
+        },
+        {
+          "position": 2,
+          "location": "1:2:2",
+          "arabic": "لِلَّهِ",
+          "arabic_normalized": "لله",
+          "transliteration": "lillahi",
+          "translation": "(be) to Allah,",
+          "root": "ا-ل-ه",
+          "root_meaning": "deity, God",
+          "morphology": {
+            "tag": "P-PN",
+            "description": "prefixed preposition lām + genitive proper noun → Allah",
+            "arabic_grammar": "جار ومجرور"
+          },
+          "occurrences": {
+            "total": 2851,
+            "breakdown": "same root as 1:1:2"
+          },
+          "source_id": "corpus-quran-com",
+          "verification_status": "verified",
+          "wazn": {
+            "pattern": null,
+            "pattern_arabic": null,
+            "form": null,
+            "meaning": "Proper noun — no derivational pattern",
+            "root_in_template": null,
+            "examples": []
+          },
+          "complexity_level": 2
+        },
+        {
+          "position": 3,
+          "location": "1:2:3",
+          "arabic": "رَبِّ",
+          "arabic_normalized": "رب",
+          "transliteration": "rabbi",
+          "translation": "the Lord",
+          "root": "ر-ب-ب",
+          "root_meaning": "to nurture, to lord",
+          "morphology": {
+            "tag": "N",
+            "description": "genitive masculine noun",
+            "arabic_grammar": "اسم مجرور"
+          },
+          "occurrences": {
+            "total": 980,
+            "breakdown": [
+              {
+                "form": "rabb (noun)",
+                "count": 975
+              },
+              {
+                "form": "rabāib (noun)",
+                "count": 1
+              },
+              {
+                "form": "rabbāniyyin (noun)",
+                "count": 3
+              },
+              {
+                "form": "ribbiyyūn (noun)",
+                "count": 1
+              }
+            ]
+          },
+          "source_id": "corpus-quran-com",
+          "verification_status": "verified",
+          "wazn": {
+            "pattern": "فَعْل",
+            "pattern_arabic": "فَعْل",
+            "form": "Noun of ownership/lordship",
+            "meaning": "Denotes the one who nurtures, owns, or has authority over something",
+            "root_in_template": "ر-ب-ب → رَبّ",
+            "examples": [
+              {
+                "word": "سَيِّد",
+                "root": "س-و-د",
+                "meaning": "master"
+              },
+              {
+                "word": "رَبّ",
+                "root": "ر-ب-ب",
+                "meaning": "lord, nurturer"
+              },
+              {
+                "word": "خَالِق",
+                "root": "خ-ل-ق",
+                "meaning": "creator (different pattern: فَاعِل)"
+              }
+            ]
+          },
+          "complexity_level": 2
+        },
+        {
+          "position": 4,
+          "location": "1:2:4",
+          "arabic": "ٱلْعَـٰلَمِينَ",
+          "arabic_normalized": "العالمين",
+          "transliteration": "l-ʿālamīna",
+          "translation": "of the universe",
+          "root": "ع-ل-م",
+          "root_meaning": "to know",
+          "morphology": {
+            "tag": "N",
+            "description": "genitive masculine plural noun",
+            "arabic_grammar": "اسم مجرور"
+          },
+          "occurrences": {
+            "total": 854,
+            "breakdown": [
+              {
+                "form": "ʿalima (verb I)",
+                "count": 382
+              },
+              {
+                "form": "ʿallama (verb II)",
+                "count": 41
+              },
+              {
+                "form": "yataʿallamu (verb V)",
+                "count": 2
+              },
+              {
+                "form": "aʿlām (noun)",
+                "count": 2
+              },
+              {
+                "form": "aʿlam (nominal)",
+                "count": 49
+              },
+              {
+                "form": "ʿālamīn (noun)",
+                "count": 73
+              },
+              {
+                "form": "ʿallām (nominal)",
+                "count": 4
+              },
+              {
+                "form": "ʿalāmāt (noun)",
+                "count": 1
+              },
+              {
+                "form": "ʿil'm (noun)",
+                "count": 105
+              },
+              {
+                "form": "ʿalīm (nominal)",
+                "count": 163
+              },
+              {
+                "form": "maʿlūmāt (adjective)",
+                "count": 2
+              },
+              {
+                "form": "ʿālim (participle)",
+                "count": 18
+              },
+              {
+                "form": "maʿlūm (participle)",
+                "count": 11
+              },
+              {
+                "form": "muʿallam (participle)",
+                "count": 1
+              }
+            ]
+          },
+          "source_id": "corpus-quran-com",
+          "verification_status": "verified",
+          "wazn": {
+            "pattern": "فَاعِل",
+            "pattern_arabic": "فَاعِل",
+            "form": "Form I active participle (اسم فاعل)",
+            "meaning": "Denotes the one who performs the action — the knower; plural form adds the sense of 'worlds' (all that exists)",
+            "root_in_template": "ع-ل-م → عَالِم (singular), عَالَمُونَ/عَالَمِينَ (plural)",
+            "examples": [
+              {
+                "word": "كَاتِب",
+                "root": "ك-ت-ب",
+                "meaning": "writer"
+              },
+              {
+                "word": "قَادِر",
+                "root": "ق-د-ر",
+                "meaning": "powerful"
+              },
+              {
+                "word": "عَابِد",
+                "root": "ع-ب-د",
+                "meaning": "worshipper"
+              }
+            ]
+          },
+          "complexity_level": 2
+        }
+      ],
+      "tafsir": [
+        {
+          "source_id": "spa5k-en-al-jalalayn",
+          "source_name": "Tafsir al-Jalalayn",
+          "author": "Jalal ad-Din al-Mahalli & Jalal ad-Din as-Suyuti",
+          "text": "In the Name of God the name of a thing is that by which it can be known. The Names of God exalted be He are the archetypal forms ṣuwar nawʿiyya whose specificities and ipseities hūwiyya indicate the attributes of God His essence and which indicate by their very existence His countenance and by their individuation His oneness. For these are the outward manifestations through which He can be known; Allāh is a name for the divine essence qua essence absolutely without taking into consideration that it may be qualified by the attributes or indeed taking into consideration that it may not be so qualified; the Compassionate is the one who causes existence and perfection to flow upon all things in the measure that divine wisdom requires and to the capacity of the receiving entities qawābil from the outset of their creation; the Merciful al-Raḥīm is the one who bestows the spiritual perfection kamāl maʿnawī that has been earmarked for the human species in the end sc. in the Hereafter. It is for this reason that they say O You Who are the Compassionate One of this world and of the Hereafter yā raḥmān al-dunyā wa'l-ākhira but say O Merciful One of the Hereafter raḥīm al-ākhira the meaning then is in the perfect human all-encompassing form general and specific mercy which is the locus of manifestation of the divine essence and the greatest truth with the totality of attributes I commence and I recite. It Allāh is the Greatest Name of God. It is to this meaning that the Prophet's ṣlʿm alluded when he said 'I have been given the sum of all excellent speech sc. The QurÌān and have been sent to complete the noble character traits makārim al-akhlāq. For words constitute the realities ḥaqāÌiq of existents mawjūdāt and their concrete substances aʿyān just as Jesus peace be upon him was called a Word from God cf. 33945. The noble character traits are the perfections of these existents and represent their specifities constituting the sources of their the existents' actions in their entirety contained as they are in the comprehensive human microcosm kawn insānī. Herein lies a subtlety la?īfa namely that the prophets peace be upon them have made the letters of the alphabet analogous to the ranks of existents marātib al-mawjūdāt.",
+          "verification_status": "sourced",
+          "complexity_level": 2
+        },
+        {
+          "source_id": "spa5k-en-tafisr-ibn-kathir",
+          "source_name": "Tafsir Ibn Kathir (English)",
+          "author": "Hafiz Ibn Kathir",
+          "text": "The Meaning of Al Fatiha & its Various Names\n\nThis Surah is called Al-Fatihah, that is, the Opener of the Book, the Surah with which prayers are begun. It is also called, Umm Al-Kitab (the Mother of the Book), according to the majority of the scholars. In an authentic Hadith recorded by At-Tirmidhi, who graded it Sahih, Abu Hurayrah said that the Messenger of Allah ﷺ said,\n\nالْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ أُمُّ الْقُرْآنِ وَأُمُّ الْكِتَابِ وَالسَّبْعُ الْمَثَانِي وَالْقُرْآنُ الْعَظِيمُ\n\n(Al-Hamdu lillahi Rabbil-'Alamin is the Mother of the Qur'an, the Mother of the Book, and the seven repeated Ayat of the Glorious Qur'an.)",
+          "verification_status": "sourced",
+          "complexity_level": 2
+        }
+      ]
+    },
+    {
+      "ayah_number": 3,
+      "verse_key": "1:3",
+      "arabic": "ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ",
+      "juz": 1,
+      "page": 1,
+      "manzil": 1,
+      "ruku": 3,
+      "hizb_quarter": 1,
+      "sajda": false,
+      "words": [
+        {
+          "position": 1,
+          "location": "1:3:1",
+          "arabic": "ٱلرَّحْمَـٰنِ",
+          "arabic_normalized": "الرحمن",
+          "transliteration": "al-raḥmāni",
+          "translation": "The Most Gracious,",
+          "root": "ر-ح-م",
+          "root_meaning": "to be merciful",
+          "morphology": {
+            "tag": "ADJ",
+            "description": "genitive masculine singular adjective",
+            "arabic_grammar": "صفة مجرورة"
+          },
+          "occurrences": {
+            "total": 339,
+            "breakdown": "same root as 1:1:3"
+          },
+          "source_id": "corpus-quran-com",
+          "verification_status": "verified",
+          "wazn": {
+            "pattern": "فَعْلَان",
+            "pattern_arabic": "فَعْلَان",
+            "form": "Intensive adjective (صفة مشبهة)",
+            "meaning": "Denotes the highest degree or abundance of a quality",
+            "root_in_template": "ر-ح-م → رَحْمَان",
+            "examples": [
+              {
+                "word": "عَطْشَان",
+                "root": "ع-ط-ش",
+                "meaning": "thirsty"
+              },
+              {
+                "word": "رَيْحَان",
+                "root": "ر-ي-ح",
+                "meaning": "fragrance, basil"
+              },
+              {
+                "word": "شَبْعَان",
+                "root": "ش-ب-ع",
+                "meaning": "full/satiated"
+              }
+            ]
+          },
+          "complexity_level": 2
+        },
+        {
+          "position": 2,
+          "location": "1:3:2",
+          "arabic": "ٱلرَّحِيمِ",
+          "arabic_normalized": "الرحيم",
+          "transliteration": "l-raḥīmi",
+          "translation": "the Most Merciful.",
+          "root": "ر-ح-م",
+          "root_meaning": "to be merciful",
+          "morphology": {
+            "tag": "ADJ",
+            "description": "genitive masculine singular adjective",
+            "arabic_grammar": "صفة مجرورة"
+          },
+          "occurrences": {
+            "total": 339,
+            "breakdown": "same root as 1:1:3"
+          },
+          "source_id": "corpus-quran-com",
+          "verification_status": "verified",
+          "wazn": {
+            "pattern": "فَعِيل",
+            "pattern_arabic": "فَعِيل",
+            "form": "Intensive adjective (صفة مشبهة)",
+            "meaning": "Denotes a permanent, established quality",
+            "root_in_template": "ر-ح-م → رَحِيم",
+            "examples": [
+              {
+                "word": "عَلِيم",
+                "root": "ع-ل-م",
+                "meaning": "all-knowing"
+              },
+              {
+                "word": "قَدِير",
+                "root": "ق-د-ر",
+                "meaning": "all-powerful"
+              },
+              {
+                "word": "حَكِيم",
+                "root": "ح-ك-م",
+                "meaning": "wise"
+              }
+            ]
+          },
+          "complexity_level": 2
+        }
+      ],
+      "tafsir": [
+        {
+          "source_id": "spa5k-en-al-jalalayn",
+          "source_name": "Tafsir al-Jalalayn",
+          "author": "Jalal ad-Din al-Mahalli & Jalal ad-Din as-Suyuti",
+          "text": "The Compassionate the Merciful that is to say the One who possesses 'mercy' which means to want what is good for those who deserve it.",
+          "verification_status": "sourced",
+          "complexity_level": 2
+        },
+        {
+          "source_id": "spa5k-en-tafisr-ibn-kathir",
+          "source_name": "Tafsir Ibn Kathir (English)",
+          "author": "Hafiz Ibn Kathir",
+          "text": "The Meaning of Al Fatiha & its Various Names\n\nThis Surah is called Al-Fatihah, that is, the Opener of the Book, the Surah with which prayers are begun. It is also called, Umm Al-Kitab (the Mother of the Book), according to the majority of the scholars. In an authentic Hadith recorded by At-Tirmidhi, who graded it Sahih, Abu Hurayrah said that the Messenger of Allah ﷺ said,\n\nالْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ أُمُّ الْقُرْآنِ وَأُمُّ الْكِتَابِ وَالسَّبْعُ الْمَثَانِي وَالْقُرْآنُ الْعَظِيمُ\n\n(Al-Hamdu lillahi Rabbil-'Alamin is the Mother of the Qur'an, the Mother of the Book, and the seven repeated Ayat of the Glorious Qur'an.)",
+          "verification_status": "sourced",
+          "complexity_level": 2
+        }
+      ]
+    },
+    {
+      "ayah_number": 4,
+      "verse_key": "1:4",
+      "arabic": "مَـٰلِكِ يَوْمِ ٱلدِّينِ",
+      "juz": 1,
+      "page": 1,
+      "manzil": 1,
+      "ruku": 4,
+      "hizb_quarter": 1,
+      "sajda": false,
+      "words": [
+        {
+          "position": 1,
+          "location": "1:4:1",
+          "arabic": "مَـٰلِكِ",
+          "arabic_normalized": "مالك",
+          "transliteration": "māliki",
+          "translation": "(The) Master",
+          "root": "م-ل-ك",
+          "root_meaning": "to possess, to king",
+          "morphology": {
+            "tag": "N",
+            "description": "genitive masculine active participle",
+            "arabic_grammar": "اسم مجرور"
+          },
+          "occurrences": {
+            "total": 206,
+            "breakdown": [
+              {
+                "form": "malakat (verb I)",
+                "count": 44
+              },
+              {
+                "form": "mālik (proper noun)",
+                "count": 1
+              },
+              {
+                "form": "malik (nominal)",
+                "count": 15
+              },
+              {
+                "form": "malak (noun)",
+                "count": 88
+              },
+              {
+                "form": "mul'k (noun)",
+                "count": 48
+              },
+              {
+                "form": "malk (noun)",
+                "count": 1
+              },
+              {
+                "form": "malakūt (noun)",
+                "count": 4
+              },
+              {
+                "form": "malīk (noun)",
+                "count": 1
+              },
+              {
+                "form": "mālik (participle)",
+                "count": 3
+              },
+              {
+                "form": "mamlūk (participle)",
+                "count": 1
+              }
+            ]
+          },
+          "source_id": "corpus-quran-com",
+          "verification_status": "verified",
+          "wazn": {
+            "pattern": "فَاعِل",
+            "pattern_arabic": "فَاعِل",
+            "form": "Form I active participle (اسم فاعل)",
+            "meaning": "Denotes the one who possesses or rules — the master, the king",
+            "root_in_template": "م-ل-ك → مَالِك",
+            "examples": [
+              {
+                "word": "صَاحِب",
+                "root": "ص-ح-ب",
+                "meaning": "companion, owner"
+              },
+              {
+                "word": "كَاتِب",
+                "root": "ك-ت-ب",
+                "meaning": "writer"
+              },
+              {
+                "word": "قَاضِي",
+                "root": "ق-ض-ي",
+                "meaning": "judge"
+              }
+            ]
+          },
+          "complexity_level": 2
+        },
+        {
+          "position": 2,
+          "location": "1:4:2",
+          "arabic": "يَوْمِ",
+          "arabic_normalized": "يوم",
+          "transliteration": "yawmi",
+          "translation": "(of the) Day",
+          "root": "ي-و-م",
+          "root_meaning": "day",
+          "morphology": {
+            "tag": "N",
+            "description": "genitive masculine noun → Day of Resurrection",
+            "arabic_grammar": "اسم مجرور"
+          },
+          "occurrences": {
+            "total": 405,
+            "breakdown": [
+              {
+                "form": "yawm (nominal)",
+                "count": 405
+              }
+            ]
+          },
+          "source_id": "corpus-quran-com",
+          "verification_status": "verified",
+          "wazn": {
+            "pattern": "فَعْل",
+            "pattern_arabic": "فَعْل",
+            "form": "Noun of time",
+            "meaning": "Basic noun — designates a period or occasion",
+            "root_in_template": "ي-و-م → يَوْم",
+            "examples": [
+              {
+                "word": "لَيْل",
+                "root": "ل-ي-ل",
+                "meaning": "night"
+              },
+              {
+                "word": "حِين",
+                "root": "ح-ي-ن",
+                "meaning": "time"
+              },
+              {
+                "word": "سَاعَة",
+                "root": "س-و-ع",
+                "meaning": "hour"
+              }
+            ]
+          },
+          "complexity_level": 2
+        },
+        {
+          "position": 3,
+          "location": "1:4:3",
+          "arabic": "ٱلدِّينِ",
+          "arabic_normalized": "الدين",
+          "transliteration": "l-dīni",
+          "translation": "(of the) Judgment.",
+          "root": "د-ي-ن",
+          "root_meaning": "to judge, to religion",
+          "morphology": {
+            "tag": "N",
+            "description": "genitive masculine noun",
+            "arabic_grammar": "اسم مجرور"
+          },
+          "occurrences": {
+            "total": 101,
+            "breakdown": [
+              {
+                "form": "yadīnu (verb I)",
+                "count": 1
+              },
+              {
+                "form": "tadāyan (verb VI)",
+                "count": 1
+              },
+              {
+                "form": "dīn (noun)",
+                "count": 92
+              },
+              {
+                "form": "dayn (noun)",
+                "count": 5
+              },
+              {
+                "form": "madīnīn (participle)",
+                "count": 2
+              }
+            ]
+          },
+          "source_id": "corpus-quran-com",
+          "verification_status": "verified",
+          "wazn": {
+            "pattern": "فَعْل",
+            "pattern_arabic": "فَعْل",
+            "form": "Noun — denotes a system, judgment, or way of life",
+            "meaning": "Basic noun — the concept of judgment, religion, or recompense",
+            "root_in_template": "د-ي-ن → دِين",
+            "examples": [
+              {
+                "word": "قَضَاء",
+                "root": "ق-ض-ي",
+                "meaning": "judgment"
+              },
+              {
+                "word": "ثَوَاب",
+                "root": "ث-و-ب",
+                "meaning": "reward"
+              },
+              {
+                "word": "عِقَاب",
+                "root": "ع-ق-ب",
+                "meaning": "punishment"
+              }
+            ]
+          },
+          "complexity_level": 2
+        }
+      ],
+      "tafsir": [
+        {
+          "source_id": "spa5k-en-al-jalalayn",
+          "source_name": "Tafsir al-Jalalayn",
+          "author": "Jalal ad-Din al-Mahalli & Jalal ad-Din as-Suyuti",
+          "text": "Master of the Day of Judgement that is the day of requite the Day of Resurrection. The reason for the specific mention of the Day of Judgement is that the mastery of none shall appear on that Day except that of God may He be exalted as is indicated by God's words 'Whose is the Kingdom today?' 'God's' Q. 4016 if one reads it mālik as opposed to malik then this signifies that He has possession of the entire affair on the Day of Resurrection or else that He is ever described by this expression in the same way as He is described as 'Forgiver of sin' ghāfir al-dhanb. Thus one can validly take it as an adjective of a definite noun.",
+          "verification_status": "sourced",
+          "complexity_level": 2
+        },
+        {
+          "source_id": "spa5k-en-tafisr-ibn-kathir",
+          "source_name": "Tafsir Ibn Kathir (English)",
+          "author": "Hafiz Ibn Kathir",
+          "text": "The Meaning of Al Fatiha & its Various Names\n\nThis Surah is called Al-Fatihah, that is, the Opener of the Book, the Surah with which prayers are begun. It is also called, Umm Al-Kitab (the Mother of the Book), according to the majority of the scholars. In an authentic Hadith recorded by At-Tirmidhi, who graded it Sahih, Abu Hurayrah said that the Messenger of Allah ﷺ said,\n\nالْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ أُمُّ الْقُرْآنِ وَأُمُّ الْكِتَابِ وَالسَّبْعُ الْمَثَانِي وَالْقُرْآنُ الْعَظِيمُ\n\n(Al-Hamdu lillahi Rabbil-'Alamin is the Mother of the Qur'an, the Mother of the Book, and the seven repeated Ayat of the Glorious Qur'an.)",
+          "verification_status": "sourced",
+          "complexity_level": 2
+        }
+      ]
+    },
+    {
+      "ayah_number": 5,
+      "verse_key": "1:5",
+      "arabic": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
+      "juz": 1,
+      "page": 1,
+      "manzil": 1,
+      "ruku": 5,
+      "hizb_quarter": 1,
+      "sajda": false,
+      "words": [
+        {
+          "position": 1,
+          "location": "1:5:1",
+          "arabic": "إِيَّاكَ",
+          "arabic_normalized": "اياك",
+          "transliteration": "iyyāka",
+          "translation": "You Alone",
+          "root": null,
+          "root_meaning": null,
+          "morphology": {
+            "tag": "PRON",
+            "description": "2nd person masculine singular personal pronoun → Allah",
+            "arabic_grammar": "ضمير منفصل"
+          },
+          "occurrences": null,
+          "source_id": "corpus-quran-com",
+          "verification_status": "verified",
+          "wazn": {
+            "pattern": null,
+            "pattern_arabic": null,
+            "form": null,
+            "meaning": "Pronoun (ضمير) — no lexical root; grammatical particle",
+            "root_in_template": null,
+            "examples": []
+          },
+          "complexity_level": 2
+        },
+        {
+          "position": 2,
+          "location": "1:5:2",
+          "arabic": "نَعْبُدُ",
+          "arabic_normalized": "نعبد",
+          "transliteration": "naʿbudu",
+          "translation": "we worship,",
+          "root": "ع-ب-د",
+          "root_meaning": "to worship, to serve",
+          "morphology": {
+            "tag": "V",
+            "description": "1st person plural imperfect verb",
+            "arabic_grammar": "فعل مضارع"
+          },
+          "occurrences": {
+            "total": 275,
+            "breakdown": [
+              {
+                "form": "ʿabada (verb I)",
+                "count": 122
+              },
+              {
+                "form": "ʿabbad (verb II)",
+                "count": 1
+              },
+              {
+                "form": "ʿābidāt (adjective)",
+                "count": 1
+              },
+              {
+                "form": "ʿibādat (noun)",
+                "count": 9
+              },
+              {
+                "form": "ʿabd (noun)",
+                "count": 131
+              },
+              {
+                "form": "ʿābid (participle)",
+                "count": 11
+              }
+            ]
+          },
+          "source_id": "corpus-quran-com",
+          "verification_status": "verified",
+          "wazn": {
+            "pattern": "نَفْعُلُ",
+            "pattern_arabic": "نَفْعُلُ",
+            "form": "Form I imperfect verb — 1st person plural",
+            "meaning": "We [are] worshipping — the imperfect indicates ongoing action",
+            "root_in_template": "ع-ب-د → نَعْبُدُ",
+            "examples": [
+              {
+                "word": "نَقُولُ",
+                "root": "ق-و-ل",
+                "meaning": "we say"
+              },
+              {
+                "word": "نَذْهَبُ",
+                "root": "ذ-ه-ب",
+                "meaning": "we go"
+              },
+              {
+                "word": "نَعْلَمُ",
+                "root": "ع-ل-م",
+                "meaning": "we know"
+              }
+            ]
+          },
+          "complexity_level": 2
+        },
+        {
+          "position": 3,
+          "location": "1:5:3",
+          "arabic": "وَإِيَّاكَ",
+          "arabic_normalized": "واياك",
+          "transliteration": "wa-iyyāka",
+          "translation": "and You Alone",
+          "root": null,
+          "root_meaning": null,
+          "morphology": {
+            "tag": "CONJ-PRON",
+            "description": "prefixed conjunction wa + 2nd person masculine singular personal pronoun → Allah",
+            "arabic_grammar": "الواو عاطفة + ضمير منفصل"
+          },
+          "occurrences": null,
+          "source_id": "corpus-quran-com",
+          "verification_status": "verified",
+          "wazn": {
+            "pattern": null,
+            "pattern_arabic": null,
+            "form": null,
+            "meaning": "Conjunction + Pronoun (حرف عطف + ضمير) — no lexical root",
+            "root_in_template": null,
+            "examples": []
+          },
+          "complexity_level": 2
+        },
+        {
+          "position": 4,
+          "location": "1:5:4",
+          "arabic": "نَسْتَعِينُ",
+          "arabic_normalized": "نستعين",
+          "transliteration": "nastaʿīnu",
+          "translation": "we ask for help.",
+          "root": "ع-و-ن",
+          "root_meaning": "to help",
+          "morphology": {
+            "tag": "V",
+            "description": "1st person plural (form X) imperfect verb",
+            "arabic_grammar": "فعل مضارع"
+          },
+          "occurrences": {
+            "total": 11,
+            "breakdown": [
+              {
+                "form": "aʿāna (verb IV)",
+                "count": 2
+              },
+              {
+                "form": "taʿāwanu (verb VI)",
+                "count": 2
+              },
+              {
+                "form": "is'taʿīnu (verb X)",
+                "count": 4
+              },
+              {
+                "form": "ʿawān (noun)",
+                "count": 1
+              },
+              {
+                "form": "mus'taʿān (participle)",
+                "count": 2
+              }
+            ]
+          },
+          "source_id": "corpus-quran-com",
+          "verification_status": "verified",
+          "wazn": {
+            "pattern": "نَسْتَفْعِلُ",
+            "pattern_arabic": "نَسْتَفْعِلُ",
+            "form": "Form X imperfect verb — 1st person plural",
+            "meaning": "We [are] asking for help — Form X adds the meaning of seeking or requesting",
+            "root_in_template": "ع-و-ن → نَسْتَعِينُ",
+            "examples": [
+              {
+                "word": "نَسْتَغْفِرُ",
+                "root": "غ-ف-ر",
+                "meaning": "we seek forgiveness"
+              },
+              {
+                "word": "نَسْتَمِعُ",
+                "root": "س-م-ع",
+                "meaning": "we listen"
+              },
+              {
+                "word": "نَصْبِرُ",
+                "root": "ص-ب-ر",
+                "meaning": "we are patient (Form I, different)"
+              }
+            ]
+          },
+          "complexity_level": 2
+        }
+      ],
+      "tafsir": [
+        {
+          "source_id": "spa5k-en-al-jalalayn",
+          "source_name": "Tafsir al-Jalalayn",
+          "author": "Jalal ad-Din al-Mahalli & Jalal ad-Din as-Suyuti",
+          "text": "You alone we worship and You alone we ask for help that is to say we reserve worship for You alone by way of acknowledging Your Oneness tawhīd and so on and we ask for Your assistance in worship and in other things.",
+          "verification_status": "sourced",
+          "complexity_level": 2
+        },
+        {
+          "source_id": "spa5k-en-tafisr-ibn-kathir",
+          "source_name": "Tafsir Ibn Kathir (English)",
+          "author": "Hafiz Ibn Kathir",
+          "text": "The Meaning of Al Fatiha & its Various Names\n\nThis Surah is called Al-Fatihah, that is, the Opener of the Book, the Surah with which prayers are begun. It is also called, Umm Al-Kitab (the Mother of the Book), according to the majority of the scholars. In an authentic Hadith recorded by At-Tirmidhi, who graded it Sahih, Abu Hurayrah said that the Messenger of Allah ﷺ said,\n\nالْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ أُمُّ الْقُرْآنِ وَأُمُّ الْكِتَابِ وَالسَّبْعُ الْمَثَانِي وَالْقُرْآنُ الْعَظِيمُ\n\n(Al-Hamdu lillahi Rabbil-'Alamin is the Mother of the Qur'an, the Mother of the Book, and the seven repeated Ayat of the Glorious Qur'an.)",
+          "verification_status": "sourced",
+          "complexity_level": 2
+        }
+      ]
+    },
+    {
+      "ayah_number": 6,
+      "verse_key": "1:6",
+      "arabic": "ٱهْدِنَا ٱلصِّرَ ٰطَ ٱلْمُسْتَقِيمَ",
+      "juz": 1,
+      "page": 1,
+      "manzil": 1,
+      "ruku": 6,
+      "hizb_quarter": 1,
+      "sajda": false,
+      "words": [
+        {
+          "position": 1,
+          "location": "1:6:1",
+          "arabic": "ٱهْدِنَا",
+          "arabic_normalized": "اهدنا",
+          "transliteration": "ih'dinā",
+          "translation": "Guide us",
+          "root": "ه-د-ي",
+          "root_meaning": "to guide",
+          "morphology": {
+            "tag": "V-PRON",
+            "description": "2nd person masculine singular imperative verb + 1st person plural object pronoun",
+            "arabic_grammar": "فعل أمر و«نا» ضمير متصل في محل نصب مفعول به"
+          },
+          "occurrences": {
+            "total": 316,
+            "breakdown": [
+              {
+                "form": "hadā (verb I)",
+                "count": 144
+              },
+              {
+                "form": "ih'tadā (verb VIII)",
+                "count": 40
+              },
+              {
+                "form": "ahdā (noun)",
+                "count": 7
+              },
+              {
+                "form": "hudan (noun)",
+                "count": 85
+              },
+              {
+                "form": "hadī (noun)",
+                "count": 7
+              },
+              {
+                "form": "hadiyyat (noun)",
+                "count": 2
+              },
+              {
+                "form": "hād (participle)",
+                "count": 7
+              },
+              {
+                "form": "hādī (participle)",
+                "count": 3
+              },
+              {
+                "form": "muh'tad (participle VIII)",
+                "count": 3
+              },
+              {
+                "form": "muh'tadūn (participle VIII)",
+                "count": 17
+              },
+              {
+                "form": "muh'tadī (participle VIII)",
+                "count": 1
+              }
+            ]
+          },
+          "source_id": "corpus-quran-com",
+          "verification_status": "verified",
+          "wazn": {
+            "pattern": "اِهْدِ",
+            "pattern_arabic": "اِفْعِلْ",
+            "form": "Form I imperative (فعل أمر)",
+            "meaning": "Command form — 'Guide!' — directed to Allah in supplication",
+            "root_in_template": "ه-د-ي → اِهْدِ",
+            "examples": [
+              {
+                "word": "اِقْرَأْ",
+                "root": "ق-ر-أ",
+                "meaning": "read!"
+              },
+              {
+                "word": "اُكْتُبْ",
+                "root": "ك-ت-ب",
+                "meaning": "write!"
+              },
+              {
+                "word": "اِسْمَعْ",
+                "root": "س-م-ع",
+                "meaning": "listen!"
+              }
+            ]
+          },
+          "complexity_level": 2
+        },
+        {
+          "position": 2,
+          "location": "1:6:2",
+          "arabic": "ٱلصِّرَ ٰطَ",
+          "arabic_normalized": "الصراط",
+          "transliteration": "l-ṣirāṭa",
+          "translation": "(to) the path,",
+          "root": "ص-ر-ط",
+          "root_meaning": "path, way",
+          "morphology": {
+            "tag": "N",
+            "description": "accusative masculine noun",
+            "arabic_grammar": "اسم منصوب"
+          },
+          "occurrences": {
+            "total": 45,
+            "breakdown": [
+              {
+                "form": "ṣirāṭ (noun)",
+                "count": 45
+              }
+            ]
+          },
+          "source_id": "corpus-quran-com",
+          "verification_status": "verified",
+          "wazn": {
+            "pattern": "فِعَال",
+            "pattern_arabic": "فِعَال",
+            "form": "Noun denoting a path or way",
+            "meaning": "A well-trodden path — the pattern فِعَال is common for nouns that denote a clear, established route",
+            "root_in_template": "ص-ر-ط → صِرَاط",
+            "examples": [
+              {
+                "word": "كِتَاب",
+                "root": "ك-ت-ب",
+                "meaning": "book"
+              },
+              {
+                "word": "حِبَال",
+                "root": "ح-ب-ل",
+                "meaning": "ropes"
+              },
+              {
+                "word": "لِبَاس",
+                "root": "ل-ب-س",
+                "meaning": "clothing"
+              }
+            ]
+          },
+          "complexity_level": 2
+        },
+        {
+          "position": 3,
+          "location": "1:6:3",
+          "arabic": "ٱلْمُسْتَقِيمَ",
+          "arabic_normalized": "المستقيم",
+          "transliteration": "l-mus'taqīma",
+          "translation": "the straight.",
+          "root": "ق-و-م",
+          "root_meaning": "to stand, to upright",
+          "morphology": {
+            "tag": "ADJ",
+            "description": "accusative masculine (form X) active participle",
+            "arabic_grammar": "صفة منصوبة"
+          },
+          "occurrences": {
+            "total": 660,
+            "breakdown": [
+              {
+                "form": "qāma (verb I)",
+                "count": 33
+              },
+              {
+                "form": "aqāma (verb IV)",
+                "count": 54
+              },
+              {
+                "form": "is'taqāmu (verb X)",
+                "count": 10
+              },
+              {
+                "form": "aqwam (noun)",
+                "count": 4
+              },
+              {
+                "form": "qawām (noun)",
+                "count": 1
+              },
+              {
+                "form": "qawwāmīn (noun)",
+                "count": 3
+              },
+              {
+                "form": "qawm (noun)",
+                "count": 383
+              },
+              {
+                "form": "qiyāmat (noun)",
+                "count": 70
+              },
+              {
+                "form": "qiyam (adjective)",
+                "count": 1
+              },
+              {
+                "form": "qayyim (adjective)",
+                "count": 5
+              },
+              {
+                "form": "qayyimat (nominal)",
+                "count": 2
+              },
+              {
+                "form": "qayyūm (adjective)",
+                "count": 3
+              },
+              {
+                "form": "maqām (noun)",
+                "count": 14
+              },
+              {
+                "form": "qāim (participle)",
+                "count": 17
+              },
+              {
+                "form": "qāimat (participle)",
+                "count": 5
+              },
+              {
+                "form": "taqwīm (verbal noun)",
+                "count": 1
+              },
+              {
+                "form": "iqām (verbal noun)",
+                "count": 2
+              },
+              {
+                "form": "iqāmat (verbal noun)",
+                "count": 1
+              },
+              {
+                "form": "muqīm (participle)",
+                "count": 10
+              },
+              {
+                "form": "muqām (participle)",
+                "count": 3
+              },
+              {
+                "form": "muqāmat (participle)",
+                "count": 1
+              },
+              {
+                "form": "mus'taqīm (participle)",
+                "count": 37
+              }
+            ]
+          },
+          "source_id": "corpus-quran-com",
+          "verification_status": "verified",
+          "wazn": {
+            "pattern": "مُسْتَفْعِلُ",
+            "pattern_arabic": "مُسْتَفْعِلُ",
+            "form": "Form X active participle (اسم فاعل من الفعل المزيد)",
+            "meaning": "The one who stands upright — Form X adds the meaning of seeking to stand or be straight",
+            "root_in_template": "ق-و-م → مُسْتَقِيم",
+            "examples": [
+              {
+                "word": "مُسْتَمِعُ",
+                "root": "س-م-ع",
+                "meaning": "listener"
+              },
+              {
+                "word": "مُسْتَغْفِرُ",
+                "root": "غ-ف-ر",
+                "meaning": "forgiveness-seeker"
+              },
+              {
+                "word": "مُسْتَوْدِعُ",
+                "root": "و-د-ع",
+                "meaning": "one who entrusts"
+              }
+            ]
+          },
+          "complexity_level": 2
+        }
+      ],
+      "tafsir": [
+        {
+          "source_id": "spa5k-en-al-jalalayn",
+          "source_name": "Tafsir al-Jalalayn",
+          "author": "Jalal ad-Din al-Mahalli & Jalal ad-Din as-Suyuti",
+          "text": "Guide us to the straight path that is 'show us the way to it'. This is substituted by",
+          "verification_status": "sourced",
+          "complexity_level": 2
+        },
+        {
+          "source_id": "spa5k-en-tafisr-ibn-kathir",
+          "source_name": "Tafsir Ibn Kathir (English)",
+          "author": "Hafiz Ibn Kathir",
+          "text": "The Meaning of Al Fatiha & its Various Names\n\nThis Surah is called Al-Fatihah, that is, the Opener of the Book, the Surah with which prayers are begun. It is also called, Umm Al-Kitab (the Mother of the Book), according to the majority of the scholars. In an authentic Hadith recorded by At-Tirmidhi, who graded it Sahih, Abu Hurayrah said that the Messenger of Allah ﷺ said,\n\nالْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ أُمُّ الْقُرْآنِ وَأُمُّ الْكِتَابِ وَالسَّبْعُ الْمَثَانِي وَالْقُرْآنُ الْعَظِيمُ\n\n(Al-Hamdu lillahi Rabbil-'Alamin is the Mother of the Qur'an, the Mother of the Book, and the seven repeated Ayat of the Glorious Qur'an.)",
+          "verification_status": "sourced",
+          "complexity_level": 2
+        }
+      ]
+    },
+    {
+      "ayah_number": 7,
+      "verse_key": "1:7",
+      "arabic": "صِرَ ٰطَ ٱلَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ ٱلْمَغْضُوبِ عَلَيْهِمْ وَلَا ٱلضَّاۤلِّينَ",
+      "juz": 1,
+      "page": 1,
+      "manzil": 1,
+      "ruku": 7,
+      "hizb_quarter": 1,
+      "sajda": false,
+      "words": [
+        {
+          "position": 1,
+          "location": "1:7:1",
+          "arabic": "صِرَ ٰطَ",
+          "arabic_normalized": "صراط",
+          "transliteration": "ṣirāṭa",
+          "translation": "(The) path",
+          "root": "ص-ر-ط",
+          "root_meaning": "path, way",
+          "morphology": {
+            "tag": "N",
+            "description": "accusative masculine noun",
+            "arabic_grammar": "اسم منصوب"
+          },
+          "occurrences": {
+            "total": 45,
+            "breakdown": "same root as 1:6:2"
+          },
+          "source_id": "corpus-quran-com",
+          "verification_status": "verified",
+          "wazn": {
+            "pattern": "فِعَال",
+            "pattern_arabic": "فِعَال",
+            "form": "Noun denoting a path or way",
+            "meaning": "Same as 1:6:2 — path, way",
+            "root_in_template": "ص-ر-ط → صِرَاط",
+            "examples": [
+              {
+                "word": "صِرَاط",
+                "root": "ص-ر-ط",
+                "meaning": "path"
+              },
+              {
+                "word": "مِثَال",
+                "root": "م-ث-ل",
+                "meaning": "example"
+              },
+              {
+                "word": "حِصَار",
+                "root": "ح-ص-ر",
+                "meaning": "siege"
+              }
+            ]
+          },
+          "complexity_level": 2
+        },
+        {
+          "position": 2,
+          "location": "1:7:2",
+          "arabic": "ٱلَّذِينَ",
+          "arabic_normalized": "الذين",
+          "transliteration": "alladhīna",
+          "translation": "(of) those",
+          "root": null,
+          "root_meaning": null,
+          "morphology": {
+            "tag": "REL",
+            "description": "masculine plural relative pronoun",
+            "arabic_grammar": "اسم موصول"
+          },
+          "occurrences": null,
+          "source_id": "corpus-quran-com",
+          "verification_status": "verified",
+          "wazn": {
+            "pattern": null,
+            "pattern_arabic": null,
+            "form": null,
+            "meaning": "Relative pronoun (اسم موصول) — no lexical root",
+            "root_in_template": null,
+            "examples": []
+          },
+          "complexity_level": 2
+        },
+        {
+          "position": 3,
+          "location": "1:7:3",
+          "arabic": "أَنْعَمْتَ",
+          "arabic_normalized": "انعمت",
+          "transliteration": "anʿamta",
+          "translation": "You have bestowed (Your) Favors",
+          "root": "ن-ع-م",
+          "root_meaning": "to favor, to bless",
+          "morphology": {
+            "tag": "V",
+            "description": "2nd person masculine singular (form IV) perfect verb",
+            "arabic_grammar": "فعل ماض والتاء ضمير متصل في محل رفع فاعل"
+          },
+          "occurrences": {
+            "total": 140,
+            "breakdown": [
+              {
+                "form": "niʿ'ma (verb I)",
+                "count": 18
+              },
+              {
+                "form": "naʿʿama (verb II)",
+                "count": 1
+              },
+              {
+                "form": "anʿama (verb IV)",
+                "count": 17
+              },
+              {
+                "form": "naʿam (noun)",
+                "count": 33
+              },
+              {
+                "form": "naʿmā (noun)",
+                "count": 1
+              },
+              {
+                "form": "niʿ'mat (noun)",
+                "count": 50
+              },
+              {
+                "form": "naʿmat (noun)",
+                "count": 2
+              },
+              {
+                "form": "naʿīm (noun)",
+                "count": 17
+              },
+              {
+                "form": "nāʿimat (participle)",
+                "count": 1
+              }
+            ]
+          },
+          "source_id": "corpus-quran-com",
+          "verification_status": "verified",
+          "wazn": {
+            "pattern": "أَفْعَلْتَ",
+            "pattern_arabic": "أَفْعَلْتَ",
+            "form": "Form IV perfect verb — 2nd person masculine singular",
+            "meaning": "You have favored — Form IV adds a causative or intensive meaning to the root",
+            "root_in_template": "ن-ع-م → أَنْعَمْتَ",
+            "examples": [
+              {
+                "word": "أَكْرَمْتَ",
+                "root": "ك-ر-م",
+                "meaning": "you have honored"
+              },
+              {
+                "word": "أَحْبَبْتَ",
+                "root": "ح-ب-ب",
+                "meaning": "you have loved"
+              },
+              {
+                "word": "أَعْطَيْتَ",
+                "root": "ع-ط-ي",
+                "meaning": "you have given (Form IV with weak letter)"
+              }
+            ]
+          },
+          "complexity_level": 2
+        },
+        {
+          "position": 4,
+          "location": "1:7:4",
+          "arabic": "عَلَيْهِمْ",
+          "arabic_normalized": "عليهم",
+          "transliteration": "ʿalayhim",
+          "translation": "on them,",
+          "root": "ع-ل-ي",
+          "root_meaning": "upon, over",
+          "morphology": {
+            "tag": "P-PRON",
+            "description": "preposition + 3rd person masculine plural object pronoun",
+            "arabic_grammar": "جار ومجرور"
+          },
+          "occurrences": null,
+          "source_id": "corpus-quran-com",
+          "verification_status": "verified",
+          "wazn": {
+            "pattern": "فَعْلَى",
+            "pattern_arabic": "فَعْلَى",
+            "form": "Preposition (حرف جر)",
+            "meaning": "Upon, over — indicates position or authority",
+            "root_in_template": "ع-ل-ي → عَلَى",
+            "examples": [
+              {
+                "word": "إِلَى",
+                "root": "ء-ل-ي",
+                "meaning": "to, towards"
+              },
+              {
+                "word": "حَتَّى",
+                "root": "ح-ت-ي",
+                "meaning": "until"
+              },
+              {
+                "word": "لَدَى",
+                "root": "ل-د-ي",
+                "meaning": "at, with"
+              }
+            ]
+          },
+          "complexity_level": 2
+        },
+        {
+          "position": 5,
+          "location": "1:7:5",
+          "arabic": "غَيْرِ",
+          "arabic_normalized": "غير",
+          "transliteration": "ghayri",
+          "translation": "not (of)",
+          "root": "غ-ي-ر",
+          "root_meaning": "other than, not",
+          "morphology": {
+            "tag": "N",
+            "description": "genitive masculine noun",
+            "arabic_grammar": "اسم مجرور"
+          },
+          "occurrences": {
+            "total": 154,
+            "breakdown": [
+              {
+                "form": "yughayyiru (verb II)",
+                "count": 4
+              },
+              {
+                "form": "yataghayyar (verb V)",
+                "count": 1
+              },
+              {
+                "form": "ghayr (nominal)",
+                "count": 147
+              },
+              {
+                "form": "mughayyir (participle II)",
+                "count": 1
+              },
+              {
+                "form": "mughīrāt (participle IV)",
+                "count": 1
+              }
+            ]
+          },
+          "source_id": "corpus-quran-com",
+          "verification_status": "verified",
+          "wazn": {
+            "pattern": "فَعْل",
+            "pattern_arabic": "فَعْل",
+            "form": "Noun denoting otherness or change",
+            "meaning": "Other than, different from — often used with negation",
+            "root_in_template": "غ-ي-ر → غَيْر",
+            "examples": [
+              {
+                "word": "سِوَى",
+                "root": "س-و-ي",
+                "meaning": "other, besides"
+              },
+              {
+                "word": "بَدْل",
+                "root": "ب-د-ل",
+                "meaning": "substitute"
+              },
+              {
+                "word": "عِوَج",
+                "root": "ع-و-ج",
+                "meaning": "crookedness"
+              }
+            ]
+          },
+          "complexity_level": 2
+        },
+        {
+          "position": 6,
+          "location": "1:7:6",
+          "arabic": "ٱلْمَغْضُوبِ",
+          "arabic_normalized": "المغضوب",
+          "transliteration": "l-maghḍūbi",
+          "translation": "those who earned (Your) wrath",
+          "root": "غ-ض-ب",
+          "root_meaning": "to anger, to wrath",
+          "morphology": {
+            "tag": "N",
+            "description": "genitive masculine passive participle",
+            "arabic_grammar": "اسم مجرور"
+          },
+          "occurrences": {
+            "total": 24,
+            "breakdown": [
+              {
+                "form": "ghaḍiba (verb I)",
+                "count": 6
+              },
+              {
+                "form": "ghaḍab (noun)",
+                "count": 14
+              },
+              {
+                "form": "ghaḍbān (noun)",
+                "count": 2
+              },
+              {
+                "form": "maghḍūb (participle)",
+                "count": 1
+              },
+              {
+                "form": "mughāḍib (participle)",
+                "count": 1
+              }
+            ]
+          },
+          "source_id": "corpus-quran-com",
+          "verification_status": "verified",
+          "wazn": {
+            "pattern": "مَفْعُول",
+            "pattern_arabic": "مَفْعُول",
+            "form": "Form I passive participle (اسم مفعول)",
+            "meaning": "The one upon whom anger is directed — the passive participle denotes the receiver of the action",
+            "root_in_template": "غ-ض-ب → مَغْضُوب",
+            "examples": [
+              {
+                "word": "مَعْلُوم",
+                "root": "ع-ل-م",
+                "meaning": "known"
+              },
+              {
+                "word": "مَكْتُوب",
+                "root": "ك-ت-ب",
+                "meaning": "written"
+              },
+              {
+                "word": "مَذْكُور",
+                "root": "ذ-ك-ر",
+                "meaning": "mentioned"
+              }
+            ]
+          },
+          "complexity_level": 2
+        },
+        {
+          "position": 7,
+          "location": "1:7:7",
+          "arabic": "عَلَيْهِمْ",
+          "arabic_normalized": "عليهم",
+          "transliteration": "ʿalayhim",
+          "translation": "on themselves",
+          "root": "ع-ل-ي",
+          "root_meaning": "upon, over",
+          "morphology": {
+            "tag": "P-PRON",
+            "description": "preposition + 3rd person masculine plural object pronoun",
+            "arabic_grammar": "جار ومجرور"
+          },
+          "occurrences": {
+            "total": 194,
+            "breakdown": "same root as 1:7:4"
+          },
+          "source_id": "corpus-quran-com",
+          "verification_status": "verified",
+          "wazn": {
+            "pattern": "فَعْلَى",
+            "pattern_arabic": "فَعْلَى",
+            "form": "Preposition (حرف جر)",
+            "meaning": "Upon, over — same as 1:7:4",
+            "root_in_template": "ع-ل-ي → عَلَى",
+            "examples": [
+              {
+                "word": "فَوْقَ",
+                "root": "ف-و-ق",
+                "meaning": "above"
+              },
+              {
+                "word": "تَحْتَ",
+                "root": "ت-ح-ت",
+                "meaning": "below"
+              },
+              {
+                "word": "وَرَاءَ",
+                "root": "و-ر-ء",
+                "meaning": "behind"
+              }
+            ]
+          },
+          "complexity_level": 2
+        },
+        {
+          "position": 8,
+          "location": "1:7:8",
+          "arabic": "وَلَا",
+          "arabic_normalized": "ولا",
+          "transliteration": "walā",
+          "translation": "and not",
+          "root": null,
+          "root_meaning": null,
+          "morphology": {
+            "tag": "CONJ-NEG",
+            "description": "prefixed conjunction wa + negative particle",
+            "arabic_grammar": "الواو عاطفة + حرف نفي"
+          },
+          "occurrences": null,
+          "source_id": "corpus-quran-com",
+          "verification_status": "verified",
+          "wazn": {
+            "pattern": null,
+            "pattern_arabic": null,
+            "form": null,
+            "meaning": "Conjunction + Negative particle (حرف عطف + حرف نفي) — no lexical root",
+            "root_in_template": null,
+            "examples": []
+          },
+          "complexity_level": 2
+        },
+        {
+          "position": 9,
+          "location": "1:7:9",
+          "arabic": "ٱلضَّاۤلِّينَ",
+          "arabic_normalized": "الضالين",
+          "transliteration": "l-ḍālīna",
+          "translation": "(of) those who go astray.",
+          "root": "ض-ل-ل",
+          "root_meaning": "to go astray, to lost",
+          "morphology": {
+            "tag": "N",
+            "description": "genitive masculine plural active participle",
+            "arabic_grammar": "اسم مجرور"
+          },
+          "occurrences": {
+            "total": 191,
+            "breakdown": [
+              {
+                "form": "ḍalla (verb I)",
+                "count": 53
+              },
+              {
+                "form": "aḍalla (verb IV)",
+                "count": 64
+              },
+              {
+                "form": "aḍall (noun)",
+                "count": 9
+              },
+              {
+                "form": "ḍalāl (noun)",
+                "count": 38
+              },
+              {
+                "form": "ḍalālat (noun)",
+                "count": 9
+              },
+              {
+                "form": "ḍāll (participle)",
+                "count": 14
+              },
+              {
+                "form": "taḍlīl (verbal noun)",
+                "count": 1
+              },
+              {
+                "form": "muḍill (participle)",
+                "count": 3
+              }
+            ]
+          },
+          "source_id": "corpus-quran-com",
+          "verification_status": "verified",
+          "wazn": {
+            "pattern": "فَاعِل",
+            "pattern_arabic": "فَاعِل",
+            "form": "Form I active participle (اسم فاعل)",
+            "meaning": "The ones who go astray — the active participle denotes the one who performs the action",
+            "root_in_template": "ض-ل-ل → ضَالّ (singular), ضَالُّونَ/ضَالِّينَ (plural)",
+            "examples": [
+              {
+                "word": "عَالِم",
+                "root": "ع-ل-م",
+                "meaning": "knower"
+              },
+              {
+                "word": "كَافِر",
+                "root": "ك-ف-ر",
+                "meaning": "disbeliever"
+              },
+              {
+                "word": "ظَالِم",
+                "root": "ظ-ل-م",
+                "meaning": "wrongdoer"
+              }
+            ]
+          },
+          "complexity_level": 2
+        }
+      ],
+      "tafsir": [
+        {
+          "source_id": "spa5k-en-al-jalalayn",
+          "source_name": "Tafsir al-Jalalayn",
+          "author": "Jalal ad-Din al-Mahalli & Jalal ad-Din as-Suyuti",
+          "text": "the path of those whom You have favoured with guidance from alladhīna together with its relative clause is substituted by ghayri l-maghdūbi 'alayhim not the path of those against whom there is wrath namely the Jews and nor of those who are astray namely the Christians. The subtle meaning implied by this substitution is that the guided ones are neither the Jews nor the Christians. But God knows best what is right and to Him is the Return and the final Resort. May God bless our master Muhammad (s) his Family and Companions and grant them everlasting peace. Sufficient is God for us; an excellent Guardian is He. There is no power and no strength save in God the High the Tremendous.",
+          "verification_status": "sourced",
+          "complexity_level": 2
+        },
+        {
+          "source_id": "spa5k-en-tafisr-ibn-kathir",
+          "source_name": "Tafsir Ibn Kathir (English)",
+          "author": "Hafiz Ibn Kathir",
+          "text": "The Meaning of Al Fatiha & its Various Names\n\nThis Surah is called Al-Fatihah, that is, the Opener of the Book, the Surah with which prayers are begun. It is also called, Umm Al-Kitab (the Mother of the Book), according to the majority of the scholars. In an authentic Hadith recorded by At-Tirmidhi, who graded it Sahih, Abu Hurayrah said that the Messenger of Allah ﷺ said,\n\nالْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ أُمُّ الْقُرْآنِ وَأُمُّ الْكِتَابِ وَالسَّبْعُ الْمَثَانِي وَالْقُرْآنُ الْعَظِيمُ\n\n(Al-Hamdu lillahi Rabbil-'Alamin is the Mother of the Qur'an, the Mother of the Book, and the seven repeated Ayat of the Glorious Qur'an.)",
+          "verification_status": "sourced",
+          "complexity_level": 2
+        }
+      ]
+    }
+  ]
+}
