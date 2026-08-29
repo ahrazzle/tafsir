@@ -100,12 +100,19 @@ const THEMES = {
 
 // Script ink (Arabic text) colour themes.
 const INK_THEMES = {
-  ink:    { label: 'Classic black', var: 'var(--ink)' },
-  sepia:  { label: 'Sepia brown', var: '#5b3a29' },
-  green:  { label: 'Green', var: 'var(--accent-ink)' },
-  navy:   { label: 'Navy', var: '#1f2d4d' },
-  maroon: { label: 'Maroon', var: '#6b2737' }
+  ink:        { label: 'Black / White', var: 'var(--ink)' },
+  sepiaBg:    { label: 'Sepia parchment', var: '#F3E9D8' },
+  sepia:      { label: 'Sepia brown', var: '#5b3a29' },
+  green:      { label: 'Green', var: 'var(--accent-ink)' },
+  navy:       { label: 'Navy', var: '#1f2d4d' },
+  maroon:     { label: 'Maroon', var: '#6b2737' }
 };
+// Dark themes where a fixed ink colour would lose contrast against the dark
+// background. On these, any fixed ink (sepia brown / green / navy / maroon) is
+// remapped to the light sepia-parchment ink for readability. The 'ink'
+// (Black / White) adapts via var(--ink) and is exempt.
+const DARK_INK_THEMES = ['midnight', 'royal'];
+const SEPIA_PARCHMENT = '#F3E9D8';
 
 // ─── State ────────────────────────────────────────────────────────
 let NAV = null;
@@ -196,8 +203,16 @@ function populateSettingsControls() {
 function applyTheme() {
   const root = document.documentElement;
   root.setAttribute('data-theme', settings.theme);
-  // ink theme applies via a CSS var on :root
-  root.style.setProperty('--ink-arabic', INK_THEMES[settings.ink].var);
+  // Ink colour for the Arabic text. The 'ink' (Black / White) theme adapts via
+  // var(--ink) and is always readable on any background. On a dark theme, any
+  // fixed ink colour (sepia / green / navy / maroon / sepiaBg) is remapped to
+  // the light sepia-parchment ink so the text stays readable. Manual selection
+  // of 'sepiaBg' still works and simply resolves to the same parchment colour.
+  let inkVar = INK_THEMES[settings.ink].var;
+  if (DARK_INK_THEMES.includes(settings.theme) && settings.ink !== 'ink') {
+    inkVar = SEPIA_PARCHMENT;
+  }
+  root.style.setProperty('--ink-arabic', inkVar);
   // preload script font if needed
   const f = SCRIPT_OPTIONS[settings.script].load;
   let link = document.getElementById('dynamic-font');
