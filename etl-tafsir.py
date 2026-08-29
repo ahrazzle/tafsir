@@ -19,6 +19,8 @@ SURAHS = [1, 2]
 JUZ1_BAQARAH_MAX = 141  # Juz 1 covers 2:1-141
 
 # Edition order (default_order from Azaraki's spec)
+# NOTE: Sa'di slug is ar-tafseer-al-saddi (registry-correct), not ar-tafsir-al-saddi.
+# Tahrir slug is dead on spa5k (404) — see etl-log.json.
 EDITION_ORDER = [
     "spa5k-en-al-jalalayn",
     "spa5k-en-tafisr-ibn-kathir",
