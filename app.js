@@ -35,13 +35,15 @@ const TAJWEED_STYLES = {
   }
 };
 
-// Script / typeface options. The rasm (Hafs text) is identical; only the
-// calligraphic typeface differs. Fonts loaded from Google Fonts CDN.
+// Script / orthography options. The user picks the Arabic orthography used for
+// display: Uthmani (canonical Madinah), IndoPak (South Asian), or Imlaei.
+// Per-ayah script fields (arabic_uthmani/arabic_indopak/arabic_imlaei) are
+// sourced from the Quran Foundation API (Sheikh Al-Jabr, stage 4).
+// Typeface is a separate dimension (font choice), not conflated with script.
 const SCRIPT_OPTIONS = {
   uthmani: { label: 'Uthmani (Madinah)', font: "'Amiri', 'Scheherazade New', serif", load: 'Amiri:wght@400;700&family=Scheherazade+New:wght@400;700' },
   indopak: { label: 'IndoPak (South Asian)', font: "'Lateef', serif", load: 'Lateef:wght@400;700' },
-  clean:   { label: 'Clean (Noto Naskh)', font: "'Noto Naskh Arabic', serif", load: 'Noto+Naskh+Arabic:wght@400;700' },
-  maghribi:{ label: 'West African (Qalam)', font: "'Aref Ruqaa', serif", load: 'Aref+Ruqaa:wght@400;700' }
+  imlaei:  { label: 'Imlaei (Modern)', font: "'Noto Naskh Arabic', serif", load: 'Noto+Naskh+Arabic:wght@400;700' }
 };
 
 // Qira'at (variant readings) — the Quranically-correct framing for what the UI
@@ -440,7 +442,27 @@ async function renderVerses(data, filterPage) {
     const words = (ayah.words && ayah.words.length) ? ayah.words : [{ location: ayah.verse_key + ':0', arabic: ayah.arabic, translation: '' }];
     const tjTokens = tjData && tjData.ayahs ? tjData.ayahs[ayah.verse_key] : null;
 
-    if (tjTokens && settings.tajweed) {
+    // Orthography-aware rendering: when a script other than the base word text
+    // is selected, render the per-ayah script field (arabic_uthmani/indopak/
+    // imlaei) as a single tap target. Word-level spans stay on 'arabic' (the
+    // Uthmani base) so morphology/tafsir word-tap keeps working.
+    const scriptField = {
+      uthmani: 'arabic_uthmani',
+      indopak: 'arabic_indopak',
+      imlaei: 'arabic_imlaei'
+    }[settings.script];
+    const altText = scriptField && ayah[scriptField];
+
+    if (altText && settings.script !== 'uthmani') {
+      // Alternate orthography: render the whole ayah as one tap target that
+      // opens the study pane on its first word.
+      const span = document.createElement('span');
+      span.className = 'word';
+      span.textContent = altText;
+      span.setAttribute('data-location', (words[0] && words[0].location) || (ayah.verse_key + ':0'));
+      span.addEventListener('click', () => openStudyPane(words[0], ayah));
+      arabicDiv.appendChild(span);
+    } else if (tjTokens && settings.tajweed) {
       // token-level colouring
       tjTokens.forEach(tok => {
         const span = document.createElement('span');
@@ -812,7 +834,7 @@ if (tajweedStyleSel) tajweedStyleSel.addEventListener('change', () => {
   saveSettings();
   try { renderVerses(loadedData[currentSurah], currentPage); } catch (e) {}
 });
-if (scriptSel) scriptSel.addEventListener('change', () => { settings.script = scriptSel.value; applyTheme(); });
+if (scriptSel) scriptSel.addEventListener('change', () => { settings.script = scriptSel.value; applyTheme(); try { renderVerses(loadedData[currentSurah], currentPage); } catch (e) {} });
 if (themeSel) themeSel.addEventListener('change', () => { settings.theme = themeSel.value; applyTheme(); });
 if (inkSel) inkSel.addEventListener('change', () => { settings.ink = inkSel.value; applyTheme(); });
 
