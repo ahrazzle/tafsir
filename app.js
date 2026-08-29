@@ -1,5 +1,5 @@
 // ═══════════════════════════════════════════════════════════════════
-// Tafsir Study — application logic
+// Sublime — application logic
 // Features: Quran-wide nav (30 juz / 114 surah / 604 pages),
 //   tajweed colour coding (switchable styles), script-type switching,
 //   UI / script / tajweed colour themes, multi-edition Sunni tafsir.
@@ -91,24 +91,27 @@ async function loadThemes() {
 
 // UI themes — set CSS custom properties on <html data-theme>.
 const THEMES = {
-  classic: { label: 'Classic (parchment + green)', dark: false },
+  classic: { label: 'Classic', dark: false },
   sepia:   { label: 'Sepia', dark: false },
   olive:   { label: 'Olive', dark: false },
-  midnight:{ label: 'Midnight (dark)', dark: true },
-  royal:   { label: 'Royal (navy + gold)', dark: false }
+  midnight:{ label: 'Midnight', dark: true },
+  royal:   { label: 'Royal', dark: true }
 };
 
 // Script ink (Arabic text) colour themes.
+// 'ink' (Black / White) adapts via var(--ink) and stays readable on any bg.
+// 'sepia' is a single colour that switches: sepia brown on light themes,
+// parchment on dark themes (handled in applyTheme). The other fixed inks
+// (green / navy / maroon) also switch to parchment on dark themes.
 const INK_THEMES = {
   ink:        { label: 'Black / White', var: 'var(--ink)' },
-  sepiaBg:    { label: 'Sepia parchment', var: '#F3E9D8' },
-  sepia:      { label: 'Sepia brown', var: '#5b3a29' },
+  sepia:      { label: 'Sepia', var: '#5b3a29' },
   green:      { label: 'Green', var: 'var(--accent-ink)' },
   navy:       { label: 'Navy', var: '#1f2d4d' },
   maroon:     { label: 'Maroon', var: '#6b2737' }
 };
 // Dark themes where a fixed ink colour would lose contrast against the dark
-// background. On these, any fixed ink (sepia brown / green / navy / maroon) is
+// background. On these, any fixed ink (sepia / green / navy / maroon) is
 // remapped to the light sepia-parchment ink for readability. The 'ink'
 // (Black / White) adapts via var(--ink) and is exempt.
 const DARK_INK_THEMES = ['midnight', 'royal'];
@@ -160,6 +163,12 @@ const tajweedStyleSel = document.getElementById('tajweedStyle');
 const scriptSel = document.getElementById('scriptSelect');
 const themeSel = document.getElementById('themeSelect');
 const inkSel = document.getElementById('inkSelect');
+// tajweed legend + page navigation
+const tajweedLegend = document.getElementById('tajweedLegend');
+const pageNav = document.getElementById('pageNav');
+const pageNavLabel = document.getElementById('pageNavLabel');
+const prevPageBtn = document.getElementById('prevPageBtn');
+const nextPageBtn = document.getElementById('nextPageBtn');
 
 // ─── Persistence (localStorage, best-effort) ────────────────────────
 function saveSettings() {
@@ -205,9 +214,9 @@ function applyTheme() {
   root.setAttribute('data-theme', settings.theme);
   // Ink colour for the Arabic text. The 'ink' (Black / White) theme adapts via
   // var(--ink) and is always readable on any background. On a dark theme, any
-  // fixed ink colour (sepia / green / navy / maroon / sepiaBg) is remapped to
-  // the light sepia-parchment ink so the text stays readable. Manual selection
-  // of 'sepiaBg' still works and simply resolves to the same parchment colour.
+  // fixed ink colour (sepia / green / navy / maroon) is remapped to the light
+  // sepia-parchment ink so the text stays readable. Selecting 'sepia' simply
+  // resolves to that same parchment colour on dark themes.
   let inkVar = INK_THEMES[settings.ink].var;
   if (DARK_INK_THEMES.includes(settings.theme) && settings.ink !== 'ink') {
     inkVar = SEPIA_PARCHMENT;
@@ -241,29 +250,29 @@ function populateJuzSelect() {
 }
 
 function populateSelectors() {
-  const inJuz = NAV.juz[currentJuz].surahs;
+  // Free navigation: ALL 114 surahs, regardless of the current juz.
+  // The juz dropdown remains a convenience shortcut; it never cages the user.
   surahSelect.innerHTML = '';
-  inJuz.forEach(num => {
+  Object.keys(NAV.surahs).forEach(num => {
     const s = NAV.surahs[num];
     const opt = document.createElement('option');
     opt.value = num;
     opt.textContent = `${num}. ${s.name}${s.content ? '' : ' ◷'}`;
     surahSelect.appendChild(opt);
   });
-  if (!inJuz.includes(currentSurah)) currentSurah = inJuz[0];
   surahSelect.value = currentSurah;
 
+  // Free navigation: ALL 604 pages, regardless of the current juz or surah.
   pageSelect.innerHTML = '';
   pageSelect.appendChild(new Option('All pages', ''));
-  const pages = NAV.surahs[currentSurah].pages;
-  pages.forEach(p => {
+  Object.keys(NAV.pages).forEach(p => {
     const opt = document.createElement('option');
     opt.value = p;
-    const range = NAV.pages[p] ? ` (${NAV.pages[p].range})` : '';
-    opt.textContent = `Page ${p}${range}`;
+    const info = NAV.pages[p];
+    opt.textContent = `Page ${p}${info.range ? ` (${info.range})` : ''}`;
     pageSelect.appendChild(opt);
   });
-  if (currentPage !== null && pages.includes(currentPage)) pageSelect.value = currentPage;
+  if (currentPage !== null) pageSelect.value = String(currentPage);
   else pageSelect.value = '';
 }
 
@@ -362,6 +371,12 @@ function renderScaffoldNotice(surahInfo) {
 async function renderVerses(data, filterPage) {
   const info = NAV.surahs[currentSurah];
   if (!info.content) { renderScaffoldNotice(info); return; }
+  // A page within a content surah but outside the built coverage (e.g. page 22,
+  // which belongs to surah 2 but sits in Juz 2) must show the honest scaffold —
+  // not an empty verse list. BUILT_PAGES is the real coverage signal.
+  if (filterPage !== null && filterPage !== undefined && !BUILT_PAGES.has(String(filterPage))) {
+    renderScaffoldNotice(info); return;
+  }
   verseList.innerHTML = '';
   statusEl.className = 'status';
   statusEl.textContent = '';
@@ -380,13 +395,29 @@ async function renderVerses(data, filterPage) {
   `;
   section.appendChild(header);
 
-  ayahs.forEach(ayah => {
+  ayahs.forEach((ayah, i) => {
     const card = document.createElement('div');
     card.className = 'ayah-card';
-    card.innerHTML = `
+
+    // Page / juz boundary markers — only shown when the value actually changes
+    // mid-render, so the user isn't told "p.1 · j.1" on every ayah. Boundaries
+    // are rare, so these read as meaningful signposts, not per-ayah noise.
+    const prev = ayahs[i - 1];
+    const pageChanged = !prev || prev.page !== ayah.page;
+    const juzChanged = !prev || prev.juz !== ayah.juz;
+    if (pageChanged || juzChanged) {
+      const marks = [];
+      if (juzChanged) marks.push(`Juz ${ayah.juz}`);
+      if (pageChanged) marks.push(`Page ${ayah.page}`);
+      const bd = document.createElement('div');
+      bd.className = 'ayah-boundary';
+      bd.innerHTML = `<span>${marks.join(' · ')}</span>`;
+      card.appendChild(bd);
+    }
+
+    card.innerHTML += `
       <div class="ayah-header">
         <span class="ayah-number">${ayah.verse_key}</span>
-        <span class="ayah-meta">p.${ayah.page} · j.${ayah.juz}</span>
       </div>
     `;
 
@@ -440,6 +471,9 @@ async function renderVerses(data, filterPage) {
   });
 
   verseList.appendChild(section);
+
+  renderTajweedLegend();
+  updatePageNav();
 
   if (settings.tajweed && !tjData) {
     const note = document.createElement('div');
@@ -656,6 +690,55 @@ paneHandle.addEventListener('touchstart', e => { startY = e.touches[0].clientY; 
 paneHandle.addEventListener('touchend', e => { if (e.changedTouches[0].clientY - startY > 60) closeStudyPane(); }, { passive: true });
 document.addEventListener('keydown', e => { if (e.key === 'Escape' && isPaneOpen) closeStudyPane(); });
 
+// ─── Tajweed legend ────────────────────────────────────────────────
+// Colour → rule mapping so users know what the tajweed colours mean.
+function renderTajweedLegend() {
+  if (!settings.tajweed) { tajweedLegend.hidden = true; tajweedLegend.innerHTML = ''; return; }
+  const style = TAJWEED_STYLES[settings.tajweedStyle];
+  const labels = {
+    'tj-madd': 'Madd (prolongation)',
+    'tj-ghunnah': 'Ghunnah (nasalization)',
+    'tj-idgham': 'Idgham (assimilation)',
+    'tj-ikhfa': 'Ikhfa (concealment)',
+    'tj-silent': 'Silent (unpronounced)',
+    'tj-qalqalah': 'Qalqalah (echo)'
+  };
+  // Resolve the actual colour per rule in the current theme for the swatch.
+  const swatchColor = cls => {
+    const probes = [
+      [`.${cls}`, 'color'],
+      [`[data-theme="${settings.theme}"] .${cls}`, 'color']
+    ];
+    for (const [sel, prop] of probes) {
+      const el = document.createElement('span'); el.className = cls;
+      document.body.appendChild(el);
+      const color = getComputedStyle(el).getPropertyValue(prop).trim();
+      el.remove();
+      if (color) return color;
+    }
+    return '#888';
+  };
+  let html = '';
+  Object.keys(style.rules).forEach(rule => {
+    const cls = style.rules[rule];
+    html += `<span class="legend-item"><span class="legend-swatch" style="background:${swatchColor(cls)}"></span>${labels[cls] || rule}</span>`;
+  });
+  tajweedLegend.innerHTML = html;
+  tajweedLegend.hidden = false;
+}
+
+// ─── Page navigation (prev / next) ────────────────────────────────
+// Shows arrows when a specific page is selected; clicking moves between pages
+// in the current surah's page list.
+function updatePageNav() {
+  if (!NAV || currentPage === null) { pageNav.hidden = true; return; }
+  prevPageBtn.disabled = currentPage <= 1;
+  nextPageBtn.disabled = currentPage >= 604;
+  const ownerInfo = NAV.pages[currentPage] ? NAV.pages[currentPage].range : '';
+  pageNavLabel.textContent = `Page ${currentPage} of 604${ownerInfo ? ` · ${ownerInfo}` : ''}`;
+  pageNav.hidden = false;
+}
+
 // ─── Navigation handlers ───────────────────────────────────────────
 juzSelect.addEventListener('change', async () => {
   currentJuz = parseInt(juzSelect.value); currentSurah = NAV.juz[currentJuz].surahs[0]; currentPage = null;
@@ -668,18 +751,47 @@ surahSelect.addEventListener('change', async () => {
 });
 pageSelect.addEventListener('change', async () => {
   currentPage = pageSelect.value ? parseInt(pageSelect.value) : null;
+  // Free navigation: a page may belong to any surah — resolve its owner.
+  if (currentPage !== null && NAV.pages[currentPage] && NAV.pages[currentPage].surah) {
+    const owner = NAV.pages[currentPage].surah;
+    if (owner !== currentSurah) {
+      currentSurah = owner;
+      populateSelectors();
+    }
+  }
   try { renderVerses(await loadSurah(currentSurah), currentPage); } catch (e) {}
 });
+// Global page movement across the full 604-page index, not just the current
+// surah's pages. Resolves the owning surah at each step so pages outside the
+// current surah (or outside built coverage) render the honest scaffold state.
+function pageStep(dir) {
+  const target = currentPage === null ? null : currentPage + dir;
+  if (target === null || target < 1 || target > 604) return;
+  currentPage = target;
+  if (NAV.pages[target] && NAV.pages[target].surah && NAV.pages[target].surah !== currentSurah) {
+    currentSurah = NAV.pages[target].surah;
+    populateSelectors();
+  }
+  pageSelect.value = String(currentPage);
+  updatePageNav();
+  // Load the surah file on demand (cached thereafter); a page outside built
+  // coverage renders the scaffold state via renderVerses' content guard.
+  loadSurah(currentSurah).then(data => renderVerses(data, currentPage)).catch(() => {});
+}
+prevPageBtn.addEventListener('click', () => pageStep(-1));
+nextPageBtn.addEventListener('click', () => pageStep(1));
 
 // ─── Settings handlers ─────────────────────────────────────────────
 tajweedToggle.addEventListener('change', () => {
   settings.tajweed = tajweedToggle.checked;
   tajweedStyleSel.disabled = !settings.tajweed;
+  renderTajweedLegend();
   saveSettings();
   try { renderVerses(loadedData[currentSurah], currentPage); } catch (e) {}
 });
 tajweedStyleSel.addEventListener('change', () => {
   settings.tajweedStyle = tajweedStyleSel.value;
+  renderTajweedLegend();
   saveSettings();
   try { renderVerses(loadedData[currentSurah], currentPage); } catch (e) {}
 });
