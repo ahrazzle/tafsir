@@ -113,6 +113,11 @@ let currentJuz = 1;
 let currentSurah = 1;
 let currentPage = null;
 let loadedData = {};
+// Real content page coverage — populated from the actual data files as they load.
+// The only honest source of "what's built": not navigation's surah page spans
+// (which list a surah's full extent even when only a juz is populated), but the
+// pages actually present in the loaded content files.
+let BUILT_PAGES = new Set();
 let currentWord = null;
 let currentAyah = null;
 let isPaneOpen = false;
@@ -258,6 +263,10 @@ async function loadSurah(num) {
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
     loadedData[num] = data;
+    // Record real page coverage from the file itself (the honest "built" signal).
+    if (data.ayahs && data.ayahs.length) {
+      data.ayahs.forEach(a => { if (a.page) BUILT_PAGES.add(String(a.page)); });
+    }
     return data;
   } catch (e) {
     statusEl.textContent = `Failed to load ${info.file}. Serve over HTTP (python3 -m http.server 8000) or verify file exists.`;
@@ -297,6 +306,25 @@ function renderScaffoldNotice(surahInfo) {
   const section = document.createElement('div');
   section.className = 'verse-section';
   const juzList = surahInfo.juz.map(j => `Juz ${j}`).join(', ');
+
+  // Progress strip — visible roadmap of what's built vs pending.
+  // Honest metric: a juz counts as "built" only if every page it spans has real
+  // content (pages recorded from the actual data files, not navigation's surah
+  // page spans — those list a surah's full extent even when only a juz is built).
+  // This never claims coverage that isn't actually in the loaded data.
+  const totalJuz = NAV.juz ? Object.keys(NAV.juz).length : 30;
+  const builtJuz = NAV.juz ? Object.keys(NAV.juz).filter(num => {
+    const j = NAV.juz[num];
+    if (!j) return false;
+    let p = j.page_start;
+    while (p <= (j.page_end || j.page_start)) {
+      if (!BUILT_PAGES.has(String(p))) return false;
+      p++;
+    }
+    return true;
+  }).length : (BUILT_PAGES.size ? 1 : 0);
+  const pct = Math.round((builtJuz / totalJuz) * 100);
+
   section.innerHTML = `
     <div class="verse-section-header">
       <div class="verse-section-title">${surahInfo.name} <span>${surahInfo.name_arabic}</span></div>
@@ -306,6 +334,10 @@ function renderScaffoldNotice(surahInfo) {
       <div class="scaffold-badge">Scaffold</div>
       <p><strong>${surahInfo.name}</strong> (${surahInfo.name_arabic}) is scaffolded but its verse content has not yet been populated by the ETL pipeline.</p>
       <p class="scaffold-meta">Revelation: ${surahInfo.revelation_type} · Pages ${surahInfo.pages[0]}–${surahInfo.pages[surahInfo.pages.length-1]} · ${surahInfo.ayahs} ayahs · ${juzList}.</p>
+      <div class="progress-strip" aria-label="Content progress">
+        <div class="progress-track"><div class="progress-fill" style="width:${pct}%"></div></div>
+        <div class="progress-label">${builtJuz} of ${totalJuz} juz built · ${pct}%</div>
+      </div>
       <p class="scaffold-hint">Routing is live for all 30 juz / 114 surahs / 604 pages. Content (verse text, word-by-word translation, morphology, tafsir, and progressive wazn) follows per the architecture's accuracy-over-coverage convention. Juz 1 (Al-Fatihah + Al-Baqarah) is fully populated.</p>
     </div>`;
   verseList.appendChild(section);
@@ -660,6 +692,10 @@ inkSel.addEventListener('change', () => { settings.ink = inkSel.value; applyThem
     populateSettingsControls();
     populateJuzSelect();
     populateSelectors();
+    // Load Juz 1's surahs eagerly so BUILT_PAGES is accurate for the progress
+    // strip on the first scaffold render (surah 2's file covers pages 2–21).
+    try { await loadSurah(1); } catch (e) {}
+    try { await loadSurah(2); } catch (e) {}
     renderVerses(await loadSurah(currentSurah), null);
   } catch (e) {
     statusEl.className = 'status error';

@@ -122,6 +122,12 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--ink); 
 .scaffold-meta { font-family: var(--font-mono); font-size: 12px; color: var(--ink-faint); }
 .scaffold-hint { font-style: italic; color: var(--ink-faint); }
 
+/* Progress strip — honest roadmap of built vs pending content */
+.progress-strip { margin: var(--space-sm) 0 var(--space-md); }
+.progress-track { height: 8px; background: var(--surface-raised); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+.progress-fill { height: 100%; background: var(--accent); border-radius: 6px; transition: width var(--duration-normal) var(--ease-out); }
+.progress-label { font-size: 12px; color: var(--ink-muted); margin-top: var(--space-xs); font-family: var(--font-mono); }
+
 /* ─── Study Pane ─── */
 .study-pane { position: fixed; bottom: 0; left: 50%; transform: translateX(-50%) translateY(100%); width: 100%; max-width: 800px; max-height: 85dvh; background: var(--surface); border-radius: var(--radius-xl) var(--radius-xl) 0 0; box-shadow: var(--shadow-lg); z-index: 100; transition: transform var(--duration-slow) var(--ease-out); display: flex; flex-direction: column; overflow: hidden; }
 .study-pane.open { transform: translateX(-50%) translateY(0); }
