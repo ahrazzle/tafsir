@@ -172,8 +172,6 @@ const inkSel = $('inkSelect');
 const tajweedLegend = $('tajweedLegend');
 const pageNav = $('pageNav');
 const pageNavLabel = $('pageNavLabel');
-const prevPageBtn = $('prevPageBtn');
-const nextPageBtn = $('nextPageBtn');
 
 // ─── Persistence (localStorage, best-effort) ────────────────────────
 function saveSettings() {
@@ -766,17 +764,48 @@ function renderTajweedLegend() {
   tajweedLegend.hidden = false;
 }
 
-// ─── Page navigation (prev / next) ────────────────────────────────
-// Shows arrows when a specific page is selected; clicking moves between pages
-// in the current surah's page list.
+// ─── Page navigation ───────────────────────────────────────────────
+// On-screen arrow buttons were removed per @user — navigation is now keyboard
+// arrow keys (← / →) stepping the GLOBAL 604-page sequence across surah
+// boundaries. The page-nav element shows only a subtle "Page N" indicator.
 function updatePageNav() {
   if (!NAV || currentPage === null || !pageNav) { if (pageNav) pageNav.hidden = true; return; }
-  if (prevPageBtn) prevPageBtn.disabled = currentPage <= 1;
-  if (nextPageBtn) nextPageBtn.disabled = currentPage >= 604;
   const ownerInfo = NAV.pages[currentPage] ? NAV.pages[currentPage].range : '';
   if (pageNavLabel) pageNavLabel.textContent = `Page ${currentPage} of 604${ownerInfo ? ` · ${ownerInfo}` : ''}`;
   pageNav.hidden = false;
 }
+
+// Global page movement across the full 604-page index, not just the current
+// surah's pages. Resolves the owning surah at each step so pages outside the
+// current surah (or outside built coverage) render the honest scaffold state.
+function pageStep(dir) {
+  // If no page is selected (All pages view), start from page 1 forward / 604 back.
+  let base = currentPage === null ? (dir > 0 ? 0 : 605) : currentPage;
+  const target = base + dir;
+  if (target < 1 || target > 604) return;
+  currentPage = target;
+  if (NAV.pages[target] && NAV.pages[target].surah && NAV.pages[target].surah !== currentSurah) {
+    currentSurah = NAV.pages[target].surah;
+    populateSelectors();
+  }
+  if (pageSelect) pageSelect.value = String(currentPage);
+  updatePageNav();
+  // Load the surah file on demand (cached thereafter); a page outside built
+  // coverage renders the scaffold state via renderVerses' content guard.
+  loadSurah(currentSurah).then(data => renderVerses(data, currentPage)).catch(() => {});
+}
+
+// Keyboard arrow navigation — continuous across surah boundaries.
+document.addEventListener('keydown', e => {
+  // Don't hijack arrow keys while typing in an input/textarea, or when the
+  // study pane (which may contain text fields) is open.
+  const t = e.target;
+  const isTyping = t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable);
+  if (isTyping) return;
+  if (isPaneOpen) return;
+  if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { e.preventDefault(); pageStep(1); }
+  else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); pageStep(-1); }
+});
 
 // ─── Navigation handlers ───────────────────────────────────────────
 if (juzSelect) juzSelect.addEventListener('change', async () => {
@@ -800,25 +829,6 @@ if (pageSelect) pageSelect.addEventListener('change', async () => {
   }
   try { renderVerses(await loadSurah(currentSurah), currentPage); } catch (e) {}
 });
-// Global page movement across the full 604-page index, not just the current
-// surah's pages. Resolves the owning surah at each step so pages outside the
-// current surah (or outside built coverage) render the honest scaffold state.
-function pageStep(dir) {
-  const target = currentPage === null ? null : currentPage + dir;
-  if (target === null || target < 1 || target > 604) return;
-  currentPage = target;
-  if (NAV.pages[target] && NAV.pages[target].surah && NAV.pages[target].surah !== currentSurah) {
-    currentSurah = NAV.pages[target].surah;
-    populateSelectors();
-  }
-  if (pageSelect) pageSelect.value = String(currentPage);
-  updatePageNav();
-  // Load the surah file on demand (cached thereafter); a page outside built
-  // coverage renders the scaffold state via renderVerses' content guard.
-  loadSurah(currentSurah).then(data => renderVerses(data, currentPage)).catch(() => {});
-}
-if (prevPageBtn) prevPageBtn.addEventListener('click', () => pageStep(-1));
-if (nextPageBtn) nextPageBtn.addEventListener('click', () => pageStep(1));
 
 // ─── Settings handlers ─────────────────────────────────────────────
 if (tajweedToggle) tajweedToggle.addEventListener('change', () => {
