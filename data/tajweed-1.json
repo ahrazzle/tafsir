@@ -1,0 +1,222 @@
+{
+ "meta": {
+  "surah": 1,
+  "surah_name": "Al-Fatihah",
+  "scheme": "madani",
+  "verified_by": "conventional colour-coded Madani mushaf (standard madd/ghunnah/idgham positions); conservative — only unambiguous markings encoded; uncertain positions left uncoloured.",
+  "coverage": "letter-level for 7 ayahs",
+  "note": "This is a curated sample to demonstrate the tajweed layer. Other surahs populate via the tajweed tokenizer at ETL time. No letter is coloured on a guessed rule."
+ },
+ "ayahs": {
+  "1:1": [
+   {
+    "c": "بِ",
+    "r": "none"
+   },
+   {
+    "c": "سۡ",
+    "r": "none"
+   },
+   {
+    "c": "مِ",
+    "r": "none"
+   },
+   {
+    "c": "ٱل",
+    "r": "none"
+   },
+   {
+    "c": "لَّ",
+    "r": "ghunnah"
+   },
+   {
+    "c": "هِ",
+    "r": "none"
+   },
+   {
+    "c": "ٱل",
+    "r": "none"
+   },
+   {
+    "c": "رَّ",
+    "r": "ghunnah"
+   },
+   {
+    "c": "حۡ",
+    "r": "none"
+   },
+   {
+    "c": "مَـٰنِ",
+    "r": "madd"
+   },
+   {
+    "c": "ٱل",
+    "r": "none"
+   },
+   {
+    "c": "رَّ",
+    "r": "ghunnah"
+   },
+   {
+    "c": "حِیمِ",
+    "r": "none"
+   }
+  ],
+  "1:2": [
+   {
+    "c": "ٱلۡ",
+    "r": "none"
+   },
+   {
+    "c": "حَمۡدُ",
+    "r": "none"
+   },
+   {
+    "c": "لِ",
+    "r": "none"
+   },
+   {
+    "c": "لَّهِ",
+    "r": "ghunnah"
+   },
+   {
+    "c": "رَبِّ",
+    "r": "none"
+   },
+   {
+    "c": "ٱلۡ",
+    "r": "none"
+   },
+   {
+    "c": "عَـٰلَمِینَ",
+    "r": "madd"
+   }
+  ],
+  "1:3": [
+   {
+    "c": "ٱل",
+    "r": "none"
+   },
+   {
+    "c": "رَّ",
+    "r": "ghunnah"
+   },
+   {
+    "c": "حۡمَـٰنِ",
+    "r": "madd"
+   },
+   {
+    "c": "ٱل",
+    "r": "none"
+   },
+   {
+    "c": "رَّ",
+    "r": "ghunnah"
+   },
+   {
+    "c": "حِیمِ",
+    "r": "none"
+   }
+  ],
+  "1:4": [
+   {
+    "c": "مَـٰلِكِ",
+    "r": "madd"
+   },
+   {
+    "c": "یَوۡمِ",
+    "r": "none"
+   },
+   {
+    "c": "ٱل",
+    "r": "none"
+   },
+   {
+    "c": "دِّینِ",
+    "r": "ghunnah"
+   }
+  ],
+  "1:5": [
+   {
+    "c": "إِیَّاكَ",
+    "r": "none"
+   },
+   {
+    "c": "نَعۡبُدُ",
+    "r": "none"
+   },
+   {
+    "c": "وَإِیَّاكَ",
+    "r": "none"
+   },
+   {
+    "c": "نَسۡتَعِینُ",
+    "r": "none"
+   }
+  ],
+  "1:6": [
+   {
+    "c": "ٱهۡدِنَا",
+    "r": "none"
+   },
+   {
+    "c": "ٱل",
+    "r": "none"
+   },
+   {
+    "c": "صِّرَ",
+    "r": "ghunnah"
+   },
+   {
+    "c": "ٰطَ",
+    "r": "madd"
+   },
+   {
+    "c": "ٱلۡمُسۡتَقِیمَ",
+    "r": "none"
+   }
+  ],
+  "1:7": [
+   {
+    "c": "صِرَ",
+    "r": "none"
+   },
+   {
+    "c": "ٰطَ",
+    "r": "madd"
+   },
+   {
+    "c": "ٱلَّذِینَ",
+    "r": "ghunnah"
+   },
+   {
+    "c": "أَنۡعَمۡتَ",
+    "r": "ghunnah"
+   },
+   {
+    "c": "عَلَیۡهِمۡ",
+    "r": "ghunnah"
+   },
+   {
+    "c": "غَیۡرِ",
+    "r": "none"
+   },
+   {
+    "c": "ٱلۡمَغۡضُوبِ",
+    "r": "ghunnah"
+   },
+   {
+    "c": "عَلَیۡهِمۡ",
+    "r": "ghunnah"
+   },
+   {
+    "c": "وَلَا",
+    "r": "none"
+   },
+   {
+    "c": "ٱلضَّاۤلِّینَ",
+    "r": "ghunnah"
+   }
+  ]
+ }
+}

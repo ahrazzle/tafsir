@@ -1,0 +1,29 @@
+{
+ "meta": {
+  "surah": 12,
+  "surah_name": "Yusuf",
+  "surah_name_arabic": "يُوسُفَ",
+  "revelation_type": "Meccan",
+  "juz": [
+   12,
+   13
+  ],
+  "total_ayahs": 111,
+  "page_range": [
+   235,
+   248
+  ],
+  "ayahs_per_juz": {
+   "12": 52,
+   "13": 59
+  },
+  "verification_status": {
+   "verse_text": "pending_etl",
+   "morphology": "pending_etl",
+   "wazn": "pending_etl"
+  },
+  "content_status": "scaffold",
+  "note": "Meta-complete scaffold. Verse/word/morphology/tafsir/wazn content to be populated by the ETL pipeline (KodeKoot) per the progressive-annotation convention in ARCHITECTURE.md. No verses synthesized."
+ },
+ "ayahs": []
+}

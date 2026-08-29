@@ -1,0 +1,27 @@
+{
+ "meta": {
+  "surah": 17,
+  "surah_name": "Al-Israa",
+  "surah_name_arabic": "الإِسۡرَاءِ",
+  "revelation_type": "Meccan",
+  "juz": [
+   15
+  ],
+  "total_ayahs": 111,
+  "page_range": [
+   282,
+   293
+  ],
+  "ayahs_per_juz": {
+   "15": 111
+  },
+  "verification_status": {
+   "verse_text": "pending_etl",
+   "morphology": "pending_etl",
+   "wazn": "pending_etl"
+  },
+  "content_status": "scaffold",
+  "note": "Meta-complete scaffold. Verse/word/morphology/tafsir/wazn content to be populated by the ETL pipeline (KodeKoot) per the progressive-annotation convention in ARCHITECTURE.md. No verses synthesized."
+ },
+ "ayahs": []
+}

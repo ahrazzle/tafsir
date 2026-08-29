@@ -1,0 +1,1184 @@
+{
+ "meta": {
+  "description": "Navigation index for Juz 10 — mapping by juz, surah, ayah, and page",
+  "juz": 10,
+  "total_ayahs": 127,
+  "source": "api.alquran.cloud/v1/juz/10",
+  "fetched": "2026-08-28"
+ },
+ "juz": {
+  "number": 10,
+  "surah_range": {
+   "start": 8,
+   "end": 9
+  },
+  "ayah_range": {
+   "start": 1201,
+   "end": 1327
+  }
+ },
+ "surahs": [
+  {
+   "surah": 8,
+   "name": "سُورَةُ الأَنفَالِ",
+   "english_name": "Al-Anfaal",
+   "translation": "The Spoils of War",
+   "revelation_type": "Medinan",
+   "ayah_start": 41,
+   "ayah_end": 75,
+   "page_start": 182,
+   "page_end": 186
+  },
+  {
+   "surah": 9,
+   "name": "سُورَةُ التَّوۡبَةِ",
+   "english_name": "At-Tawba",
+   "translation": "The Repentance",
+   "revelation_type": "Medinan",
+   "ayah_start": 1,
+   "ayah_end": 92,
+   "page_start": 187,
+   "page_end": 201
+  }
+ ],
+ "pages": {
+  "182": {
+   "page": 182,
+   "surah": 8,
+   "ayah_start": 45,
+   "ayah_end": 45
+  },
+  "183": {
+   "page": 183,
+   "surah": 8,
+   "ayah_start": 52,
+   "ayah_end": 52
+  },
+  "184": {
+   "page": 184,
+   "surah": 8,
+   "ayah_start": 61,
+   "ayah_end": 61
+  },
+  "185": {
+   "page": 185,
+   "surah": 8,
+   "ayah_start": 69,
+   "ayah_end": 69
+  },
+  "186": {
+   "page": 186,
+   "surah": 8,
+   "ayah_start": 75,
+   "ayah_end": 75
+  },
+  "187": {
+   "page": 187,
+   "surah": 9,
+   "ayah_start": 6,
+   "ayah_end": 6
+  },
+  "188": {
+   "page": 188,
+   "surah": 9,
+   "ayah_start": 13,
+   "ayah_end": 13
+  },
+  "189": {
+   "page": 189,
+   "surah": 9,
+   "ayah_start": 20,
+   "ayah_end": 20
+  },
+  "190": {
+   "page": 190,
+   "surah": 9,
+   "ayah_start": 26,
+   "ayah_end": 26
+  },
+  "191": {
+   "page": 191,
+   "surah": 9,
+   "ayah_start": 31,
+   "ayah_end": 31
+  },
+  "192": {
+   "page": 192,
+   "surah": 9,
+   "ayah_start": 36,
+   "ayah_end": 36
+  },
+  "193": {
+   "page": 193,
+   "surah": 9,
+   "ayah_start": 40,
+   "ayah_end": 40
+  },
+  "194": {
+   "page": 194,
+   "surah": 9,
+   "ayah_start": 47,
+   "ayah_end": 47
+  },
+  "195": {
+   "page": 195,
+   "surah": 9,
+   "ayah_start": 54,
+   "ayah_end": 54
+  },
+  "196": {
+   "page": 196,
+   "surah": 9,
+   "ayah_start": 61,
+   "ayah_end": 61
+  },
+  "197": {
+   "page": 197,
+   "surah": 9,
+   "ayah_start": 68,
+   "ayah_end": 68
+  },
+  "198": {
+   "page": 198,
+   "surah": 9,
+   "ayah_start": 72,
+   "ayah_end": 72
+  },
+  "199": {
+   "page": 199,
+   "surah": 9,
+   "ayah_start": 79,
+   "ayah_end": 79
+  },
+  "200": {
+   "page": 200,
+   "surah": 9,
+   "ayah_start": 86,
+   "ayah_end": 86
+  },
+  "201": {
+   "page": 201,
+   "surah": 9,
+   "ayah_start": 92,
+   "ayah_end": 92
+  }
+ },
+ "ayah_index": [
+  {
+   "global_number": 1201,
+   "surah": 8,
+   "ayah_in_surah": 41,
+   "verse_key": "8:41",
+   "page": 182,
+   "juz": 10
+  },
+  {
+   "global_number": 1202,
+   "surah": 8,
+   "ayah_in_surah": 42,
+   "verse_key": "8:42",
+   "page": 182,
+   "juz": 10
+  },
+  {
+   "global_number": 1203,
+   "surah": 8,
+   "ayah_in_surah": 43,
+   "verse_key": "8:43",
+   "page": 182,
+   "juz": 10
+  },
+  {
+   "global_number": 1204,
+   "surah": 8,
+   "ayah_in_surah": 44,
+   "verse_key": "8:44",
+   "page": 182,
+   "juz": 10
+  },
+  {
+   "global_number": 1205,
+   "surah": 8,
+   "ayah_in_surah": 45,
+   "verse_key": "8:45",
+   "page": 182,
+   "juz": 10
+  },
+  {
+   "global_number": 1206,
+   "surah": 8,
+   "ayah_in_surah": 46,
+   "verse_key": "8:46",
+   "page": 183,
+   "juz": 10
+  },
+  {
+   "global_number": 1207,
+   "surah": 8,
+   "ayah_in_surah": 47,
+   "verse_key": "8:47",
+   "page": 183,
+   "juz": 10
+  },
+  {
+   "global_number": 1208,
+   "surah": 8,
+   "ayah_in_surah": 48,
+   "verse_key": "8:48",
+   "page": 183,
+   "juz": 10
+  },
+  {
+   "global_number": 1209,
+   "surah": 8,
+   "ayah_in_surah": 49,
+   "verse_key": "8:49",
+   "page": 183,
+   "juz": 10
+  },
+  {
+   "global_number": 1210,
+   "surah": 8,
+   "ayah_in_surah": 50,
+   "verse_key": "8:50",
+   "page": 183,
+   "juz": 10
+  },
+  {
+   "global_number": 1211,
+   "surah": 8,
+   "ayah_in_surah": 51,
+   "verse_key": "8:51",
+   "page": 183,
+   "juz": 10
+  },
+  {
+   "global_number": 1212,
+   "surah": 8,
+   "ayah_in_surah": 52,
+   "verse_key": "8:52",
+   "page": 183,
+   "juz": 10
+  },
+  {
+   "global_number": 1213,
+   "surah": 8,
+   "ayah_in_surah": 53,
+   "verse_key": "8:53",
+   "page": 184,
+   "juz": 10
+  },
+  {
+   "global_number": 1214,
+   "surah": 8,
+   "ayah_in_surah": 54,
+   "verse_key": "8:54",
+   "page": 184,
+   "juz": 10
+  },
+  {
+   "global_number": 1215,
+   "surah": 8,
+   "ayah_in_surah": 55,
+   "verse_key": "8:55",
+   "page": 184,
+   "juz": 10
+  },
+  {
+   "global_number": 1216,
+   "surah": 8,
+   "ayah_in_surah": 56,
+   "verse_key": "8:56",
+   "page": 184,
+   "juz": 10
+  },
+  {
+   "global_number": 1217,
+   "surah": 8,
+   "ayah_in_surah": 57,
+   "verse_key": "8:57",
+   "page": 184,
+   "juz": 10
+  },
+  {
+   "global_number": 1218,
+   "surah": 8,
+   "ayah_in_surah": 58,
+   "verse_key": "8:58",
+   "page": 184,
+   "juz": 10
+  },
+  {
+   "global_number": 1219,
+   "surah": 8,
+   "ayah_in_surah": 59,
+   "verse_key": "8:59",
+   "page": 184,
+   "juz": 10
+  },
+  {
+   "global_number": 1220,
+   "surah": 8,
+   "ayah_in_surah": 60,
+   "verse_key": "8:60",
+   "page": 184,
+   "juz": 10
+  },
+  {
+   "global_number": 1221,
+   "surah": 8,
+   "ayah_in_surah": 61,
+   "verse_key": "8:61",
+   "page": 184,
+   "juz": 10
+  },
+  {
+   "global_number": 1222,
+   "surah": 8,
+   "ayah_in_surah": 62,
+   "verse_key": "8:62",
+   "page": 185,
+   "juz": 10
+  },
+  {
+   "global_number": 1223,
+   "surah": 8,
+   "ayah_in_surah": 63,
+   "verse_key": "8:63",
+   "page": 185,
+   "juz": 10
+  },
+  {
+   "global_number": 1224,
+   "surah": 8,
+   "ayah_in_surah": 64,
+   "verse_key": "8:64",
+   "page": 185,
+   "juz": 10
+  },
+  {
+   "global_number": 1225,
+   "surah": 8,
+   "ayah_in_surah": 65,
+   "verse_key": "8:65",
+   "page": 185,
+   "juz": 10
+  },
+  {
+   "global_number": 1226,
+   "surah": 8,
+   "ayah_in_surah": 66,
+   "verse_key": "8:66",
+   "page": 185,
+   "juz": 10
+  },
+  {
+   "global_number": 1227,
+   "surah": 8,
+   "ayah_in_surah": 67,
+   "verse_key": "8:67",
+   "page": 185,
+   "juz": 10
+  },
+  {
+   "global_number": 1228,
+   "surah": 8,
+   "ayah_in_surah": 68,
+   "verse_key": "8:68",
+   "page": 185,
+   "juz": 10
+  },
+  {
+   "global_number": 1229,
+   "surah": 8,
+   "ayah_in_surah": 69,
+   "verse_key": "8:69",
+   "page": 185,
+   "juz": 10
+  },
+  {
+   "global_number": 1230,
+   "surah": 8,
+   "ayah_in_surah": 70,
+   "verse_key": "8:70",
+   "page": 186,
+   "juz": 10
+  },
+  {
+   "global_number": 1231,
+   "surah": 8,
+   "ayah_in_surah": 71,
+   "verse_key": "8:71",
+   "page": 186,
+   "juz": 10
+  },
+  {
+   "global_number": 1232,
+   "surah": 8,
+   "ayah_in_surah": 72,
+   "verse_key": "8:72",
+   "page": 186,
+   "juz": 10
+  },
+  {
+   "global_number": 1233,
+   "surah": 8,
+   "ayah_in_surah": 73,
+   "verse_key": "8:73",
+   "page": 186,
+   "juz": 10
+  },
+  {
+   "global_number": 1234,
+   "surah": 8,
+   "ayah_in_surah": 74,
+   "verse_key": "8:74",
+   "page": 186,
+   "juz": 10
+  },
+  {
+   "global_number": 1235,
+   "surah": 8,
+   "ayah_in_surah": 75,
+   "verse_key": "8:75",
+   "page": 186,
+   "juz": 10
+  },
+  {
+   "global_number": 1236,
+   "surah": 9,
+   "ayah_in_surah": 1,
+   "verse_key": "9:1",
+   "page": 187,
+   "juz": 10
+  },
+  {
+   "global_number": 1237,
+   "surah": 9,
+   "ayah_in_surah": 2,
+   "verse_key": "9:2",
+   "page": 187,
+   "juz": 10
+  },
+  {
+   "global_number": 1238,
+   "surah": 9,
+   "ayah_in_surah": 3,
+   "verse_key": "9:3",
+   "page": 187,
+   "juz": 10
+  },
+  {
+   "global_number": 1239,
+   "surah": 9,
+   "ayah_in_surah": 4,
+   "verse_key": "9:4",
+   "page": 187,
+   "juz": 10
+  },
+  {
+   "global_number": 1240,
+   "surah": 9,
+   "ayah_in_surah": 5,
+   "verse_key": "9:5",
+   "page": 187,
+   "juz": 10
+  },
+  {
+   "global_number": 1241,
+   "surah": 9,
+   "ayah_in_surah": 6,
+   "verse_key": "9:6",
+   "page": 187,
+   "juz": 10
+  },
+  {
+   "global_number": 1242,
+   "surah": 9,
+   "ayah_in_surah": 7,
+   "verse_key": "9:7",
+   "page": 188,
+   "juz": 10
+  },
+  {
+   "global_number": 1243,
+   "surah": 9,
+   "ayah_in_surah": 8,
+   "verse_key": "9:8",
+   "page": 188,
+   "juz": 10
+  },
+  {
+   "global_number": 1244,
+   "surah": 9,
+   "ayah_in_surah": 9,
+   "verse_key": "9:9",
+   "page": 188,
+   "juz": 10
+  },
+  {
+   "global_number": 1245,
+   "surah": 9,
+   "ayah_in_surah": 10,
+   "verse_key": "9:10",
+   "page": 188,
+   "juz": 10
+  },
+  {
+   "global_number": 1246,
+   "surah": 9,
+   "ayah_in_surah": 11,
+   "verse_key": "9:11",
+   "page": 188,
+   "juz": 10
+  },
+  {
+   "global_number": 1247,
+   "surah": 9,
+   "ayah_in_surah": 12,
+   "verse_key": "9:12",
+   "page": 188,
+   "juz": 10
+  },
+  {
+   "global_number": 1248,
+   "surah": 9,
+   "ayah_in_surah": 13,
+   "verse_key": "9:13",
+   "page": 188,
+   "juz": 10
+  },
+  {
+   "global_number": 1249,
+   "surah": 9,
+   "ayah_in_surah": 14,
+   "verse_key": "9:14",
+   "page": 189,
+   "juz": 10
+  },
+  {
+   "global_number": 1250,
+   "surah": 9,
+   "ayah_in_surah": 15,
+   "verse_key": "9:15",
+   "page": 189,
+   "juz": 10
+  },
+  {
+   "global_number": 1251,
+   "surah": 9,
+   "ayah_in_surah": 16,
+   "verse_key": "9:16",
+   "page": 189,
+   "juz": 10
+  },
+  {
+   "global_number": 1252,
+   "surah": 9,
+   "ayah_in_surah": 17,
+   "verse_key": "9:17",
+   "page": 189,
+   "juz": 10
+  },
+  {
+   "global_number": 1253,
+   "surah": 9,
+   "ayah_in_surah": 18,
+   "verse_key": "9:18",
+   "page": 189,
+   "juz": 10
+  },
+  {
+   "global_number": 1254,
+   "surah": 9,
+   "ayah_in_surah": 19,
+   "verse_key": "9:19",
+   "page": 189,
+   "juz": 10
+  },
+  {
+   "global_number": 1255,
+   "surah": 9,
+   "ayah_in_surah": 20,
+   "verse_key": "9:20",
+   "page": 189,
+   "juz": 10
+  },
+  {
+   "global_number": 1256,
+   "surah": 9,
+   "ayah_in_surah": 21,
+   "verse_key": "9:21",
+   "page": 190,
+   "juz": 10
+  },
+  {
+   "global_number": 1257,
+   "surah": 9,
+   "ayah_in_surah": 22,
+   "verse_key": "9:22",
+   "page": 190,
+   "juz": 10
+  },
+  {
+   "global_number": 1258,
+   "surah": 9,
+   "ayah_in_surah": 23,
+   "verse_key": "9:23",
+   "page": 190,
+   "juz": 10
+  },
+  {
+   "global_number": 1259,
+   "surah": 9,
+   "ayah_in_surah": 24,
+   "verse_key": "9:24",
+   "page": 190,
+   "juz": 10
+  },
+  {
+   "global_number": 1260,
+   "surah": 9,
+   "ayah_in_surah": 25,
+   "verse_key": "9:25",
+   "page": 190,
+   "juz": 10
+  },
+  {
+   "global_number": 1261,
+   "surah": 9,
+   "ayah_in_surah": 26,
+   "verse_key": "9:26",
+   "page": 190,
+   "juz": 10
+  },
+  {
+   "global_number": 1262,
+   "surah": 9,
+   "ayah_in_surah": 27,
+   "verse_key": "9:27",
+   "page": 191,
+   "juz": 10
+  },
+  {
+   "global_number": 1263,
+   "surah": 9,
+   "ayah_in_surah": 28,
+   "verse_key": "9:28",
+   "page": 191,
+   "juz": 10
+  },
+  {
+   "global_number": 1264,
+   "surah": 9,
+   "ayah_in_surah": 29,
+   "verse_key": "9:29",
+   "page": 191,
+   "juz": 10
+  },
+  {
+   "global_number": 1265,
+   "surah": 9,
+   "ayah_in_surah": 30,
+   "verse_key": "9:30",
+   "page": 191,
+   "juz": 10
+  },
+  {
+   "global_number": 1266,
+   "surah": 9,
+   "ayah_in_surah": 31,
+   "verse_key": "9:31",
+   "page": 191,
+   "juz": 10
+  },
+  {
+   "global_number": 1267,
+   "surah": 9,
+   "ayah_in_surah": 32,
+   "verse_key": "9:32",
+   "page": 192,
+   "juz": 10
+  },
+  {
+   "global_number": 1268,
+   "surah": 9,
+   "ayah_in_surah": 33,
+   "verse_key": "9:33",
+   "page": 192,
+   "juz": 10
+  },
+  {
+   "global_number": 1269,
+   "surah": 9,
+   "ayah_in_surah": 34,
+   "verse_key": "9:34",
+   "page": 192,
+   "juz": 10
+  },
+  {
+   "global_number": 1270,
+   "surah": 9,
+   "ayah_in_surah": 35,
+   "verse_key": "9:35",
+   "page": 192,
+   "juz": 10
+  },
+  {
+   "global_number": 1271,
+   "surah": 9,
+   "ayah_in_surah": 36,
+   "verse_key": "9:36",
+   "page": 192,
+   "juz": 10
+  },
+  {
+   "global_number": 1272,
+   "surah": 9,
+   "ayah_in_surah": 37,
+   "verse_key": "9:37",
+   "page": 193,
+   "juz": 10
+  },
+  {
+   "global_number": 1273,
+   "surah": 9,
+   "ayah_in_surah": 38,
+   "verse_key": "9:38",
+   "page": 193,
+   "juz": 10
+  },
+  {
+   "global_number": 1274,
+   "surah": 9,
+   "ayah_in_surah": 39,
+   "verse_key": "9:39",
+   "page": 193,
+   "juz": 10
+  },
+  {
+   "global_number": 1275,
+   "surah": 9,
+   "ayah_in_surah": 40,
+   "verse_key": "9:40",
+   "page": 193,
+   "juz": 10
+  },
+  {
+   "global_number": 1276,
+   "surah": 9,
+   "ayah_in_surah": 41,
+   "verse_key": "9:41",
+   "page": 194,
+   "juz": 10
+  },
+  {
+   "global_number": 1277,
+   "surah": 9,
+   "ayah_in_surah": 42,
+   "verse_key": "9:42",
+   "page": 194,
+   "juz": 10
+  },
+  {
+   "global_number": 1278,
+   "surah": 9,
+   "ayah_in_surah": 43,
+   "verse_key": "9:43",
+   "page": 194,
+   "juz": 10
+  },
+  {
+   "global_number": 1279,
+   "surah": 9,
+   "ayah_in_surah": 44,
+   "verse_key": "9:44",
+   "page": 194,
+   "juz": 10
+  },
+  {
+   "global_number": 1280,
+   "surah": 9,
+   "ayah_in_surah": 45,
+   "verse_key": "9:45",
+   "page": 194,
+   "juz": 10
+  },
+  {
+   "global_number": 1281,
+   "surah": 9,
+   "ayah_in_surah": 46,
+   "verse_key": "9:46",
+   "page": 194,
+   "juz": 10
+  },
+  {
+   "global_number": 1282,
+   "surah": 9,
+   "ayah_in_surah": 47,
+   "verse_key": "9:47",
+   "page": 194,
+   "juz": 10
+  },
+  {
+   "global_number": 1283,
+   "surah": 9,
+   "ayah_in_surah": 48,
+   "verse_key": "9:48",
+   "page": 195,
+   "juz": 10
+  },
+  {
+   "global_number": 1284,
+   "surah": 9,
+   "ayah_in_surah": 49,
+   "verse_key": "9:49",
+   "page": 195,
+   "juz": 10
+  },
+  {
+   "global_number": 1285,
+   "surah": 9,
+   "ayah_in_surah": 50,
+   "verse_key": "9:50",
+   "page": 195,
+   "juz": 10
+  },
+  {
+   "global_number": 1286,
+   "surah": 9,
+   "ayah_in_surah": 51,
+   "verse_key": "9:51",
+   "page": 195,
+   "juz": 10
+  },
+  {
+   "global_number": 1287,
+   "surah": 9,
+   "ayah_in_surah": 52,
+   "verse_key": "9:52",
+   "page": 195,
+   "juz": 10
+  },
+  {
+   "global_number": 1288,
+   "surah": 9,
+   "ayah_in_surah": 53,
+   "verse_key": "9:53",
+   "page": 195,
+   "juz": 10
+  },
+  {
+   "global_number": 1289,
+   "surah": 9,
+   "ayah_in_surah": 54,
+   "verse_key": "9:54",
+   "page": 195,
+   "juz": 10
+  },
+  {
+   "global_number": 1290,
+   "surah": 9,
+   "ayah_in_surah": 55,
+   "verse_key": "9:55",
+   "page": 196,
+   "juz": 10
+  },
+  {
+   "global_number": 1291,
+   "surah": 9,
+   "ayah_in_surah": 56,
+   "verse_key": "9:56",
+   "page": 196,
+   "juz": 10
+  },
+  {
+   "global_number": 1292,
+   "surah": 9,
+   "ayah_in_surah": 57,
+   "verse_key": "9:57",
+   "page": 196,
+   "juz": 10
+  },
+  {
+   "global_number": 1293,
+   "surah": 9,
+   "ayah_in_surah": 58,
+   "verse_key": "9:58",
+   "page": 196,
+   "juz": 10
+  },
+  {
+   "global_number": 1294,
+   "surah": 9,
+   "ayah_in_surah": 59,
+   "verse_key": "9:59",
+   "page": 196,
+   "juz": 10
+  },
+  {
+   "global_number": 1295,
+   "surah": 9,
+   "ayah_in_surah": 60,
+   "verse_key": "9:60",
+   "page": 196,
+   "juz": 10
+  },
+  {
+   "global_number": 1296,
+   "surah": 9,
+   "ayah_in_surah": 61,
+   "verse_key": "9:61",
+   "page": 196,
+   "juz": 10
+  },
+  {
+   "global_number": 1297,
+   "surah": 9,
+   "ayah_in_surah": 62,
+   "verse_key": "9:62",
+   "page": 197,
+   "juz": 10
+  },
+  {
+   "global_number": 1298,
+   "surah": 9,
+   "ayah_in_surah": 63,
+   "verse_key": "9:63",
+   "page": 197,
+   "juz": 10
+  },
+  {
+   "global_number": 1299,
+   "surah": 9,
+   "ayah_in_surah": 64,
+   "verse_key": "9:64",
+   "page": 197,
+   "juz": 10
+  },
+  {
+   "global_number": 1300,
+   "surah": 9,
+   "ayah_in_surah": 65,
+   "verse_key": "9:65",
+   "page": 197,
+   "juz": 10
+  },
+  {
+   "global_number": 1301,
+   "surah": 9,
+   "ayah_in_surah": 66,
+   "verse_key": "9:66",
+   "page": 197,
+   "juz": 10
+  },
+  {
+   "global_number": 1302,
+   "surah": 9,
+   "ayah_in_surah": 67,
+   "verse_key": "9:67",
+   "page": 197,
+   "juz": 10
+  },
+  {
+   "global_number": 1303,
+   "surah": 9,
+   "ayah_in_surah": 68,
+   "verse_key": "9:68",
+   "page": 197,
+   "juz": 10
+  },
+  {
+   "global_number": 1304,
+   "surah": 9,
+   "ayah_in_surah": 69,
+   "verse_key": "9:69",
+   "page": 198,
+   "juz": 10
+  },
+  {
+   "global_number": 1305,
+   "surah": 9,
+   "ayah_in_surah": 70,
+   "verse_key": "9:70",
+   "page": 198,
+   "juz": 10
+  },
+  {
+   "global_number": 1306,
+   "surah": 9,
+   "ayah_in_surah": 71,
+   "verse_key": "9:71",
+   "page": 198,
+   "juz": 10
+  },
+  {
+   "global_number": 1307,
+   "surah": 9,
+   "ayah_in_surah": 72,
+   "verse_key": "9:72",
+   "page": 198,
+   "juz": 10
+  },
+  {
+   "global_number": 1308,
+   "surah": 9,
+   "ayah_in_surah": 73,
+   "verse_key": "9:73",
+   "page": 199,
+   "juz": 10
+  },
+  {
+   "global_number": 1309,
+   "surah": 9,
+   "ayah_in_surah": 74,
+   "verse_key": "9:74",
+   "page": 199,
+   "juz": 10
+  },
+  {
+   "global_number": 1310,
+   "surah": 9,
+   "ayah_in_surah": 75,
+   "verse_key": "9:75",
+   "page": 199,
+   "juz": 10
+  },
+  {
+   "global_number": 1311,
+   "surah": 9,
+   "ayah_in_surah": 76,
+   "verse_key": "9:76",
+   "page": 199,
+   "juz": 10
+  },
+  {
+   "global_number": 1312,
+   "surah": 9,
+   "ayah_in_surah": 77,
+   "verse_key": "9:77",
+   "page": 199,
+   "juz": 10
+  },
+  {
+   "global_number": 1313,
+   "surah": 9,
+   "ayah_in_surah": 78,
+   "verse_key": "9:78",
+   "page": 199,
+   "juz": 10
+  },
+  {
+   "global_number": 1314,
+   "surah": 9,
+   "ayah_in_surah": 79,
+   "verse_key": "9:79",
+   "page": 199,
+   "juz": 10
+  },
+  {
+   "global_number": 1315,
+   "surah": 9,
+   "ayah_in_surah": 80,
+   "verse_key": "9:80",
+   "page": 200,
+   "juz": 10
+  },
+  {
+   "global_number": 1316,
+   "surah": 9,
+   "ayah_in_surah": 81,
+   "verse_key": "9:81",
+   "page": 200,
+   "juz": 10
+  },
+  {
+   "global_number": 1317,
+   "surah": 9,
+   "ayah_in_surah": 82,
+   "verse_key": "9:82",
+   "page": 200,
+   "juz": 10
+  },
+  {
+   "global_number": 1318,
+   "surah": 9,
+   "ayah_in_surah": 83,
+   "verse_key": "9:83",
+   "page": 200,
+   "juz": 10
+  },
+  {
+   "global_number": 1319,
+   "surah": 9,
+   "ayah_in_surah": 84,
+   "verse_key": "9:84",
+   "page": 200,
+   "juz": 10
+  },
+  {
+   "global_number": 1320,
+   "surah": 9,
+   "ayah_in_surah": 85,
+   "verse_key": "9:85",
+   "page": 200,
+   "juz": 10
+  },
+  {
+   "global_number": 1321,
+   "surah": 9,
+   "ayah_in_surah": 86,
+   "verse_key": "9:86",
+   "page": 200,
+   "juz": 10
+  },
+  {
+   "global_number": 1322,
+   "surah": 9,
+   "ayah_in_surah": 87,
+   "verse_key": "9:87",
+   "page": 201,
+   "juz": 10
+  },
+  {
+   "global_number": 1323,
+   "surah": 9,
+   "ayah_in_surah": 88,
+   "verse_key": "9:88",
+   "page": 201,
+   "juz": 10
+  },
+  {
+   "global_number": 1324,
+   "surah": 9,
+   "ayah_in_surah": 89,
+   "verse_key": "9:89",
+   "page": 201,
+   "juz": 10
+  },
+  {
+   "global_number": 1325,
+   "surah": 9,
+   "ayah_in_surah": 90,
+   "verse_key": "9:90",
+   "page": 201,
+   "juz": 10
+  },
+  {
+   "global_number": 1326,
+   "surah": 9,
+   "ayah_in_surah": 91,
+   "verse_key": "9:91",
+   "page": 201,
+   "juz": 10
+  },
+  {
+   "global_number": 1327,
+   "surah": 9,
+   "ayah_in_surah": 92,
+   "verse_key": "9:92",
+   "page": 201,
+   "juz": 10
+  }
+ ]
+}

@@ -1,0 +1,27 @@
+{
+ "meta": {
+  "surah": 80,
+  "surah_name": "Abasa",
+  "surah_name_arabic": "عَبَسَ",
+  "revelation_type": "Meccan",
+  "juz": [
+   30
+  ],
+  "total_ayahs": 42,
+  "page_range": [
+   585,
+   585
+  ],
+  "ayahs_per_juz": {
+   "30": 42
+  },
+  "verification_status": {
+   "verse_text": "pending_etl",
+   "morphology": "pending_etl",
+   "wazn": "pending_etl"
+  },
+  "content_status": "scaffold",
+  "note": "Meta-complete scaffold. Verse/word/morphology/tafsir/wazn content to be populated by the ETL pipeline (KodeKoot) per the progressive-annotation convention in ARCHITECTURE.md. No verses synthesized."
+ },
+ "ayahs": []
+}

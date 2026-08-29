@@ -1,0 +1,27 @@
+{
+ "meta": {
+  "surah": 40,
+  "surah_name": "Ghafir",
+  "surah_name_arabic": "غَافِرٍ",
+  "revelation_type": "Meccan",
+  "juz": [
+   24
+  ],
+  "total_ayahs": 85,
+  "page_range": [
+   467,
+   476
+  ],
+  "ayahs_per_juz": {
+   "24": 85
+  },
+  "verification_status": {
+   "verse_text": "pending_etl",
+   "morphology": "pending_etl",
+   "wazn": "pending_etl"
+  },
+  "content_status": "scaffold",
+  "note": "Meta-complete scaffold. Verse/word/morphology/tafsir/wazn content to be populated by the ETL pipeline (KodeKoot) per the progressive-annotation convention in ARCHITECTURE.md. No verses synthesized."
+ },
+ "ayahs": []
+}

@@ -1,0 +1,27 @@
+{
+ "meta": {
+  "surah": 88,
+  "surah_name": "Al-Ghaashiya",
+  "surah_name_arabic": "الغَاشِيَةِ",
+  "revelation_type": "Meccan",
+  "juz": [
+   30
+  ],
+  "total_ayahs": 26,
+  "page_range": [
+   592,
+   592
+  ],
+  "ayahs_per_juz": {
+   "30": 26
+  },
+  "verification_status": {
+   "verse_text": "pending_etl",
+   "morphology": "pending_etl",
+   "wazn": "pending_etl"
+  },
+  "content_status": "scaffold",
+  "note": "Meta-complete scaffold. Verse/word/morphology/tafsir/wazn content to be populated by the ETL pipeline (KodeKoot) per the progressive-annotation convention in ARCHITECTURE.md. No verses synthesized."
+ },
+ "ayahs": []
+}

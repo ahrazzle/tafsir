@@ -1,0 +1,29 @@
+{
+ "meta": {
+  "surah": 8,
+  "surah_name": "Al-Anfaal",
+  "surah_name_arabic": "الأَنفَالِ",
+  "revelation_type": "Medinan",
+  "juz": [
+   9,
+   10
+  ],
+  "total_ayahs": 75,
+  "page_range": [
+   177,
+   186
+  ],
+  "ayahs_per_juz": {
+   "9": 40,
+   "10": 35
+  },
+  "verification_status": {
+   "verse_text": "pending_etl",
+   "morphology": "pending_etl",
+   "wazn": "pending_etl"
+  },
+  "content_status": "scaffold",
+  "note": "Meta-complete scaffold. Verse/word/morphology/tafsir/wazn content to be populated by the ETL pipeline (KodeKoot) per the progressive-annotation convention in ARCHITECTURE.md. No verses synthesized."
+ },
+ "ayahs": []
+}

@@ -1,0 +1,27 @@
+{
+ "meta": {
+  "surah": 32,
+  "surah_name": "As-Sajda",
+  "surah_name_arabic": "السَّجۡدَةِ",
+  "revelation_type": "Meccan",
+  "juz": [
+   21
+  ],
+  "total_ayahs": 30,
+  "page_range": [
+   415,
+   417
+  ],
+  "ayahs_per_juz": {
+   "21": 30
+  },
+  "verification_status": {
+   "verse_text": "pending_etl",
+   "morphology": "pending_etl",
+   "wazn": "pending_etl"
+  },
+  "content_status": "scaffold",
+  "note": "Meta-complete scaffold. Verse/word/morphology/tafsir/wazn content to be populated by the ETL pipeline (KodeKoot) per the progressive-annotation convention in ARCHITECTURE.md. No verses synthesized."
+ },
+ "ayahs": []
+}

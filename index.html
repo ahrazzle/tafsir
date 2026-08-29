@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" data-theme="classic" data-script="uthmani">
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Tafsir Study — Juz 1</title>
+<title>Tafsir Study — Quran</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -18,34 +18,59 @@
   --accent: #2D6A4F; --accent-light: #D8E8E0; --accent-ink: #1B4332;
   --gold: #B8860B; --gold-light: #FDF3D1;
   --highlight: rgba(45,106,79,0.12); --highlight-active: rgba(45,106,79,0.22);
+  --ink-arabic: var(--ink);
   --shadow-sm: 0 1px 2px rgba(26,24,20,0.04); --shadow-md: 0 4px 12px rgba(26,24,20,0.08); --shadow-lg: 0 12px 40px rgba(26,24,20,0.12);
   --radius-sm: 8px; --radius-md: 12px; --radius-lg: 16px; --radius-xl: 20px;
   --font-arabic: 'Amiri', serif; --font-body: 'Inter', -apple-system, sans-serif; --font-mono: 'JetBrains Mono', monospace;
   --space-xs: 4px; --space-sm: 8px; --space-md: 16px; --space-lg: 24px; --space-xl: 32px;
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1); --duration-fast: 150ms; --duration-normal: 250ms; --duration-slow: 400ms;
 }
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #141311; --surface: #1E1D1A; --surface-raised: #262420; --surface-sunken: #181715;
-    --ink: #E8E4DE; --ink-muted: #9E9890; --ink-faint: #6B6560;
-    --border: #33302C; --border-strong: #444039;
-    --accent: #52B788; --accent-light: #1B4332; --accent-ink: #D8E8E0;
-    --gold: #D4A843; --gold-light: #2A2410;
-    --highlight: rgba(82,183,136,0.15); --highlight-active: rgba(82,183,136,0.28);
-    --shadow-sm: 0 1px 2px rgba(0,0,0,0.2); --shadow-md: 0 4px 12px rgba(0,0,0,0.3); --shadow-lg: 0 12px 40px rgba(0,0,0,0.4);
-  }
+/* Theme: Sepia */
+[data-theme="sepia"] {
+  --bg: #F3E9D8; --surface: #FBF4E8; --surface-raised: #FBF4E8; --surface-sunken: #ECE0CB;
+  --ink: #3B2F1E; --ink-muted: #7A6A4F; --ink-faint: #A89878;
+  --border: #E0D2B8; --border-strong: #CBB893; --accent: #8A6D3B; --accent-light: #EFE2C6; --accent-ink: #5E4A28;
+  --gold: #9A6B16; --gold-light: #F6E9CC; --highlight: rgba(138,109,59,0.12); --highlight-active: rgba(138,109,59,0.22);
+}
+/* Theme: Olive */
+[data-theme="olive"] {
+  --bg: #F2F3EC; --surface: #FBFCF6; --surface-raised: #FBFCF6; --surface-sunken: #E6E8DA;
+  --ink: #23291C; --ink-muted: #5C6450; --ink-faint: #8C927E;
+  --border: #DCE0CF; --border-strong: #C3C9AE; --accent: #5C6B2F; --accent-light: #E4E9CE; --accent-ink: #3A4420;
+  --gold: #8A6D12; --gold-light: #F1EBC8; --highlight: rgba(92,107,47,0.12); --highlight-active: rgba(92,107,47,0.22);
+}
+/* Theme: Midnight (dark) */
+[data-theme="midnight"] {
+  --bg: #141311; --surface: #1E1D1A; --surface-raised: #262420; --surface-sunken: #181715;
+  --ink: #E8E4DE; --ink-muted: #9E9890; --ink-faint: #6B6560;
+  --border: #33302C; --border-strong: #444039; --accent: #52B788; --accent-light: #1B4332; --accent-ink: #D8E8E0;
+  --gold: #D4A843; --gold-light: #2A2410; --highlight: rgba(82,183,136,0.15); --highlight-active: rgba(82,183,136,0.28);
+}
+/* Theme: Royal */
+[data-theme="royal"] {
+  --bg: #11131F; --surface: #1A1D2E; --surface-raised: #232742; --surface-sunken: #151826;
+  --ink: #ECEAF5; --ink-muted: #A39FC0; --ink-faint: #6E6A8C;
+  --border: #2E3350; --border-strong: #3D4468; --accent: #C9A24B; --accent-light: #2A2410; --accent-ink: #F1DFB0;
+  --gold: #C9A24B; --gold-light: #2A2410; --highlight: rgba(201,162,75,0.14); --highlight-active: rgba(201,162,75,0.26);
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: var(--font-body); background: var(--bg); color: var(--ink); line-height: 1.6; -webkit-font-smoothing: antialiased; min-height: 100dvh; }
 
 /* ─── Nav Bar ─── */
-.navbar { max-width: 800px; margin: 0 auto; padding: var(--space-md) var(--space-lg); display: flex; align-items: center; justify-content: space-between; gap: var(--space-sm); flex-wrap: wrap; }
+.navbar { max-width: 960px; margin: 0 auto; padding: var(--space-md) var(--space-lg); display: flex; align-items: center; justify-content: space-between; gap: var(--space-sm); flex-wrap: wrap; }
 .nav-brand { font-size: 14px; font-weight: 700; color: var(--accent); letter-spacing: 0.02em; }
 .nav-brand span { color: var(--ink-faint); font-weight: 400; }
 .nav-dims { display: flex; align-items: center; gap: var(--space-sm); flex-wrap: wrap; }
 .nav-dim { display: flex; align-items: center; gap: 6px; background: var(--surface-sunken); border-radius: var(--radius-md); padding: 4px 6px; }
 .nav-dim label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-faint); padding-left: 6px; }
-.nav-dim select { font-family: var(--font-body); font-size: 13px; font-weight: 500; color: var(--ink); background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 4px 8px; cursor: pointer; outline: none; max-width: 110px; }
+.nav-dim select { font-family: var(--font-body); font-size: 13px; font-weight: 500; color: var(--ink); background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 4px 8px; cursor: pointer; outline: none; max-width: 130px; }
+
+/* ─── Settings bar ─── */
+.settings-bar { max-width: 960px; margin: 0 auto; padding: 0 var(--space-lg) var(--space-sm); display: flex; align-items: center; gap: var(--space-sm); flex-wrap: wrap; }
+.toggle-wrap { display: flex; align-items: center; gap: 6px; background: var(--surface-sunken); border-radius: var(--radius-md); padding: 4px 10px; cursor: pointer; }
+.toggle-wrap input { width: 16px; height: 16px; accent-color: var(--accent); cursor: pointer; }
+.toggle-wrap label { font-size: 12px; font-weight: 600; color: var(--ink-muted); cursor: pointer; user-select: none; }
+.settings-bar .nav-dim select { max-width: 150px; }
 
 /* ─── Verse List ─── */
 .verse-list { max-width: 800px; margin: 0 auto; padding: var(--space-md) var(--space-lg) var(--space-2xl); }
@@ -59,7 +84,7 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--ink); 
 .ayah-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-sm); }
 .ayah-number { font-size: 11px; font-weight: 600; color: var(--accent); background: var(--accent-light); padding: 2px 10px; border-radius: 20px; }
 .ayah-meta { font-size: 11px; color: var(--ink-faint); font-family: var(--font-mono); }
-.ayah-arabic { font-family: var(--font-arabic); font-size: 28px; line-height: 2.2; text-align: right; direction: rtl; color: var(--ink); margin-bottom: var(--space-sm); }
+.ayah-arabic { font-family: var(--font-arabic); font-size: 28px; line-height: 2.2; text-align: right; direction: rtl; color: var(--ink-arabic); margin-bottom: var(--space-sm); }
 .ayah-arabic .word { display: inline; cursor: pointer; padding: 2px 2px; border-radius: 4px; transition: background var(--duration-fast) var(--ease-out), color var(--duration-fast) var(--ease-out); }
 .ayah-arabic .word:hover, .ayah-arabic .word:active { background: var(--highlight-active); color: var(--accent-ink); }
 .ayah-arabic .word.highlight { background: var(--highlight); border-radius: 4px; }
@@ -67,11 +92,35 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--ink); 
 .ayah-translation .tword { display: inline; padding: 1px 2px; border-radius: 3px; transition: background var(--duration-fast) var(--ease-out); }
 .ayah-translation .tword.highlight { background: var(--highlight); color: var(--ink); font-weight: 500; }
 
+/* ─── Tajweed colour classes ─── */
+.tj-word { border-radius: 4px; }
+.tj-madd    { color: #C0392B; }                 /* red   — Madani madd */
+.tj-ghunnah { color: #1E8449; }                 /* green — nasalization */
+.tj-idgham  { color: #2E86C1; }                 /* blue  — assimilation */
+.tj-ikhfa   { color: #2E86C1; }                 /* blue  — concealment */
+.tj-silent  { color: #7F8C8D; }                 /* grey  — unpronounced */
+.tj-qalqalah{ color: #2471A3; }                 /* blue echo */
+[data-theme="midnight"] .tj-madd { color: #FF6B5B; }
+[data-theme="midnight"] .tj-ghunnah { color: #58D68D; }
+[data-theme="midnight"] .tj-idgham, [data-theme="midnight"] .tj-ikhfa, [data-theme="midnight"] .tj-qalqalah { color: #5DADE2; }
+[data-theme="midnight"] .tj-silent { color: #A6ACAF; }
+/* Aalim scheme shifts madd to yellow */
+[data-tajweed-style="aalim"] .tj-madd { color: #D4AC0D; }
+
 /* ─── Status ─── */
 .status { max-width: 800px; margin: var(--space-md) auto 0; padding: var(--space-sm) var(--space-lg); font-size: 12px; color: var(--ink-faint); text-align: center; }
 .status.error { color: #C0392B; }
 .status.loading { color: var(--accent); }
 .status.help { color: var(--gold); }
+.tajweed-pending { max-width: 800px; margin: var(--space-md) auto 0; padding: var(--space-sm) var(--space-lg); font-size: 12px; color: var(--ink-faint); font-style: italic; text-align: center; }
+
+/* ─── Scaffold notice ─── */
+.scaffold-notice { background: var(--surface-sunken); border: 1px dashed var(--border-strong); border-radius: var(--radius-md); padding: var(--space-lg); margin-top: var(--space-md); }
+.scaffold-badge { display: inline-block; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--gold); background: var(--gold-light); padding: 3px 10px; border-radius: 20px; margin-bottom: var(--space-sm); }
+.scaffold-notice p { font-size: 14px; color: var(--ink-muted); line-height: 1.7; margin-bottom: var(--space-sm); }
+.scaffold-notice p:last-child { margin-bottom: 0; }
+.scaffold-meta { font-family: var(--font-mono); font-size: 12px; color: var(--ink-faint); }
+.scaffold-hint { font-style: italic; color: var(--ink-faint); }
 
 /* ─── Study Pane ─── */
 .study-pane { position: fixed; bottom: 0; left: 50%; transform: translateX(-50%) translateY(100%); width: 100%; max-width: 800px; max-height: 85dvh; background: var(--surface); border-radius: var(--radius-xl) var(--radius-xl) 0 0; box-shadow: var(--shadow-lg); z-index: 100; transition: transform var(--duration-slow) var(--ease-out); display: flex; flex-direction: column; overflow: hidden; }
@@ -144,7 +193,7 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--ink); 
 <body>
 
 <div class="navbar">
-  <div class="nav-brand">Tafsir Study <span>· Juz 1</span></div>
+  <div class="nav-brand">Tafsir Study <span>· Quran</span></div>
   <div class="nav-dims">
     <div class="nav-dim"><label>Juz</label><select id="juzSelect"><option value="1">Juz 1</option></select></div>
     <div class="nav-dim"><label>Surah</label><select id="surahSelect"></select></div>
@@ -152,7 +201,15 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--ink); 
   </div>
 </div>
 
-<div class="status" id="status">Loading Juz 1…</div>
+<div class="settings-bar">
+  <label class="toggle-wrap"><input type="checkbox" id="tajweedToggle"><label for="tajweedToggle">Tajweed</label></label>
+  <div class="nav-dim"><label>Style</label><select id="tajweedStyle"><option value="madani">Madani</option></select></div>
+  <div class="nav-dim"><label>Script</label><select id="scriptSelect"></select></div>
+  <div class="nav-dim"><label>Theme</label><select id="themeSelect"></select></div>
+  <div class="nav-dim"><label>Ink</label><select id="inkSelect"></select></div>
+</div>
+
+<div class="status" id="status">Loading…</div>
 <div class="verse-list" id="verseList"></div>
 
 <div class="study-pane-overlay" id="overlay"></div>
@@ -171,333 +228,6 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--ink); 
   <div class="study-content" id="studyContent"></div>
 </div>
 
-<script>
-// ═══════════════════════════════════════════════════════
-// NAVIGATION INDEX (Juz 1 — verified against api.alquran.cloud)
-// ═══════════════════════════════════════════════════════
-const NAV = {
-  juz: { number: 1, total_ayahs: 148, surahs: [1, 2], pages: "1-21" },
-  surahs: {
-    1: { name: "Al-Fatihah", name_arabic: "الفاتحة", ayahs: 7, pages: [1], file: "data/surah-1.json" },
-    2: { name: "Al-Baqarah", name_arabic: "البقرة", ayahs_in_juz: 141, pages: [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21], file: "data/surah-2.json" }
-  },
-  pages: {
-    1:{range:"1:1-1:7",surah:1},2:{range:"2:1-2:5",surah:2},3:{range:"2:6-2:16",surah:2},
-    4:{range:"2:17-2:24",surah:2},5:{range:"2:25-2:29",surah:2},6:{range:"2:30-2:37",surah:2},
-    7:{range:"2:38-2:48",surah:2},8:{range:"2:49-2:57",surah:2},9:{range:"2:58-2:61",surah:2},
-    10:{range:"2:62-2:69",surah:2},11:{range:"2:70-2:76",surah:2},12:{range:"2:77-2:83",surah:2},
-    13:{range:"2:84-2:88",surah:2},14:{range:"2:89-2:93",surah:2},15:{range:"2:94-2:101",surah:2},
-    16:{range:"2:102-2:105",surah:2},17:{range:"2:106-2:112",surah:2},18:{range:"2:113-2:119",surah:2},
-    19:{range:"2:120-2:126",surah:2},20:{range:"2:127-2:134",surah:2},21:{range:"2:135-2:141",surah:2}
-  }
-};
-
-// ─── State ───
-let currentSurah = 1;
-let currentPage = null;
-let loadedData = {};
-let currentWord = null;
-let currentAyah = null;
-let isPaneOpen = false;
-let selectedTafsirIndex = 0;
-
-// ─── DOM ───
-const surahSelect = document.getElementById('surahSelect');
-const pageSelect = document.getElementById('pageSelect');
-const verseList = document.getElementById('verseList');
-const statusEl = document.getElementById('status');
-const studyPane = document.getElementById('studyPane');
-const overlay = document.getElementById('overlay');
-const studyArabic = document.getElementById('studyArabic');
-const studyTranslation = document.getElementById('studyTranslation');
-const studyLocation = document.getElementById('studyLocation');
-const studyContent = document.getElementById('studyContent');
-const tafsirSelect = document.getElementById('tafsirSelect');
-const paneHandle = document.getElementById('paneHandle');
-
-// ─── Populate selectors ───
-function populateSelectors() {
-  surahSelect.innerHTML = '';
-  Object.keys(NAV.surahs).forEach(num => {
-    const s = NAV.surahs[num];
-    const opt = document.createElement('option');
-    opt.value = num;
-    opt.textContent = `${num}. ${s.name}`;
-    surahSelect.appendChild(opt);
-  });
-  surahSelect.value = currentSurah;
-
-  pageSelect.innerHTML = '';
-  pageSelect.appendChild(new Option('All pages', ''));
-  const pages = NAV.surahs[currentSurah].pages;
-  pages.forEach(p => {
-    const opt = document.createElement('option');
-    opt.value = p;
-    const range = NAV.pages[p] ? ` (${NAV.pages[p].range})` : '';
-    opt.textContent = `Page ${p}${range}`;
-    pageSelect.appendChild(opt);
-  });
-  if (currentPage !== null && pages.includes(currentPage)) pageSelect.value = currentPage;
-  else pageSelect.value = '';
-}
-
-// ─── Load data file ───
-async function loadSurah(num) {
-  const info = NAV.surahs[num];
-  if (loadedData[num]) return loadedData[num];
-  statusEl.textContent = `Loading ${info.name}…`;
-  statusEl.className = 'status loading';
-  try {
-    const res = await fetch(info.file);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const data = await res.json();
-    loadedData[num] = data;
-    return data;
-  } catch (e) {
-    statusEl.textContent = `Failed to load ${info.file}. Serve over HTTP (python3 -m http.server 8000) or verify file exists.`;
-    statusEl.className = 'status error';
-    throw e;
-  }
-}
-
-// ─── Render ───
-function renderVerses(data, filterPage) {
-  verseList.innerHTML = '';
-  statusEl.className = 'status';
-  statusEl.textContent = '';
-
-  const ayahs = data.ayahs.filter(a => !filterPage || a.page === filterPage);
-  const section = document.createElement('div');
-  section.className = 'verse-section';
-
-  const header = document.createElement('div');
-  header.className = 'verse-section-header';
-  header.innerHTML = `
-    <div class="verse-section-title">${data.meta.surah}. ${data.meta.surah_name} <span>${data.meta.surah_name_arabic}</span></div>
-    <div class="verse-count">${ayahs.length} ayahs${filterPage ? ` · page ${filterPage}` : ''}</div>
-  `;
-  section.appendChild(header);
-
-  ayahs.forEach(ayah => {
-    const card = document.createElement('div');
-    card.className = 'ayah-card';
-    card.innerHTML = `
-      <div class="ayah-header">
-        <span class="ayah-number">${ayah.verse_key}</span>
-        <span class="ayah-meta">p.${ayah.page} · j.${ayah.juz}</span>
-      </div>
-    `;
-
-    const arabicDiv = document.createElement('div');
-    arabicDiv.className = 'ayah-arabic';
-    (ayah.words && ayah.words.length ? ayah.words : [{ location: ayah.verse_key + ':0', arabic: ayah.arabic, translation: '' }]).forEach(word => {
-      const span = document.createElement('span');
-      span.className = 'word';
-      span.textContent = word.arabic;
-      span.setAttribute('data-location', word.location);
-      span.addEventListener('click', () => openStudyPane(word, ayah));
-      span.addEventListener('mouseenter', () => highlightPair(word.location, true));
-      span.addEventListener('mouseleave', () => highlightPair(word.location, false));
-      arabicDiv.appendChild(span);
-    });
-    card.appendChild(arabicDiv);
-
-    const transDiv = document.createElement('div');
-    transDiv.className = 'ayah-translation';
-    (ayah.words && ayah.words.length ? ayah.words : [{ location: ayah.verse_key + ':0', arabic: ayah.arabic, translation: '' }]).forEach(word => {
-      if (!word.translation) return;
-      const span = document.createElement('span');
-      span.className = 'tword';
-      span.textContent = word.translation;
-      span.setAttribute('data-location', word.location);
-      span.addEventListener('mouseenter', () => highlightPair(word.location, true));
-      span.addEventListener('mouseleave', () => highlightPair(word.location, false));
-      transDiv.appendChild(span);
-      transDiv.appendChild(document.createTextNode(' '));
-    });
-    card.appendChild(transDiv);
-
-    section.appendChild(card);
-  });
-
-  verseList.appendChild(section);
-}
-
-// ─── Bidirectional Highlighting ───
-function highlightPair(location, active) {
-  const a = document.querySelector(`.word[data-location="${location}"]`);
-  const t = document.querySelector(`.tword[data-location="${location}"]`);
-  if (a) a.classList.toggle('highlight', active);
-  if (t) t.classList.toggle('highlight', active);
-}
-
-// ─── Tafsir Selector ───
-function populateTafsirSelector(ayah) {
-  tafsirSelect.innerHTML = '';
-  const tafsirs = ayah.tafsir || [];
-  if (!tafsirs.length) {
-    const opt = document.createElement('option');
-    opt.value = -1;
-    opt.textContent = 'No tafsir available';
-    tafsirSelect.appendChild(opt);
-    tafsirSelect.disabled = true;
-    selectedTafsirIndex = -1;
-    return;
-  }
-  tafsirSelect.disabled = false;
-  tafsirs.forEach((t, i) => {
-    const opt = document.createElement('option');
-    opt.value = i;
-    opt.textContent = t.source_name;
-    tafsirSelect.appendChild(opt);
-  });
-  if (selectedTafsirIndex >= tafsirs.length) selectedTafsirIndex = 0;
-  tafsirSelect.value = selectedTafsirIndex;
-  tafsirSelect.onchange = () => {
-    selectedTafsirIndex = parseInt(tafsirSelect.value);
-    if (currentWord && currentAyah) renderStudyContent(currentWord, currentAyah);
-  };
-}
-
-// ─── Open Study Pane ───
-function openStudyPane(word, ayah) {
-  currentWord = word;
-  currentAyah = ayah;
-  document.querySelectorAll('.word.selected').forEach(el => el.classList.remove('selected'));
-  const wordEl = document.querySelector(`.word[data-location="${word.location}"]`);
-  if (wordEl) wordEl.classList.add('selected');
-
-  studyArabic.textContent = word.arabic;
-  studyTranslation.textContent = word.translation || '';
-  studyLocation.textContent = `${ayah.verse_key} · word ${word.position || word.location.split(':')[2]}`;
-  populateTafsirSelector(ayah);
-  renderStudyContent(word, ayah);
-
-  studyPane.classList.add('open');
-  overlay.classList.add('open');
-  isPaneOpen = true;
-  studyContent.scrollTop = 0;
-}
-
-// ─── Render Study Content ───
-function renderStudyContent(word, ayah) {
-  studyContent.innerHTML = '';
-  const wz = word.wazn || null;
-
-  // Root
-  if (word.root) {
-    const s = document.createElement('div'); s.className = 'study-section';
-    s.innerHTML = `<div class="section-label">Root</div><div class="root-card"><div class="root-arabic">${word.root}</div><div class="root-info"><div class="root-letters">${word.root}</div><div class="root-meaning">${word.root_meaning || ''}</div></div></div>`;
-    studyContent.appendChild(s);
-  } else if (word.morphology && word.morphology.tag) {
-    const s = document.createElement('div'); s.className = 'study-section';
-    s.innerHTML = `<div class="section-label">Root</div><div class="no-root">${wz && wz.meaning ? wz.meaning : 'This word has no lexical root.'}</div>`;
-    studyContent.appendChild(s);
-  }
-
-  // Morphology
-  if (word.morphology) {
-    const m = word.morphology;
-    const s = document.createElement('div'); s.className = 'study-section';
-    s.innerHTML = `<div class="section-label">Morphology</div><div class="morph-tag"><span class="tag-code">${m.tag || ''}</span>${m.description || ''}</div>${m.arabic_grammar ? `<div class="morph-grammar">${m.arabic_grammar}</div>` : ''}`;
-    studyContent.appendChild(s);
-  }
-
-  // Wazn
-  if (wz && wz.pattern_arabic) {
-    const s = document.createElement('div'); s.className = 'study-section';
-    let ex = '';
-    if (wz.examples && wz.examples.length) {
-      ex = '<div class="wazn-examples">' + wz.examples.map(e => `<span class="wazn-example-chip"><span class="ex-word">${e.word}</span><span class="ex-meaning">${e.meaning}</span></span>`).join('') + '</div>';
-    }
-    s.innerHTML = `
-      <div class="section-label">Pattern</div>
-      <div class="wazn-card">
-        <div class="wazn-pattern"><span class="wazn-template">${wz.pattern_arabic}</span><span class="wazn-form">${wz.form || ''}</span></div>
-        <button class="wazn-toggle" aria-expanded="false">Show pattern details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
-        <div class="wazn-details">
-          <div class="wazn-meaning">${wz.meaning || ''}</div>
-          ${wz.root_in_template ? `<div class="wazn-template-visual">${wz.root_in_template}</div>` : ''}
-          ${ex}
-        </div>
-      </div>`;
-    studyContent.appendChild(s);
-    const tog = s.querySelector('.wazn-toggle'); const det = s.querySelector('.wazn-details');
-    tog.addEventListener('click', () => {
-      const open = det.classList.contains('expanded');
-      det.classList.toggle('expanded'); tog.classList.toggle('expanded');
-      tog.innerHTML = open ? `Show pattern details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>` : `Hide details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>`;
-      tog.setAttribute('aria-expanded', open ? 'false' : 'true');
-    });
-  }
-
-  // Tafsir
-  const tafsirs = ayah.tafsir || [];
-  const s = document.createElement('div'); s.className = 'study-section';
-  s.innerHTML = `<div class="section-label">Tafsir</div>`;
-  if (tafsirs.length) {
-    const t = tafsirs[selectedTafsirIndex] || tafsirs[0];
-    const isLong = t.text.length > 250;
-    s.innerHTML += `<div class="tafsir-card"><div class="tafsir-source">${t.source_name}</div><div class="tafsir-text${isLong?' collapsed':''}" id="tafsirText">${t.text}</div>${isLong?`<button class="tafsir-expand" id="tafsirExpand" aria-expanded="false">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>`:''}</div>`;
-    studyContent.appendChild(s);
-    if (isLong) {
-      const eb = document.getElementById('tafsirExpand'); const tt = document.getElementById('tafsirText');
-      eb.addEventListener('click', () => {
-        const open = tt.classList.contains('collapsed');
-        tt.classList.toggle('collapsed'); eb.classList.toggle('expanded');
-        eb.innerHTML = open ? `Show less <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>` : `Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>`;
-        eb.setAttribute('aria-expanded', open ? 'false' : 'true');
-      });
-    }
-  } else {
-    s.innerHTML += `<div class="no-tafsir">No tafsir available for this verse yet.</div>`;
-    studyContent.appendChild(s);
-  }
-
-  // Occurrences
-  if (word.occurrences && word.occurrences.total) {
-    const maxCount = Math.max(...(Array.isArray(word.occurrences.breakdown) ? word.occurrences.breakdown.map(b => b.count) : [1]));
-    const s = document.createElement('div'); s.className = 'study-section';
-    let bd = '';
-    if (Array.isArray(word.occurrences.breakdown)) {
-      word.occurrences.breakdown.forEach(item => { const pct = (item.count/maxCount)*100; bd += `<div class="occ-row" style="display:flex;align-items:center;gap:8px;font-size:13px;padding:6px 0;border-bottom:1px solid var(--border);"><span class="occ-form" style="font-family:var(--font-arabic);font-size:15px;color:var(--ink);min-width:80px;direction:rtl;">${item.form.split(' ')[0]}</span><div class="occ-bar" style="flex:1;height:6px;background:var(--surface-sunken);border-radius:3px;overflow:hidden;"><div class="occ-bar-fill" style="height:100%;background:var(--accent);border-radius:3px;min-width:2px;width:${pct}%"></div></div><span class="occ-count" style="font-family:var(--font-mono);font-size:12px;font-weight:500;color:var(--ink-muted);min-width:32px;text-align:right;">${item.count}</span></div>`; });
-    }
-    s.innerHTML = `<div class="section-label">Occurrences in the Quran</div><div class="occurrences-summary"><span class="occurrences-count">${word.occurrences.total}</span><span class="occurrences-label">total occurrences<br>across derived forms</span></div>${bd}`;
-    studyContent.appendChild(s);
-  }
-}
-
-// ─── Close Study Pane ───
-function closeStudyPane() {
-  studyPane.classList.remove('open'); overlay.classList.remove('open'); isPaneOpen = false;
-  document.querySelectorAll('.word.selected, .highlight').forEach(el => el.classList.remove('selected','highlight'));
-}
-overlay.addEventListener('click', closeStudyPane);
-let startY = 0;
-paneHandle.addEventListener('touchstart', e => { startY = e.touches[0].clientY; }, { passive: true });
-paneHandle.addEventListener('touchend', e => { if (e.changedTouches[0].clientY - startY > 60) closeStudyPane(); }, { passive: true });
-document.addEventListener('keydown', e => { if (e.key === 'Escape' && isPaneOpen) closeStudyPane(); });
-
-// ─── Navigation handlers ───
-surahSelect.addEventListener('change', async () => {
-  currentSurah = parseInt(surahSelect.value); currentPage = null; populateSelectors();
-  try { renderVerses(await loadSurah(currentSurah), null); } catch (e) {}
-});
-pageSelect.addEventListener('change', async () => {
-  currentPage = pageSelect.value ? parseInt(pageSelect.value) : null;
-  try { renderVerses(await loadSurah(currentSurah), currentPage); } catch (e) {}
-});
-
-// ─── Init ───
-populateSelectors();
-(async () => {
-  if (location.protocol === 'file:') {
-    statusEl.className = 'status help';
-    statusEl.textContent = 'Opening via file:// — data files are blocked by the browser. Run: python3 -m http.server 8000 and open http://localhost:8000/';
-  }
-  try { renderVerses(await loadSurah(1), null); }
-  catch (e) {}
-})();
-</script>
+<script src="app.js"></script>
 </body>
 </html>

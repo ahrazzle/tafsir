@@ -1,0 +1,5906 @@
+{
+ "meta": {
+  "description": "Consolidated Quran navigation index — all 30 juz, 114 surahs, 604 pages. Generated to mirror per-juz navigation-juzN.json files; single source of truth for routing in index.html.",
+  "generated": "2026-08-28",
+  "total_surahs": 114,
+  "total_juz": 30,
+  "total_pages": 604,
+  "total_ayahs": 6236,
+  "content_ready": [
+   1,
+   2
+  ],
+  "source": "navigation-juzN.json (api.alquran.cloud/v1/juz/N) + _surah_master.json"
+ },
+ "juz": {
+  "1": {
+   "surahs": [
+    1,
+    2
+   ],
+   "page_start": 1,
+   "page_end": 21,
+   "total_ayahs": 148
+  },
+  "2": {
+   "surahs": [
+    2
+   ],
+   "page_start": 22,
+   "page_end": 41,
+   "total_ayahs": 111
+  },
+  "3": {
+   "surahs": [
+    2,
+    3
+   ],
+   "page_start": 42,
+   "page_end": 62,
+   "total_ayahs": 126
+  },
+  "4": {
+   "surahs": [
+    3,
+    4
+   ],
+   "page_start": 62,
+   "page_end": 81,
+   "total_ayahs": 131
+  },
+  "5": {
+   "surahs": [
+    4
+   ],
+   "page_start": 82,
+   "page_end": 101,
+   "total_ayahs": 124
+  },
+  "6": {
+   "surahs": [
+    4,
+    5
+   ],
+   "page_start": 102,
+   "page_end": 121,
+   "total_ayahs": 110
+  },
+  "7": {
+   "surahs": [
+    5,
+    6
+   ],
+   "page_start": 121,
+   "page_end": 141,
+   "total_ayahs": 149
+  },
+  "8": {
+   "surahs": [
+    6,
+    7
+   ],
+   "page_start": 142,
+   "page_end": 161,
+   "total_ayahs": 142
+  },
+  "9": {
+   "surahs": [
+    7,
+    8
+   ],
+   "page_start": 162,
+   "page_end": 181,
+   "total_ayahs": 159
+  },
+  "10": {
+   "surahs": [
+    8,
+    9
+   ],
+   "page_start": 182,
+   "page_end": 201,
+   "total_ayahs": 127
+  },
+  "11": {
+   "surahs": [
+    9,
+    10,
+    11
+   ],
+   "page_start": 201,
+   "page_end": 221,
+   "total_ayahs": 151
+  },
+  "12": {
+   "surahs": [
+    11,
+    12
+   ],
+   "page_start": 222,
+   "page_end": 241,
+   "total_ayahs": 170
+  },
+  "13": {
+   "surahs": [
+    12,
+    13,
+    14
+   ],
+   "page_start": 242,
+   "page_end": 261,
+   "total_ayahs": 154
+  },
+  "14": {
+   "surahs": [
+    15,
+    16
+   ],
+   "page_start": 262,
+   "page_end": 281,
+   "total_ayahs": 227
+  },
+  "15": {
+   "surahs": [
+    17,
+    18
+   ],
+   "page_start": 282,
+   "page_end": 301,
+   "total_ayahs": 185
+  },
+  "16": {
+   "surahs": [
+    18,
+    19,
+    20
+   ],
+   "page_start": 302,
+   "page_end": 321,
+   "total_ayahs": 269
+  },
+  "17": {
+   "surahs": [
+    21,
+    22
+   ],
+   "page_start": 322,
+   "page_end": 341,
+   "total_ayahs": 190
+  },
+  "18": {
+   "surahs": [
+    23,
+    24,
+    25
+   ],
+   "page_start": 342,
+   "page_end": 361,
+   "total_ayahs": 202
+  },
+  "19": {
+   "surahs": [
+    25,
+    26,
+    27
+   ],
+   "page_start": 362,
+   "page_end": 381,
+   "total_ayahs": 339
+  },
+  "20": {
+   "surahs": [
+    27,
+    28,
+    29
+   ],
+   "page_start": 382,
+   "page_end": 401,
+   "total_ayahs": 171
+  },
+  "21": {
+   "surahs": [
+    29,
+    30,
+    31,
+    32,
+    33
+   ],
+   "page_start": 402,
+   "page_end": 421,
+   "total_ayahs": 178
+  },
+  "22": {
+   "surahs": [
+    33,
+    34,
+    35,
+    36
+   ],
+   "page_start": 422,
+   "page_end": 441,
+   "total_ayahs": 169
+  },
+  "23": {
+   "surahs": [
+    36,
+    37,
+    38,
+    39
+   ],
+   "page_start": 442,
+   "page_end": 461,
+   "total_ayahs": 357
+  },
+  "24": {
+   "surahs": [
+    39,
+    40,
+    41
+   ],
+   "page_start": 462,
+   "page_end": 481,
+   "total_ayahs": 175
+  },
+  "25": {
+   "surahs": [
+    41,
+    42,
+    43,
+    44,
+    45
+   ],
+   "page_start": 482,
+   "page_end": 502,
+   "total_ayahs": 246
+  },
+  "26": {
+   "surahs": [
+    46,
+    47,
+    48,
+    49,
+    50,
+    51
+   ],
+   "page_start": 502,
+   "page_end": 521,
+   "total_ayahs": 195
+  },
+  "27": {
+   "surahs": [
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57
+   ],
+   "page_start": 522,
+   "page_end": 541,
+   "total_ayahs": 399
+  },
+  "28": {
+   "surahs": [
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66
+   ],
+   "page_start": 542,
+   "page_end": 561,
+   "total_ayahs": 137
+  },
+  "29": {
+   "surahs": [
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77
+   ],
+   "page_start": 562,
+   "page_end": 581,
+   "total_ayahs": 431
+  },
+  "30": {
+   "surahs": [
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114
+   ],
+   "page_start": 582,
+   "page_end": 604,
+   "total_ayahs": 564
+  }
+ },
+ "surahs": {
+  "1": {
+   "name": "Al-Faatiha",
+   "name_arabic": "ٱلْفَاتِحَةِ",
+   "ayahs": 7,
+   "pages": [
+    1
+   ],
+   "file": "data/surah-1.json",
+   "juz": [
+    1
+   ],
+   "content": true,
+   "revelation_type": "Meccan"
+  },
+  "2": {
+   "name": "Al-Baqara",
+   "name_arabic": "البَقَرَةِ",
+   "ayahs": 286,
+   "pages": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49
+   ],
+   "file": "data/surah-2.json",
+   "juz": [
+    1,
+    2,
+    3
+   ],
+   "content": true,
+   "revelation_type": "Medinan"
+  },
+  "3": {
+   "name": "Aal-i-Imraan",
+   "name_arabic": "آلِ عِمۡرَانَ",
+   "ayahs": 200,
+   "pages": [
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76
+   ],
+   "file": "data/surah-3.json",
+   "juz": [
+    3,
+    4
+   ],
+   "content": false,
+   "revelation_type": "Medinan",
+   "ayahs_in_juz1": {
+    "3": 92,
+    "4": 108
+   }
+  },
+  "4": {
+   "name": "An-Nisaa",
+   "name_arabic": "النِّسَاءِ",
+   "ayahs": 176,
+   "pages": [
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106
+   ],
+   "file": "data/surah-4.json",
+   "juz": [
+    4,
+    5,
+    6
+   ],
+   "content": false,
+   "revelation_type": "Medinan",
+   "ayahs_in_juz1": {
+    "4": 23,
+    "5": 124,
+    "6": 29
+   }
+  },
+  "5": {
+   "name": "Al-Maaida",
+   "name_arabic": "المَائـِدَةِ",
+   "ayahs": 120,
+   "pages": [
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127
+   ],
+   "file": "data/surah-5.json",
+   "juz": [
+    6,
+    7
+   ],
+   "content": false,
+   "revelation_type": "Medinan",
+   "ayahs_in_juz1": {
+    "6": 81,
+    "7": 39
+   }
+  },
+  "6": {
+   "name": "Al-An'aam",
+   "name_arabic": "الأَنۡعَامِ",
+   "ayahs": 165,
+   "pages": [
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139,
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    147,
+    148,
+    149,
+    150
+   ],
+   "file": "data/surah-6.json",
+   "juz": [
+    7,
+    8
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "7": 110,
+    "8": 55
+   }
+  },
+  "7": {
+   "name": "Al-A'raaf",
+   "name_arabic": "الأَعۡرَافِ",
+   "ayahs": 206,
+   "pages": [
+    151,
+    152,
+    153,
+    154,
+    155,
+    156,
+    157,
+    158,
+    159,
+    160,
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167,
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174,
+    175,
+    176
+   ],
+   "file": "data/surah-7.json",
+   "juz": [
+    8,
+    9
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "8": 87,
+    "9": 119
+   }
+  },
+  "8": {
+   "name": "Al-Anfaal",
+   "name_arabic": "الأَنفَالِ",
+   "ayahs": 75,
+   "pages": [
+    177,
+    178,
+    179,
+    180,
+    181,
+    182,
+    183,
+    184,
+    185,
+    186
+   ],
+   "file": "data/surah-8.json",
+   "juz": [
+    9,
+    10
+   ],
+   "content": false,
+   "revelation_type": "Medinan",
+   "ayahs_in_juz1": {
+    "9": 40,
+    "10": 35
+   }
+  },
+  "9": {
+   "name": "At-Tawba",
+   "name_arabic": "التَّوۡبَةِ",
+   "ayahs": 129,
+   "pages": [
+    187,
+    188,
+    189,
+    190,
+    191,
+    192,
+    193,
+    194,
+    195,
+    196,
+    197,
+    198,
+    199,
+    200,
+    201,
+    202,
+    203,
+    204,
+    205,
+    206,
+    207
+   ],
+   "file": "data/surah-9.json",
+   "juz": [
+    10,
+    11
+   ],
+   "content": false,
+   "revelation_type": "Medinan",
+   "ayahs_in_juz1": {
+    "10": 92,
+    "11": 37
+   }
+  },
+  "10": {
+   "name": "Yunus",
+   "name_arabic": "يُونُسَ",
+   "ayahs": 109,
+   "pages": [
+    208,
+    209,
+    210,
+    211,
+    212,
+    213,
+    214,
+    215,
+    216,
+    217,
+    218,
+    219,
+    220,
+    221
+   ],
+   "file": "data/surah-10.json",
+   "juz": [
+    11
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "11": 109
+   }
+  },
+  "11": {
+   "name": "Hud",
+   "name_arabic": "هُودٍ",
+   "ayahs": 123,
+   "pages": [
+    221,
+    222,
+    223,
+    224,
+    225,
+    226,
+    227,
+    228,
+    229,
+    230,
+    231,
+    232,
+    233,
+    234,
+    235
+   ],
+   "file": "data/surah-11.json",
+   "juz": [
+    11,
+    12
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "11": 5,
+    "12": 118
+   }
+  },
+  "12": {
+   "name": "Yusuf",
+   "name_arabic": "يُوسُفَ",
+   "ayahs": 111,
+   "pages": [
+    235,
+    236,
+    237,
+    238,
+    239,
+    240,
+    241,
+    242,
+    243,
+    244,
+    245,
+    246,
+    247,
+    248
+   ],
+   "file": "data/surah-12.json",
+   "juz": [
+    12,
+    13
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "12": 52,
+    "13": 59
+   }
+  },
+  "13": {
+   "name": "Ar-Ra'd",
+   "name_arabic": "الرَّعۡدِ",
+   "ayahs": 43,
+   "pages": [
+    249,
+    250,
+    251,
+    252,
+    253,
+    254,
+    255
+   ],
+   "file": "data/surah-13.json",
+   "juz": [
+    13
+   ],
+   "content": false,
+   "revelation_type": "Medinan",
+   "ayahs_in_juz1": {
+    "13": 43
+   }
+  },
+  "14": {
+   "name": "Ibrahim",
+   "name_arabic": "إِبۡرَاهِيمَ",
+   "ayahs": 52,
+   "pages": [
+    255,
+    256,
+    257,
+    258,
+    259,
+    260,
+    261
+   ],
+   "file": "data/surah-14.json",
+   "juz": [
+    13
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "13": 52
+   }
+  },
+  "15": {
+   "name": "Al-Hijr",
+   "name_arabic": "الحِجۡرِ",
+   "ayahs": 99,
+   "pages": [
+    262,
+    263,
+    264,
+    265,
+    266,
+    267
+   ],
+   "file": "data/surah-15.json",
+   "juz": [
+    14
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "14": 99
+   }
+  },
+  "16": {
+   "name": "An-Nahl",
+   "name_arabic": "النَّحۡلِ",
+   "ayahs": 128,
+   "pages": [
+    267,
+    268,
+    269,
+    270,
+    271,
+    272,
+    273,
+    274,
+    275,
+    276,
+    277,
+    278,
+    279,
+    280,
+    281
+   ],
+   "file": "data/surah-16.json",
+   "juz": [
+    14
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "14": 128
+   }
+  },
+  "17": {
+   "name": "Al-Israa",
+   "name_arabic": "الإِسۡرَاءِ",
+   "ayahs": 111,
+   "pages": [
+    282,
+    283,
+    284,
+    285,
+    286,
+    287,
+    288,
+    289,
+    290,
+    291,
+    292,
+    293
+   ],
+   "file": "data/surah-17.json",
+   "juz": [
+    15
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "15": 111
+   }
+  },
+  "18": {
+   "name": "Al-Kahf",
+   "name_arabic": "الكَهۡفِ",
+   "ayahs": 110,
+   "pages": [
+    293,
+    294,
+    295,
+    296,
+    297,
+    298,
+    299,
+    300,
+    301,
+    302,
+    303,
+    304
+   ],
+   "file": "data/surah-18.json",
+   "juz": [
+    15,
+    16
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "15": 74,
+    "16": 36
+   }
+  },
+  "19": {
+   "name": "Maryam",
+   "name_arabic": "مَرۡيَمَ",
+   "ayahs": 98,
+   "pages": [
+    305,
+    306,
+    307,
+    308,
+    309,
+    310,
+    311,
+    312
+   ],
+   "file": "data/surah-19.json",
+   "juz": [
+    16
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "16": 98
+   }
+  },
+  "20": {
+   "name": "Taa-Haa",
+   "name_arabic": "طه",
+   "ayahs": 135,
+   "pages": [
+    312,
+    313,
+    314,
+    315,
+    316,
+    317,
+    318,
+    319,
+    320,
+    321
+   ],
+   "file": "data/surah-20.json",
+   "juz": [
+    16
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "16": 135
+   }
+  },
+  "21": {
+   "name": "Al-Anbiyaa",
+   "name_arabic": "الأَنبِيَاءِ",
+   "ayahs": 112,
+   "pages": [
+    322,
+    323,
+    324,
+    325,
+    326,
+    327,
+    328,
+    329,
+    330,
+    331
+   ],
+   "file": "data/surah-21.json",
+   "juz": [
+    17
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "17": 112
+   }
+  },
+  "22": {
+   "name": "Al-Hajj",
+   "name_arabic": "الحَجِّ",
+   "ayahs": 78,
+   "pages": [
+    332,
+    333,
+    334,
+    335,
+    336,
+    337,
+    338,
+    339,
+    340,
+    341
+   ],
+   "file": "data/surah-22.json",
+   "juz": [
+    17
+   ],
+   "content": false,
+   "revelation_type": "Medinan",
+   "ayahs_in_juz1": {
+    "17": 78
+   }
+  },
+  "23": {
+   "name": "Al-Muminoon",
+   "name_arabic": "المُؤۡمِنُونَ",
+   "ayahs": 118,
+   "pages": [
+    342,
+    343,
+    344,
+    345,
+    346,
+    347,
+    348,
+    349
+   ],
+   "file": "data/surah-23.json",
+   "juz": [
+    18
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "18": 118
+   }
+  },
+  "24": {
+   "name": "An-Noor",
+   "name_arabic": "النُّورِ",
+   "ayahs": 64,
+   "pages": [
+    350,
+    351,
+    352,
+    353,
+    354,
+    355,
+    356,
+    357,
+    358,
+    359
+   ],
+   "file": "data/surah-24.json",
+   "juz": [
+    18
+   ],
+   "content": false,
+   "revelation_type": "Medinan",
+   "ayahs_in_juz1": {
+    "18": 64
+   }
+  },
+  "25": {
+   "name": "Al-Furqaan",
+   "name_arabic": "الفُرۡقَانِ",
+   "ayahs": 77,
+   "pages": [
+    359,
+    360,
+    361,
+    362,
+    363,
+    364,
+    365,
+    366
+   ],
+   "file": "data/surah-25.json",
+   "juz": [
+    18,
+    19
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "18": 20,
+    "19": 57
+   }
+  },
+  "26": {
+   "name": "Ash-Shu'araa",
+   "name_arabic": "الشُّعَرَاءِ",
+   "ayahs": 227,
+   "pages": [
+    367,
+    368,
+    369,
+    370,
+    371,
+    372,
+    373,
+    374,
+    375,
+    376
+   ],
+   "file": "data/surah-26.json",
+   "juz": [
+    19
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "19": 227
+   }
+  },
+  "27": {
+   "name": "An-Naml",
+   "name_arabic": "النَّمۡلِ",
+   "ayahs": 93,
+   "pages": [
+    377,
+    378,
+    379,
+    380,
+    381,
+    382,
+    383,
+    384,
+    385
+   ],
+   "file": "data/surah-27.json",
+   "juz": [
+    19,
+    20
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "19": 55,
+    "20": 38
+   }
+  },
+  "28": {
+   "name": "Al-Qasas",
+   "name_arabic": "القَصَصِ",
+   "ayahs": 88,
+   "pages": [
+    385,
+    386,
+    387,
+    388,
+    389,
+    390,
+    391,
+    392,
+    393,
+    394,
+    395,
+    396
+   ],
+   "file": "data/surah-28.json",
+   "juz": [
+    20
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "20": 88
+   }
+  },
+  "29": {
+   "name": "Al-Ankaboot",
+   "name_arabic": "العَنكَبُوتِ",
+   "ayahs": 69,
+   "pages": [
+    396,
+    397,
+    398,
+    399,
+    400,
+    401,
+    402,
+    403,
+    404
+   ],
+   "file": "data/surah-29.json",
+   "juz": [
+    20,
+    21
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "20": 45,
+    "21": 24
+   }
+  },
+  "30": {
+   "name": "Ar-Room",
+   "name_arabic": "الرُّومِ",
+   "ayahs": 60,
+   "pages": [
+    404,
+    405,
+    406,
+    407,
+    408,
+    409,
+    410
+   ],
+   "file": "data/surah-30.json",
+   "juz": [
+    21
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "21": 60
+   }
+  },
+  "31": {
+   "name": "Luqman",
+   "name_arabic": "لُقۡمَانَ",
+   "ayahs": 34,
+   "pages": [
+    411,
+    412,
+    413,
+    414
+   ],
+   "file": "data/surah-31.json",
+   "juz": [
+    21
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "21": 34
+   }
+  },
+  "32": {
+   "name": "As-Sajda",
+   "name_arabic": "السَّجۡدَةِ",
+   "ayahs": 30,
+   "pages": [
+    415,
+    416,
+    417
+   ],
+   "file": "data/surah-32.json",
+   "juz": [
+    21
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "21": 30
+   }
+  },
+  "33": {
+   "name": "Al-Ahzaab",
+   "name_arabic": "الأَحۡزَابِ",
+   "ayahs": 73,
+   "pages": [
+    418,
+    419,
+    420,
+    421,
+    422,
+    423,
+    424,
+    425,
+    426,
+    427
+   ],
+   "file": "data/surah-33.json",
+   "juz": [
+    21,
+    22
+   ],
+   "content": false,
+   "revelation_type": "Medinan",
+   "ayahs_in_juz1": {
+    "21": 30,
+    "22": 43
+   }
+  },
+  "34": {
+   "name": "Saba",
+   "name_arabic": "سَبَإٍ",
+   "ayahs": 54,
+   "pages": [
+    428,
+    429,
+    430,
+    431,
+    432,
+    433,
+    434
+   ],
+   "file": "data/surah-34.json",
+   "juz": [
+    22
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "22": 54
+   }
+  },
+  "35": {
+   "name": "Faatir",
+   "name_arabic": "فَاطِرٍ",
+   "ayahs": 45,
+   "pages": [
+    434,
+    435,
+    436,
+    437,
+    438,
+    439,
+    440
+   ],
+   "file": "data/surah-35.json",
+   "juz": [
+    22
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "22": 45
+   }
+  },
+  "36": {
+   "name": "Yaseen",
+   "name_arabic": "يسٓ",
+   "ayahs": 83,
+   "pages": [
+    440,
+    441,
+    442,
+    443,
+    444,
+    445
+   ],
+   "file": "data/surah-36.json",
+   "juz": [
+    22,
+    23
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "22": 27,
+    "23": 56
+   }
+  },
+  "37": {
+   "name": "As-Saaffaat",
+   "name_arabic": "الصَّافَّاتِ",
+   "ayahs": 182,
+   "pages": [
+    446,
+    447,
+    448,
+    449,
+    450,
+    451,
+    452
+   ],
+   "file": "data/surah-37.json",
+   "juz": [
+    23
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "23": 182
+   }
+  },
+  "38": {
+   "name": "Saad",
+   "name_arabic": "صٓ",
+   "ayahs": 88,
+   "pages": [
+    453,
+    454,
+    455,
+    456,
+    457,
+    458
+   ],
+   "file": "data/surah-38.json",
+   "juz": [
+    23
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "23": 88
+   }
+  },
+  "39": {
+   "name": "Az-Zumar",
+   "name_arabic": "الزُّمَرِ",
+   "ayahs": 75,
+   "pages": [
+    458,
+    459,
+    460,
+    461,
+    462,
+    463,
+    464,
+    465,
+    466,
+    467
+   ],
+   "file": "data/surah-39.json",
+   "juz": [
+    23,
+    24
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "23": 31,
+    "24": 44
+   }
+  },
+  "40": {
+   "name": "Ghafir",
+   "name_arabic": "غَافِرٍ",
+   "ayahs": 85,
+   "pages": [
+    467,
+    468,
+    469,
+    470,
+    471,
+    472,
+    473,
+    474,
+    475,
+    476
+   ],
+   "file": "data/surah-40.json",
+   "juz": [
+    24
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "24": 85
+   }
+  },
+  "41": {
+   "name": "Fussilat",
+   "name_arabic": "فُصِّلَتۡ",
+   "ayahs": 54,
+   "pages": [
+    477,
+    478,
+    479,
+    480,
+    481,
+    482
+   ],
+   "file": "data/surah-41.json",
+   "juz": [
+    24,
+    25
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "24": 46,
+    "25": 8
+   }
+  },
+  "42": {
+   "name": "Ash-Shura",
+   "name_arabic": "الشُّورَىٰ",
+   "ayahs": 53,
+   "pages": [
+    483,
+    484,
+    485,
+    486,
+    487,
+    488,
+    489
+   ],
+   "file": "data/surah-42.json",
+   "juz": [
+    25
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "25": 53
+   }
+  },
+  "43": {
+   "name": "Az-Zukhruf",
+   "name_arabic": "الزُّخۡرُفِ",
+   "ayahs": 89,
+   "pages": [
+    489,
+    490,
+    491,
+    492,
+    493,
+    494,
+    495
+   ],
+   "file": "data/surah-43.json",
+   "juz": [
+    25
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "25": 89
+   }
+  },
+  "44": {
+   "name": "Ad-Dukhaan",
+   "name_arabic": "الدُّخَانِ",
+   "ayahs": 59,
+   "pages": [
+    496,
+    497,
+    498
+   ],
+   "file": "data/surah-44.json",
+   "juz": [
+    25
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "25": 59
+   }
+  },
+  "45": {
+   "name": "Al-Jaathiya",
+   "name_arabic": "الجَاثِيَةِ",
+   "ayahs": 37,
+   "pages": [
+    499,
+    500,
+    501,
+    502
+   ],
+   "file": "data/surah-45.json",
+   "juz": [
+    25
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "25": 37
+   }
+  },
+  "46": {
+   "name": "Al-Ahqaf",
+   "name_arabic": "الأَحۡقَافِ",
+   "ayahs": 35,
+   "pages": [
+    502,
+    503,
+    504,
+    505,
+    506
+   ],
+   "file": "data/surah-46.json",
+   "juz": [
+    26
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "26": 35
+   }
+  },
+  "47": {
+   "name": "Muhammad",
+   "name_arabic": "مُحَمَّدٍ",
+   "ayahs": 38,
+   "pages": [
+    507,
+    508,
+    509,
+    510
+   ],
+   "file": "data/surah-47.json",
+   "juz": [
+    26
+   ],
+   "content": false,
+   "revelation_type": "Medinan",
+   "ayahs_in_juz1": {
+    "26": 38
+   }
+  },
+  "48": {
+   "name": "Al-Fath",
+   "name_arabic": "الفَتۡحِ",
+   "ayahs": 29,
+   "pages": [
+    511,
+    512,
+    513,
+    514,
+    515
+   ],
+   "file": "data/surah-48.json",
+   "juz": [
+    26
+   ],
+   "content": false,
+   "revelation_type": "Medinan",
+   "ayahs_in_juz1": {
+    "26": 29
+   }
+  },
+  "49": {
+   "name": "Al-Hujuraat",
+   "name_arabic": "الحُجُرَاتِ",
+   "ayahs": 18,
+   "pages": [
+    515,
+    516,
+    517
+   ],
+   "file": "data/surah-49.json",
+   "juz": [
+    26
+   ],
+   "content": false,
+   "revelation_type": "Medinan",
+   "ayahs_in_juz1": {
+    "26": 18
+   }
+  },
+  "50": {
+   "name": "Qaaf",
+   "name_arabic": "قٓ",
+   "ayahs": 45,
+   "pages": [
+    518,
+    519,
+    520
+   ],
+   "file": "data/surah-50.json",
+   "juz": [
+    26
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "26": 45
+   }
+  },
+  "51": {
+   "name": "Adh-Dhaariyat",
+   "name_arabic": "الذَّارِيَاتِ",
+   "ayahs": 60,
+   "pages": [
+    520,
+    521,
+    522,
+    523
+   ],
+   "file": "data/surah-51.json",
+   "juz": [
+    26,
+    27
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "26": 30,
+    "27": 30
+   }
+  },
+  "52": {
+   "name": "At-Tur",
+   "name_arabic": "الطُّورِ",
+   "ayahs": 49,
+   "pages": [
+    523,
+    524,
+    525
+   ],
+   "file": "data/surah-52.json",
+   "juz": [
+    27
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "27": 49
+   }
+  },
+  "53": {
+   "name": "An-Najm",
+   "name_arabic": "النَّجۡمِ",
+   "ayahs": 62,
+   "pages": [
+    526,
+    527,
+    528
+   ],
+   "file": "data/surah-53.json",
+   "juz": [
+    27
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "27": 62
+   }
+  },
+  "54": {
+   "name": "Al-Qamar",
+   "name_arabic": "القَمَرِ",
+   "ayahs": 55,
+   "pages": [
+    528,
+    529,
+    530,
+    531
+   ],
+   "file": "data/surah-54.json",
+   "juz": [
+    27
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "27": 55
+   }
+  },
+  "55": {
+   "name": "Ar-Rahmaan",
+   "name_arabic": "الرَّحۡمَٰن",
+   "ayahs": 78,
+   "pages": [
+    531,
+    532,
+    533,
+    534
+   ],
+   "file": "data/surah-55.json",
+   "juz": [
+    27
+   ],
+   "content": false,
+   "revelation_type": "Medinan",
+   "ayahs_in_juz1": {
+    "27": 78
+   }
+  },
+  "56": {
+   "name": "Al-Waaqia",
+   "name_arabic": "الوَاقِعَةِ",
+   "ayahs": 96,
+   "pages": [
+    534,
+    535,
+    536,
+    537
+   ],
+   "file": "data/surah-56.json",
+   "juz": [
+    27
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "27": 96
+   }
+  },
+  "57": {
+   "name": "Al-Hadid",
+   "name_arabic": "الحَدِيدِ",
+   "ayahs": 29,
+   "pages": [
+    537,
+    538,
+    539,
+    540,
+    541
+   ],
+   "file": "data/surah-57.json",
+   "juz": [
+    27
+   ],
+   "content": false,
+   "revelation_type": "Medinan",
+   "ayahs_in_juz1": {
+    "27": 29
+   }
+  },
+  "58": {
+   "name": "Al-Mujaadila",
+   "name_arabic": "المُجَادلَةِ",
+   "ayahs": 22,
+   "pages": [
+    542,
+    543,
+    544,
+    545
+   ],
+   "file": "data/surah-58.json",
+   "juz": [
+    28
+   ],
+   "content": false,
+   "revelation_type": "Medinan",
+   "ayahs_in_juz1": {
+    "28": 22
+   }
+  },
+  "59": {
+   "name": "Al-Hashr",
+   "name_arabic": "الحَشۡرِ",
+   "ayahs": 24,
+   "pages": [
+    545,
+    546,
+    547,
+    548
+   ],
+   "file": "data/surah-59.json",
+   "juz": [
+    28
+   ],
+   "content": false,
+   "revelation_type": "Medinan",
+   "ayahs_in_juz1": {
+    "28": 24
+   }
+  },
+  "60": {
+   "name": "Al-Mumtahana",
+   "name_arabic": "المُمۡتَحنَةِ",
+   "ayahs": 13,
+   "pages": [
+    549,
+    550,
+    551
+   ],
+   "file": "data/surah-60.json",
+   "juz": [
+    28
+   ],
+   "content": false,
+   "revelation_type": "Medinan",
+   "ayahs_in_juz1": {
+    "28": 13
+   }
+  },
+  "61": {
+   "name": "As-Saff",
+   "name_arabic": "الصَّفِّ",
+   "ayahs": 14,
+   "pages": [
+    551,
+    552
+   ],
+   "file": "data/surah-61.json",
+   "juz": [
+    28
+   ],
+   "content": false,
+   "revelation_type": "Medinan",
+   "ayahs_in_juz1": {
+    "28": 14
+   }
+  },
+  "62": {
+   "name": "Al-Jumu'a",
+   "name_arabic": "الجُمُعَةِ",
+   "ayahs": 11,
+   "pages": [
+    553,
+    554
+   ],
+   "file": "data/surah-62.json",
+   "juz": [
+    28
+   ],
+   "content": false,
+   "revelation_type": "Medinan",
+   "ayahs_in_juz1": {
+    "28": 11
+   }
+  },
+  "63": {
+   "name": "Al-Munaafiqoon",
+   "name_arabic": "المُنَافِقُونَ",
+   "ayahs": 11,
+   "pages": [
+    554,
+    555
+   ],
+   "file": "data/surah-63.json",
+   "juz": [
+    28
+   ],
+   "content": false,
+   "revelation_type": "Medinan",
+   "ayahs_in_juz1": {
+    "28": 11
+   }
+  },
+  "64": {
+   "name": "At-Taghaabun",
+   "name_arabic": "التَّغَابُنِ",
+   "ayahs": 18,
+   "pages": [
+    556,
+    557
+   ],
+   "file": "data/surah-64.json",
+   "juz": [
+    28
+   ],
+   "content": false,
+   "revelation_type": "Medinan",
+   "ayahs_in_juz1": {
+    "28": 18
+   }
+  },
+  "65": {
+   "name": "At-Talaaq",
+   "name_arabic": "الطَّلَاقِ",
+   "ayahs": 12,
+   "pages": [
+    558,
+    559
+   ],
+   "file": "data/surah-65.json",
+   "juz": [
+    28
+   ],
+   "content": false,
+   "revelation_type": "Medinan",
+   "ayahs_in_juz1": {
+    "28": 12
+   }
+  },
+  "66": {
+   "name": "At-Tahrim",
+   "name_arabic": "التَّحۡرِيمِ",
+   "ayahs": 12,
+   "pages": [
+    560,
+    561
+   ],
+   "file": "data/surah-66.json",
+   "juz": [
+    28
+   ],
+   "content": false,
+   "revelation_type": "Medinan",
+   "ayahs_in_juz1": {
+    "28": 12
+   }
+  },
+  "67": {
+   "name": "Al-Mulk",
+   "name_arabic": "المُلۡكِ",
+   "ayahs": 30,
+   "pages": [
+    562,
+    563,
+    564
+   ],
+   "file": "data/surah-67.json",
+   "juz": [
+    29
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "29": 30
+   }
+  },
+  "68": {
+   "name": "Al-Qalam",
+   "name_arabic": "القَلَمِ",
+   "ayahs": 52,
+   "pages": [
+    564,
+    565,
+    566
+   ],
+   "file": "data/surah-68.json",
+   "juz": [
+    29
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "29": 52
+   }
+  },
+  "69": {
+   "name": "Al-Haaqqa",
+   "name_arabic": "الحَاقَّةِ",
+   "ayahs": 52,
+   "pages": [
+    566,
+    567,
+    568
+   ],
+   "file": "data/surah-69.json",
+   "juz": [
+    29
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "29": 52
+   }
+  },
+  "70": {
+   "name": "Al-Ma'aarij",
+   "name_arabic": "المَعَارِجِ",
+   "ayahs": 44,
+   "pages": [
+    568,
+    569,
+    570
+   ],
+   "file": "data/surah-70.json",
+   "juz": [
+    29
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "29": 44
+   }
+  },
+  "71": {
+   "name": "Nooh",
+   "name_arabic": "نُوحٍ",
+   "ayahs": 28,
+   "pages": [
+    570,
+    571
+   ],
+   "file": "data/surah-71.json",
+   "juz": [
+    29
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "29": 28
+   }
+  },
+  "72": {
+   "name": "Al-Jinn",
+   "name_arabic": "الجِنِّ",
+   "ayahs": 28,
+   "pages": [
+    572,
+    573
+   ],
+   "file": "data/surah-72.json",
+   "juz": [
+    29
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "29": 28
+   }
+  },
+  "73": {
+   "name": "Al-Muzzammil",
+   "name_arabic": "المُزَّمِّلِ",
+   "ayahs": 20,
+   "pages": [
+    574,
+    575
+   ],
+   "file": "data/surah-73.json",
+   "juz": [
+    29
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "29": 20
+   }
+  },
+  "74": {
+   "name": "Al-Muddaththir",
+   "name_arabic": "المُدَّثِّرِ",
+   "ayahs": 56,
+   "pages": [
+    575,
+    576,
+    577
+   ],
+   "file": "data/surah-74.json",
+   "juz": [
+    29
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "29": 56
+   }
+  },
+  "75": {
+   "name": "Al-Qiyaama",
+   "name_arabic": "القِيَامَةِ",
+   "ayahs": 40,
+   "pages": [
+    577,
+    578
+   ],
+   "file": "data/surah-75.json",
+   "juz": [
+    29
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "29": 40
+   }
+  },
+  "76": {
+   "name": "Al-Insaan",
+   "name_arabic": "الإِنسَانِ",
+   "ayahs": 31,
+   "pages": [
+    578,
+    579,
+    580
+   ],
+   "file": "data/surah-76.json",
+   "juz": [
+    29
+   ],
+   "content": false,
+   "revelation_type": "Medinan",
+   "ayahs_in_juz1": {
+    "29": 31
+   }
+  },
+  "77": {
+   "name": "Al-Mursalaat",
+   "name_arabic": "المُرۡسَلَاتِ",
+   "ayahs": 50,
+   "pages": [
+    580,
+    581
+   ],
+   "file": "data/surah-77.json",
+   "juz": [
+    29
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "29": 50
+   }
+  },
+  "78": {
+   "name": "An-Naba",
+   "name_arabic": "النَّبَإِ",
+   "ayahs": 40,
+   "pages": [
+    582,
+    583
+   ],
+   "file": "data/surah-78.json",
+   "juz": [
+    30
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "30": 40
+   }
+  },
+  "79": {
+   "name": "An-Naazi'aat",
+   "name_arabic": "النَّازِعَاتِ",
+   "ayahs": 46,
+   "pages": [
+    583,
+    584
+   ],
+   "file": "data/surah-79.json",
+   "juz": [
+    30
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "30": 46
+   }
+  },
+  "80": {
+   "name": "Abasa",
+   "name_arabic": "عَبَسَ",
+   "ayahs": 42,
+   "pages": [
+    585
+   ],
+   "file": "data/surah-80.json",
+   "juz": [
+    30
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "30": 42
+   }
+  },
+  "81": {
+   "name": "At-Takwir",
+   "name_arabic": "التَّكۡوِيرِ",
+   "ayahs": 29,
+   "pages": [
+    586
+   ],
+   "file": "data/surah-81.json",
+   "juz": [
+    30
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "30": 29
+   }
+  },
+  "82": {
+   "name": "Al-Infitaar",
+   "name_arabic": "الانفِطَارِ",
+   "ayahs": 19,
+   "pages": [
+    587
+   ],
+   "file": "data/surah-82.json",
+   "juz": [
+    30
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "30": 19
+   }
+  },
+  "83": {
+   "name": "Al-Mutaffifin",
+   "name_arabic": "المُطَفِّفِينَ",
+   "ayahs": 36,
+   "pages": [
+    587,
+    588,
+    589
+   ],
+   "file": "data/surah-83.json",
+   "juz": [
+    30
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "30": 36
+   }
+  },
+  "84": {
+   "name": "Al-Inshiqaaq",
+   "name_arabic": "الانشِقَاقِ",
+   "ayahs": 25,
+   "pages": [
+    589
+   ],
+   "file": "data/surah-84.json",
+   "juz": [
+    30
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "30": 25
+   }
+  },
+  "85": {
+   "name": "Al-Burooj",
+   "name_arabic": "البُرُوجِ",
+   "ayahs": 22,
+   "pages": [
+    590
+   ],
+   "file": "data/surah-85.json",
+   "juz": [
+    30
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "30": 22
+   }
+  },
+  "86": {
+   "name": "At-Taariq",
+   "name_arabic": "الطَّارِقِ",
+   "ayahs": 17,
+   "pages": [
+    591
+   ],
+   "file": "data/surah-86.json",
+   "juz": [
+    30
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "30": 17
+   }
+  },
+  "87": {
+   "name": "Al-A'laa",
+   "name_arabic": "الأَعۡلَىٰ",
+   "ayahs": 19,
+   "pages": [
+    591,
+    592
+   ],
+   "file": "data/surah-87.json",
+   "juz": [
+    30
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "30": 19
+   }
+  },
+  "88": {
+   "name": "Al-Ghaashiya",
+   "name_arabic": "الغَاشِيَةِ",
+   "ayahs": 26,
+   "pages": [
+    592
+   ],
+   "file": "data/surah-88.json",
+   "juz": [
+    30
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "30": 26
+   }
+  },
+  "89": {
+   "name": "Al-Fajr",
+   "name_arabic": "الفَجۡرِ",
+   "ayahs": 30,
+   "pages": [
+    593,
+    594
+   ],
+   "file": "data/surah-89.json",
+   "juz": [
+    30
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "30": 30
+   }
+  },
+  "90": {
+   "name": "Al-Balad",
+   "name_arabic": "البَلَدِ",
+   "ayahs": 20,
+   "pages": [
+    594
+   ],
+   "file": "data/surah-90.json",
+   "juz": [
+    30
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "30": 20
+   }
+  },
+  "91": {
+   "name": "Ash-Shams",
+   "name_arabic": "الشَّمۡسِ",
+   "ayahs": 15,
+   "pages": [
+    595
+   ],
+   "file": "data/surah-91.json",
+   "juz": [
+    30
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "30": 15
+   }
+  },
+  "92": {
+   "name": "Al-Lail",
+   "name_arabic": "اللَّيۡلِ",
+   "ayahs": 21,
+   "pages": [
+    595,
+    596
+   ],
+   "file": "data/surah-92.json",
+   "juz": [
+    30
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "30": 21
+   }
+  },
+  "93": {
+   "name": "Ad-Dhuhaa",
+   "name_arabic": "الضُّحَىٰ",
+   "ayahs": 11,
+   "pages": [
+    596
+   ],
+   "file": "data/surah-93.json",
+   "juz": [
+    30
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "30": 11
+   }
+  },
+  "94": {
+   "name": "Ash-Sharh",
+   "name_arabic": "الشَّرۡحِ",
+   "ayahs": 8,
+   "pages": [
+    596
+   ],
+   "file": "data/surah-94.json",
+   "juz": [
+    30
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "30": 8
+   }
+  },
+  "95": {
+   "name": "At-Tin",
+   "name_arabic": "التِّينِ",
+   "ayahs": 8,
+   "pages": [
+    597
+   ],
+   "file": "data/surah-95.json",
+   "juz": [
+    30
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "30": 8
+   }
+  },
+  "96": {
+   "name": "Al-Alaq",
+   "name_arabic": "العَلَقِ",
+   "ayahs": 19,
+   "pages": [
+    597
+   ],
+   "file": "data/surah-96.json",
+   "juz": [
+    30
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "30": 19
+   }
+  },
+  "97": {
+   "name": "Al-Qadr",
+   "name_arabic": "القَدۡرِ",
+   "ayahs": 5,
+   "pages": [
+    598
+   ],
+   "file": "data/surah-97.json",
+   "juz": [
+    30
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "30": 5
+   }
+  },
+  "98": {
+   "name": "Al-Bayyina",
+   "name_arabic": "البَيِّنَةِ",
+   "ayahs": 8,
+   "pages": [
+    598,
+    599
+   ],
+   "file": "data/surah-98.json",
+   "juz": [
+    30
+   ],
+   "content": false,
+   "revelation_type": "Medinan",
+   "ayahs_in_juz1": {
+    "30": 8
+   }
+  },
+  "99": {
+   "name": "Az-Zalzala",
+   "name_arabic": "الزَّلۡزَلَةِ",
+   "ayahs": 8,
+   "pages": [
+    599
+   ],
+   "file": "data/surah-99.json",
+   "juz": [
+    30
+   ],
+   "content": false,
+   "revelation_type": "Medinan",
+   "ayahs_in_juz1": {
+    "30": 8
+   }
+  },
+  "100": {
+   "name": "Al-Aadiyaat",
+   "name_arabic": "العَادِيَاتِ",
+   "ayahs": 11,
+   "pages": [
+    599,
+    600
+   ],
+   "file": "data/surah-100.json",
+   "juz": [
+    30
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "30": 11
+   }
+  },
+  "101": {
+   "name": "Al-Qaari'a",
+   "name_arabic": "القَارِعَةِ",
+   "ayahs": 11,
+   "pages": [
+    600
+   ],
+   "file": "data/surah-101.json",
+   "juz": [
+    30
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "30": 11
+   }
+  },
+  "102": {
+   "name": "At-Takaathur",
+   "name_arabic": "التَّكَاثُرِ",
+   "ayahs": 8,
+   "pages": [
+    600
+   ],
+   "file": "data/surah-102.json",
+   "juz": [
+    30
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "30": 8
+   }
+  },
+  "103": {
+   "name": "Al-Asr",
+   "name_arabic": "العَصۡرِ",
+   "ayahs": 3,
+   "pages": [
+    601
+   ],
+   "file": "data/surah-103.json",
+   "juz": [
+    30
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "30": 3
+   }
+  },
+  "104": {
+   "name": "Al-Humaza",
+   "name_arabic": "الهُمَزَةِ",
+   "ayahs": 9,
+   "pages": [
+    601
+   ],
+   "file": "data/surah-104.json",
+   "juz": [
+    30
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "30": 9
+   }
+  },
+  "105": {
+   "name": "Al-Fil",
+   "name_arabic": "الفِيلِ",
+   "ayahs": 5,
+   "pages": [
+    601
+   ],
+   "file": "data/surah-105.json",
+   "juz": [
+    30
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "30": 5
+   }
+  },
+  "106": {
+   "name": "Quraish",
+   "name_arabic": "قُرَيۡشٍ",
+   "ayahs": 4,
+   "pages": [
+    602
+   ],
+   "file": "data/surah-106.json",
+   "juz": [
+    30
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "30": 4
+   }
+  },
+  "107": {
+   "name": "Al-Maa'un",
+   "name_arabic": "المَاعُونِ",
+   "ayahs": 7,
+   "pages": [
+    602
+   ],
+   "file": "data/surah-107.json",
+   "juz": [
+    30
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "30": 7
+   }
+  },
+  "108": {
+   "name": "Al-Kawthar",
+   "name_arabic": "الكَوۡثَرِ",
+   "ayahs": 3,
+   "pages": [
+    602
+   ],
+   "file": "data/surah-108.json",
+   "juz": [
+    30
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "30": 3
+   }
+  },
+  "109": {
+   "name": "Al-Kaafiroon",
+   "name_arabic": "الكَافِرُونَ",
+   "ayahs": 6,
+   "pages": [
+    603
+   ],
+   "file": "data/surah-109.json",
+   "juz": [
+    30
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "30": 6
+   }
+  },
+  "110": {
+   "name": "An-Nasr",
+   "name_arabic": "النَّصۡرِ",
+   "ayahs": 3,
+   "pages": [
+    603
+   ],
+   "file": "data/surah-110.json",
+   "juz": [
+    30
+   ],
+   "content": false,
+   "revelation_type": "Medinan",
+   "ayahs_in_juz1": {
+    "30": 3
+   }
+  },
+  "111": {
+   "name": "Al-Masad",
+   "name_arabic": "المَسَدِ",
+   "ayahs": 5,
+   "pages": [
+    603
+   ],
+   "file": "data/surah-111.json",
+   "juz": [
+    30
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "30": 5
+   }
+  },
+  "112": {
+   "name": "Al-Ikhlaas",
+   "name_arabic": "الإِخۡلَاصِ",
+   "ayahs": 4,
+   "pages": [
+    604
+   ],
+   "file": "data/surah-112.json",
+   "juz": [
+    30
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "30": 4
+   }
+  },
+  "113": {
+   "name": "Al-Falaq",
+   "name_arabic": "الفَلَقِ",
+   "ayahs": 5,
+   "pages": [
+    604
+   ],
+   "file": "data/surah-113.json",
+   "juz": [
+    30
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "30": 5
+   }
+  },
+  "114": {
+   "name": "An-Naas",
+   "name_arabic": "النَّاسِ",
+   "ayahs": 6,
+   "pages": [
+    604
+   ],
+   "file": "data/surah-114.json",
+   "juz": [
+    30
+   ],
+   "content": false,
+   "revelation_type": "Meccan",
+   "ayahs_in_juz1": {
+    "30": 6
+   }
+  }
+ },
+ "pages": {
+  "1": {
+   "range": "1:1-1:7",
+   "surah": 1,
+   "juz": 1
+  },
+  "2": {
+   "range": "2:1-2:5",
+   "surah": 2,
+   "juz": 1
+  },
+  "3": {
+   "range": "2:6-2:16",
+   "surah": 2,
+   "juz": 1
+  },
+  "4": {
+   "range": "2:17-2:24",
+   "surah": 2,
+   "juz": 1
+  },
+  "5": {
+   "range": "2:25-2:29",
+   "surah": 2,
+   "juz": 1
+  },
+  "6": {
+   "range": "2:30-2:37",
+   "surah": 2,
+   "juz": 1
+  },
+  "7": {
+   "range": "2:38-2:48",
+   "surah": 2,
+   "juz": 1
+  },
+  "8": {
+   "range": "2:49-2:57",
+   "surah": 2,
+   "juz": 1
+  },
+  "9": {
+   "range": "2:58-2:61",
+   "surah": 2,
+   "juz": 1
+  },
+  "10": {
+   "range": "2:62-2:69",
+   "surah": 2,
+   "juz": 1
+  },
+  "11": {
+   "range": "2:70-2:76",
+   "surah": 2,
+   "juz": 1
+  },
+  "12": {
+   "range": "2:77-2:83",
+   "surah": 2,
+   "juz": 1
+  },
+  "13": {
+   "range": "2:84-2:88",
+   "surah": 2,
+   "juz": 1
+  },
+  "14": {
+   "range": "2:89-2:93",
+   "surah": 2,
+   "juz": 1
+  },
+  "15": {
+   "range": "2:94-2:101",
+   "surah": 2,
+   "juz": 1
+  },
+  "16": {
+   "range": "2:102-2:105",
+   "surah": 2,
+   "juz": 1
+  },
+  "17": {
+   "range": "2:106-2:112",
+   "surah": 2,
+   "juz": 1
+  },
+  "18": {
+   "range": "2:113-2:119",
+   "surah": 2,
+   "juz": 1
+  },
+  "19": {
+   "range": "2:120-2:126",
+   "surah": 2,
+   "juz": 1
+  },
+  "20": {
+   "range": "2:127-2:134",
+   "surah": 2,
+   "juz": 1
+  },
+  "21": {
+   "range": "2:135-2:141",
+   "surah": 2,
+   "juz": 1
+  },
+  "22": {
+   "range": "2:145-2:145",
+   "surah": 2,
+   "juz": 2
+  },
+  "23": {
+   "range": "2:153-2:153",
+   "surah": 2,
+   "juz": 2
+  },
+  "24": {
+   "range": "2:163-2:163",
+   "surah": 2,
+   "juz": 2
+  },
+  "25": {
+   "range": "2:169-2:169",
+   "surah": 2,
+   "juz": 2
+  },
+  "26": {
+   "range": "2:176-2:176",
+   "surah": 2,
+   "juz": 2
+  },
+  "27": {
+   "range": "2:181-2:181",
+   "surah": 2,
+   "juz": 2
+  },
+  "28": {
+   "range": "2:186-2:186",
+   "surah": 2,
+   "juz": 2
+  },
+  "29": {
+   "range": "2:190-2:190",
+   "surah": 2,
+   "juz": 2
+  },
+  "30": {
+   "range": "2:196-2:196",
+   "surah": 2,
+   "juz": 2
+  },
+  "31": {
+   "range": "2:202-2:202",
+   "surah": 2,
+   "juz": 2
+  },
+  "32": {
+   "range": "2:210-2:210",
+   "surah": 2,
+   "juz": 2
+  },
+  "33": {
+   "range": "2:215-2:215",
+   "surah": 2,
+   "juz": 2
+  },
+  "34": {
+   "range": "2:219-2:219",
+   "surah": 2,
+   "juz": 2
+  },
+  "35": {
+   "range": "2:224-2:224",
+   "surah": 2,
+   "juz": 2
+  },
+  "36": {
+   "range": "2:230-2:230",
+   "surah": 2,
+   "juz": 2
+  },
+  "37": {
+   "range": "2:233-2:233",
+   "surah": 2,
+   "juz": 2
+  },
+  "38": {
+   "range": "2:237-2:237",
+   "surah": 2,
+   "juz": 2
+  },
+  "39": {
+   "range": "2:245-2:245",
+   "surah": 2,
+   "juz": 2
+  },
+  "40": {
+   "range": "2:248-2:248",
+   "surah": 2,
+   "juz": 2
+  },
+  "41": {
+   "range": "2:252-2:252",
+   "surah": 2,
+   "juz": 2
+  },
+  "42": {
+   "range": "2:256-2:256",
+   "surah": 2,
+   "juz": 3
+  },
+  "43": {
+   "range": "2:259-2:259",
+   "surah": 2,
+   "juz": 3
+  },
+  "44": {
+   "range": "2:264-2:264",
+   "surah": 2,
+   "juz": 3
+  },
+  "45": {
+   "range": "2:269-2:269",
+   "surah": 2,
+   "juz": 3
+  },
+  "46": {
+   "range": "2:274-2:274",
+   "surah": 2,
+   "juz": 3
+  },
+  "47": {
+   "range": "2:281-2:281",
+   "surah": 2,
+   "juz": 3
+  },
+  "48": {
+   "range": "2:282-2:282",
+   "surah": 2,
+   "juz": 3
+  },
+  "49": {
+   "range": "2:286-2:286",
+   "surah": 2,
+   "juz": 3
+  },
+  "50": {
+   "range": "3:9-3:9",
+   "surah": 3,
+   "juz": 3
+  },
+  "51": {
+   "range": "3:15-3:15",
+   "surah": 3,
+   "juz": 3
+  },
+  "52": {
+   "range": "3:22-3:22",
+   "surah": 3,
+   "juz": 3
+  },
+  "53": {
+   "range": "3:29-3:29",
+   "surah": 3,
+   "juz": 3
+  },
+  "54": {
+   "range": "3:37-3:37",
+   "surah": 3,
+   "juz": 3
+  },
+  "55": {
+   "range": "3:45-3:45",
+   "surah": 3,
+   "juz": 3
+  },
+  "56": {
+   "range": "3:52-3:52",
+   "surah": 3,
+   "juz": 3
+  },
+  "57": {
+   "range": "3:61-3:61",
+   "surah": 3,
+   "juz": 3
+  },
+  "58": {
+   "range": "3:70-3:70",
+   "surah": 3,
+   "juz": 3
+  },
+  "59": {
+   "range": "3:77-3:77",
+   "surah": 3,
+   "juz": 3
+  },
+  "60": {
+   "range": "3:83-3:83",
+   "surah": 3,
+   "juz": 3
+  },
+  "61": {
+   "range": "3:91-3:91",
+   "surah": 3,
+   "juz": 3
+  },
+  "62": {
+   "range": "3:100-3:100",
+   "surah": 3,
+   "juz": 3
+  },
+  "63": {
+   "range": "3:108-3:108",
+   "surah": 3,
+   "juz": 4
+  },
+  "64": {
+   "range": "3:115-3:115",
+   "surah": 3,
+   "juz": 4
+  },
+  "65": {
+   "range": "3:121-3:121",
+   "surah": 3,
+   "juz": 4
+  },
+  "66": {
+   "range": "3:132-3:132",
+   "surah": 3,
+   "juz": 4
+  },
+  "67": {
+   "range": "3:140-3:140",
+   "surah": 3,
+   "juz": 4
+  },
+  "68": {
+   "range": "3:148-3:148",
+   "surah": 3,
+   "juz": 4
+  },
+  "69": {
+   "range": "3:153-3:153",
+   "surah": 3,
+   "juz": 4
+  },
+  "70": {
+   "range": "3:157-3:157",
+   "surah": 3,
+   "juz": 4
+  },
+  "71": {
+   "range": "3:165-3:165",
+   "surah": 3,
+   "juz": 4
+  },
+  "72": {
+   "range": "3:173-3:173",
+   "surah": 3,
+   "juz": 4
+  },
+  "73": {
+   "range": "3:180-3:180",
+   "surah": 3,
+   "juz": 4
+  },
+  "74": {
+   "range": "3:186-3:186",
+   "surah": 3,
+   "juz": 4
+  },
+  "75": {
+   "range": "3:194-3:194",
+   "surah": 3,
+   "juz": 4
+  },
+  "76": {
+   "range": "3:200-3:200",
+   "surah": 3,
+   "juz": 4
+  },
+  "77": {
+   "range": "4:6-4:6",
+   "surah": 4,
+   "juz": 4
+  },
+  "78": {
+   "range": "4:11-4:11",
+   "surah": 4,
+   "juz": 4
+  },
+  "79": {
+   "range": "4:14-4:14",
+   "surah": 4,
+   "juz": 4
+  },
+  "80": {
+   "range": "4:19-4:19",
+   "surah": 4,
+   "juz": 4
+  },
+  "81": {
+   "range": "4:23-4:23",
+   "surah": 4,
+   "juz": 4
+  },
+  "82": {
+   "range": "4:26-4:26",
+   "surah": 4,
+   "juz": 5
+  },
+  "83": {
+   "range": "4:33-4:33",
+   "surah": 4,
+   "juz": 5
+  },
+  "84": {
+   "range": "4:37-4:37",
+   "surah": 4,
+   "juz": 5
+  },
+  "85": {
+   "range": "4:44-4:44",
+   "surah": 4,
+   "juz": 5
+  },
+  "86": {
+   "range": "4:51-4:51",
+   "surah": 4,
+   "juz": 5
+  },
+  "87": {
+   "range": "4:59-4:59",
+   "surah": 4,
+   "juz": 5
+  },
+  "88": {
+   "range": "4:65-4:65",
+   "surah": 4,
+   "juz": 5
+  },
+  "89": {
+   "range": "4:74-4:74",
+   "surah": 4,
+   "juz": 5
+  },
+  "90": {
+   "range": "4:79-4:79",
+   "surah": 4,
+   "juz": 5
+  },
+  "91": {
+   "range": "4:86-4:86",
+   "surah": 4,
+   "juz": 5
+  },
+  "92": {
+   "range": "4:91-4:91",
+   "surah": 4,
+   "juz": 5
+  },
+  "93": {
+   "range": "4:94-4:94",
+   "surah": 4,
+   "juz": 5
+  },
+  "94": {
+   "range": "4:101-4:101",
+   "surah": 4,
+   "juz": 5
+  },
+  "95": {
+   "range": "4:105-4:105",
+   "surah": 4,
+   "juz": 5
+  },
+  "96": {
+   "range": "4:113-4:113",
+   "surah": 4,
+   "juz": 5
+  },
+  "97": {
+   "range": "4:121-4:121",
+   "surah": 4,
+   "juz": 5
+  },
+  "98": {
+   "range": "4:127-4:127",
+   "surah": 4,
+   "juz": 5
+  },
+  "99": {
+   "range": "4:134-4:134",
+   "surah": 4,
+   "juz": 5
+  },
+  "100": {
+   "range": "4:140-4:140",
+   "surah": 4,
+   "juz": 5
+  },
+  "101": {
+   "range": "4:147-4:147",
+   "surah": 4,
+   "juz": 5
+  },
+  "102": {
+   "range": "4:154-4:154",
+   "surah": 4,
+   "juz": 6
+  },
+  "103": {
+   "range": "4:162-4:162",
+   "surah": 4,
+   "juz": 6
+  },
+  "104": {
+   "range": "4:170-4:170",
+   "surah": 4,
+   "juz": 6
+  },
+  "105": {
+   "range": "4:175-4:175",
+   "surah": 4,
+   "juz": 6
+  },
+  "106": {
+   "range": "5:2-5:2",
+   "surah": 5,
+   "juz": 6
+  },
+  "107": {
+   "range": "5:5-5:5",
+   "surah": 5,
+   "juz": 6
+  },
+  "108": {
+   "range": "5:9-5:9",
+   "surah": 5,
+   "juz": 6
+  },
+  "109": {
+   "range": "5:13-5:13",
+   "surah": 5,
+   "juz": 6
+  },
+  "110": {
+   "range": "5:17-5:17",
+   "surah": 5,
+   "juz": 6
+  },
+  "111": {
+   "range": "5:23-5:23",
+   "surah": 5,
+   "juz": 6
+  },
+  "112": {
+   "range": "5:31-5:31",
+   "surah": 5,
+   "juz": 6
+  },
+  "113": {
+   "range": "5:36-5:36",
+   "surah": 5,
+   "juz": 6
+  },
+  "114": {
+   "range": "5:41-5:41",
+   "surah": 5,
+   "juz": 6
+  },
+  "115": {
+   "range": "5:45-5:45",
+   "surah": 5,
+   "juz": 6
+  },
+  "116": {
+   "range": "5:50-5:50",
+   "surah": 5,
+   "juz": 6
+  },
+  "117": {
+   "range": "5:57-5:57",
+   "surah": 5,
+   "juz": 6
+  },
+  "118": {
+   "range": "5:64-5:64",
+   "surah": 5,
+   "juz": 6
+  },
+  "119": {
+   "range": "5:70-5:70",
+   "surah": 5,
+   "juz": 6
+  },
+  "120": {
+   "range": "5:76-5:76",
+   "surah": 5,
+   "juz": 6
+  },
+  "121": {
+   "range": "5:82-5:82",
+   "surah": 5,
+   "juz": 6
+  },
+  "122": {
+   "range": "5:89-5:89",
+   "surah": 5,
+   "juz": 7
+  },
+  "123": {
+   "range": "5:95-5:95",
+   "surah": 5,
+   "juz": 7
+  },
+  "124": {
+   "range": "5:103-5:103",
+   "surah": 5,
+   "juz": 7
+  },
+  "125": {
+   "range": "5:108-5:108",
+   "surah": 5,
+   "juz": 7
+  },
+  "126": {
+   "range": "5:113-5:113",
+   "surah": 5,
+   "juz": 7
+  },
+  "127": {
+   "range": "5:120-5:120",
+   "surah": 5,
+   "juz": 7
+  },
+  "128": {
+   "range": "6:8-6:8",
+   "surah": 6,
+   "juz": 7
+  },
+  "129": {
+   "range": "6:18-6:18",
+   "surah": 6,
+   "juz": 7
+  },
+  "130": {
+   "range": "6:27-6:27",
+   "surah": 6,
+   "juz": 7
+  },
+  "131": {
+   "range": "6:35-6:35",
+   "surah": 6,
+   "juz": 7
+  },
+  "132": {
+   "range": "6:44-6:44",
+   "surah": 6,
+   "juz": 7
+  },
+  "133": {
+   "range": "6:52-6:52",
+   "surah": 6,
+   "juz": 7
+  },
+  "134": {
+   "range": "6:59-6:59",
+   "surah": 6,
+   "juz": 7
+  },
+  "135": {
+   "range": "6:68-6:68",
+   "surah": 6,
+   "juz": 7
+  },
+  "136": {
+   "range": "6:73-6:73",
+   "surah": 6,
+   "juz": 7
+  },
+  "137": {
+   "range": "6:81-6:81",
+   "surah": 6,
+   "juz": 7
+  },
+  "138": {
+   "range": "6:90-6:90",
+   "surah": 6,
+   "juz": 7
+  },
+  "139": {
+   "range": "6:94-6:94",
+   "surah": 6,
+   "juz": 7
+  },
+  "140": {
+   "range": "6:101-6:101",
+   "surah": 6,
+   "juz": 7
+  },
+  "141": {
+   "range": "6:110-6:110",
+   "surah": 6,
+   "juz": 7
+  },
+  "142": {
+   "range": "6:118-6:118",
+   "surah": 6,
+   "juz": 8
+  },
+  "143": {
+   "range": "6:124-6:124",
+   "surah": 6,
+   "juz": 8
+  },
+  "144": {
+   "range": "6:131-6:131",
+   "surah": 6,
+   "juz": 8
+  },
+  "145": {
+   "range": "6:137-6:137",
+   "surah": 6,
+   "juz": 8
+  },
+  "146": {
+   "range": "6:142-6:142",
+   "surah": 6,
+   "juz": 8
+  },
+  "147": {
+   "range": "6:146-6:146",
+   "surah": 6,
+   "juz": 8
+  },
+  "148": {
+   "range": "6:151-6:151",
+   "surah": 6,
+   "juz": 8
+  },
+  "149": {
+   "range": "6:157-6:157",
+   "surah": 6,
+   "juz": 8
+  },
+  "150": {
+   "range": "6:165-6:165",
+   "surah": 6,
+   "juz": 8
+  },
+  "151": {
+   "range": "7:11-7:11",
+   "surah": 7,
+   "juz": 8
+  },
+  "152": {
+   "range": "7:22-7:22",
+   "surah": 7,
+   "juz": 8
+  },
+  "153": {
+   "range": "7:30-7:30",
+   "surah": 7,
+   "juz": 8
+  },
+  "154": {
+   "range": "7:37-7:37",
+   "surah": 7,
+   "juz": 8
+  },
+  "155": {
+   "range": "7:43-7:43",
+   "surah": 7,
+   "juz": 8
+  },
+  "156": {
+   "range": "7:51-7:51",
+   "surah": 7,
+   "juz": 8
+  },
+  "157": {
+   "range": "7:57-7:57",
+   "surah": 7,
+   "juz": 8
+  },
+  "158": {
+   "range": "7:67-7:67",
+   "surah": 7,
+   "juz": 8
+  },
+  "159": {
+   "range": "7:73-7:73",
+   "surah": 7,
+   "juz": 8
+  },
+  "160": {
+   "range": "7:81-7:81",
+   "surah": 7,
+   "juz": 8
+  },
+  "161": {
+   "range": "7:87-7:87",
+   "surah": 7,
+   "juz": 8
+  },
+  "162": {
+   "range": "7:95-7:95",
+   "surah": 7,
+   "juz": 9
+  },
+  "163": {
+   "range": "7:104-7:104",
+   "surah": 7,
+   "juz": 9
+  },
+  "164": {
+   "range": "7:120-7:120",
+   "surah": 7,
+   "juz": 9
+  },
+  "165": {
+   "range": "7:130-7:130",
+   "surah": 7,
+   "juz": 9
+  },
+  "166": {
+   "range": "7:137-7:137",
+   "surah": 7,
+   "juz": 9
+  },
+  "167": {
+   "range": "7:143-7:143",
+   "surah": 7,
+   "juz": 9
+  },
+  "168": {
+   "range": "7:149-7:149",
+   "surah": 7,
+   "juz": 9
+  },
+  "169": {
+   "range": "7:155-7:155",
+   "surah": 7,
+   "juz": 9
+  },
+  "170": {
+   "range": "7:159-7:159",
+   "surah": 7,
+   "juz": 9
+  },
+  "171": {
+   "range": "7:163-7:163",
+   "surah": 7,
+   "juz": 9
+  },
+  "172": {
+   "range": "7:170-7:170",
+   "surah": 7,
+   "juz": 9
+  },
+  "173": {
+   "range": "7:178-7:178",
+   "surah": 7,
+   "juz": 9
+  },
+  "174": {
+   "range": "7:187-7:187",
+   "surah": 7,
+   "juz": 9
+  },
+  "175": {
+   "range": "7:195-7:195",
+   "surah": 7,
+   "juz": 9
+  },
+  "176": {
+   "range": "7:206-7:206",
+   "surah": 7,
+   "juz": 9
+  },
+  "177": {
+   "range": "8:8-8:8",
+   "surah": 8,
+   "juz": 9
+  },
+  "178": {
+   "range": "8:16-8:16",
+   "surah": 8,
+   "juz": 9
+  },
+  "179": {
+   "range": "8:25-8:25",
+   "surah": 8,
+   "juz": 9
+  },
+  "180": {
+   "range": "8:33-8:33",
+   "surah": 8,
+   "juz": 9
+  },
+  "181": {
+   "range": "8:40-8:40",
+   "surah": 8,
+   "juz": 9
+  },
+  "182": {
+   "range": "8:45-8:45",
+   "surah": 8,
+   "juz": 10
+  },
+  "183": {
+   "range": "8:52-8:52",
+   "surah": 8,
+   "juz": 10
+  },
+  "184": {
+   "range": "8:61-8:61",
+   "surah": 8,
+   "juz": 10
+  },
+  "185": {
+   "range": "8:69-8:69",
+   "surah": 8,
+   "juz": 10
+  },
+  "186": {
+   "range": "8:75-8:75",
+   "surah": 8,
+   "juz": 10
+  },
+  "187": {
+   "range": "9:6-9:6",
+   "surah": 9,
+   "juz": 10
+  },
+  "188": {
+   "range": "9:13-9:13",
+   "surah": 9,
+   "juz": 10
+  },
+  "189": {
+   "range": "9:20-9:20",
+   "surah": 9,
+   "juz": 10
+  },
+  "190": {
+   "range": "9:26-9:26",
+   "surah": 9,
+   "juz": 10
+  },
+  "191": {
+   "range": "9:31-9:31",
+   "surah": 9,
+   "juz": 10
+  },
+  "192": {
+   "range": "9:36-9:36",
+   "surah": 9,
+   "juz": 10
+  },
+  "193": {
+   "range": "9:40-9:40",
+   "surah": 9,
+   "juz": 10
+  },
+  "194": {
+   "range": "9:47-9:47",
+   "surah": 9,
+   "juz": 10
+  },
+  "195": {
+   "range": "9:54-9:54",
+   "surah": 9,
+   "juz": 10
+  },
+  "196": {
+   "range": "9:61-9:61",
+   "surah": 9,
+   "juz": 10
+  },
+  "197": {
+   "range": "9:68-9:68",
+   "surah": 9,
+   "juz": 10
+  },
+  "198": {
+   "range": "9:72-9:72",
+   "surah": 9,
+   "juz": 10
+  },
+  "199": {
+   "range": "9:79-9:79",
+   "surah": 9,
+   "juz": 10
+  },
+  "200": {
+   "range": "9:86-9:86",
+   "surah": 9,
+   "juz": 10
+  },
+  "201": {
+   "range": "9:93-9:93",
+   "surah": 9,
+   "juz": 10
+  },
+  "202": {
+   "range": "9:99-9:99",
+   "surah": 9,
+   "juz": 11
+  },
+  "203": {
+   "range": "9:106-9:106",
+   "surah": 9,
+   "juz": 11
+  },
+  "204": {
+   "range": "9:111-9:111",
+   "surah": 9,
+   "juz": 11
+  },
+  "205": {
+   "range": "9:117-9:117",
+   "surah": 9,
+   "juz": 11
+  },
+  "206": {
+   "range": "9:122-9:122",
+   "surah": 9,
+   "juz": 11
+  },
+  "207": {
+   "range": "9:129-9:129",
+   "surah": 9,
+   "juz": 11
+  },
+  "208": {
+   "range": "10:6-10:6",
+   "surah": 10,
+   "juz": 11
+  },
+  "209": {
+   "range": "10:14-10:14",
+   "surah": 10,
+   "juz": 11
+  },
+  "210": {
+   "range": "10:20-10:20",
+   "surah": 10,
+   "juz": 11
+  },
+  "211": {
+   "range": "10:25-10:25",
+   "surah": 10,
+   "juz": 11
+  },
+  "212": {
+   "range": "10:33-10:33",
+   "surah": 10,
+   "juz": 11
+  },
+  "213": {
+   "range": "10:42-10:42",
+   "surah": 10,
+   "juz": 11
+  },
+  "214": {
+   "range": "10:53-10:53",
+   "surah": 10,
+   "juz": 11
+  },
+  "215": {
+   "range": "10:61-10:61",
+   "surah": 10,
+   "juz": 11
+  },
+  "216": {
+   "range": "10:70-10:70",
+   "surah": 10,
+   "juz": 11
+  },
+  "217": {
+   "range": "10:78-10:78",
+   "surah": 10,
+   "juz": 11
+  },
+  "218": {
+   "range": "10:88-10:88",
+   "surah": 10,
+   "juz": 11
+  },
+  "219": {
+   "range": "10:97-10:97",
+   "surah": 10,
+   "juz": 11
+  },
+  "220": {
+   "range": "10:106-10:106",
+   "surah": 10,
+   "juz": 11
+  },
+  "221": {
+   "range": "11:5-11:5",
+   "surah": 11,
+   "juz": 11
+  },
+  "222": {
+   "range": "11:12-11:12",
+   "surah": 11,
+   "juz": 12
+  },
+  "223": {
+   "range": "11:19-11:19",
+   "surah": 11,
+   "juz": 12
+  },
+  "224": {
+   "range": "11:28-11:28",
+   "surah": 11,
+   "juz": 12
+  },
+  "225": {
+   "range": "11:37-11:37",
+   "surah": 11,
+   "juz": 12
+  },
+  "226": {
+   "range": "11:45-11:45",
+   "surah": 11,
+   "juz": 12
+  },
+  "227": {
+   "range": "11:53-11:53",
+   "surah": 11,
+   "juz": 12
+  },
+  "228": {
+   "range": "11:62-11:62",
+   "surah": 11,
+   "juz": 12
+  },
+  "229": {
+   "range": "11:71-11:71",
+   "surah": 11,
+   "juz": 12
+  },
+  "230": {
+   "range": "11:81-11:81",
+   "surah": 11,
+   "juz": 12
+  },
+  "231": {
+   "range": "11:88-11:88",
+   "surah": 11,
+   "juz": 12
+  },
+  "232": {
+   "range": "11:97-11:97",
+   "surah": 11,
+   "juz": 12
+  },
+  "233": {
+   "range": "11:108-11:108",
+   "surah": 11,
+   "juz": 12
+  },
+  "234": {
+   "range": "11:117-11:117",
+   "surah": 11,
+   "juz": 12
+  },
+  "235": {
+   "range": "12:4-12:4",
+   "surah": 12,
+   "juz": 12
+  },
+  "236": {
+   "range": "12:14-12:14",
+   "surah": 12,
+   "juz": 12
+  },
+  "237": {
+   "range": "12:22-12:22",
+   "surah": 12,
+   "juz": 12
+  },
+  "238": {
+   "range": "12:30-12:30",
+   "surah": 12,
+   "juz": 12
+  },
+  "239": {
+   "range": "12:37-12:37",
+   "surah": 12,
+   "juz": 12
+  },
+  "240": {
+   "range": "12:43-12:43",
+   "surah": 12,
+   "juz": 12
+  },
+  "241": {
+   "range": "12:52-12:52",
+   "surah": 12,
+   "juz": 12
+  },
+  "242": {
+   "range": "12:63-12:63",
+   "surah": 12,
+   "juz": 13
+  },
+  "243": {
+   "range": "12:69-12:69",
+   "surah": 12,
+   "juz": 13
+  },
+  "244": {
+   "range": "12:78-12:78",
+   "surah": 12,
+   "juz": 13
+  },
+  "245": {
+   "range": "12:86-12:86",
+   "surah": 12,
+   "juz": 13
+  },
+  "246": {
+   "range": "12:95-12:95",
+   "surah": 12,
+   "juz": 13
+  },
+  "247": {
+   "range": "12:103-12:103",
+   "surah": 12,
+   "juz": 13
+  },
+  "248": {
+   "range": "12:111-12:111",
+   "surah": 12,
+   "juz": 13
+  },
+  "249": {
+   "range": "13:5-13:5",
+   "surah": 13,
+   "juz": 13
+  },
+  "250": {
+   "range": "13:13-13:13",
+   "surah": 13,
+   "juz": 13
+  },
+  "251": {
+   "range": "13:18-13:18",
+   "surah": 13,
+   "juz": 13
+  },
+  "252": {
+   "range": "13:28-13:28",
+   "surah": 13,
+   "juz": 13
+  },
+  "253": {
+   "range": "13:34-13:34",
+   "surah": 13,
+   "juz": 13
+  },
+  "254": {
+   "range": "13:42-13:42",
+   "surah": 13,
+   "juz": 13
+  },
+  "255": {
+   "range": "14:5-14:5",
+   "surah": 14,
+   "juz": 13
+  },
+  "256": {
+   "range": "14:10-14:10",
+   "surah": 14,
+   "juz": 13
+  },
+  "257": {
+   "range": "14:18-14:18",
+   "surah": 14,
+   "juz": 13
+  },
+  "258": {
+   "range": "14:24-14:24",
+   "surah": 14,
+   "juz": 13
+  },
+  "259": {
+   "range": "14:33-14:33",
+   "surah": 14,
+   "juz": 13
+  },
+  "260": {
+   "range": "14:42-14:42",
+   "surah": 14,
+   "juz": 13
+  },
+  "261": {
+   "range": "14:52-14:52",
+   "surah": 14,
+   "juz": 13
+  },
+  "262": {
+   "range": "15:15-15:15",
+   "surah": 15,
+   "juz": 14
+  },
+  "263": {
+   "range": "15:31-15:31",
+   "surah": 15,
+   "juz": 14
+  },
+  "264": {
+   "range": "15:51-15:51",
+   "surah": 15,
+   "juz": 14
+  },
+  "265": {
+   "range": "15:70-15:70",
+   "surah": 15,
+   "juz": 14
+  },
+  "266": {
+   "range": "15:90-15:90",
+   "surah": 15,
+   "juz": 14
+  },
+  "267": {
+   "range": "16:6-16:6",
+   "surah": 16,
+   "juz": 14
+  },
+  "268": {
+   "range": "16:14-16:14",
+   "surah": 16,
+   "juz": 14
+  },
+  "269": {
+   "range": "16:26-16:26",
+   "surah": 16,
+   "juz": 14
+  },
+  "270": {
+   "range": "16:34-16:34",
+   "surah": 16,
+   "juz": 14
+  },
+  "271": {
+   "range": "16:42-16:42",
+   "surah": 16,
+   "juz": 14
+  },
+  "272": {
+   "range": "16:54-16:54",
+   "surah": 16,
+   "juz": 14
+  },
+  "273": {
+   "range": "16:64-16:64",
+   "surah": 16,
+   "juz": 14
+  },
+  "274": {
+   "range": "16:72-16:72",
+   "surah": 16,
+   "juz": 14
+  },
+  "275": {
+   "range": "16:79-16:79",
+   "surah": 16,
+   "juz": 14
+  },
+  "276": {
+   "range": "16:87-16:87",
+   "surah": 16,
+   "juz": 14
+  },
+  "277": {
+   "range": "16:93-16:93",
+   "surah": 16,
+   "juz": 14
+  },
+  "278": {
+   "range": "16:102-16:102",
+   "surah": 16,
+   "juz": 14
+  },
+  "279": {
+   "range": "16:110-16:110",
+   "surah": 16,
+   "juz": 14
+  },
+  "280": {
+   "range": "16:118-16:118",
+   "surah": 16,
+   "juz": 14
+  },
+  "281": {
+   "range": "16:128-16:128",
+   "surah": 16,
+   "juz": 14
+  },
+  "282": {
+   "range": "17:7-17:7",
+   "surah": 17,
+   "juz": 15
+  },
+  "283": {
+   "range": "17:17-17:17",
+   "surah": 17,
+   "juz": 15
+  },
+  "284": {
+   "range": "17:27-17:27",
+   "surah": 17,
+   "juz": 15
+  },
+  "285": {
+   "range": "17:38-17:38",
+   "surah": 17,
+   "juz": 15
+  },
+  "286": {
+   "range": "17:49-17:49",
+   "surah": 17,
+   "juz": 15
+  },
+  "287": {
+   "range": "17:58-17:58",
+   "surah": 17,
+   "juz": 15
+  },
+  "288": {
+   "range": "17:66-17:66",
+   "surah": 17,
+   "juz": 15
+  },
+  "289": {
+   "range": "17:75-17:75",
+   "surah": 17,
+   "juz": 15
+  },
+  "290": {
+   "range": "17:86-17:86",
+   "surah": 17,
+   "juz": 15
+  },
+  "291": {
+   "range": "17:96-17:96",
+   "surah": 17,
+   "juz": 15
+  },
+  "292": {
+   "range": "17:104-17:104",
+   "surah": 17,
+   "juz": 15
+  },
+  "293": {
+   "range": "18:4-18:4",
+   "surah": 18,
+   "juz": 15
+  },
+  "294": {
+   "range": "18:15-18:15",
+   "surah": 18,
+   "juz": 15
+  },
+  "295": {
+   "range": "18:20-18:20",
+   "surah": 18,
+   "juz": 15
+  },
+  "296": {
+   "range": "18:27-18:27",
+   "surah": 18,
+   "juz": 15
+  },
+  "297": {
+   "range": "18:34-18:34",
+   "surah": 18,
+   "juz": 15
+  },
+  "298": {
+   "range": "18:45-18:45",
+   "surah": 18,
+   "juz": 15
+  },
+  "299": {
+   "range": "18:53-18:53",
+   "surah": 18,
+   "juz": 15
+  },
+  "300": {
+   "range": "18:61-18:61",
+   "surah": 18,
+   "juz": 15
+  },
+  "301": {
+   "range": "18:74-18:74",
+   "surah": 18,
+   "juz": 15
+  },
+  "302": {
+   "range": "18:83-18:83",
+   "surah": 18,
+   "juz": 16
+  },
+  "303": {
+   "range": "18:97-18:97",
+   "surah": 18,
+   "juz": 16
+  },
+  "304": {
+   "range": "18:110-18:110",
+   "surah": 18,
+   "juz": 16
+  },
+  "305": {
+   "range": "19:11-19:11",
+   "surah": 19,
+   "juz": 16
+  },
+  "306": {
+   "range": "19:25-19:25",
+   "surah": 19,
+   "juz": 16
+  },
+  "307": {
+   "range": "19:38-19:38",
+   "surah": 19,
+   "juz": 16
+  },
+  "308": {
+   "range": "19:51-19:51",
+   "surah": 19,
+   "juz": 16
+  },
+  "309": {
+   "range": "19:64-19:64",
+   "surah": 19,
+   "juz": 16
+  },
+  "310": {
+   "range": "19:76-19:76",
+   "surah": 19,
+   "juz": 16
+  },
+  "311": {
+   "range": "19:95-19:95",
+   "surah": 19,
+   "juz": 16
+  },
+  "312": {
+   "range": "20:12-20:12",
+   "surah": 20,
+   "juz": 16
+  },
+  "313": {
+   "range": "20:37-20:37",
+   "surah": 20,
+   "juz": 16
+  },
+  "314": {
+   "range": "20:51-20:51",
+   "surah": 20,
+   "juz": 16
+  },
+  "315": {
+   "range": "20:64-20:64",
+   "surah": 20,
+   "juz": 16
+  },
+  "316": {
+   "range": "20:76-20:76",
+   "surah": 20,
+   "juz": 16
+  },
+  "317": {
+   "range": "20:87-20:87",
+   "surah": 20,
+   "juz": 16
+  },
+  "318": {
+   "range": "20:98-20:98",
+   "surah": 20,
+   "juz": 16
+  },
+  "319": {
+   "range": "20:113-20:113",
+   "surah": 20,
+   "juz": 16
+  },
+  "320": {
+   "range": "20:125-20:125",
+   "surah": 20,
+   "juz": 16
+  },
+  "321": {
+   "range": "20:135-20:135",
+   "surah": 20,
+   "juz": 16
+  },
+  "322": {
+   "range": "21:10-21:10",
+   "surah": 21,
+   "juz": 17
+  },
+  "323": {
+   "range": "21:24-21:24",
+   "surah": 21,
+   "juz": 17
+  },
+  "324": {
+   "range": "21:35-21:35",
+   "surah": 21,
+   "juz": 17
+  },
+  "325": {
+   "range": "21:44-21:44",
+   "surah": 21,
+   "juz": 17
+  },
+  "326": {
+   "range": "21:57-21:57",
+   "surah": 21,
+   "juz": 17
+  },
+  "327": {
+   "range": "21:72-21:72",
+   "surah": 21,
+   "juz": 17
+  },
+  "328": {
+   "range": "21:81-21:81",
+   "surah": 21,
+   "juz": 17
+  },
+  "329": {
+   "range": "21:90-21:90",
+   "surah": 21,
+   "juz": 17
+  },
+  "330": {
+   "range": "21:101-21:101",
+   "surah": 21,
+   "juz": 17
+  },
+  "331": {
+   "range": "21:112-21:112",
+   "surah": 21,
+   "juz": 17
+  },
+  "332": {
+   "range": "22:5-22:5",
+   "surah": 22,
+   "juz": 17
+  },
+  "333": {
+   "range": "22:15-22:15",
+   "surah": 22,
+   "juz": 17
+  },
+  "334": {
+   "range": "22:23-22:23",
+   "surah": 22,
+   "juz": 17
+  },
+  "335": {
+   "range": "22:30-22:30",
+   "surah": 22,
+   "juz": 17
+  },
+  "336": {
+   "range": "22:38-22:38",
+   "surah": 22,
+   "juz": 17
+  },
+  "337": {
+   "range": "22:46-22:46",
+   "surah": 22,
+   "juz": 17
+  },
+  "338": {
+   "range": "22:55-22:55",
+   "surah": 22,
+   "juz": 17
+  },
+  "339": {
+   "range": "22:64-22:64",
+   "surah": 22,
+   "juz": 17
+  },
+  "340": {
+   "range": "22:72-22:72",
+   "surah": 22,
+   "juz": 17
+  },
+  "341": {
+   "range": "22:78-22:78",
+   "surah": 22,
+   "juz": 17
+  },
+  "342": {
+   "range": "23:17-23:17",
+   "surah": 23,
+   "juz": 18
+  },
+  "343": {
+   "range": "23:27-23:27",
+   "surah": 23,
+   "juz": 18
+  },
+  "344": {
+   "range": "23:42-23:42",
+   "surah": 23,
+   "juz": 18
+  },
+  "345": {
+   "range": "23:59-23:59",
+   "surah": 23,
+   "juz": 18
+  },
+  "346": {
+   "range": "23:74-23:74",
+   "surah": 23,
+   "juz": 18
+  },
+  "347": {
+   "range": "23:89-23:89",
+   "surah": 23,
+   "juz": 18
+  },
+  "348": {
+   "range": "23:104-23:104",
+   "surah": 23,
+   "juz": 18
+  },
+  "349": {
+   "range": "23:118-23:118",
+   "surah": 23,
+   "juz": 18
+  },
+  "350": {
+   "range": "24:10-24:10",
+   "surah": 24,
+   "juz": 18
+  },
+  "351": {
+   "range": "24:20-24:20",
+   "surah": 24,
+   "juz": 18
+  },
+  "352": {
+   "range": "24:27-24:27",
+   "surah": 24,
+   "juz": 18
+  },
+  "353": {
+   "range": "24:31-24:31",
+   "surah": 24,
+   "juz": 18
+  },
+  "354": {
+   "range": "24:36-24:36",
+   "surah": 24,
+   "juz": 18
+  },
+  "355": {
+   "range": "24:43-24:43",
+   "surah": 24,
+   "juz": 18
+  },
+  "356": {
+   "range": "24:53-24:53",
+   "surah": 24,
+   "juz": 18
+  },
+  "357": {
+   "range": "24:58-24:58",
+   "surah": 24,
+   "juz": 18
+  },
+  "358": {
+   "range": "24:61-24:61",
+   "surah": 24,
+   "juz": 18
+  },
+  "359": {
+   "range": "25:2-25:2",
+   "surah": 25,
+   "juz": 18
+  },
+  "360": {
+   "range": "25:11-25:11",
+   "surah": 25,
+   "juz": 18
+  },
+  "361": {
+   "range": "25:20-25:20",
+   "surah": 25,
+   "juz": 18
+  },
+  "362": {
+   "range": "25:32-25:32",
+   "surah": 25,
+   "juz": 19
+  },
+  "363": {
+   "range": "25:43-25:43",
+   "surah": 25,
+   "juz": 19
+  },
+  "364": {
+   "range": "25:55-25:55",
+   "surah": 25,
+   "juz": 19
+  },
+  "365": {
+   "range": "25:67-25:67",
+   "surah": 25,
+   "juz": 19
+  },
+  "366": {
+   "range": "25:77-25:77",
+   "surah": 25,
+   "juz": 19
+  },
+  "367": {
+   "range": "26:19-26:19",
+   "surah": 26,
+   "juz": 19
+  },
+  "368": {
+   "range": "26:39-26:39",
+   "surah": 26,
+   "juz": 19
+  },
+  "369": {
+   "range": "26:60-26:60",
+   "surah": 26,
+   "juz": 19
+  },
+  "370": {
+   "range": "26:83-26:83",
+   "surah": 26,
+   "juz": 19
+  },
+  "371": {
+   "range": "26:111-26:111",
+   "surah": 26,
+   "juz": 19
+  },
+  "372": {
+   "range": "26:136-26:136",
+   "surah": 26,
+   "juz": 19
+  },
+  "373": {
+   "range": "26:159-26:159",
+   "surah": 26,
+   "juz": 19
+  },
+  "374": {
+   "range": "26:183-26:183",
+   "surah": 26,
+   "juz": 19
+  },
+  "375": {
+   "range": "26:206-26:206",
+   "surah": 26,
+   "juz": 19
+  },
+  "376": {
+   "range": "26:227-26:227",
+   "surah": 26,
+   "juz": 19
+  },
+  "377": {
+   "range": "27:13-27:13",
+   "surah": 27,
+   "juz": 19
+  },
+  "378": {
+   "range": "27:22-27:22",
+   "surah": 27,
+   "juz": 19
+  },
+  "379": {
+   "range": "27:35-27:35",
+   "surah": 27,
+   "juz": 19
+  },
+  "380": {
+   "range": "27:44-27:44",
+   "surah": 27,
+   "juz": 19
+  },
+  "381": {
+   "range": "27:55-27:55",
+   "surah": 27,
+   "juz": 19
+  },
+  "382": {
+   "range": "27:63-27:63",
+   "surah": 27,
+   "juz": 20
+  },
+  "383": {
+   "range": "27:76-27:76",
+   "surah": 27,
+   "juz": 20
+  },
+  "384": {
+   "range": "27:88-27:88",
+   "surah": 27,
+   "juz": 20
+  },
+  "385": {
+   "range": "28:5-28:5",
+   "surah": 28,
+   "juz": 20
+  },
+  "386": {
+   "range": "28:13-28:13",
+   "surah": 28,
+   "juz": 20
+  },
+  "387": {
+   "range": "28:21-28:21",
+   "surah": 28,
+   "juz": 20
+  },
+  "388": {
+   "range": "28:28-28:28",
+   "surah": 28,
+   "juz": 20
+  },
+  "389": {
+   "range": "28:35-28:35",
+   "surah": 28,
+   "juz": 20
+  },
+  "390": {
+   "range": "28:43-28:43",
+   "surah": 28,
+   "juz": 20
+  },
+  "391": {
+   "range": "28:50-28:50",
+   "surah": 28,
+   "juz": 20
+  },
+  "392": {
+   "range": "28:59-28:59",
+   "surah": 28,
+   "juz": 20
+  },
+  "393": {
+   "range": "28:70-28:70",
+   "surah": 28,
+   "juz": 20
+  },
+  "394": {
+   "range": "28:77-28:77",
+   "surah": 28,
+   "juz": 20
+  },
+  "395": {
+   "range": "28:84-28:84",
+   "surah": 28,
+   "juz": 20
+  },
+  "396": {
+   "range": "29:6-29:6",
+   "surah": 29,
+   "juz": 20
+  },
+  "397": {
+   "range": "29:14-29:14",
+   "surah": 29,
+   "juz": 20
+  },
+  "398": {
+   "range": "29:23-29:23",
+   "surah": 29,
+   "juz": 20
+  },
+  "399": {
+   "range": "29:30-29:30",
+   "surah": 29,
+   "juz": 20
+  },
+  "400": {
+   "range": "29:38-29:38",
+   "surah": 29,
+   "juz": 20
+  },
+  "401": {
+   "range": "29:45-29:45",
+   "surah": 29,
+   "juz": 20
+  },
+  "402": {
+   "range": "29:52-29:52",
+   "surah": 29,
+   "juz": 21
+  },
+  "403": {
+   "range": "29:63-29:63",
+   "surah": 29,
+   "juz": 21
+  },
+  "404": {
+   "range": "30:5-30:5",
+   "surah": 30,
+   "juz": 21
+  },
+  "405": {
+   "range": "30:15-30:15",
+   "surah": 30,
+   "juz": 21
+  },
+  "406": {
+   "range": "30:24-30:24",
+   "surah": 30,
+   "juz": 21
+  },
+  "407": {
+   "range": "30:32-30:32",
+   "surah": 30,
+   "juz": 21
+  },
+  "408": {
+   "range": "30:41-30:41",
+   "surah": 30,
+   "juz": 21
+  },
+  "409": {
+   "range": "30:50-30:50",
+   "surah": 30,
+   "juz": 21
+  },
+  "410": {
+   "range": "30:60-30:60",
+   "surah": 30,
+   "juz": 21
+  },
+  "411": {
+   "range": "31:11-31:11",
+   "surah": 31,
+   "juz": 21
+  },
+  "412": {
+   "range": "31:19-31:19",
+   "surah": 31,
+   "juz": 21
+  },
+  "413": {
+   "range": "31:28-31:28",
+   "surah": 31,
+   "juz": 21
+  },
+  "414": {
+   "range": "31:34-31:34",
+   "surah": 31,
+   "juz": 21
+  },
+  "415": {
+   "range": "32:11-32:11",
+   "surah": 32,
+   "juz": 21
+  },
+  "416": {
+   "range": "32:20-32:20",
+   "surah": 32,
+   "juz": 21
+  },
+  "417": {
+   "range": "32:30-32:30",
+   "surah": 32,
+   "juz": 21
+  },
+  "418": {
+   "range": "33:6-33:6",
+   "surah": 33,
+   "juz": 21
+  },
+  "419": {
+   "range": "33:15-33:15",
+   "surah": 33,
+   "juz": 21
+  },
+  "420": {
+   "range": "33:22-33:22",
+   "surah": 33,
+   "juz": 21
+  },
+  "421": {
+   "range": "33:30-33:30",
+   "surah": 33,
+   "juz": 21
+  },
+  "422": {
+   "range": "33:35-33:35",
+   "surah": 33,
+   "juz": 22
+  },
+  "423": {
+   "range": "33:43-33:43",
+   "surah": 33,
+   "juz": 22
+  },
+  "424": {
+   "range": "33:50-33:50",
+   "surah": 33,
+   "juz": 22
+  },
+  "425": {
+   "range": "33:54-33:54",
+   "surah": 33,
+   "juz": 22
+  },
+  "426": {
+   "range": "33:62-33:62",
+   "surah": 33,
+   "juz": 22
+  },
+  "427": {
+   "range": "33:73-33:73",
+   "surah": 33,
+   "juz": 22
+  },
+  "428": {
+   "range": "34:7-34:7",
+   "surah": 34,
+   "juz": 22
+  },
+  "429": {
+   "range": "34:14-34:14",
+   "surah": 34,
+   "juz": 22
+  },
+  "430": {
+   "range": "34:22-34:22",
+   "surah": 34,
+   "juz": 22
+  },
+  "431": {
+   "range": "34:31-34:31",
+   "surah": 34,
+   "juz": 22
+  },
+  "432": {
+   "range": "34:39-34:39",
+   "surah": 34,
+   "juz": 22
+  },
+  "433": {
+   "range": "34:48-34:48",
+   "surah": 34,
+   "juz": 22
+  },
+  "434": {
+   "range": "35:3-35:3",
+   "surah": 35,
+   "juz": 22
+  },
+  "435": {
+   "range": "35:11-35:11",
+   "surah": 35,
+   "juz": 22
+  },
+  "436": {
+   "range": "35:18-35:18",
+   "surah": 35,
+   "juz": 22
+  },
+  "437": {
+   "range": "35:30-35:30",
+   "surah": 35,
+   "juz": 22
+  },
+  "438": {
+   "range": "35:38-35:38",
+   "surah": 35,
+   "juz": 22
+  },
+  "439": {
+   "range": "35:44-35:44",
+   "surah": 35,
+   "juz": 22
+  },
+  "440": {
+   "range": "36:12-36:12",
+   "surah": 36,
+   "juz": 22
+  },
+  "441": {
+   "range": "36:27-36:27",
+   "surah": 36,
+   "juz": 22
+  },
+  "442": {
+   "range": "36:40-36:40",
+   "surah": 36,
+   "juz": 23
+  },
+  "443": {
+   "range": "36:54-36:54",
+   "surah": 36,
+   "juz": 23
+  },
+  "444": {
+   "range": "36:70-36:70",
+   "surah": 36,
+   "juz": 23
+  },
+  "445": {
+   "range": "36:83-36:83",
+   "surah": 36,
+   "juz": 23
+  },
+  "446": {
+   "range": "37:24-37:24",
+   "surah": 37,
+   "juz": 23
+  },
+  "447": {
+   "range": "37:51-37:51",
+   "surah": 37,
+   "juz": 23
+  },
+  "448": {
+   "range": "37:76-37:76",
+   "surah": 37,
+   "juz": 23
+  },
+  "449": {
+   "range": "37:102-37:102",
+   "surah": 37,
+   "juz": 23
+  },
+  "450": {
+   "range": "37:126-37:126",
+   "surah": 37,
+   "juz": 23
+  },
+  "451": {
+   "range": "37:153-37:153",
+   "surah": 37,
+   "juz": 23
+  },
+  "452": {
+   "range": "37:182-37:182",
+   "surah": 37,
+   "juz": 23
+  },
+  "453": {
+   "range": "38:16-38:16",
+   "surah": 38,
+   "juz": 23
+  },
+  "454": {
+   "range": "38:26-38:26",
+   "surah": 38,
+   "juz": 23
+  },
+  "455": {
+   "range": "38:42-38:42",
+   "surah": 38,
+   "juz": 23
+  },
+  "456": {
+   "range": "38:61-38:61",
+   "surah": 38,
+   "juz": 23
+  },
+  "457": {
+   "range": "38:83-38:83",
+   "surah": 38,
+   "juz": 23
+  },
+  "458": {
+   "range": "39:5-39:5",
+   "surah": 39,
+   "juz": 23
+  },
+  "459": {
+   "range": "39:10-39:10",
+   "surah": 39,
+   "juz": 23
+  },
+  "460": {
+   "range": "39:21-39:21",
+   "surah": 39,
+   "juz": 23
+  },
+  "461": {
+   "range": "39:31-39:31",
+   "surah": 39,
+   "juz": 23
+  },
+  "462": {
+   "range": "39:40-39:40",
+   "surah": 39,
+   "juz": 24
+  },
+  "463": {
+   "range": "39:47-39:47",
+   "surah": 39,
+   "juz": 24
+  },
+  "464": {
+   "range": "39:56-39:56",
+   "surah": 39,
+   "juz": 24
+  },
+  "465": {
+   "range": "39:67-39:67",
+   "surah": 39,
+   "juz": 24
+  },
+  "466": {
+   "range": "39:74-39:74",
+   "surah": 39,
+   "juz": 24
+  },
+  "467": {
+   "range": "40:7-40:7",
+   "surah": 40,
+   "juz": 24
+  },
+  "468": {
+   "range": "40:16-40:16",
+   "surah": 40,
+   "juz": 24
+  },
+  "469": {
+   "range": "40:25-40:25",
+   "surah": 40,
+   "juz": 24
+  },
+  "470": {
+   "range": "40:33-40:33",
+   "surah": 40,
+   "juz": 24
+  },
+  "471": {
+   "range": "40:40-40:40",
+   "surah": 40,
+   "juz": 24
+  },
+  "472": {
+   "range": "40:49-40:49",
+   "surah": 40,
+   "juz": 24
+  },
+  "473": {
+   "range": "40:58-40:58",
+   "surah": 40,
+   "juz": 24
+  },
+  "474": {
+   "range": "40:66-40:66",
+   "surah": 40,
+   "juz": 24
+  },
+  "475": {
+   "range": "40:77-40:77",
+   "surah": 40,
+   "juz": 24
+  },
+  "476": {
+   "range": "40:85-40:85",
+   "surah": 40,
+   "juz": 24
+  },
+  "477": {
+   "range": "41:11-41:11",
+   "surah": 41,
+   "juz": 24
+  },
+  "478": {
+   "range": "41:20-41:20",
+   "surah": 41,
+   "juz": 24
+  },
+  "479": {
+   "range": "41:29-41:29",
+   "surah": 41,
+   "juz": 24
+  },
+  "480": {
+   "range": "41:38-41:38",
+   "surah": 41,
+   "juz": 24
+  },
+  "481": {
+   "range": "41:46-41:46",
+   "surah": 41,
+   "juz": 24
+  },
+  "482": {
+   "range": "41:54-41:54",
+   "surah": 41,
+   "juz": 25
+  },
+  "483": {
+   "range": "42:10-42:10",
+   "surah": 42,
+   "juz": 25
+  },
+  "484": {
+   "range": "42:15-42:15",
+   "surah": 42,
+   "juz": 25
+  },
+  "485": {
+   "range": "42:22-42:22",
+   "surah": 42,
+   "juz": 25
+  },
+  "486": {
+   "range": "42:31-42:31",
+   "surah": 42,
+   "juz": 25
+  },
+  "487": {
+   "range": "42:44-42:44",
+   "surah": 42,
+   "juz": 25
+  },
+  "488": {
+   "range": "42:51-42:51",
+   "surah": 42,
+   "juz": 25
+  },
+  "489": {
+   "range": "43:10-43:10",
+   "surah": 43,
+   "juz": 25
+  },
+  "490": {
+   "range": "43:22-43:22",
+   "surah": 43,
+   "juz": 25
+  },
+  "491": {
+   "range": "43:33-43:33",
+   "surah": 43,
+   "juz": 25
+  },
+  "492": {
+   "range": "43:47-43:47",
+   "surah": 43,
+   "juz": 25
+  },
+  "493": {
+   "range": "43:60-43:60",
+   "surah": 43,
+   "juz": 25
+  },
+  "494": {
+   "range": "43:73-43:73",
+   "surah": 43,
+   "juz": 25
+  },
+  "495": {
+   "range": "43:89-43:89",
+   "surah": 43,
+   "juz": 25
+  },
+  "496": {
+   "range": "44:18-44:18",
+   "surah": 44,
+   "juz": 25
+  },
+  "497": {
+   "range": "44:39-44:39",
+   "surah": 44,
+   "juz": 25
+  },
+  "498": {
+   "range": "44:59-44:59",
+   "surah": 44,
+   "juz": 25
+  },
+  "499": {
+   "range": "45:13-45:13",
+   "surah": 45,
+   "juz": 25
+  },
+  "500": {
+   "range": "45:22-45:22",
+   "surah": 45,
+   "juz": 25
+  },
+  "501": {
+   "range": "45:32-45:32",
+   "surah": 45,
+   "juz": 25
+  },
+  "502": {
+   "range": "46:5-46:5",
+   "surah": 46,
+   "juz": 25
+  },
+  "503": {
+   "range": "46:14-46:14",
+   "surah": 46,
+   "juz": 26
+  },
+  "504": {
+   "range": "46:20-46:20",
+   "surah": 46,
+   "juz": 26
+  },
+  "505": {
+   "range": "46:28-46:28",
+   "surah": 46,
+   "juz": 26
+  },
+  "506": {
+   "range": "46:35-46:35",
+   "surah": 46,
+   "juz": 26
+  },
+  "507": {
+   "range": "47:11-47:11",
+   "surah": 47,
+   "juz": 26
+  },
+  "508": {
+   "range": "47:19-47:19",
+   "surah": 47,
+   "juz": 26
+  },
+  "509": {
+   "range": "47:29-47:29",
+   "surah": 47,
+   "juz": 26
+  },
+  "510": {
+   "range": "47:38-47:38",
+   "surah": 47,
+   "juz": 26
+  },
+  "511": {
+   "range": "48:9-48:9",
+   "surah": 48,
+   "juz": 26
+  },
+  "512": {
+   "range": "48:15-48:15",
+   "surah": 48,
+   "juz": 26
+  },
+  "513": {
+   "range": "48:23-48:23",
+   "surah": 48,
+   "juz": 26
+  },
+  "514": {
+   "range": "48:28-48:28",
+   "surah": 48,
+   "juz": 26
+  },
+  "515": {
+   "range": "49:4-49:4",
+   "surah": 49,
+   "juz": 26
+  },
+  "516": {
+   "range": "49:11-49:11",
+   "surah": 49,
+   "juz": 26
+  },
+  "517": {
+   "range": "49:18-49:18",
+   "surah": 49,
+   "juz": 26
+  },
+  "518": {
+   "range": "50:15-50:15",
+   "surah": 50,
+   "juz": 26
+  },
+  "519": {
+   "range": "50:35-50:35",
+   "surah": 50,
+   "juz": 26
+  },
+  "520": {
+   "range": "51:6-51:6",
+   "surah": 51,
+   "juz": 26
+  },
+  "521": {
+   "range": "51:30-51:30",
+   "surah": 51,
+   "juz": 26
+  },
+  "522": {
+   "range": "51:51-51:51",
+   "surah": 51,
+   "juz": 27
+  },
+  "523": {
+   "range": "52:14-52:14",
+   "surah": 52,
+   "juz": 27
+  },
+  "524": {
+   "range": "52:31-52:31",
+   "surah": 52,
+   "juz": 27
+  },
+  "525": {
+   "range": "52:49-52:49",
+   "surah": 52,
+   "juz": 27
+  },
+  "526": {
+   "range": "53:26-53:26",
+   "surah": 53,
+   "juz": 27
+  },
+  "527": {
+   "range": "53:44-53:44",
+   "surah": 53,
+   "juz": 27
+  },
+  "528": {
+   "range": "54:6-54:6",
+   "surah": 54,
+   "juz": 27
+  },
+  "529": {
+   "range": "54:27-54:27",
+   "surah": 54,
+   "juz": 27
+  },
+  "530": {
+   "range": "54:49-54:49",
+   "surah": 54,
+   "juz": 27
+  },
+  "531": {
+   "range": "55:16-55:16",
+   "surah": 55,
+   "juz": 27
+  },
+  "532": {
+   "range": "55:40-55:40",
+   "surah": 55,
+   "juz": 27
+  },
+  "533": {
+   "range": "55:67-55:67",
+   "surah": 55,
+   "juz": 27
+  },
+  "534": {
+   "range": "56:16-56:16",
+   "surah": 56,
+   "juz": 27
+  },
+  "535": {
+   "range": "56:50-56:50",
+   "surah": 56,
+   "juz": 27
+  },
+  "536": {
+   "range": "56:76-56:76",
+   "surah": 56,
+   "juz": 27
+  },
+  "537": {
+   "range": "57:3-57:3",
+   "surah": 57,
+   "juz": 27
+  },
+  "538": {
+   "range": "57:11-57:11",
+   "surah": 57,
+   "juz": 27
+  },
+  "539": {
+   "range": "57:18-57:18",
+   "surah": 57,
+   "juz": 27
+  },
+  "540": {
+   "range": "57:24-57:24",
+   "surah": 57,
+   "juz": 27
+  },
+  "541": {
+   "range": "57:29-57:29",
+   "surah": 57,
+   "juz": 27
+  },
+  "542": {
+   "range": "58:6-58:6",
+   "surah": 58,
+   "juz": 28
+  },
+  "543": {
+   "range": "58:11-58:11",
+   "surah": 58,
+   "juz": 28
+  },
+  "544": {
+   "range": "58:21-58:21",
+   "surah": 58,
+   "juz": 28
+  },
+  "545": {
+   "range": "59:3-59:3",
+   "surah": 59,
+   "juz": 28
+  },
+  "546": {
+   "range": "59:9-59:9",
+   "surah": 59,
+   "juz": 28
+  },
+  "547": {
+   "range": "59:16-59:16",
+   "surah": 59,
+   "juz": 28
+  },
+  "548": {
+   "range": "59:24-59:24",
+   "surah": 59,
+   "juz": 28
+  },
+  "549": {
+   "range": "60:5-60:5",
+   "surah": 60,
+   "juz": 28
+  },
+  "550": {
+   "range": "60:11-60:11",
+   "surah": 60,
+   "juz": 28
+  },
+  "551": {
+   "range": "61:5-61:5",
+   "surah": 61,
+   "juz": 28
+  },
+  "552": {
+   "range": "61:14-61:14",
+   "surah": 61,
+   "juz": 28
+  },
+  "553": {
+   "range": "62:8-62:8",
+   "surah": 62,
+   "juz": 28
+  },
+  "554": {
+   "range": "63:4-63:4",
+   "surah": 63,
+   "juz": 28
+  },
+  "555": {
+   "range": "63:11-63:11",
+   "surah": 63,
+   "juz": 28
+  },
+  "556": {
+   "range": "64:9-64:9",
+   "surah": 64,
+   "juz": 28
+  },
+  "557": {
+   "range": "64:18-64:18",
+   "surah": 64,
+   "juz": 28
+  },
+  "558": {
+   "range": "65:5-65:5",
+   "surah": 65,
+   "juz": 28
+  },
+  "559": {
+   "range": "65:12-65:12",
+   "surah": 65,
+   "juz": 28
+  },
+  "560": {
+   "range": "66:7-66:7",
+   "surah": 66,
+   "juz": 28
+  },
+  "561": {
+   "range": "66:12-66:12",
+   "surah": 66,
+   "juz": 28
+  },
+  "562": {
+   "range": "67:12-67:12",
+   "surah": 67,
+   "juz": 29
+  },
+  "563": {
+   "range": "67:26-67:26",
+   "surah": 67,
+   "juz": 29
+  },
+  "564": {
+   "range": "68:15-68:15",
+   "surah": 68,
+   "juz": 29
+  },
+  "565": {
+   "range": "68:42-68:42",
+   "surah": 68,
+   "juz": 29
+  },
+  "566": {
+   "range": "69:8-69:8",
+   "surah": 69,
+   "juz": 29
+  },
+  "567": {
+   "range": "69:34-69:34",
+   "surah": 69,
+   "juz": 29
+  },
+  "568": {
+   "range": "70:10-70:10",
+   "surah": 70,
+   "juz": 29
+  },
+  "569": {
+   "range": "70:39-70:39",
+   "surah": 70,
+   "juz": 29
+  },
+  "570": {
+   "range": "71:10-71:10",
+   "surah": 71,
+   "juz": 29
+  },
+  "571": {
+   "range": "71:28-71:28",
+   "surah": 71,
+   "juz": 29
+  },
+  "572": {
+   "range": "72:13-72:13",
+   "surah": 72,
+   "juz": 29
+  },
+  "573": {
+   "range": "72:28-72:28",
+   "surah": 72,
+   "juz": 29
+  },
+  "574": {
+   "range": "73:19-73:19",
+   "surah": 73,
+   "juz": 29
+  },
+  "575": {
+   "range": "74:17-74:17",
+   "surah": 74,
+   "juz": 29
+  },
+  "576": {
+   "range": "74:47-74:47",
+   "surah": 74,
+   "juz": 29
+  },
+  "577": {
+   "range": "75:19-75:19",
+   "surah": 75,
+   "juz": 29
+  },
+  "578": {
+   "range": "76:5-76:5",
+   "surah": 76,
+   "juz": 29
+  },
+  "579": {
+   "range": "76:25-76:25",
+   "surah": 76,
+   "juz": 29
+  },
+  "580": {
+   "range": "77:19-77:19",
+   "surah": 77,
+   "juz": 29
+  },
+  "581": {
+   "range": "77:50-77:50",
+   "surah": 77,
+   "juz": 29
+  },
+  "582": {
+   "range": "78:30-78:30",
+   "surah": 78,
+   "juz": 30
+  },
+  "583": {
+   "range": "79:15-79:15",
+   "surah": 79,
+   "juz": 30
+  },
+  "584": {
+   "range": "79:46-79:46",
+   "surah": 79,
+   "juz": 30
+  },
+  "585": {
+   "range": "80:42-80:42",
+   "surah": 80,
+   "juz": 30
+  },
+  "586": {
+   "range": "81:29-81:29",
+   "surah": 81,
+   "juz": 30
+  },
+  "587": {
+   "range": "83:6-83:6",
+   "surah": 83,
+   "juz": 30
+  },
+  "588": {
+   "range": "83:34-83:34",
+   "surah": 83,
+   "juz": 30
+  },
+  "589": {
+   "range": "84:25-84:25",
+   "surah": 84,
+   "juz": 30
+  },
+  "590": {
+   "range": "85:22-85:22",
+   "surah": 85,
+   "juz": 30
+  },
+  "591": {
+   "range": "87:15-87:15",
+   "surah": 87,
+   "juz": 30
+  },
+  "592": {
+   "range": "88:26-88:26",
+   "surah": 88,
+   "juz": 30
+  },
+  "593": {
+   "range": "89:23-89:23",
+   "surah": 89,
+   "juz": 30
+  },
+  "594": {
+   "range": "90:20-90:20",
+   "surah": 90,
+   "juz": 30
+  },
+  "595": {
+   "range": "92:14-92:14",
+   "surah": 92,
+   "juz": 30
+  },
+  "596": {
+   "range": "94:8-94:8",
+   "surah": 94,
+   "juz": 30
+  },
+  "597": {
+   "range": "96:19-96:19",
+   "surah": 96,
+   "juz": 30
+  },
+  "598": {
+   "range": "98:7-98:7",
+   "surah": 98,
+   "juz": 30
+  },
+  "599": {
+   "range": "100:9-100:9",
+   "surah": 100,
+   "juz": 30
+  },
+  "600": {
+   "range": "102:8-102:8",
+   "surah": 102,
+   "juz": 30
+  },
+  "601": {
+   "range": "105:5-105:5",
+   "surah": 105,
+   "juz": 30
+  },
+  "602": {
+   "range": "108:3-108:3",
+   "surah": 108,
+   "juz": 30
+  },
+  "603": {
+   "range": "111:5-111:5",
+   "surah": 111,
+   "juz": 30
+  },
+  "604": {
+   "range": "114:6-114:6",
+   "surah": 114,
+   "juz": 30
+  }
+ }
+}

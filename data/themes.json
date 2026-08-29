@@ -1,12 +1,52 @@
 {
-  "meta": {
-    "description": "Thematic tags linking verses to contemporary themes",
-    "scope": "verse",
-    "source_ids": ["qul-mutashabihat", "thematic-annotation-dataset"],
-    "verification_status": "sourced",
-    "complexity_level": 3,
-    "status": "partial_data",
-    "instructions": "Themes are curated tags that connect classical tafsir to contemporary ethical/philosophical inquiry. Each verse can have multiple themes. Themes are presented as user-selectable filters in the Explore view."
+ "meta": {
+  "description": "Thematic tags linking verses to contemporary themes",
+  "scope": "verse",
+  "source_ids": [
+   "qul-mutashabihat",
+   "thematic-annotation-dataset"
+  ],
+  "verification_status": "seed_demo",
+  "complexity_level": 3,
+  "status": "seed_demo",
+  "instructions": "Themes are curated tags that connect classical tafsir to contemporary ethical/philosophical inquiry. Each verse can have multiple themes. Themes are presented as user-selectable filters in the Explore view.",
+  "note": "ILLUSTRATIVE SEED for Al-Fatihah (7 verses) to exercise the Explore/themes layer in the UI. These theme labels/descriptions are demo content written to demonstrate the rendering — NOT sourced from any scholarly edition. Replace with user-provided curated material before treating as real. Full coverage populates as content is curated."
+ },
+ "themes": [
+  {
+   "verse_key": "1:1",
+   "theme": "Beginning / intention",
+   "description": "Opening every act in the name of God — the discipline of niyyah (intention) in daily life."
   },
-  "themes": []
+  {
+   "verse_key": "1:2",
+   "theme": "Gratitude",
+   "description": "All praise to God, Lord of the worlds — grounding gratitude as the foundational human posture."
+  },
+  {
+   "verse_key": "1:3",
+   "theme": "Divine mercy",
+   "description": "Ar-Rahman and Ar-Raheem — mercy as both universal and specific; basis of the ethics of compassion."
+  },
+  {
+   "verse_key": "1:4",
+   "theme": "Accountability",
+   "description": "Master of the Day of Judgment — moral accountability and living with the end in mind."
+  },
+  {
+   "verse_key": "1:5",
+   "theme": "Worship & reliance",
+   "description": "You alone we worship, You alone we ask for help — the pairing of devotion and trust in everyday reliance."
+  },
+  {
+   "verse_key": "1:6",
+   "theme": "Guidance",
+   "description": "Guide us to the straight path — seeking ongoing moral and spiritual direction."
+  },
+  {
+   "verse_key": "1:7",
+   "theme": "Community & identity",
+   "description": "The path of those blessed, not the astray — community, identity, and avoiding extremes."
+  }
+ ]
 }

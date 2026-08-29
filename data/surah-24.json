@@ -1,0 +1,27 @@
+{
+ "meta": {
+  "surah": 24,
+  "surah_name": "An-Noor",
+  "surah_name_arabic": "النُّورِ",
+  "revelation_type": "Medinan",
+  "juz": [
+   18
+  ],
+  "total_ayahs": 64,
+  "page_range": [
+   350,
+   359
+  ],
+  "ayahs_per_juz": {
+   "18": 64
+  },
+  "verification_status": {
+   "verse_text": "pending_etl",
+   "morphology": "pending_etl",
+   "wazn": "pending_etl"
+  },
+  "content_status": "scaffold",
+  "note": "Meta-complete scaffold. Verse/word/morphology/tafsir/wazn content to be populated by the ETL pipeline (KodeKoot) per the progressive-annotation convention in ARCHITECTURE.md. No verses synthesized."
+ },
+ "ayahs": []
+}

@@ -1,0 +1,29 @@
+{
+ "meta": {
+  "surah": 3,
+  "surah_name": "Aal-i-Imraan",
+  "surah_name_arabic": "آلِ عِمۡرَانَ",
+  "revelation_type": "Medinan",
+  "juz": [
+   3,
+   4
+  ],
+  "total_ayahs": 200,
+  "page_range": [
+   50,
+   76
+  ],
+  "ayahs_per_juz": {
+   "3": 92,
+   "4": 108
+  },
+  "verification_status": {
+   "verse_text": "pending_etl",
+   "morphology": "pending_etl",
+   "wazn": "pending_etl"
+  },
+  "content_status": "scaffold",
+  "note": "Meta-complete scaffold. Verse/word/morphology/tafsir/wazn content to be populated by the ETL pipeline (KodeKoot) per the progressive-annotation convention in ARCHITECTURE.md. No verses synthesized."
+ },
+ "ayahs": []
+}
