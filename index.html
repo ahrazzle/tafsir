@@ -6,7 +6,7 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Tafsir Study — Quran</title>
+<title>Sublime — Quran</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -84,6 +84,37 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--ink); 
 .ayah-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-sm); }
 .ayah-number { font-size: 11px; font-weight: 600; color: var(--accent); background: var(--accent-light); padding: 2px 10px; border-radius: 20px; }
 .ayah-meta { font-size: 11px; color: var(--ink-faint); font-family: var(--font-mono); }
+
+/* Page / juz boundary signpost — shown only when the value changes mid-render */
+.ayah-boundary { display: flex; justify-content: flex-end; margin: var(--space-sm) 0 var(--space-sm); }
+.ayah-boundary span {
+  font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em;
+  color: var(--ink-faint); background: var(--surface-sunken); border: 1px solid var(--border);
+  padding: 2px 8px; border-radius: 10px; font-family: var(--font-mono);
+}
+
+/* Tajweed legend */
+.tajweed-legend {
+  max-width: 800px; margin: var(--space-sm) auto 0; padding: var(--space-sm) var(--space-lg);
+  display: flex; flex-wrap: wrap; gap: var(--space-md); align-items: center;
+  font-size: 12px; color: var(--ink-muted); background: var(--surface); border-bottom: 1px solid var(--border);
+}
+.tajweed-legend .legend-item { display: inline-flex; align-items: center; gap: 6px; }
+.tajweed-legend .legend-swatch { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+
+/* Page navigation arrows */
+.page-nav {
+  max-width: 800px; margin: 0 auto; padding: var(--space-xs) var(--space-lg);
+  display: flex; align-items: center; justify-content: center; gap: var(--space-md);
+}
+.page-nav button {
+  font-family: var(--font-body); font-size: 18px; font-weight: 700; color: var(--accent);
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm);
+  width: 36px; height: 36px; cursor: pointer; transition: background var(--duration-fast) var(--ease-out);
+}
+.page-nav button:hover { background: var(--accent-light); }
+.page-nav button:disabled { opacity: 0.3; cursor: default; }
+.page-nav span { font-size: 13px; color: var(--ink-muted); font-family: var(--font-mono); }
 .ayah-arabic { font-family: var(--font-arabic); font-size: 28px; line-height: 2.2; text-align: right; direction: rtl; color: var(--ink-arabic); margin-bottom: var(--space-sm); }
 .ayah-arabic .word { display: inline; cursor: pointer; padding: 2px 2px; border-radius: 4px; transition: background var(--duration-fast) var(--ease-out), color var(--duration-fast) var(--ease-out); }
 .ayah-arabic .word:hover, .ayah-arabic .word:active { background: var(--highlight-active); color: var(--accent-ink); }
@@ -199,7 +230,7 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--ink); 
 <body>
 
 <div class="navbar">
-  <div class="nav-brand">Tafsir Study <span>· Quran</span></div>
+  <div class="nav-brand">Sublime <span>· Quran</span></div>
   <div class="nav-dims">
     <div class="nav-dim"><label>Juz</label><select id="juzSelect"><option value="1">Juz 1</option></select></div>
     <div class="nav-dim"><label>Surah</label><select id="surahSelect"></select></div>
@@ -216,6 +247,12 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--ink); 
 </div>
 
 <div class="status" id="status">Loading…</div>
+<div class="tajweed-legend" id="tajweedLegend" hidden></div>
+<div class="page-nav" id="pageNav" hidden>
+  <button id="prevPageBtn" aria-label="Previous page">←</button>
+  <span id="pageNavLabel"></span>
+  <button id="nextPageBtn" aria-label="Next page">→</button>
+</div>
 <div class="verse-list" id="verseList"></div>
 
 <div class="study-pane-overlay" id="overlay"></div>

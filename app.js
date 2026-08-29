@@ -144,31 +144,34 @@ const settings = {
 };
 
 // ─── DOM ──────────────────────────────────────────────────────────
-const juzSelect = document.getElementById('juzSelect');
-const surahSelect = document.getElementById('surahSelect');
-const pageSelect = document.getElementById('pageSelect');
-const verseList = document.getElementById('verseList');
-const statusEl = document.getElementById('status');
-const studyPane = document.getElementById('studyPane');
-const overlay = document.getElementById('overlay');
-const studyArabic = document.getElementById('studyArabic');
-const studyTranslation = document.getElementById('studyTranslation');
-const studyLocation = document.getElementById('studyLocation');
-const studyContent = document.getElementById('studyContent');
-const tafsirSelect = document.getElementById('tafsirSelect');
-const paneHandle = document.getElementById('paneHandle');
+// Safe getElementById: returns null if missing, never throws at declaration.
+// The app must still work (degraded) if a UI element is absent from the page.
+function $(id) { return document.getElementById(id); }
+const juzSelect = $('juzSelect');
+const surahSelect = $('surahSelect');
+const pageSelect = $('pageSelect');
+const verseList = $('verseList');
+const statusEl = $('status');
+const studyPane = $('studyPane');
+const overlay = $('overlay');
+const studyArabic = $('studyArabic');
+const studyTranslation = $('studyTranslation');
+const studyLocation = $('studyLocation');
+const studyContent = $('studyContent');
+const tafsirSelect = $('tafsirSelect');
+const paneHandle = $('paneHandle');
 // settings controls
-const tajweedToggle = document.getElementById('tajweedToggle');
-const tajweedStyleSel = document.getElementById('tajweedStyle');
-const scriptSel = document.getElementById('scriptSelect');
-const themeSel = document.getElementById('themeSelect');
-const inkSel = document.getElementById('inkSelect');
+const tajweedToggle = $('tajweedToggle');
+const tajweedStyleSel = $('tajweedStyle');
+const scriptSel = $('scriptSelect');
+const themeSel = $('themeSelect');
+const inkSel = $('inkSelect');
 // tajweed legend + page navigation
-const tajweedLegend = document.getElementById('tajweedLegend');
-const pageNav = document.getElementById('pageNav');
-const pageNavLabel = document.getElementById('pageNavLabel');
-const prevPageBtn = document.getElementById('prevPageBtn');
-const nextPageBtn = document.getElementById('nextPageBtn');
+const tajweedLegend = $('tajweedLegend');
+const pageNav = $('pageNav');
+const pageNavLabel = $('pageNavLabel');
+const prevPageBtn = $('prevPageBtn');
+const nextPageBtn = $('nextPageBtn');
 
 // ─── Persistence (localStorage, best-effort) ────────────────────────
 function saveSettings() {
@@ -192,21 +195,27 @@ function populateSettingsControls() {
   tajweedStyleSel.value = settings.tajweedStyle;
   tajweedStyleSel.disabled = !settings.tajweed;
   // script
-  scriptSel.innerHTML = '';
-  Object.keys(SCRIPT_OPTIONS).forEach(k => {
-    scriptSel.appendChild(new Option(SCRIPT_OPTIONS[k].label, k));
-  });
-  scriptSel.value = settings.script;
+  if (scriptSel) {
+    scriptSel.innerHTML = '';
+    Object.keys(SCRIPT_OPTIONS).forEach(k => {
+      scriptSel.appendChild(new Option(SCRIPT_OPTIONS[k].label, k));
+    });
+    scriptSel.value = settings.script;
+  }
   // theme
-  themeSel.innerHTML = '';
-  Object.keys(THEMES).forEach(k => themeSel.appendChild(new Option(THEMES[k].label, k)));
-  themeSel.value = settings.theme;
+  if (themeSel) {
+    themeSel.innerHTML = '';
+    Object.keys(THEMES).forEach(k => themeSel.appendChild(new Option(THEMES[k].label, k)));
+    themeSel.value = settings.theme;
+  }
   // ink
-  inkSel.innerHTML = '';
-  Object.keys(INK_THEMES).forEach(k => inkSel.appendChild(new Option(INK_THEMES[k].label, k)));
-  inkSel.value = settings.ink;
+  if (inkSel) {
+    inkSel.innerHTML = '';
+    Object.keys(INK_THEMES).forEach(k => inkSel.appendChild(new Option(INK_THEMES[k].label, k)));
+    inkSel.value = settings.ink;
+  }
   // toggle
-  tajweedToggle.checked = settings.tajweed;
+  if (tajweedToggle) tajweedToggle.checked = settings.tajweed;
 }
 
 function applyTheme() {
@@ -237,6 +246,7 @@ function applyTheme() {
 }
 
 function populateJuzSelect() {
+  if (!juzSelect) return;
   juzSelect.innerHTML = '';
   Object.keys(NAV.juz).forEach(num => {
     const j = NAV.juz[num];
@@ -252,28 +262,32 @@ function populateJuzSelect() {
 function populateSelectors() {
   // Free navigation: ALL 114 surahs, regardless of the current juz.
   // The juz dropdown remains a convenience shortcut; it never cages the user.
-  surahSelect.innerHTML = '';
-  Object.keys(NAV.surahs).forEach(num => {
-    const s = NAV.surahs[num];
-    const opt = document.createElement('option');
-    opt.value = num;
-    opt.textContent = `${num}. ${s.name}${s.content ? '' : ' ◷'}`;
-    surahSelect.appendChild(opt);
-  });
-  surahSelect.value = currentSurah;
+  if (surahSelect) {
+    surahSelect.innerHTML = '';
+    Object.keys(NAV.surahs).forEach(num => {
+      const s = NAV.surahs[num];
+      const opt = document.createElement('option');
+      opt.value = num;
+      opt.textContent = `${num}. ${s.name}${s.content ? '' : ' ◷'}`;
+      surahSelect.appendChild(opt);
+    });
+    surahSelect.value = currentSurah;
+  }
 
   // Free navigation: ALL 604 pages, regardless of the current juz or surah.
-  pageSelect.innerHTML = '';
-  pageSelect.appendChild(new Option('All pages', ''));
-  Object.keys(NAV.pages).forEach(p => {
-    const opt = document.createElement('option');
-    opt.value = p;
-    const info = NAV.pages[p];
-    opt.textContent = `Page ${p}${info.range ? ` (${info.range})` : ''}`;
-    pageSelect.appendChild(opt);
-  });
-  if (currentPage !== null) pageSelect.value = String(currentPage);
-  else pageSelect.value = '';
+  if (pageSelect) {
+    pageSelect.innerHTML = '';
+    pageSelect.appendChild(new Option('All pages', ''));
+    Object.keys(NAV.pages).forEach(p => {
+      const opt = document.createElement('option');
+      opt.value = p;
+      const info = NAV.pages[p];
+      opt.textContent = `Page ${p}${info.range ? ` (${info.range})` : ''}`;
+      pageSelect.appendChild(opt);
+    });
+    if (currentPage !== null) pageSelect.value = String(currentPage);
+    else pageSelect.value = '';
+  }
 }
 
 // ─── Load data file ────────────────────────────────────────────────
@@ -623,7 +637,7 @@ function renderStudyContent(word, ayah) {
     studyContent.appendChild(s);
     if (isLong) {
       const eb = document.getElementById('tafsirExpand'); const tt = document.getElementById('tafsirText');
-      eb.addEventListener('click', () => {
+      if (eb && tt) eb.addEventListener('click', () => {
         const open = tt.classList.contains('collapsed');
         tt.classList.toggle('collapsed'); eb.classList.toggle('expanded');
         eb.innerHTML = open ? `Show less <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>` : `Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>`;
@@ -684,15 +698,18 @@ function closeStudyPane() {
   studyPane.classList.remove('open'); overlay.classList.remove('open'); isPaneOpen = false;
   document.querySelectorAll('.word.selected, .highlight').forEach(el => el.classList.remove('selected', 'highlight'));
 }
-overlay.addEventListener('click', closeStudyPane);
+if (overlay) overlay.addEventListener('click', closeStudyPane);
 let startY = 0;
-paneHandle.addEventListener('touchstart', e => { startY = e.touches[0].clientY; }, { passive: true });
-paneHandle.addEventListener('touchend', e => { if (e.changedTouches[0].clientY - startY > 60) closeStudyPane(); }, { passive: true });
+if (paneHandle) {
+  paneHandle.addEventListener('touchstart', e => { startY = e.touches[0].clientY; }, { passive: true });
+  paneHandle.addEventListener('touchend', e => { if (e.changedTouches[0].clientY - startY > 60) closeStudyPane(); }, { passive: true });
+}
 document.addEventListener('keydown', e => { if (e.key === 'Escape' && isPaneOpen) closeStudyPane(); });
 
 // ─── Tajweed legend ────────────────────────────────────────────────
 // Colour → rule mapping so users know what the tajweed colours mean.
 function renderTajweedLegend() {
+  if (!tajweedLegend) return;
   if (!settings.tajweed) { tajweedLegend.hidden = true; tajweedLegend.innerHTML = ''; return; }
   const style = TAJWEED_STYLES[settings.tajweedStyle];
   const labels = {
@@ -731,25 +748,25 @@ function renderTajweedLegend() {
 // Shows arrows when a specific page is selected; clicking moves between pages
 // in the current surah's page list.
 function updatePageNav() {
-  if (!NAV || currentPage === null) { pageNav.hidden = true; return; }
-  prevPageBtn.disabled = currentPage <= 1;
-  nextPageBtn.disabled = currentPage >= 604;
+  if (!NAV || currentPage === null || !pageNav) { if (pageNav) pageNav.hidden = true; return; }
+  if (prevPageBtn) prevPageBtn.disabled = currentPage <= 1;
+  if (nextPageBtn) nextPageBtn.disabled = currentPage >= 604;
   const ownerInfo = NAV.pages[currentPage] ? NAV.pages[currentPage].range : '';
-  pageNavLabel.textContent = `Page ${currentPage} of 604${ownerInfo ? ` · ${ownerInfo}` : ''}`;
+  if (pageNavLabel) pageNavLabel.textContent = `Page ${currentPage} of 604${ownerInfo ? ` · ${ownerInfo}` : ''}`;
   pageNav.hidden = false;
 }
 
 // ─── Navigation handlers ───────────────────────────────────────────
-juzSelect.addEventListener('change', async () => {
+if (juzSelect) juzSelect.addEventListener('change', async () => {
   currentJuz = parseInt(juzSelect.value); currentSurah = NAV.juz[currentJuz].surahs[0]; currentPage = null;
   populateSelectors();
   try { renderVerses(await loadSurah(currentSurah), null); } catch (e) {}
 });
-surahSelect.addEventListener('change', async () => {
+if (surahSelect) surahSelect.addEventListener('change', async () => {
   currentSurah = parseInt(surahSelect.value); currentPage = null; populateSelectors();
   try { renderVerses(await loadSurah(currentSurah), null); } catch (e) {}
 });
-pageSelect.addEventListener('change', async () => {
+if (pageSelect) pageSelect.addEventListener('change', async () => {
   currentPage = pageSelect.value ? parseInt(pageSelect.value) : null;
   // Free navigation: a page may belong to any surah — resolve its owner.
   if (currentPage !== null && NAV.pages[currentPage] && NAV.pages[currentPage].surah) {
@@ -772,32 +789,32 @@ function pageStep(dir) {
     currentSurah = NAV.pages[target].surah;
     populateSelectors();
   }
-  pageSelect.value = String(currentPage);
+  if (pageSelect) pageSelect.value = String(currentPage);
   updatePageNav();
   // Load the surah file on demand (cached thereafter); a page outside built
   // coverage renders the scaffold state via renderVerses' content guard.
   loadSurah(currentSurah).then(data => renderVerses(data, currentPage)).catch(() => {});
 }
-prevPageBtn.addEventListener('click', () => pageStep(-1));
-nextPageBtn.addEventListener('click', () => pageStep(1));
+if (prevPageBtn) prevPageBtn.addEventListener('click', () => pageStep(-1));
+if (nextPageBtn) nextPageBtn.addEventListener('click', () => pageStep(1));
 
 // ─── Settings handlers ─────────────────────────────────────────────
-tajweedToggle.addEventListener('change', () => {
+if (tajweedToggle) tajweedToggle.addEventListener('change', () => {
   settings.tajweed = tajweedToggle.checked;
-  tajweedStyleSel.disabled = !settings.tajweed;
+  if (tajweedStyleSel) tajweedStyleSel.disabled = !settings.tajweed;
   renderTajweedLegend();
   saveSettings();
   try { renderVerses(loadedData[currentSurah], currentPage); } catch (e) {}
 });
-tajweedStyleSel.addEventListener('change', () => {
+if (tajweedStyleSel) tajweedStyleSel.addEventListener('change', () => {
   settings.tajweedStyle = tajweedStyleSel.value;
   renderTajweedLegend();
   saveSettings();
   try { renderVerses(loadedData[currentSurah], currentPage); } catch (e) {}
 });
-scriptSel.addEventListener('change', () => { settings.script = scriptSel.value; applyTheme(); });
-themeSel.addEventListener('change', () => { settings.theme = themeSel.value; applyTheme(); });
-inkSel.addEventListener('change', () => { settings.ink = inkSel.value; applyTheme(); });
+if (scriptSel) scriptSel.addEventListener('change', () => { settings.script = scriptSel.value; applyTheme(); });
+if (themeSel) themeSel.addEventListener('change', () => { settings.theme = themeSel.value; applyTheme(); });
+if (inkSel) inkSel.addEventListener('change', () => { settings.ink = inkSel.value; applyTheme(); });
 
 // ─── Init ──────────────────────────────────────────────────────────
 (async () => {
