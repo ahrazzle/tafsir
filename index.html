@@ -67,6 +67,40 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--ink); 
 
 /* ─── Settings bar ─── */
 .settings-bar { max-width: 960px; margin: 0 auto; padding: 0 var(--space-lg) var(--space-sm); display: flex; align-items: center; gap: var(--space-sm); flex-wrap: wrap; }
+.settings-toggle {
+  font-family: var(--font-body); font-size: 13px; font-weight: 600; color: var(--accent);
+  background: var(--surface-sunken); border: 1px solid var(--border); border-radius: var(--radius-md);
+  padding: 6px 14px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;
+  transition: background var(--duration-fast) var(--ease-out), color var(--duration-fast) var(--ease-out);
+}
+.settings-toggle:hover { background: var(--accent-light); color: var(--accent-ink); }
+
+/* Settings drawer */
+.settings-panel { position: fixed; inset: 0; z-index: 200; }
+.settings-panel[hidden] { display: none; }
+.settings-panel-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.4); }
+.settings-drawer {
+  position: absolute; top: 0; right: 0; bottom: 0; width: min(340px, 90vw);
+  background: var(--surface); border-left: 1px solid var(--border); box-shadow: var(--shadow-lg);
+  padding: var(--space-lg); overflow-y: auto; z-index: 201;
+  animation: drawerIn var(--duration-normal) var(--ease-out);
+}
+@keyframes drawerIn { from { transform: translateX(40px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+.settings-drawer-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-lg); }
+.settings-drawer-header h2 { font-size: 18px; font-weight: 700; color: var(--ink); }
+.settings-close { font-size: 24px; font-weight: 400; color: var(--ink-muted); background: none; border: none; cursor: pointer; line-height: 1; }
+.settings-close:hover { color: var(--ink); }
+.settings-section { margin-bottom: var(--space-xl); }
+.settings-section h3 { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faint); margin-bottom: var(--space-sm); }
+.settings-row { display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-sm); flex-wrap: wrap; }
+.settings-row label { font-size: 12px; font-weight: 600; color: var(--ink-muted); min-width: 74px; }
+.settings-row select { font-family: var(--font-body); font-size: 13px; font-weight: 500; color: var(--ink); background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 4px 8px; cursor: pointer; outline: none; flex: 1; min-width: 0; }
+.settings-row input[type="color"] { width: 40px; height: 30px; border: 1px solid var(--border); border-radius: 6px; background: none; cursor: pointer; padding: 0; }
+.custom-save { font-family: var(--font-body); font-size: 12px; font-weight: 600; color: #fff; background: var(--accent); border: none; border-radius: 8px; padding: 6px 12px; cursor: pointer; }
+.custom-save:hover { opacity: 0.9; }
+.custom-delete { font-family: var(--font-body); font-size: 12px; font-weight: 600; color: #C0392B; background: none; border: 1px solid #C0392B; border-radius: 8px; padding: 5px 10px; cursor: pointer; }
+.custom-delete:hover { background: rgba(192,57,43,0.1); }
+
 .toggle-wrap { display: flex; align-items: center; gap: 6px; background: var(--surface-sunken); border-radius: var(--radius-md); padding: 4px 10px; cursor: pointer; }
 .toggle-wrap input { width: 16px; height: 16px; accent-color: var(--accent); cursor: pointer; }
 .toggle-wrap label { font-size: 12px; font-weight: 600; color: var(--ink-muted); cursor: pointer; user-select: none; }
@@ -108,7 +142,7 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--ink); 
   display: flex; align-items: center; justify-content: center;
 }
 .page-nav span { font-size: 12px; color: var(--ink-faint); font-family: var(--font-mono); letter-spacing: 0.03em; }
-.ayah-arabic { font-family: var(--font-arabic); font-size: 28px; line-height: 2.2; text-align: right; direction: rtl; color: var(--ink-arabic); margin-bottom: var(--space-sm); }
+.ayah-arabic { font-family: var(--font-arabic); font-size: 28px; line-height: 2.2; text-align: right; direction: rtl; color: var(--ink-arabic); margin-bottom: var(--space-sm); overflow-wrap: anywhere; word-break: break-word; }
 .ayah-arabic .word { display: inline; cursor: pointer; padding: 2px 2px; border-radius: 4px; transition: background var(--duration-fast) var(--ease-out), color var(--duration-fast) var(--ease-out); }
 .ayah-arabic .word:hover, .ayah-arabic .word:active { background: var(--highlight-active); color: var(--accent-ink); }
 .ayah-arabic .word.highlight { background: var(--highlight); border-radius: 4px; }
@@ -170,7 +204,13 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--ink); 
 .study-content { flex: 1; overflow-y: auto; padding: var(--space-md) var(--space-lg); -webkit-overflow-scrolling: touch; }
 .study-section { margin-bottom: var(--space-lg); animation: fadeUp var(--duration-normal) var(--ease-out) both; }
 .study-section:nth-child(1) { animation-delay: 40ms; } .study-section:nth-child(2) { animation-delay: 80ms; } .study-section:nth-child(3) { animation-delay: 120ms; } .study-section:nth-child(4) { animation-delay: 160ms; } .study-section:nth-child(5) { animation-delay: 200ms; }
-.section-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faint); margin-bottom: var(--space-sm); }
+.section-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faint); margin-bottom: var(--space-sm); display: flex; align-items: center; gap: var(--space-sm); }
+
+/* Wazn verification tier badges — three distinct trust levels. */
+.tier-badge { display: inline-block; font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; padding: 2px 7px; border-radius: 10px; line-height: 1.4; }
+.tier-verified { color: var(--accent); background: var(--accent-light); border: 1px solid var(--accent); }
+.tier-pattern-verified { color: var(--gold); background: var(--gold-light); border: 1px solid var(--gold); }
+.tier-pending { color: var(--ink-faint); background: var(--surface-sunken); border: 1px solid var(--border-strong); font-style: italic; }
 
 .root-card { background: var(--surface-sunken); border-radius: var(--radius-md); padding: var(--space-md); display: flex; align-items: center; gap: var(--space-md); }
 .root-arabic { font-family: var(--font-arabic); font-size: 22px; font-weight: 700; color: var(--accent); direction: rtl; }
@@ -232,11 +272,44 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--ink); 
 </div>
 
 <div class="settings-bar">
-  <label class="toggle-wrap"><input type="checkbox" id="tajweedToggle"><label for="tajweedToggle">Tajweed</label></label>
-  <div class="nav-dim"><label>Style</label><select id="tajweedStyle"><option value="madani">Madani</option></select></div>
-  <div class="nav-dim"><label>Script</label><select id="scriptSelect"></select></div>
-  <div class="nav-dim"><label>Theme</label><select id="themeSelect"></select></div>
-  <div class="nav-dim"><label>Ink</label><select id="inkSelect"></select></div>
+  <button class="settings-toggle" id="settingsToggle" aria-label="Open settings" aria-expanded="false">☰ Settings</button>
+</div>
+
+<div class="settings-panel" id="settingsPanel" hidden>
+  <div class="settings-panel-backdrop" id="settingsBackdrop"></div>
+  <aside class="settings-drawer" role="dialog" aria-label="Settings">
+    <div class="settings-drawer-header">
+      <h2>Settings</h2>
+      <button class="settings-close" id="settingsClose" aria-label="Close settings">×</button>
+    </div>
+
+    <div class="settings-section">
+      <h3>Tajweed</h3>
+      <label class="toggle-wrap"><input type="checkbox" id="tajweedToggle"><label for="tajweedToggle">Enable colouring</label></label>
+      <div class="settings-row"><label>Style</label><select id="tajweedStyle"><option value="madani">Madani</option></select></div>
+    </div>
+
+    <div class="settings-section">
+      <h3>Text</h3>
+      <div class="settings-row"><label>Script</label><select id="scriptSelect"></select></div>
+      <div class="settings-row"><label>Ink</label><select id="inkSelect"></select></div>
+    </div>
+
+    <div class="settings-section">
+      <h3>Appearance</h3>
+      <div class="settings-row"><label>Theme</label><select id="themeSelect"></select></div>
+
+      <div class="settings-row" id="customThemeRow" hidden>
+        <label>Background</label>
+        <input type="color" id="customBg" value="#FAF8F5">
+        <label>Ink</label>
+        <input type="color" id="customInk" value="#1A1814">
+        <button class="custom-save" id="customSave">Save as theme</button>
+        <select id="customSavedSelect" aria-label="Saved custom themes"><option value="">— saved —</option></select>
+        <button class="custom-delete" id="customDelete" hidden>Delete</button>
+      </div>
+    </div>
+  </aside>
 </div>
 
 <div class="status" id="status">Loading…</div>

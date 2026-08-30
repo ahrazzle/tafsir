@@ -12,7 +12,7 @@
 // Tajweed rule → CSS class. Two established colour conventions are switchable.
 const TAJWEED_STYLES = {
   madani: {
-    label: 'Madani (Madinah Mushaf)',
+    label: 'Madani',
     rules: {
       madd:     'tj-madd',      // red    — prolongation
       ghunnah:  'tj-ghunnah',   // green  — nasalization
@@ -97,8 +97,11 @@ const THEMES = {
   sepia:   { label: 'Sepia', dark: false },
   olive:   { label: 'Olive', dark: false },
   midnight:{ label: 'Midnight', dark: true },
-  royal:   { label: 'Royal', dark: true }
+  royal:   { label: 'Royal', dark: true },
+  custom:  { label: 'Custom', dark: false }
 };
+// User-created themes: { id: { name, bg, ink } }, persisted in localStorage.
+let customThemes = {};
 
 // Script ink (Arabic text) colour themes.
 // 'ink' (Black / White) adapts via var(--ink) and stays readable on any bg.
@@ -142,7 +145,8 @@ const settings = {
   tajweedStyle: 'madani',
   script: 'uthmani',
   theme: 'classic',
-  ink: 'ink'
+  ink: 'ink',
+  customThemeId: null
 };
 
 // ─── DOM ──────────────────────────────────────────────────────────
@@ -168,6 +172,17 @@ const tajweedStyleSel = $('tajweedStyle');
 const scriptSel = $('scriptSelect');
 const themeSel = $('themeSelect');
 const inkSel = $('inkSelect');
+// settings drawer + custom theme creator
+const settingsToggle = $('settingsToggle');
+const settingsPanel = $('settingsPanel');
+const settingsClose = $('settingsClose');
+const settingsBackdrop = $('settingsBackdrop');
+const customThemeRow = $('customThemeRow');
+const customBg = $('customBg');
+const customInk = $('customInk');
+const customSave = $('customSave');
+const customSavedSelect = $('customSavedSelect');
+const customDelete = $('customDelete');
 // tajweed legend + page navigation
 const tajweedLegend = $('tajweedLegend');
 const pageNav = $('pageNav');
@@ -175,12 +190,17 @@ const pageNavLabel = $('pageNavLabel');
 
 // ─── Persistence (localStorage, best-effort) ────────────────────────
 function saveSettings() {
-  try { localStorage.setItem('tafsir-settings', JSON.stringify(settings)); } catch (e) {}
+  try {
+    localStorage.setItem('tafsir-settings', JSON.stringify(settings));
+    localStorage.setItem('tafsir-custom-themes', JSON.stringify(customThemes));
+  } catch (e) {}
 }
 function loadSettings() {
   try {
     const s = JSON.parse(localStorage.getItem('tafsir-settings'));
     if (s) Object.assign(settings, s);
+    const ct = JSON.parse(localStorage.getItem('tafsir-custom-themes'));
+    if (ct) customThemes = ct;
   } catch (e) {}
 }
 
@@ -230,6 +250,26 @@ function applyTheme() {
   if (DARK_INK_THEMES.includes(settings.theme) && settings.ink !== 'ink') {
     inkVar = SEPIA_PARCHMENT;
   }
+  // Custom theme — override both background and Arabic-ink from the saved theme.
+  if (settings.theme === 'custom') {
+    const ct = customThemes[settings.customThemeId];
+    if (ct) {
+      root.style.setProperty('--bg', ct.bg);
+      root.style.setProperty('--surface', ct.bg);
+      root.style.setProperty('--surface-raised', ct.bg);
+      root.style.setProperty('--surface-sunken', ct.bg);
+      root.style.setProperty('--ink-arabic', ct.ink);
+    }
+    root.setAttribute('data-theme', 'custom');
+    applyCustomThemeControls();
+    saveSettings();
+    return;
+  }
+  // Reset any custom-theme overrides when not using a custom theme.
+  root.style.removeProperty('--bg');
+  root.style.removeProperty('--surface');
+  root.style.removeProperty('--surface-raised');
+  root.style.removeProperty('--surface-sunken');
   root.style.setProperty('--ink-arabic', inkVar);
   // preload script font if needed
   const f = SCRIPT_OPTIONS[settings.script].load;
@@ -252,7 +292,12 @@ function populateJuzSelect() {
     const j = NAV.juz[num];
     const opt = document.createElement('option');
     opt.value = num;
-    const ready = j.surahs.some(s => NAV.surahs[s].content);
+    // Derive readiness from actual loaded data (files fetched + ayahs present),
+    // not from a hardcoded content flag.
+    const ready = j.surahs.some(s => {
+      const d = loadedData[s];
+      return d && d.ayahs && d.ayahs.length > 0;
+    });
     opt.textContent = `Juz ${num}${ready ? '' : ' (scaffold)'}`;
     juzSelect.appendChild(opt);
   });
@@ -268,7 +313,10 @@ function populateSelectors() {
       const s = NAV.surahs[num];
       const opt = document.createElement('option');
       opt.value = num;
-      opt.textContent = `${num}. ${s.name}${s.content ? '' : ' ◷'}`;
+      // Readiness derived at runtime from whether the file has loaded with ayahs.
+      const d = loadedData[num];
+      const ready = d && d.ayahs && d.ayahs.length > 0;
+      opt.textContent = `${num}. ${s.name}${ready ? '' : ' ◷'}`;
       surahSelect.appendChild(opt);
     });
     surahSelect.value = currentSurah;
@@ -291,6 +339,8 @@ function populateSelectors() {
 }
 
 // ─── Load data file ────────────────────────────────────────────────
+// Returns the parsed data, or null if the file doesn't exist (honest scaffold
+// path). Never throws — a missing file is a "not built yet" state, not an error.
 async function loadSurah(num) {
   const info = NAV.surahs[num];
   if (loadedData[num]) return loadedData[num];
@@ -298,7 +348,7 @@ async function loadSurah(num) {
   statusEl.className = 'status loading';
   try {
     const res = await fetch(info.file);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    if (!res.ok) return null;  // 404 → not built yet → scaffold
     const data = await res.json();
     loadedData[num] = data;
     // Record real page coverage from the file itself (the honest "built" signal).
@@ -309,7 +359,7 @@ async function loadSurah(num) {
   } catch (e) {
     statusEl.textContent = `Failed to load ${info.file}. Serve over HTTP (python3 -m http.server 8000) or verify file exists.`;
     statusEl.className = 'status error';
-    throw e;
+    return null;
   }
 }
 
@@ -376,18 +426,23 @@ function renderScaffoldNotice(surahInfo) {
         <div class="progress-track"><div class="progress-fill" style="width:${pct}%"></div></div>
         <div class="progress-label">${builtJuz} of ${totalJuz} juz built · ${pct}%</div>
       </div>
-      <p class="scaffold-hint">Routing is live for all 30 juz / 114 surahs / 604 pages. Content (verse text, word-by-word translation, morphology, tafsir, and progressive wazn) follows per the architecture's accuracy-over-coverage convention. Juz 1 (Al-Fatihah + Al-Baqarah) is fully populated.</p>
+      <p class="scaffold-hint">Routing is live for all 30 juz / 114 surahs / 604 pages. Content (verse text, word-by-word translation, morphology, tafsir, and progressive wazn) follows per the architecture's accuracy-over-coverage convention. Juz 1–3 (Al-Fatihah, Al-Baqarah, Ali 'Imran 3:1–92) are populated.</p>
     </div>`;
   verseList.appendChild(section);
 }
 
 // ─── Render verses ─────────────────────────────────────────────────
+// Readiness is DERIVED at runtime from whether the data file actually loaded,
+// never from a hardcoded 'content' flag. A file that fetched successfully with
+// ayahs renders content; anything else renders the honest scaffold.
 async function renderVerses(data, filterPage) {
   const info = NAV.surahs[currentSurah];
-  if (!info.content) { renderScaffoldNotice(info); return; }
-  // A page within a content surah but outside the built coverage (e.g. page 22,
-  // which belongs to surah 2 but sits in Juz 2) must show the honest scaffold —
-  // not an empty verse list. BUILT_PAGES is the real coverage signal.
+  const hasContent = data && data.ayahs && data.ayahs.length > 0;
+  if (!hasContent) { renderScaffoldNotice(info); return; }
+  // A page within a content surah but outside the built coverage (e.g. a page
+  // whose data file hasn't been populated) must show the honest scaffold —
+  // not an empty verse list. BUILT_PAGES is the runtime coverage signal,
+  // recorded from the actual data files as they load.
   if (filterPage !== null && filterPage !== undefined && !BUILT_PAGES.has(String(filterPage))) {
     renderScaffoldNotice(info); return;
   }
@@ -625,8 +680,21 @@ function renderStudyContent(word, ayah) {
     if (wz.examples && wz.examples.length) {
       ex = '<div class="wazn-examples">' + wz.examples.map(e => `<span class="wazn-example-chip"><span class="ex-word">${e.word}</span><span class="ex-meaning">${e.meaning}</span></span>`).join('') + '</div>';
     }
+    // Tier badge — two verified tiers (full vs pattern-only) + pending.
+    // The badge is the trust signal: it tells the user whether the wazn template
+    // shown has been hand-audited (verified) or only shape-derived with the
+    // function label still pending. Honest display of what we know vs don't.
+    const vs = (word && word.verification_status) || (wz && wz.verification_status) || 'pending';
+    let tierHtml = '';
+    if (vs === 'verified') {
+      tierHtml = '<span class="tier-badge tier-verified" title="Pattern and function hand-audited against corpus tags">verified</span>';
+    } else if (vs === 'pattern-verified') {
+      tierHtml = '<span class="tier-badge tier-pattern-verified" title="Pattern shape-confirmed; function label still pending audit">pattern verified · function pending</span>';
+    } else {
+      tierHtml = '<span class="tier-badge tier-pending" title="Auto-derived; pending audit">pending</span>';
+    }
     s.innerHTML = `
-      <div class="section-label">Pattern</div>
+      <div class="section-label">Pattern ${tierHtml}</div>
       <div class="wazn-card">
         <div class="wazn-pattern"><span class="wazn-template">${wz.pattern_arabic}</span><span class="wazn-form">${wz.form || ''}</span></div>
         <button class="wazn-toggle" aria-expanded="false">Show pattern details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
@@ -848,6 +916,92 @@ if (scriptSel) scriptSel.addEventListener('change', () => { settings.script = sc
 if (themeSel) themeSel.addEventListener('change', () => { settings.theme = themeSel.value; applyTheme(); });
 if (inkSel) inkSel.addEventListener('change', () => { settings.ink = inkSel.value; applyTheme(); });
 
+// ─── Settings drawer ──────────────────────────────────────────────
+function openSettings() {
+  if (!settingsPanel) return;
+  settingsPanel.hidden = false;
+  if (settingsToggle) settingsToggle.setAttribute('aria-expanded', 'true');
+  populateCustomThemeSelect();
+}
+function closeSettings() {
+  if (!settingsPanel) return;
+  settingsPanel.hidden = true;
+  if (settingsToggle) settingsToggle.setAttribute('aria-expanded', 'false');
+}
+if (settingsToggle) settingsToggle.addEventListener('click', () => {
+  if (settingsPanel.hidden) openSettings(); else closeSettings();
+});
+if (settingsClose) settingsClose.addEventListener('click', closeSettings);
+if (settingsBackdrop) settingsBackdrop.addEventListener('click', closeSettings);
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && settingsPanel && !settingsPanel.hidden) closeSettings(); });
+
+// ─── Custom theme creator ─────────────────────────────────────────
+// Show the custom colour pickers only when the "Custom" theme is active.
+function applyCustomThemeControls() {
+  if (!customThemeRow) return;
+  customThemeRow.hidden = !(settings.theme === 'custom');
+  if (settings.theme === 'custom' && customThemes[settings.customThemeId]) {
+    const ct = customThemes[settings.customThemeId];
+    if (customBg) customBg.value = ct.bg;
+    if (customInk) customInk.value = ct.ink;
+    if (customDelete) customDelete.hidden = false;
+  }
+}
+function populateCustomThemeSelect() {
+  if (!customSavedSelect) return;
+  customSavedSelect.innerHTML = '';
+  customSavedSelect.appendChild(new Option('— saved —', ''));
+  Object.entries(customThemes).forEach(([id, t]) => {
+    customSavedSelect.appendChild(new Option(t.name || 'Custom', id));
+  });
+  if (settings.customThemeId) customSavedSelect.value = settings.customThemeId;
+}
+function saveCustomTheme() {
+  const id = 'c' + Date.now();
+  const name = `Custom ${Object.keys(customThemes).length + 1}`;
+  customThemes[id] = { name, bg: customBg.value, ink: customInk.value };
+  settings.theme = 'custom';
+  settings.customThemeId = id;
+  saveSettings();
+  applyTheme();
+  populateCustomThemeSelect();
+  if (themeSel) themeSel.value = 'custom';
+}
+function deleteCustomTheme() {
+  if (!settings.customThemeId) return;
+  delete customThemes[settings.customThemeId];
+  settings.customThemeId = null;
+  settings.theme = 'classic';
+  saveSettings();
+  applyTheme();
+  if (themeSel) themeSel.value = 'classic';
+  populateCustomThemeSelect();
+  applyCustomThemeControls();
+}
+if (customSave) customSave.addEventListener('click', saveCustomTheme);
+if (customDelete) customDelete.addEventListener('click', deleteCustomTheme);
+if (customSavedSelect) customSavedSelect.addEventListener('change', () => {
+  const id = customSavedSelect.value;
+  if (!id) return;
+  settings.theme = 'custom';
+  settings.customThemeId = id;
+  saveSettings();
+  applyTheme();
+  if (themeSel) themeSel.value = 'custom';
+});
+if (customBg) customBg.addEventListener('input', () => {
+  if (settings.theme === 'custom' && settings.customThemeId && customThemes[settings.customThemeId]) {
+    customThemes[settings.customThemeId].bg = customBg.value;
+    applyTheme();
+  }
+});
+if (customInk) customInk.addEventListener('input', () => {
+  if (settings.theme === 'custom' && settings.customThemeId && customThemes[settings.customThemeId]) {
+    customThemes[settings.customThemeId].ink = customInk.value;
+    applyTheme();
+  }
+});
+
 // ─── Init ──────────────────────────────────────────────────────────
 (async () => {
   loadSettings();
@@ -865,13 +1019,18 @@ if (inkSel) inkSel.addEventListener('change', () => { settings.ink = inkSel.valu
       tafsirRegistry = r2.ok ? await r2.json() : null;
     } catch (e) { tafsirRegistry = null; }
     applyTheme();
+    applyCustomThemeControls();
     populateSettingsControls();
     populateJuzSelect();
     populateSelectors();
-    // Load Juz 1's surahs eagerly so BUILT_PAGES is accurate for the progress
-    // strip on the first scaffold render (surah 2's file covers pages 2–21).
-    try { await loadSurah(1); } catch (e) {}
-    try { await loadSurah(2); } catch (e) {}
+    // Load the populated surahs eagerly so BUILT_PAGES + derived readiness are
+    // accurate on first render. loadSurah returns null (not throw) for missing
+    // files, so no catch needed — the scaffold path handles it.
+    await loadSurah(1);
+    await loadSurah(2);
+    await loadSurah(3);
+    populateJuzSelect();
+    populateSelectors();
     renderVerses(await loadSurah(currentSurah), null);
   } catch (e) {
     statusEl.className = 'status error';
