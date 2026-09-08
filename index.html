@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="classic" data-script="uthmani">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Sublime — Quran</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #FAF8F5; --surface: #FFFFFF; --surface-raised: #FFFFFF; --surface-sunken: #F3F1ED;
+  --ink: #1A1814; --ink-muted: #6B6560; --ink-faint: #9E9890;
+  --border: #E5E2DD; --border-strong: #D0CCC6;
+  --accent: #2D6A4F; --accent-light: #D8E8E0; --accent-ink: #1B4332;
+  --gold: #B8860B; --gold-light: #FDF3D1;
+  --highlight: rgba(45,106,79,0.12); --highlight-active: rgba(45,106,79,0.22);
+  --ink-arabic: var(--ink);
+  --shadow-sm: 0 1px 2px rgba(26,24,20,0.04); --shadow-md: 0 4px 12px rgba(26,24,20,0.08); --shadow-lg: 0 12px 40px rgba(26,24,20,0.12);
+  --radius-sm: 8px; --radius-md: 12px; --radius-lg: 16px; --radius-xl: 20px;
+  --font-arabic: 'Amiri', serif; --font-body: 'Inter', -apple-system, sans-serif; --font-mono: 'JetBrains Mono', monospace;
+  --space-xs: 4px; --space-sm: 8px; --space-md: 16px; --space-lg: 24px; --space-xl: 32px;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1); --duration-fast: 150ms; --duration-normal: 250ms; --duration-slow: 400ms;
+}
+/* Theme: Sepia */
+[data-theme="sepia"] {
+  --bg: #F3E9D8; --surface: #FBF4E8; --surface-raised: #FBF4E8; --surface-sunken: #ECE0CB;
+  --ink: #3B2F1E; --ink-muted: #7A6A4F; --ink-faint: #A89878;
+  --border: #E0D2B8; --border-strong: #CBB893; --accent: #8A6D3B; --accent-light: #EFE2C6; --accent-ink: #5E4A28;
+  --gold: #9A6B16; --gold-light: #F6E9CC; --highlight: rgba(138,109,59,0.12); --highlight-active: rgba(138,109,59,0.22);
+}
+/* Theme: Olive */
+[data-theme="olive"] {
+  --bg: #F2F3EC; --surface: #FBFCF6; --surface-raised: #FBFCF6; --surface-sunken: #E6E8DA;
+  --ink: #23291C; --ink-muted: #5C6450; --ink-faint: #8C927E;
+  --border: #DCE0CF; --border-strong: #C3C9AE; --accent: #5C6B2F; --accent-light: #E4E9CE; --accent-ink: #3A4420;
+  --gold: #8A6D12; --gold-light: #F1EBC8; --highlight: rgba(92,107,47,0.12); --highlight-active: rgba(92,107,47,0.22);
+}
+/* Theme: Midnight (dark) */
+[data-theme="midnight"] {
+  --bg: #141311; --surface: #1E1D1A; --surface-raised: #262420; --surface-sunken: #181715;
+  --ink: #E8E4DE; --ink-muted: #9E9890; --ink-faint: #6B6560;
+  --border: #33302C; --border-strong: #444039; --accent: #52B788; --accent-light: #1B4332; --accent-ink: #D8E8E0;
+  --gold: #D4A843; --gold-light: #2A2410; --highlight: rgba(82,183,136,0.15); --highlight-active: rgba(82,183,136,0.28);
+}
+/* Theme: Royal */
+[data-theme="royal"] {
+  --bg: #11131F; --surface: #1A1D2E; --surface-raised: #232742; --surface-sunken: #151826;
+  --ink: #ECEAF5; --ink-muted: #A39FC0; --ink-faint: #6E6A8C;
+  --border: #2E3350; --border-strong: #3D4468; --accent: #C9A24B; --accent-light: #2A2410; --accent-ink: #F1DFB0;
+  --gold: #C9A24B; --gold-light: #2A2410; --highlight: rgba(201,162,75,0.14); --highlight-active: rgba(201,162,75,0.26);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--ink); line-height: 1.6; -webkit-font-smoothing: antialiased; min-height: 100dvh; }
+
+/* ─── Nav Bar ─── */
+.navbar { max-width: 960px; margin: 0 auto; padding: var(--space-md) var(--space-lg); display: flex; align-items: center; justify-content: space-between; gap: var(--space-sm); flex-wrap: wrap; }
+.nav-brand { font-size: 14px; font-weight: 700; color: var(--accent); letter-spacing: 0.02em; }
+.nav-brand span { color: var(--ink-faint); font-weight: 400; }
+.nav-dims { display: flex; align-items: center; gap: var(--space-sm); flex-wrap: wrap; }
+.nav-dim { display: flex; align-items: center; gap: 6px; background: var(--surface-sunken); border-radius: var(--radius-md); padding: 4px 6px; }
+.nav-dim label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-faint); padding-left: 6px; }
+.nav-dim select { font-family: var(--font-body); font-size: 13px; font-weight: 500; color: var(--ink); background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 4px 8px; cursor: pointer; outline: none; max-width: 130px; }
+
+/* ─── Settings bar ─── */
+.settings-bar { max-width: 960px; margin: 0 auto; padding: 0 var(--space-lg) var(--space-sm); display: flex; align-items: center; gap: var(--space-sm); flex-wrap: wrap; }
+.settings-toggle {
+  font-family: var(--font-body); font-size: 13px; font-weight: 600; color: var(--accent);
+  background: var(--surface-sunken); border: 1px solid var(--border); border-radius: var(--radius-md);
+  padding: 6px 14px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;
+  transition: background var(--duration-fast) var(--ease-out), color var(--duration-fast) var(--ease-out);
+}
+.settings-toggle:hover { background: var(--accent-light); color: var(--accent-ink); }
+
+/* Settings drawer */
+.settings-panel { position: fixed; inset: 0; z-index: 200; }
+.settings-panel[hidden] { display: none; }
+.settings-panel-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.4); }
+.settings-drawer {
+  position: absolute; top: 0; right: 0; bottom: 0; width: min(340px, 90vw);
+  background: var(--surface); border-left: 1px solid var(--border); box-shadow: var(--shadow-lg);
+  padding: var(--space-lg); overflow-y: auto; z-index: 201;
+  animation: drawerIn var(--duration-normal) var(--ease-out);
+}
+@keyframes drawerIn { from { transform: translateX(40px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+.settings-drawer-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-lg); }
+.settings-drawer-header h2 { font-size: 18px; font-weight: 700; color: var(--ink); }
+.settings-close { font-size: 24px; font-weight: 400; color: var(--ink-muted); background: none; border: none; cursor: pointer; line-height: 1; }
+.settings-close:hover { color: var(--ink); }
+.settings-section { margin-bottom: var(--space-xl); }
+.settings-section h3 { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faint); margin-bottom: var(--space-sm); }
+.settings-row { display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-sm); flex-wrap: wrap; }
+.settings-row label { font-size: 12px; font-weight: 600; color: var(--ink-muted); min-width: 74px; }
+.settings-row select { font-family: var(--font-body); font-size: 13px; font-weight: 500; color: var(--ink); background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 4px 8px; cursor: pointer; outline: none; flex: 1; min-width: 0; }
+.settings-row input[type="color"] { width: 40px; height: 30px; border: 1px solid var(--border); border-radius: 6px; background: none; cursor: pointer; padding: 0; }
+.custom-save { font-family: var(--font-body); font-size: 12px; font-weight: 600; color: #fff; background: var(--accent); border: none; border-radius: 8px; padding: 6px 12px; cursor: pointer; }
+.custom-save:hover { opacity: 0.9; }
+.custom-delete { font-family: var(--font-body); font-size: 12px; font-weight: 600; color: #C0392B; background: none; border: 1px solid #C0392B; border-radius: 8px; padding: 5px 10px; cursor: pointer; }
+.custom-delete:hover { background: rgba(192,57,43,0.1); }
+
+.toggle-wrap { display: flex; align-items: center; gap: 6px; background: var(--surface-sunken); border-radius: var(--radius-md); padding: 4px 10px; cursor: pointer; }
+.toggle-wrap input { width: 16px; height: 16px; accent-color: var(--accent); cursor: pointer; }
+.toggle-wrap label { font-size: 12px; font-weight: 600; color: var(--ink-muted); cursor: pointer; user-select: none; }
+.settings-bar .nav-dim select { max-width: 150px; }
+
+/* ─── Verse List ─── */
+.verse-list { max-width: 800px; margin: 0 auto; padding: var(--space-md) var(--space-lg) var(--space-2xl); }
+.verse-section { margin-bottom: var(--space-xl); }
+.verse-section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-md); padding-bottom: var(--space-sm); border-bottom: 1px solid var(--border); }
+.verse-section-title { font-size: 14px; font-weight: 600; color: var(--ink-muted); }
+.verse-section-title span { color: var(--accent); font-weight: 700; }
+.verse-count { font-size: 12px; color: var(--ink-faint); }
+
+.ayah-card { padding: var(--space-lg) 0; border-bottom: 1px solid var(--border); }
+.ayah-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-sm); }
+.ayah-number { font-size: 11px; font-weight: 600; color: var(--accent); background: var(--accent-light); padding: 2px 10px; border-radius: 20px; }
+.ayah-meta { font-size: 11px; color: var(--ink-faint); font-family: var(--font-mono); }
+
+/* Page / juz boundary signpost — shown only when the value changes mid-render */
+.ayah-boundary { display: flex; justify-content: flex-end; margin: var(--space-sm) 0 var(--space-sm); }
+.ayah-boundary span {
+  font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em;
+  color: var(--ink-faint); background: var(--surface-sunken); border: 1px solid var(--border);
+  padding: 2px 8px; border-radius: 10px; font-family: var(--font-mono);
+}
+
+/* Tajweed legend */
+.tajweed-legend {
+  max-width: 800px; margin: var(--space-sm) auto 0; padding: var(--space-sm) var(--space-lg);
+  display: flex; flex-wrap: wrap; gap: var(--space-md); align-items: center;
+  font-size: 12px; color: var(--ink-muted); background: var(--surface); border-bottom: 1px solid var(--border);
+}
+.tajweed-legend .legend-item { display: inline-flex; align-items: center; gap: 6px; }
+.tajweed-legend .legend-swatch { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+
+/* Page navigation indicator (subtle, keyboard-driven) */
+.page-nav {
+  max-width: 800px; margin: 0 auto; padding: var(--space-xs) var(--space-lg);
+  display: flex; align-items: center; justify-content: center;
+}
+.page-nav span { font-size: 12px; color: var(--ink-faint); font-family: var(--font-mono); letter-spacing: 0.03em; }
+.ayah-arabic { font-family: var(--font-arabic); font-size: 28px; line-height: 2.2; text-align: right; direction: rtl; color: var(--ink-arabic); margin-bottom: var(--space-sm); overflow-wrap: anywhere; word-break: break-word; }
+.ayah-arabic .word { display: inline; cursor: pointer; padding: 2px 2px; border-radius: 4px; transition: background var(--duration-fast) var(--ease-out), color var(--duration-fast) var(--ease-out); }
+.ayah-arabic .word:hover, .ayah-arabic .word:active { background: var(--highlight-active); color: var(--accent-ink); }
+.ayah-arabic .word.highlight { background: var(--highlight); border-radius: 4px; }
+.ayah-translation { font-size: 15px; color: var(--ink-muted); line-height: 1.7; font-weight: 400; }
+.ayah-translation .tword { display: inline; padding: 1px 2px; border-radius: 3px; transition: background var(--duration-fast) var(--ease-out); }
+.ayah-translation .tword.highlight { background: var(--highlight); color: var(--ink); font-weight: 500; }
+
+/* ─── Tajweed colour classes ─── */
+.tj-word { border-radius: 4px; }
+.tj-madd    { color: #C0392B; }                 /* red   — Madani madd */
+.tj-ghunnah { color: #1E8449; }                 /* green — nasalization */
+.tj-idgham  { color: #2E86C1; }                 /* blue  — assimilation */
+.tj-ikhfa   { color: #2E86C1; }                 /* blue  — concealment */
+.tj-silent  { color: #7F8C8D; }                 /* grey  — unpronounced */
+.tj-qalqalah{ color: #2471A3; }                 /* blue echo */
+[data-theme="midnight"] .tj-madd { color: #FF6B5B; }
+[data-theme="midnight"] .tj-ghunnah { color: #58D68D; }
+[data-theme="midnight"] .tj-idgham, [data-theme="midnight"] .tj-ikhfa, [data-theme="midnight"] .tj-qalqalah { color: #5DADE2; }
+[data-theme="midnight"] .tj-silent { color: #A6ACAF; }
+/* Aalim scheme shifts madd to yellow */
+[data-tajweed-style="aalim"] .tj-madd { color: #D4AC0D; }
+
+/* ─── Status ─── */
+.status { max-width: 800px; margin: var(--space-md) auto 0; padding: var(--space-sm) var(--space-lg); font-size: 12px; color: var(--ink-faint); text-align: center; }
+.status.error { color: #C0392B; }
+.status.loading { color: var(--accent); }
+.status.help { color: var(--gold); }
+.tajweed-pending { max-width: 800px; margin: var(--space-md) auto 0; padding: var(--space-sm) var(--space-lg); font-size: 12px; color: var(--ink-faint); font-style: italic; text-align: center; }
+
+/* ─── Scaffold notice ─── */
+.scaffold-notice { background: var(--surface-sunken); border: 1px dashed var(--border-strong); border-radius: var(--radius-md); padding: var(--space-lg); margin-top: var(--space-md); }
+.scaffold-badge { display: inline-block; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--gold); background: var(--gold-light); padding: 3px 10px; border-radius: 20px; margin-bottom: var(--space-sm); }
+.scaffold-notice p { font-size: 14px; color: var(--ink-muted); line-height: 1.7; margin-bottom: var(--space-sm); }
+.scaffold-notice p:last-child { margin-bottom: 0; }
+.scaffold-meta { font-family: var(--font-mono); font-size: 12px; color: var(--ink-faint); }
+.scaffold-hint { font-style: italic; color: var(--ink-faint); }
+
+/* Progress strip — honest roadmap of built vs pending content */
+.progress-strip { margin: var(--space-sm) 0 var(--space-md); }
+.progress-track { height: 8px; background: var(--surface-raised); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+.progress-fill { height: 100%; background: var(--accent); border-radius: 6px; transition: width var(--duration-normal) var(--ease-out); }
+.progress-label { font-size: 12px; color: var(--ink-muted); margin-top: var(--space-xs); font-family: var(--font-mono); }
+
+/* ─── Study Pane ─── */
+.study-pane { position: fixed; bottom: 0; left: 50%; transform: translateX(-50%) translateY(100%); width: 100%; max-width: 800px; max-height: 85dvh; background: var(--surface); border-radius: var(--radius-xl) var(--radius-xl) 0 0; box-shadow: var(--shadow-lg); z-index: 100; transition: transform var(--duration-slow) var(--ease-out); display: flex; flex-direction: column; overflow: hidden; }
+.study-pane.open { transform: translateX(-50%) translateY(0); }
+.study-pane-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.3); opacity: 0; pointer-events: none; transition: opacity var(--duration-normal) var(--ease-out); z-index: 99; }
+.study-pane-overlay.open { opacity: 1; pointer-events: auto; }
+.study-pane-handle { display: flex; justify-content: center; padding: var(--space-sm) 0; cursor: grab; flex-shrink: 0; }
+.study-pane-handle::before { content: ''; width: 36px; height: 4px; background: var(--border-strong); border-radius: 2px; }
+.study-header { padding: 0 var(--space-lg) var(--space-md); border-bottom: 1px solid var(--border); flex-shrink: 0; }
+.study-word-display { display: flex; align-items: baseline; gap: var(--space-md); margin-bottom: var(--space-sm); flex-wrap: wrap; }
+.study-arabic { font-family: var(--font-arabic); font-size: 34px; font-weight: 700; color: var(--accent); line-height: 1.2; }
+.study-translation { font-size: 16px; color: var(--ink-muted); font-weight: 500; }
+.study-meta { display: flex; align-items: center; gap: var(--space-sm); font-size: 12px; color: var(--ink-faint); flex-wrap: wrap; }
+.source-selector { margin-left: auto; }
+.source-selector select { font-family: var(--font-body); font-size: 12px; font-weight: 500; color: var(--accent); background: var(--accent-light); border: none; border-radius: 12px; padding: 3px 10px; cursor: pointer; outline: none; appearance: none; -webkit-appearance: none; padding-right: 24px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%232D6A4F' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 8px center; }
+
+.study-content { flex: 1; overflow-y: auto; padding: var(--space-md) var(--space-lg); -webkit-overflow-scrolling: touch; }
+.study-section { margin-bottom: var(--space-lg); animation: fadeUp var(--duration-normal) var(--ease-out) both; }
+.study-section:nth-child(1) { animation-delay: 40ms; } .study-section:nth-child(2) { animation-delay: 80ms; } .study-section:nth-child(3) { animation-delay: 120ms; } .study-section:nth-child(4) { animation-delay: 160ms; } .study-section:nth-child(5) { animation-delay: 200ms; }
+.section-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faint); margin-bottom: var(--space-sm); display: flex; align-items: center; gap: var(--space-sm); }
+
+/* Wazn verification tier badges — three distinct trust levels. */
+.tier-badge { display: inline-block; font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; padding: 2px 7px; border-radius: 10px; line-height: 1.4; }
+.tier-verified { color: var(--accent); background: var(--accent-light); border: 1px solid var(--accent); }
+.tier-pattern-verified { color: var(--gold); background: var(--gold-light); border: 1px solid var(--gold); }
+.tier-pending { color: var(--ink-faint); background: var(--surface-sunken); border: 1px solid var(--border-strong); font-style: italic; }
+
+.root-card { background: var(--surface-sunken); border-radius: var(--radius-md); padding: var(--space-md); display: flex; align-items: center; gap: var(--space-md); }
+.root-arabic { font-family: var(--font-arabic); font-size: 22px; font-weight: 700; color: var(--accent); direction: rtl; }
+.root-info { flex: 1; } .root-letters { font-family: var(--font-mono); font-size: 13px; color: var(--ink-muted); margin-bottom: 2px; } .root-meaning { font-size: 15px; font-weight: 500; color: var(--ink); }
+
+.morph-tag { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 500; color: var(--accent-ink); background: var(--accent-light); padding: 4px 12px; border-radius: 20px; margin-bottom: var(--space-sm); }
+.morph-tag .tag-code { font-family: var(--font-mono); font-size: 11px; font-weight: 600; opacity: 0.7; }
+.morph-desc { font-size: 14px; color: var(--ink-muted); line-height: 1.6; }
+.morph-grammar { font-family: var(--font-arabic); font-size: 14px; color: var(--ink-faint); margin-top: var(--space-xs); }
+
+.wazn-card { background: var(--surface-sunken); border-radius: var(--radius-md); padding: var(--space-md); }
+.wazn-pattern { display: flex; align-items: center; gap: var(--space-md); margin-bottom: var(--space-sm); flex-wrap: wrap; }
+.wazn-template { font-family: var(--font-arabic); font-size: 24px; font-weight: 700; color: var(--accent); direction: rtl; background: var(--accent-light); padding: 4px 14px; border-radius: var(--radius-sm); }
+.wazn-form { font-size: 14px; font-weight: 500; color: var(--ink); }
+.wazn-toggle { display: inline-flex; align-items: center; gap: 4px; font-size: 13px; font-weight: 600; color: var(--accent); background: none; border: none; cursor: pointer; padding: var(--space-sm) 0; font-family: var(--font-body); }
+.wazn-toggle:hover { color: var(--accent-ink); }
+.wazn-toggle svg { width: 14px; height: 14px; transition: transform var(--duration-fast) var(--ease-out); }
+.wazn-toggle.expanded svg { transform: rotate(180deg); }
+.wazn-details { display: none; padding-top: var(--space-sm); }
+.wazn-details.expanded { display: block; }
+.wazn-meaning { font-size: 14px; color: var(--ink-muted); line-height: 1.6; margin-bottom: var(--space-sm); }
+.wazn-template-visual { font-family: var(--font-arabic); font-size: 16px; color: var(--ink-muted); direction: rtl; margin-bottom: var(--space-sm); padding: var(--space-sm); background: var(--bg); border-radius: var(--radius-sm); border: 1px dashed var(--border-strong); }
+.wazn-examples { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-top: var(--space-sm); }
+.wazn-example-chip { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; background: var(--bg); border: 1px solid var(--border); padding: 4px 10px; border-radius: 20px; }
+.wazn-example-chip .ex-word { font-family: var(--font-arabic); font-size: 15px; color: var(--accent); direction: rtl; }
+.wazn-example-chip .ex-meaning { color: var(--ink-muted); }
+
+.tafsir-card { background: var(--gold-light); border-radius: var(--radius-md); padding: var(--space-md); }
+.tafsir-source { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: var(--gold); margin-bottom: var(--space-sm); }
+.tafsir-text { font-size: 15px; line-height: 1.75; color: var(--ink); }
+.tafsir-text.collapsed { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+.tafsir-expand { display: inline-flex; align-items: center; gap: 4px; font-size: 13px; font-weight: 600; color: var(--accent); background: none; border: none; cursor: pointer; padding: var(--space-sm) 0 0; font-family: var(--font-body); }
+.tafsir-expand svg { width: 14px; height: 14px; transition: transform var(--duration-fast) var(--ease-out); }
+.tafsir-expand.expanded svg { transform: rotate(180deg); }
+.no-tafsir { font-size: 14px; color: var(--ink-faint); font-style: italic; }
+
+.occurrences-summary { display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-md); }
+.occurrences-count { font-size: 28px; font-weight: 700; color: var(--accent); line-height: 1; }
+.occurrences-label { font-size: 13px; color: var(--ink-muted); }
+.no-root { font-size: 14px; color: var(--ink-faint); font-style: italic; }
+
+@media (min-width: 768px) { .ayah-arabic { font-size: 32px; } }
+.study-content::-webkit-scrollbar { width: 4px; }
+.study-content::-webkit-scrollbar-track { background: transparent; }
+.study-content::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 2px; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) { .study-section { animation: none; } .study-pane { transition-duration: var(--duration-fast); } }
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <div class="nav-brand">Sublime <span>· Quran</span></div>
+  <div class="nav-dims">
+    <div class="nav-dim"><label>Juz</label><select id="juzSelect"><option value="1">Juz 1</option></select></div>
+    <div class="nav-dim"><label>Surah</label><select id="surahSelect"></select></div>
+    <div class="nav-dim"><label>Page</label><select id="pageSelect"></select></div>
+  </div>
+</div>
+
+<div class="settings-bar">
+  <button class="settings-toggle" id="settingsToggle" aria-label="Open settings" aria-expanded="false">☰ Settings</button>
+</div>
+
+<div class="settings-panel" id="settingsPanel" hidden>
+  <div class="settings-panel-backdrop" id="settingsBackdrop"></div>
+  <aside class="settings-drawer" role="dialog" aria-label="Settings">
+    <div class="settings-drawer-header">
+      <h2>Settings</h2>
+      <button class="settings-close" id="settingsClose" aria-label="Close settings">×</button>
+    </div>
+
+    <div class="settings-section">
+      <h3>Tajweed</h3>
+      <label class="toggle-wrap"><input type="checkbox" id="tajweedToggle"><label for="tajweedToggle">Enable colouring</label></label>
+      <div class="settings-row"><label>Style</label><select id="tajweedStyle"><option value="madani">Madani</option></select></div>
+    </div>
+
+    <div class="settings-section">
+      <h3>Text</h3>
+      <div class="settings-row"><label>Script</label><select id="scriptSelect"></select></div>
+      <div class="settings-row"><label>Ink</label><select id="inkSelect"></select></div>
+    </div>
+
+    <div class="settings-section">
+      <h3>Appearance</h3>
+      <div class="settings-row"><label>Theme</label><select id="themeSelect"></select></div>
+
+      <div class="settings-row" id="customThemeRow" hidden>
+        <label>Background</label>
+        <input type="color" id="customBg" value="#FAF8F5">
+        <label>Ink</label>
+        <input type="color" id="customInk" value="#1A1814">
+        <button class="custom-save" id="customSave">Save as theme</button>
+        <select id="customSavedSelect" aria-label="Saved custom themes"><option value="">— saved —</option></select>
+        <button class="custom-delete" id="customDelete" hidden>Delete</button>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<div class="status" id="status">Loading…</div>
+<div class="tajweed-legend" id="tajweedLegend" hidden></div>
+<div class="page-nav" id="pageNav" hidden>
+  <span id="pageNavLabel"></span>
+</div>
+<div class="verse-list" id="verseList"></div>
+
+<div class="study-pane-overlay" id="overlay"></div>
+<div class="study-pane" id="studyPane">
+  <div class="study-pane-handle" id="paneHandle"></div>
+  <div class="study-header">
+    <div class="study-word-display">
+      <span class="study-arabic" id="studyArabic"></span>
+      <span class="study-translation" id="studyTranslation"></span>
+    </div>
+    <div class="study-meta">
+      <span id="studyLocation"></span>
+      <div class="source-selector"><select id="tafsirSelect" aria-label="Select tafsir source"></select></div>
+    </div>
+  </div>
+  <div class="study-content" id="studyContent"></div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

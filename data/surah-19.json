@@ -1,0 +1,27 @@
+{
+ "meta": {
+  "surah": 19,
+  "surah_name": "Maryam",
+  "surah_name_arabic": "مَرۡيَمَ",
+  "revelation_type": "Meccan",
+  "juz": [
+   16
+  ],
+  "total_ayahs": 98,
+  "page_range": [
+   305,
+   312
+  ],
+  "ayahs_per_juz": {
+   "16": 98
+  },
+  "verification_status": {
+   "verse_text": "pending_etl",
+   "morphology": "pending_etl",
+   "wazn": "pending_etl"
+  },
+  "content_status": "scaffold",
+  "note": "Meta-complete scaffold. Verse/word/morphology/tafsir/wazn content to be populated by the ETL pipeline (KodeKoot) per the progressive-annotation convention in ARCHITECTURE.md. No verses synthesized."
+ },
+ "ayahs": []
+}

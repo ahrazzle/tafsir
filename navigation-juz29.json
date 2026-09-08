@@ -1,0 +1,3715 @@
+{
+ "meta": {
+  "description": "Navigation index for Juz 29 — mapping by juz, surah, ayah, and page",
+  "juz": 29,
+  "total_ayahs": 431,
+  "source": "api.alquran.cloud/v1/juz/29",
+  "fetched": "2026-08-28"
+ },
+ "juz": {
+  "number": 29,
+  "surah_range": {
+   "start": 67,
+   "end": 77
+  },
+  "ayah_range": {
+   "start": 5242,
+   "end": 5672
+  }
+ },
+ "surahs": [
+  {
+   "surah": 67,
+   "name": "سُورَةُ المُلۡكِ",
+   "english_name": "Al-Mulk",
+   "translation": "The Sovereignty",
+   "revelation_type": "Meccan",
+   "ayah_start": 1,
+   "ayah_end": 30,
+   "page_start": 562,
+   "page_end": 564
+  },
+  {
+   "surah": 68,
+   "name": "سُورَةُ القَلَمِ",
+   "english_name": "Al-Qalam",
+   "translation": "The Pen",
+   "revelation_type": "Meccan",
+   "ayah_start": 1,
+   "ayah_end": 52,
+   "page_start": 564,
+   "page_end": 566
+  },
+  {
+   "surah": 69,
+   "name": "سُورَةُ الحَاقَّةِ",
+   "english_name": "Al-Haaqqa",
+   "translation": "The Reality",
+   "revelation_type": "Meccan",
+   "ayah_start": 1,
+   "ayah_end": 52,
+   "page_start": 566,
+   "page_end": 568
+  },
+  {
+   "surah": 70,
+   "name": "سُورَةُ المَعَارِجِ",
+   "english_name": "Al-Ma'aarij",
+   "translation": "The Ascending Stairways",
+   "revelation_type": "Meccan",
+   "ayah_start": 1,
+   "ayah_end": 44,
+   "page_start": 568,
+   "page_end": 570
+  },
+  {
+   "surah": 71,
+   "name": "سُورَةُ نُوحٍ",
+   "english_name": "Nooh",
+   "translation": "Noah",
+   "revelation_type": "Meccan",
+   "ayah_start": 1,
+   "ayah_end": 28,
+   "page_start": 570,
+   "page_end": 571
+  },
+  {
+   "surah": 72,
+   "name": "سُورَةُ الجِنِّ",
+   "english_name": "Al-Jinn",
+   "translation": "The Jinn",
+   "revelation_type": "Meccan",
+   "ayah_start": 1,
+   "ayah_end": 28,
+   "page_start": 572,
+   "page_end": 573
+  },
+  {
+   "surah": 73,
+   "name": "سُورَةُ المُزَّمِّلِ",
+   "english_name": "Al-Muzzammil",
+   "translation": "The Enshrouded One",
+   "revelation_type": "Meccan",
+   "ayah_start": 1,
+   "ayah_end": 20,
+   "page_start": 574,
+   "page_end": 575
+  },
+  {
+   "surah": 74,
+   "name": "سُورَةُ المُدَّثِّرِ",
+   "english_name": "Al-Muddaththir",
+   "translation": "The Cloaked One",
+   "revelation_type": "Meccan",
+   "ayah_start": 1,
+   "ayah_end": 56,
+   "page_start": 575,
+   "page_end": 577
+  },
+  {
+   "surah": 75,
+   "name": "سُورَةُ القِيَامَةِ",
+   "english_name": "Al-Qiyaama",
+   "translation": "The Resurrection",
+   "revelation_type": "Meccan",
+   "ayah_start": 1,
+   "ayah_end": 40,
+   "page_start": 577,
+   "page_end": 578
+  },
+  {
+   "surah": 76,
+   "name": "سُورَةُ الإِنسَانِ",
+   "english_name": "Al-Insaan",
+   "translation": "Man",
+   "revelation_type": "Medinan",
+   "ayah_start": 1,
+   "ayah_end": 31,
+   "page_start": 578,
+   "page_end": 580
+  },
+  {
+   "surah": 77,
+   "name": "سُورَةُ المُرۡسَلَاتِ",
+   "english_name": "Al-Mursalaat",
+   "translation": "The Emissaries",
+   "revelation_type": "Meccan",
+   "ayah_start": 1,
+   "ayah_end": 50,
+   "page_start": 580,
+   "page_end": 581
+  }
+ ],
+ "pages": {
+  "562": {
+   "page": 562,
+   "surah": 67,
+   "ayah_start": 12,
+   "ayah_end": 12
+  },
+  "563": {
+   "page": 563,
+   "surah": 67,
+   "ayah_start": 26,
+   "ayah_end": 26
+  },
+  "564": {
+   "page": 564,
+   "surah": 68,
+   "ayah_start": 15,
+   "ayah_end": 15
+  },
+  "565": {
+   "page": 565,
+   "surah": 68,
+   "ayah_start": 42,
+   "ayah_end": 42
+  },
+  "566": {
+   "page": 566,
+   "surah": 69,
+   "ayah_start": 8,
+   "ayah_end": 8
+  },
+  "567": {
+   "page": 567,
+   "surah": 69,
+   "ayah_start": 34,
+   "ayah_end": 34
+  },
+  "568": {
+   "page": 568,
+   "surah": 70,
+   "ayah_start": 10,
+   "ayah_end": 10
+  },
+  "569": {
+   "page": 569,
+   "surah": 70,
+   "ayah_start": 39,
+   "ayah_end": 39
+  },
+  "570": {
+   "page": 570,
+   "surah": 71,
+   "ayah_start": 10,
+   "ayah_end": 10
+  },
+  "571": {
+   "page": 571,
+   "surah": 71,
+   "ayah_start": 28,
+   "ayah_end": 28
+  },
+  "572": {
+   "page": 572,
+   "surah": 72,
+   "ayah_start": 13,
+   "ayah_end": 13
+  },
+  "573": {
+   "page": 573,
+   "surah": 72,
+   "ayah_start": 28,
+   "ayah_end": 28
+  },
+  "574": {
+   "page": 574,
+   "surah": 73,
+   "ayah_start": 19,
+   "ayah_end": 19
+  },
+  "575": {
+   "page": 575,
+   "surah": 74,
+   "ayah_start": 17,
+   "ayah_end": 17
+  },
+  "576": {
+   "page": 576,
+   "surah": 74,
+   "ayah_start": 47,
+   "ayah_end": 47
+  },
+  "577": {
+   "page": 577,
+   "surah": 75,
+   "ayah_start": 19,
+   "ayah_end": 19
+  },
+  "578": {
+   "page": 578,
+   "surah": 76,
+   "ayah_start": 5,
+   "ayah_end": 5
+  },
+  "579": {
+   "page": 579,
+   "surah": 76,
+   "ayah_start": 25,
+   "ayah_end": 25
+  },
+  "580": {
+   "page": 580,
+   "surah": 77,
+   "ayah_start": 19,
+   "ayah_end": 19
+  },
+  "581": {
+   "page": 581,
+   "surah": 77,
+   "ayah_start": 50,
+   "ayah_end": 50
+  }
+ },
+ "ayah_index": [
+  {
+   "global_number": 5242,
+   "surah": 67,
+   "ayah_in_surah": 1,
+   "verse_key": "67:1",
+   "page": 562,
+   "juz": 29
+  },
+  {
+   "global_number": 5243,
+   "surah": 67,
+   "ayah_in_surah": 2,
+   "verse_key": "67:2",
+   "page": 562,
+   "juz": 29
+  },
+  {
+   "global_number": 5244,
+   "surah": 67,
+   "ayah_in_surah": 3,
+   "verse_key": "67:3",
+   "page": 562,
+   "juz": 29
+  },
+  {
+   "global_number": 5245,
+   "surah": 67,
+   "ayah_in_surah": 4,
+   "verse_key": "67:4",
+   "page": 562,
+   "juz": 29
+  },
+  {
+   "global_number": 5246,
+   "surah": 67,
+   "ayah_in_surah": 5,
+   "verse_key": "67:5",
+   "page": 562,
+   "juz": 29
+  },
+  {
+   "global_number": 5247,
+   "surah": 67,
+   "ayah_in_surah": 6,
+   "verse_key": "67:6",
+   "page": 562,
+   "juz": 29
+  },
+  {
+   "global_number": 5248,
+   "surah": 67,
+   "ayah_in_surah": 7,
+   "verse_key": "67:7",
+   "page": 562,
+   "juz": 29
+  },
+  {
+   "global_number": 5249,
+   "surah": 67,
+   "ayah_in_surah": 8,
+   "verse_key": "67:8",
+   "page": 562,
+   "juz": 29
+  },
+  {
+   "global_number": 5250,
+   "surah": 67,
+   "ayah_in_surah": 9,
+   "verse_key": "67:9",
+   "page": 562,
+   "juz": 29
+  },
+  {
+   "global_number": 5251,
+   "surah": 67,
+   "ayah_in_surah": 10,
+   "verse_key": "67:10",
+   "page": 562,
+   "juz": 29
+  },
+  {
+   "global_number": 5252,
+   "surah": 67,
+   "ayah_in_surah": 11,
+   "verse_key": "67:11",
+   "page": 562,
+   "juz": 29
+  },
+  {
+   "global_number": 5253,
+   "surah": 67,
+   "ayah_in_surah": 12,
+   "verse_key": "67:12",
+   "page": 562,
+   "juz": 29
+  },
+  {
+   "global_number": 5254,
+   "surah": 67,
+   "ayah_in_surah": 13,
+   "verse_key": "67:13",
+   "page": 563,
+   "juz": 29
+  },
+  {
+   "global_number": 5255,
+   "surah": 67,
+   "ayah_in_surah": 14,
+   "verse_key": "67:14",
+   "page": 563,
+   "juz": 29
+  },
+  {
+   "global_number": 5256,
+   "surah": 67,
+   "ayah_in_surah": 15,
+   "verse_key": "67:15",
+   "page": 563,
+   "juz": 29
+  },
+  {
+   "global_number": 5257,
+   "surah": 67,
+   "ayah_in_surah": 16,
+   "verse_key": "67:16",
+   "page": 563,
+   "juz": 29
+  },
+  {
+   "global_number": 5258,
+   "surah": 67,
+   "ayah_in_surah": 17,
+   "verse_key": "67:17",
+   "page": 563,
+   "juz": 29
+  },
+  {
+   "global_number": 5259,
+   "surah": 67,
+   "ayah_in_surah": 18,
+   "verse_key": "67:18",
+   "page": 563,
+   "juz": 29
+  },
+  {
+   "global_number": 5260,
+   "surah": 67,
+   "ayah_in_surah": 19,
+   "verse_key": "67:19",
+   "page": 563,
+   "juz": 29
+  },
+  {
+   "global_number": 5261,
+   "surah": 67,
+   "ayah_in_surah": 20,
+   "verse_key": "67:20",
+   "page": 563,
+   "juz": 29
+  },
+  {
+   "global_number": 5262,
+   "surah": 67,
+   "ayah_in_surah": 21,
+   "verse_key": "67:21",
+   "page": 563,
+   "juz": 29
+  },
+  {
+   "global_number": 5263,
+   "surah": 67,
+   "ayah_in_surah": 22,
+   "verse_key": "67:22",
+   "page": 563,
+   "juz": 29
+  },
+  {
+   "global_number": 5264,
+   "surah": 67,
+   "ayah_in_surah": 23,
+   "verse_key": "67:23",
+   "page": 563,
+   "juz": 29
+  },
+  {
+   "global_number": 5265,
+   "surah": 67,
+   "ayah_in_surah": 24,
+   "verse_key": "67:24",
+   "page": 563,
+   "juz": 29
+  },
+  {
+   "global_number": 5266,
+   "surah": 67,
+   "ayah_in_surah": 25,
+   "verse_key": "67:25",
+   "page": 563,
+   "juz": 29
+  },
+  {
+   "global_number": 5267,
+   "surah": 67,
+   "ayah_in_surah": 26,
+   "verse_key": "67:26",
+   "page": 563,
+   "juz": 29
+  },
+  {
+   "global_number": 5268,
+   "surah": 67,
+   "ayah_in_surah": 27,
+   "verse_key": "67:27",
+   "page": 564,
+   "juz": 29
+  },
+  {
+   "global_number": 5269,
+   "surah": 67,
+   "ayah_in_surah": 28,
+   "verse_key": "67:28",
+   "page": 564,
+   "juz": 29
+  },
+  {
+   "global_number": 5270,
+   "surah": 67,
+   "ayah_in_surah": 29,
+   "verse_key": "67:29",
+   "page": 564,
+   "juz": 29
+  },
+  {
+   "global_number": 5271,
+   "surah": 67,
+   "ayah_in_surah": 30,
+   "verse_key": "67:30",
+   "page": 564,
+   "juz": 29
+  },
+  {
+   "global_number": 5272,
+   "surah": 68,
+   "ayah_in_surah": 1,
+   "verse_key": "68:1",
+   "page": 564,
+   "juz": 29
+  },
+  {
+   "global_number": 5273,
+   "surah": 68,
+   "ayah_in_surah": 2,
+   "verse_key": "68:2",
+   "page": 564,
+   "juz": 29
+  },
+  {
+   "global_number": 5274,
+   "surah": 68,
+   "ayah_in_surah": 3,
+   "verse_key": "68:3",
+   "page": 564,
+   "juz": 29
+  },
+  {
+   "global_number": 5275,
+   "surah": 68,
+   "ayah_in_surah": 4,
+   "verse_key": "68:4",
+   "page": 564,
+   "juz": 29
+  },
+  {
+   "global_number": 5276,
+   "surah": 68,
+   "ayah_in_surah": 5,
+   "verse_key": "68:5",
+   "page": 564,
+   "juz": 29
+  },
+  {
+   "global_number": 5277,
+   "surah": 68,
+   "ayah_in_surah": 6,
+   "verse_key": "68:6",
+   "page": 564,
+   "juz": 29
+  },
+  {
+   "global_number": 5278,
+   "surah": 68,
+   "ayah_in_surah": 7,
+   "verse_key": "68:7",
+   "page": 564,
+   "juz": 29
+  },
+  {
+   "global_number": 5279,
+   "surah": 68,
+   "ayah_in_surah": 8,
+   "verse_key": "68:8",
+   "page": 564,
+   "juz": 29
+  },
+  {
+   "global_number": 5280,
+   "surah": 68,
+   "ayah_in_surah": 9,
+   "verse_key": "68:9",
+   "page": 564,
+   "juz": 29
+  },
+  {
+   "global_number": 5281,
+   "surah": 68,
+   "ayah_in_surah": 10,
+   "verse_key": "68:10",
+   "page": 564,
+   "juz": 29
+  },
+  {
+   "global_number": 5282,
+   "surah": 68,
+   "ayah_in_surah": 11,
+   "verse_key": "68:11",
+   "page": 564,
+   "juz": 29
+  },
+  {
+   "global_number": 5283,
+   "surah": 68,
+   "ayah_in_surah": 12,
+   "verse_key": "68:12",
+   "page": 564,
+   "juz": 29
+  },
+  {
+   "global_number": 5284,
+   "surah": 68,
+   "ayah_in_surah": 13,
+   "verse_key": "68:13",
+   "page": 564,
+   "juz": 29
+  },
+  {
+   "global_number": 5285,
+   "surah": 68,
+   "ayah_in_surah": 14,
+   "verse_key": "68:14",
+   "page": 564,
+   "juz": 29
+  },
+  {
+   "global_number": 5286,
+   "surah": 68,
+   "ayah_in_surah": 15,
+   "verse_key": "68:15",
+   "page": 564,
+   "juz": 29
+  },
+  {
+   "global_number": 5287,
+   "surah": 68,
+   "ayah_in_surah": 16,
+   "verse_key": "68:16",
+   "page": 565,
+   "juz": 29
+  },
+  {
+   "global_number": 5288,
+   "surah": 68,
+   "ayah_in_surah": 17,
+   "verse_key": "68:17",
+   "page": 565,
+   "juz": 29
+  },
+  {
+   "global_number": 5289,
+   "surah": 68,
+   "ayah_in_surah": 18,
+   "verse_key": "68:18",
+   "page": 565,
+   "juz": 29
+  },
+  {
+   "global_number": 5290,
+   "surah": 68,
+   "ayah_in_surah": 19,
+   "verse_key": "68:19",
+   "page": 565,
+   "juz": 29
+  },
+  {
+   "global_number": 5291,
+   "surah": 68,
+   "ayah_in_surah": 20,
+   "verse_key": "68:20",
+   "page": 565,
+   "juz": 29
+  },
+  {
+   "global_number": 5292,
+   "surah": 68,
+   "ayah_in_surah": 21,
+   "verse_key": "68:21",
+   "page": 565,
+   "juz": 29
+  },
+  {
+   "global_number": 5293,
+   "surah": 68,
+   "ayah_in_surah": 22,
+   "verse_key": "68:22",
+   "page": 565,
+   "juz": 29
+  },
+  {
+   "global_number": 5294,
+   "surah": 68,
+   "ayah_in_surah": 23,
+   "verse_key": "68:23",
+   "page": 565,
+   "juz": 29
+  },
+  {
+   "global_number": 5295,
+   "surah": 68,
+   "ayah_in_surah": 24,
+   "verse_key": "68:24",
+   "page": 565,
+   "juz": 29
+  },
+  {
+   "global_number": 5296,
+   "surah": 68,
+   "ayah_in_surah": 25,
+   "verse_key": "68:25",
+   "page": 565,
+   "juz": 29
+  },
+  {
+   "global_number": 5297,
+   "surah": 68,
+   "ayah_in_surah": 26,
+   "verse_key": "68:26",
+   "page": 565,
+   "juz": 29
+  },
+  {
+   "global_number": 5298,
+   "surah": 68,
+   "ayah_in_surah": 27,
+   "verse_key": "68:27",
+   "page": 565,
+   "juz": 29
+  },
+  {
+   "global_number": 5299,
+   "surah": 68,
+   "ayah_in_surah": 28,
+   "verse_key": "68:28",
+   "page": 565,
+   "juz": 29
+  },
+  {
+   "global_number": 5300,
+   "surah": 68,
+   "ayah_in_surah": 29,
+   "verse_key": "68:29",
+   "page": 565,
+   "juz": 29
+  },
+  {
+   "global_number": 5301,
+   "surah": 68,
+   "ayah_in_surah": 30,
+   "verse_key": "68:30",
+   "page": 565,
+   "juz": 29
+  },
+  {
+   "global_number": 5302,
+   "surah": 68,
+   "ayah_in_surah": 31,
+   "verse_key": "68:31",
+   "page": 565,
+   "juz": 29
+  },
+  {
+   "global_number": 5303,
+   "surah": 68,
+   "ayah_in_surah": 32,
+   "verse_key": "68:32",
+   "page": 565,
+   "juz": 29
+  },
+  {
+   "global_number": 5304,
+   "surah": 68,
+   "ayah_in_surah": 33,
+   "verse_key": "68:33",
+   "page": 565,
+   "juz": 29
+  },
+  {
+   "global_number": 5305,
+   "surah": 68,
+   "ayah_in_surah": 34,
+   "verse_key": "68:34",
+   "page": 565,
+   "juz": 29
+  },
+  {
+   "global_number": 5306,
+   "surah": 68,
+   "ayah_in_surah": 35,
+   "verse_key": "68:35",
+   "page": 565,
+   "juz": 29
+  },
+  {
+   "global_number": 5307,
+   "surah": 68,
+   "ayah_in_surah": 36,
+   "verse_key": "68:36",
+   "page": 565,
+   "juz": 29
+  },
+  {
+   "global_number": 5308,
+   "surah": 68,
+   "ayah_in_surah": 37,
+   "verse_key": "68:37",
+   "page": 565,
+   "juz": 29
+  },
+  {
+   "global_number": 5309,
+   "surah": 68,
+   "ayah_in_surah": 38,
+   "verse_key": "68:38",
+   "page": 565,
+   "juz": 29
+  },
+  {
+   "global_number": 5310,
+   "surah": 68,
+   "ayah_in_surah": 39,
+   "verse_key": "68:39",
+   "page": 565,
+   "juz": 29
+  },
+  {
+   "global_number": 5311,
+   "surah": 68,
+   "ayah_in_surah": 40,
+   "verse_key": "68:40",
+   "page": 565,
+   "juz": 29
+  },
+  {
+   "global_number": 5312,
+   "surah": 68,
+   "ayah_in_surah": 41,
+   "verse_key": "68:41",
+   "page": 565,
+   "juz": 29
+  },
+  {
+   "global_number": 5313,
+   "surah": 68,
+   "ayah_in_surah": 42,
+   "verse_key": "68:42",
+   "page": 565,
+   "juz": 29
+  },
+  {
+   "global_number": 5314,
+   "surah": 68,
+   "ayah_in_surah": 43,
+   "verse_key": "68:43",
+   "page": 566,
+   "juz": 29
+  },
+  {
+   "global_number": 5315,
+   "surah": 68,
+   "ayah_in_surah": 44,
+   "verse_key": "68:44",
+   "page": 566,
+   "juz": 29
+  },
+  {
+   "global_number": 5316,
+   "surah": 68,
+   "ayah_in_surah": 45,
+   "verse_key": "68:45",
+   "page": 566,
+   "juz": 29
+  },
+  {
+   "global_number": 5317,
+   "surah": 68,
+   "ayah_in_surah": 46,
+   "verse_key": "68:46",
+   "page": 566,
+   "juz": 29
+  },
+  {
+   "global_number": 5318,
+   "surah": 68,
+   "ayah_in_surah": 47,
+   "verse_key": "68:47",
+   "page": 566,
+   "juz": 29
+  },
+  {
+   "global_number": 5319,
+   "surah": 68,
+   "ayah_in_surah": 48,
+   "verse_key": "68:48",
+   "page": 566,
+   "juz": 29
+  },
+  {
+   "global_number": 5320,
+   "surah": 68,
+   "ayah_in_surah": 49,
+   "verse_key": "68:49",
+   "page": 566,
+   "juz": 29
+  },
+  {
+   "global_number": 5321,
+   "surah": 68,
+   "ayah_in_surah": 50,
+   "verse_key": "68:50",
+   "page": 566,
+   "juz": 29
+  },
+  {
+   "global_number": 5322,
+   "surah": 68,
+   "ayah_in_surah": 51,
+   "verse_key": "68:51",
+   "page": 566,
+   "juz": 29
+  },
+  {
+   "global_number": 5323,
+   "surah": 68,
+   "ayah_in_surah": 52,
+   "verse_key": "68:52",
+   "page": 566,
+   "juz": 29
+  },
+  {
+   "global_number": 5324,
+   "surah": 69,
+   "ayah_in_surah": 1,
+   "verse_key": "69:1",
+   "page": 566,
+   "juz": 29
+  },
+  {
+   "global_number": 5325,
+   "surah": 69,
+   "ayah_in_surah": 2,
+   "verse_key": "69:2",
+   "page": 566,
+   "juz": 29
+  },
+  {
+   "global_number": 5326,
+   "surah": 69,
+   "ayah_in_surah": 3,
+   "verse_key": "69:3",
+   "page": 566,
+   "juz": 29
+  },
+  {
+   "global_number": 5327,
+   "surah": 69,
+   "ayah_in_surah": 4,
+   "verse_key": "69:4",
+   "page": 566,
+   "juz": 29
+  },
+  {
+   "global_number": 5328,
+   "surah": 69,
+   "ayah_in_surah": 5,
+   "verse_key": "69:5",
+   "page": 566,
+   "juz": 29
+  },
+  {
+   "global_number": 5329,
+   "surah": 69,
+   "ayah_in_surah": 6,
+   "verse_key": "69:6",
+   "page": 566,
+   "juz": 29
+  },
+  {
+   "global_number": 5330,
+   "surah": 69,
+   "ayah_in_surah": 7,
+   "verse_key": "69:7",
+   "page": 566,
+   "juz": 29
+  },
+  {
+   "global_number": 5331,
+   "surah": 69,
+   "ayah_in_surah": 8,
+   "verse_key": "69:8",
+   "page": 566,
+   "juz": 29
+  },
+  {
+   "global_number": 5332,
+   "surah": 69,
+   "ayah_in_surah": 9,
+   "verse_key": "69:9",
+   "page": 567,
+   "juz": 29
+  },
+  {
+   "global_number": 5333,
+   "surah": 69,
+   "ayah_in_surah": 10,
+   "verse_key": "69:10",
+   "page": 567,
+   "juz": 29
+  },
+  {
+   "global_number": 5334,
+   "surah": 69,
+   "ayah_in_surah": 11,
+   "verse_key": "69:11",
+   "page": 567,
+   "juz": 29
+  },
+  {
+   "global_number": 5335,
+   "surah": 69,
+   "ayah_in_surah": 12,
+   "verse_key": "69:12",
+   "page": 567,
+   "juz": 29
+  },
+  {
+   "global_number": 5336,
+   "surah": 69,
+   "ayah_in_surah": 13,
+   "verse_key": "69:13",
+   "page": 567,
+   "juz": 29
+  },
+  {
+   "global_number": 5337,
+   "surah": 69,
+   "ayah_in_surah": 14,
+   "verse_key": "69:14",
+   "page": 567,
+   "juz": 29
+  },
+  {
+   "global_number": 5338,
+   "surah": 69,
+   "ayah_in_surah": 15,
+   "verse_key": "69:15",
+   "page": 567,
+   "juz": 29
+  },
+  {
+   "global_number": 5339,
+   "surah": 69,
+   "ayah_in_surah": 16,
+   "verse_key": "69:16",
+   "page": 567,
+   "juz": 29
+  },
+  {
+   "global_number": 5340,
+   "surah": 69,
+   "ayah_in_surah": 17,
+   "verse_key": "69:17",
+   "page": 567,
+   "juz": 29
+  },
+  {
+   "global_number": 5341,
+   "surah": 69,
+   "ayah_in_surah": 18,
+   "verse_key": "69:18",
+   "page": 567,
+   "juz": 29
+  },
+  {
+   "global_number": 5342,
+   "surah": 69,
+   "ayah_in_surah": 19,
+   "verse_key": "69:19",
+   "page": 567,
+   "juz": 29
+  },
+  {
+   "global_number": 5343,
+   "surah": 69,
+   "ayah_in_surah": 20,
+   "verse_key": "69:20",
+   "page": 567,
+   "juz": 29
+  },
+  {
+   "global_number": 5344,
+   "surah": 69,
+   "ayah_in_surah": 21,
+   "verse_key": "69:21",
+   "page": 567,
+   "juz": 29
+  },
+  {
+   "global_number": 5345,
+   "surah": 69,
+   "ayah_in_surah": 22,
+   "verse_key": "69:22",
+   "page": 567,
+   "juz": 29
+  },
+  {
+   "global_number": 5346,
+   "surah": 69,
+   "ayah_in_surah": 23,
+   "verse_key": "69:23",
+   "page": 567,
+   "juz": 29
+  },
+  {
+   "global_number": 5347,
+   "surah": 69,
+   "ayah_in_surah": 24,
+   "verse_key": "69:24",
+   "page": 567,
+   "juz": 29
+  },
+  {
+   "global_number": 5348,
+   "surah": 69,
+   "ayah_in_surah": 25,
+   "verse_key": "69:25",
+   "page": 567,
+   "juz": 29
+  },
+  {
+   "global_number": 5349,
+   "surah": 69,
+   "ayah_in_surah": 26,
+   "verse_key": "69:26",
+   "page": 567,
+   "juz": 29
+  },
+  {
+   "global_number": 5350,
+   "surah": 69,
+   "ayah_in_surah": 27,
+   "verse_key": "69:27",
+   "page": 567,
+   "juz": 29
+  },
+  {
+   "global_number": 5351,
+   "surah": 69,
+   "ayah_in_surah": 28,
+   "verse_key": "69:28",
+   "page": 567,
+   "juz": 29
+  },
+  {
+   "global_number": 5352,
+   "surah": 69,
+   "ayah_in_surah": 29,
+   "verse_key": "69:29",
+   "page": 567,
+   "juz": 29
+  },
+  {
+   "global_number": 5353,
+   "surah": 69,
+   "ayah_in_surah": 30,
+   "verse_key": "69:30",
+   "page": 567,
+   "juz": 29
+  },
+  {
+   "global_number": 5354,
+   "surah": 69,
+   "ayah_in_surah": 31,
+   "verse_key": "69:31",
+   "page": 567,
+   "juz": 29
+  },
+  {
+   "global_number": 5355,
+   "surah": 69,
+   "ayah_in_surah": 32,
+   "verse_key": "69:32",
+   "page": 567,
+   "juz": 29
+  },
+  {
+   "global_number": 5356,
+   "surah": 69,
+   "ayah_in_surah": 33,
+   "verse_key": "69:33",
+   "page": 567,
+   "juz": 29
+  },
+  {
+   "global_number": 5357,
+   "surah": 69,
+   "ayah_in_surah": 34,
+   "verse_key": "69:34",
+   "page": 567,
+   "juz": 29
+  },
+  {
+   "global_number": 5358,
+   "surah": 69,
+   "ayah_in_surah": 35,
+   "verse_key": "69:35",
+   "page": 568,
+   "juz": 29
+  },
+  {
+   "global_number": 5359,
+   "surah": 69,
+   "ayah_in_surah": 36,
+   "verse_key": "69:36",
+   "page": 568,
+   "juz": 29
+  },
+  {
+   "global_number": 5360,
+   "surah": 69,
+   "ayah_in_surah": 37,
+   "verse_key": "69:37",
+   "page": 568,
+   "juz": 29
+  },
+  {
+   "global_number": 5361,
+   "surah": 69,
+   "ayah_in_surah": 38,
+   "verse_key": "69:38",
+   "page": 568,
+   "juz": 29
+  },
+  {
+   "global_number": 5362,
+   "surah": 69,
+   "ayah_in_surah": 39,
+   "verse_key": "69:39",
+   "page": 568,
+   "juz": 29
+  },
+  {
+   "global_number": 5363,
+   "surah": 69,
+   "ayah_in_surah": 40,
+   "verse_key": "69:40",
+   "page": 568,
+   "juz": 29
+  },
+  {
+   "global_number": 5364,
+   "surah": 69,
+   "ayah_in_surah": 41,
+   "verse_key": "69:41",
+   "page": 568,
+   "juz": 29
+  },
+  {
+   "global_number": 5365,
+   "surah": 69,
+   "ayah_in_surah": 42,
+   "verse_key": "69:42",
+   "page": 568,
+   "juz": 29
+  },
+  {
+   "global_number": 5366,
+   "surah": 69,
+   "ayah_in_surah": 43,
+   "verse_key": "69:43",
+   "page": 568,
+   "juz": 29
+  },
+  {
+   "global_number": 5367,
+   "surah": 69,
+   "ayah_in_surah": 44,
+   "verse_key": "69:44",
+   "page": 568,
+   "juz": 29
+  },
+  {
+   "global_number": 5368,
+   "surah": 69,
+   "ayah_in_surah": 45,
+   "verse_key": "69:45",
+   "page": 568,
+   "juz": 29
+  },
+  {
+   "global_number": 5369,
+   "surah": 69,
+   "ayah_in_surah": 46,
+   "verse_key": "69:46",
+   "page": 568,
+   "juz": 29
+  },
+  {
+   "global_number": 5370,
+   "surah": 69,
+   "ayah_in_surah": 47,
+   "verse_key": "69:47",
+   "page": 568,
+   "juz": 29
+  },
+  {
+   "global_number": 5371,
+   "surah": 69,
+   "ayah_in_surah": 48,
+   "verse_key": "69:48",
+   "page": 568,
+   "juz": 29
+  },
+  {
+   "global_number": 5372,
+   "surah": 69,
+   "ayah_in_surah": 49,
+   "verse_key": "69:49",
+   "page": 568,
+   "juz": 29
+  },
+  {
+   "global_number": 5373,
+   "surah": 69,
+   "ayah_in_surah": 50,
+   "verse_key": "69:50",
+   "page": 568,
+   "juz": 29
+  },
+  {
+   "global_number": 5374,
+   "surah": 69,
+   "ayah_in_surah": 51,
+   "verse_key": "69:51",
+   "page": 568,
+   "juz": 29
+  },
+  {
+   "global_number": 5375,
+   "surah": 69,
+   "ayah_in_surah": 52,
+   "verse_key": "69:52",
+   "page": 568,
+   "juz": 29
+  },
+  {
+   "global_number": 5376,
+   "surah": 70,
+   "ayah_in_surah": 1,
+   "verse_key": "70:1",
+   "page": 568,
+   "juz": 29
+  },
+  {
+   "global_number": 5377,
+   "surah": 70,
+   "ayah_in_surah": 2,
+   "verse_key": "70:2",
+   "page": 568,
+   "juz": 29
+  },
+  {
+   "global_number": 5378,
+   "surah": 70,
+   "ayah_in_surah": 3,
+   "verse_key": "70:3",
+   "page": 568,
+   "juz": 29
+  },
+  {
+   "global_number": 5379,
+   "surah": 70,
+   "ayah_in_surah": 4,
+   "verse_key": "70:4",
+   "page": 568,
+   "juz": 29
+  },
+  {
+   "global_number": 5380,
+   "surah": 70,
+   "ayah_in_surah": 5,
+   "verse_key": "70:5",
+   "page": 568,
+   "juz": 29
+  },
+  {
+   "global_number": 5381,
+   "surah": 70,
+   "ayah_in_surah": 6,
+   "verse_key": "70:6",
+   "page": 568,
+   "juz": 29
+  },
+  {
+   "global_number": 5382,
+   "surah": 70,
+   "ayah_in_surah": 7,
+   "verse_key": "70:7",
+   "page": 568,
+   "juz": 29
+  },
+  {
+   "global_number": 5383,
+   "surah": 70,
+   "ayah_in_surah": 8,
+   "verse_key": "70:8",
+   "page": 568,
+   "juz": 29
+  },
+  {
+   "global_number": 5384,
+   "surah": 70,
+   "ayah_in_surah": 9,
+   "verse_key": "70:9",
+   "page": 568,
+   "juz": 29
+  },
+  {
+   "global_number": 5385,
+   "surah": 70,
+   "ayah_in_surah": 10,
+   "verse_key": "70:10",
+   "page": 568,
+   "juz": 29
+  },
+  {
+   "global_number": 5386,
+   "surah": 70,
+   "ayah_in_surah": 11,
+   "verse_key": "70:11",
+   "page": 569,
+   "juz": 29
+  },
+  {
+   "global_number": 5387,
+   "surah": 70,
+   "ayah_in_surah": 12,
+   "verse_key": "70:12",
+   "page": 569,
+   "juz": 29
+  },
+  {
+   "global_number": 5388,
+   "surah": 70,
+   "ayah_in_surah": 13,
+   "verse_key": "70:13",
+   "page": 569,
+   "juz": 29
+  },
+  {
+   "global_number": 5389,
+   "surah": 70,
+   "ayah_in_surah": 14,
+   "verse_key": "70:14",
+   "page": 569,
+   "juz": 29
+  },
+  {
+   "global_number": 5390,
+   "surah": 70,
+   "ayah_in_surah": 15,
+   "verse_key": "70:15",
+   "page": 569,
+   "juz": 29
+  },
+  {
+   "global_number": 5391,
+   "surah": 70,
+   "ayah_in_surah": 16,
+   "verse_key": "70:16",
+   "page": 569,
+   "juz": 29
+  },
+  {
+   "global_number": 5392,
+   "surah": 70,
+   "ayah_in_surah": 17,
+   "verse_key": "70:17",
+   "page": 569,
+   "juz": 29
+  },
+  {
+   "global_number": 5393,
+   "surah": 70,
+   "ayah_in_surah": 18,
+   "verse_key": "70:18",
+   "page": 569,
+   "juz": 29
+  },
+  {
+   "global_number": 5394,
+   "surah": 70,
+   "ayah_in_surah": 19,
+   "verse_key": "70:19",
+   "page": 569,
+   "juz": 29
+  },
+  {
+   "global_number": 5395,
+   "surah": 70,
+   "ayah_in_surah": 20,
+   "verse_key": "70:20",
+   "page": 569,
+   "juz": 29
+  },
+  {
+   "global_number": 5396,
+   "surah": 70,
+   "ayah_in_surah": 21,
+   "verse_key": "70:21",
+   "page": 569,
+   "juz": 29
+  },
+  {
+   "global_number": 5397,
+   "surah": 70,
+   "ayah_in_surah": 22,
+   "verse_key": "70:22",
+   "page": 569,
+   "juz": 29
+  },
+  {
+   "global_number": 5398,
+   "surah": 70,
+   "ayah_in_surah": 23,
+   "verse_key": "70:23",
+   "page": 569,
+   "juz": 29
+  },
+  {
+   "global_number": 5399,
+   "surah": 70,
+   "ayah_in_surah": 24,
+   "verse_key": "70:24",
+   "page": 569,
+   "juz": 29
+  },
+  {
+   "global_number": 5400,
+   "surah": 70,
+   "ayah_in_surah": 25,
+   "verse_key": "70:25",
+   "page": 569,
+   "juz": 29
+  },
+  {
+   "global_number": 5401,
+   "surah": 70,
+   "ayah_in_surah": 26,
+   "verse_key": "70:26",
+   "page": 569,
+   "juz": 29
+  },
+  {
+   "global_number": 5402,
+   "surah": 70,
+   "ayah_in_surah": 27,
+   "verse_key": "70:27",
+   "page": 569,
+   "juz": 29
+  },
+  {
+   "global_number": 5403,
+   "surah": 70,
+   "ayah_in_surah": 28,
+   "verse_key": "70:28",
+   "page": 569,
+   "juz": 29
+  },
+  {
+   "global_number": 5404,
+   "surah": 70,
+   "ayah_in_surah": 29,
+   "verse_key": "70:29",
+   "page": 569,
+   "juz": 29
+  },
+  {
+   "global_number": 5405,
+   "surah": 70,
+   "ayah_in_surah": 30,
+   "verse_key": "70:30",
+   "page": 569,
+   "juz": 29
+  },
+  {
+   "global_number": 5406,
+   "surah": 70,
+   "ayah_in_surah": 31,
+   "verse_key": "70:31",
+   "page": 569,
+   "juz": 29
+  },
+  {
+   "global_number": 5407,
+   "surah": 70,
+   "ayah_in_surah": 32,
+   "verse_key": "70:32",
+   "page": 569,
+   "juz": 29
+  },
+  {
+   "global_number": 5408,
+   "surah": 70,
+   "ayah_in_surah": 33,
+   "verse_key": "70:33",
+   "page": 569,
+   "juz": 29
+  },
+  {
+   "global_number": 5409,
+   "surah": 70,
+   "ayah_in_surah": 34,
+   "verse_key": "70:34",
+   "page": 569,
+   "juz": 29
+  },
+  {
+   "global_number": 5410,
+   "surah": 70,
+   "ayah_in_surah": 35,
+   "verse_key": "70:35",
+   "page": 569,
+   "juz": 29
+  },
+  {
+   "global_number": 5411,
+   "surah": 70,
+   "ayah_in_surah": 36,
+   "verse_key": "70:36",
+   "page": 569,
+   "juz": 29
+  },
+  {
+   "global_number": 5412,
+   "surah": 70,
+   "ayah_in_surah": 37,
+   "verse_key": "70:37",
+   "page": 569,
+   "juz": 29
+  },
+  {
+   "global_number": 5413,
+   "surah": 70,
+   "ayah_in_surah": 38,
+   "verse_key": "70:38",
+   "page": 569,
+   "juz": 29
+  },
+  {
+   "global_number": 5414,
+   "surah": 70,
+   "ayah_in_surah": 39,
+   "verse_key": "70:39",
+   "page": 569,
+   "juz": 29
+  },
+  {
+   "global_number": 5415,
+   "surah": 70,
+   "ayah_in_surah": 40,
+   "verse_key": "70:40",
+   "page": 570,
+   "juz": 29
+  },
+  {
+   "global_number": 5416,
+   "surah": 70,
+   "ayah_in_surah": 41,
+   "verse_key": "70:41",
+   "page": 570,
+   "juz": 29
+  },
+  {
+   "global_number": 5417,
+   "surah": 70,
+   "ayah_in_surah": 42,
+   "verse_key": "70:42",
+   "page": 570,
+   "juz": 29
+  },
+  {
+   "global_number": 5418,
+   "surah": 70,
+   "ayah_in_surah": 43,
+   "verse_key": "70:43",
+   "page": 570,
+   "juz": 29
+  },
+  {
+   "global_number": 5419,
+   "surah": 70,
+   "ayah_in_surah": 44,
+   "verse_key": "70:44",
+   "page": 570,
+   "juz": 29
+  },
+  {
+   "global_number": 5420,
+   "surah": 71,
+   "ayah_in_surah": 1,
+   "verse_key": "71:1",
+   "page": 570,
+   "juz": 29
+  },
+  {
+   "global_number": 5421,
+   "surah": 71,
+   "ayah_in_surah": 2,
+   "verse_key": "71:2",
+   "page": 570,
+   "juz": 29
+  },
+  {
+   "global_number": 5422,
+   "surah": 71,
+   "ayah_in_surah": 3,
+   "verse_key": "71:3",
+   "page": 570,
+   "juz": 29
+  },
+  {
+   "global_number": 5423,
+   "surah": 71,
+   "ayah_in_surah": 4,
+   "verse_key": "71:4",
+   "page": 570,
+   "juz": 29
+  },
+  {
+   "global_number": 5424,
+   "surah": 71,
+   "ayah_in_surah": 5,
+   "verse_key": "71:5",
+   "page": 570,
+   "juz": 29
+  },
+  {
+   "global_number": 5425,
+   "surah": 71,
+   "ayah_in_surah": 6,
+   "verse_key": "71:6",
+   "page": 570,
+   "juz": 29
+  },
+  {
+   "global_number": 5426,
+   "surah": 71,
+   "ayah_in_surah": 7,
+   "verse_key": "71:7",
+   "page": 570,
+   "juz": 29
+  },
+  {
+   "global_number": 5427,
+   "surah": 71,
+   "ayah_in_surah": 8,
+   "verse_key": "71:8",
+   "page": 570,
+   "juz": 29
+  },
+  {
+   "global_number": 5428,
+   "surah": 71,
+   "ayah_in_surah": 9,
+   "verse_key": "71:9",
+   "page": 570,
+   "juz": 29
+  },
+  {
+   "global_number": 5429,
+   "surah": 71,
+   "ayah_in_surah": 10,
+   "verse_key": "71:10",
+   "page": 570,
+   "juz": 29
+  },
+  {
+   "global_number": 5430,
+   "surah": 71,
+   "ayah_in_surah": 11,
+   "verse_key": "71:11",
+   "page": 571,
+   "juz": 29
+  },
+  {
+   "global_number": 5431,
+   "surah": 71,
+   "ayah_in_surah": 12,
+   "verse_key": "71:12",
+   "page": 571,
+   "juz": 29
+  },
+  {
+   "global_number": 5432,
+   "surah": 71,
+   "ayah_in_surah": 13,
+   "verse_key": "71:13",
+   "page": 571,
+   "juz": 29
+  },
+  {
+   "global_number": 5433,
+   "surah": 71,
+   "ayah_in_surah": 14,
+   "verse_key": "71:14",
+   "page": 571,
+   "juz": 29
+  },
+  {
+   "global_number": 5434,
+   "surah": 71,
+   "ayah_in_surah": 15,
+   "verse_key": "71:15",
+   "page": 571,
+   "juz": 29
+  },
+  {
+   "global_number": 5435,
+   "surah": 71,
+   "ayah_in_surah": 16,
+   "verse_key": "71:16",
+   "page": 571,
+   "juz": 29
+  },
+  {
+   "global_number": 5436,
+   "surah": 71,
+   "ayah_in_surah": 17,
+   "verse_key": "71:17",
+   "page": 571,
+   "juz": 29
+  },
+  {
+   "global_number": 5437,
+   "surah": 71,
+   "ayah_in_surah": 18,
+   "verse_key": "71:18",
+   "page": 571,
+   "juz": 29
+  },
+  {
+   "global_number": 5438,
+   "surah": 71,
+   "ayah_in_surah": 19,
+   "verse_key": "71:19",
+   "page": 571,
+   "juz": 29
+  },
+  {
+   "global_number": 5439,
+   "surah": 71,
+   "ayah_in_surah": 20,
+   "verse_key": "71:20",
+   "page": 571,
+   "juz": 29
+  },
+  {
+   "global_number": 5440,
+   "surah": 71,
+   "ayah_in_surah": 21,
+   "verse_key": "71:21",
+   "page": 571,
+   "juz": 29
+  },
+  {
+   "global_number": 5441,
+   "surah": 71,
+   "ayah_in_surah": 22,
+   "verse_key": "71:22",
+   "page": 571,
+   "juz": 29
+  },
+  {
+   "global_number": 5442,
+   "surah": 71,
+   "ayah_in_surah": 23,
+   "verse_key": "71:23",
+   "page": 571,
+   "juz": 29
+  },
+  {
+   "global_number": 5443,
+   "surah": 71,
+   "ayah_in_surah": 24,
+   "verse_key": "71:24",
+   "page": 571,
+   "juz": 29
+  },
+  {
+   "global_number": 5444,
+   "surah": 71,
+   "ayah_in_surah": 25,
+   "verse_key": "71:25",
+   "page": 571,
+   "juz": 29
+  },
+  {
+   "global_number": 5445,
+   "surah": 71,
+   "ayah_in_surah": 26,
+   "verse_key": "71:26",
+   "page": 571,
+   "juz": 29
+  },
+  {
+   "global_number": 5446,
+   "surah": 71,
+   "ayah_in_surah": 27,
+   "verse_key": "71:27",
+   "page": 571,
+   "juz": 29
+  },
+  {
+   "global_number": 5447,
+   "surah": 71,
+   "ayah_in_surah": 28,
+   "verse_key": "71:28",
+   "page": 571,
+   "juz": 29
+  },
+  {
+   "global_number": 5448,
+   "surah": 72,
+   "ayah_in_surah": 1,
+   "verse_key": "72:1",
+   "page": 572,
+   "juz": 29
+  },
+  {
+   "global_number": 5449,
+   "surah": 72,
+   "ayah_in_surah": 2,
+   "verse_key": "72:2",
+   "page": 572,
+   "juz": 29
+  },
+  {
+   "global_number": 5450,
+   "surah": 72,
+   "ayah_in_surah": 3,
+   "verse_key": "72:3",
+   "page": 572,
+   "juz": 29
+  },
+  {
+   "global_number": 5451,
+   "surah": 72,
+   "ayah_in_surah": 4,
+   "verse_key": "72:4",
+   "page": 572,
+   "juz": 29
+  },
+  {
+   "global_number": 5452,
+   "surah": 72,
+   "ayah_in_surah": 5,
+   "verse_key": "72:5",
+   "page": 572,
+   "juz": 29
+  },
+  {
+   "global_number": 5453,
+   "surah": 72,
+   "ayah_in_surah": 6,
+   "verse_key": "72:6",
+   "page": 572,
+   "juz": 29
+  },
+  {
+   "global_number": 5454,
+   "surah": 72,
+   "ayah_in_surah": 7,
+   "verse_key": "72:7",
+   "page": 572,
+   "juz": 29
+  },
+  {
+   "global_number": 5455,
+   "surah": 72,
+   "ayah_in_surah": 8,
+   "verse_key": "72:8",
+   "page": 572,
+   "juz": 29
+  },
+  {
+   "global_number": 5456,
+   "surah": 72,
+   "ayah_in_surah": 9,
+   "verse_key": "72:9",
+   "page": 572,
+   "juz": 29
+  },
+  {
+   "global_number": 5457,
+   "surah": 72,
+   "ayah_in_surah": 10,
+   "verse_key": "72:10",
+   "page": 572,
+   "juz": 29
+  },
+  {
+   "global_number": 5458,
+   "surah": 72,
+   "ayah_in_surah": 11,
+   "verse_key": "72:11",
+   "page": 572,
+   "juz": 29
+  },
+  {
+   "global_number": 5459,
+   "surah": 72,
+   "ayah_in_surah": 12,
+   "verse_key": "72:12",
+   "page": 572,
+   "juz": 29
+  },
+  {
+   "global_number": 5460,
+   "surah": 72,
+   "ayah_in_surah": 13,
+   "verse_key": "72:13",
+   "page": 572,
+   "juz": 29
+  },
+  {
+   "global_number": 5461,
+   "surah": 72,
+   "ayah_in_surah": 14,
+   "verse_key": "72:14",
+   "page": 573,
+   "juz": 29
+  },
+  {
+   "global_number": 5462,
+   "surah": 72,
+   "ayah_in_surah": 15,
+   "verse_key": "72:15",
+   "page": 573,
+   "juz": 29
+  },
+  {
+   "global_number": 5463,
+   "surah": 72,
+   "ayah_in_surah": 16,
+   "verse_key": "72:16",
+   "page": 573,
+   "juz": 29
+  },
+  {
+   "global_number": 5464,
+   "surah": 72,
+   "ayah_in_surah": 17,
+   "verse_key": "72:17",
+   "page": 573,
+   "juz": 29
+  },
+  {
+   "global_number": 5465,
+   "surah": 72,
+   "ayah_in_surah": 18,
+   "verse_key": "72:18",
+   "page": 573,
+   "juz": 29
+  },
+  {
+   "global_number": 5466,
+   "surah": 72,
+   "ayah_in_surah": 19,
+   "verse_key": "72:19",
+   "page": 573,
+   "juz": 29
+  },
+  {
+   "global_number": 5467,
+   "surah": 72,
+   "ayah_in_surah": 20,
+   "verse_key": "72:20",
+   "page": 573,
+   "juz": 29
+  },
+  {
+   "global_number": 5468,
+   "surah": 72,
+   "ayah_in_surah": 21,
+   "verse_key": "72:21",
+   "page": 573,
+   "juz": 29
+  },
+  {
+   "global_number": 5469,
+   "surah": 72,
+   "ayah_in_surah": 22,
+   "verse_key": "72:22",
+   "page": 573,
+   "juz": 29
+  },
+  {
+   "global_number": 5470,
+   "surah": 72,
+   "ayah_in_surah": 23,
+   "verse_key": "72:23",
+   "page": 573,
+   "juz": 29
+  },
+  {
+   "global_number": 5471,
+   "surah": 72,
+   "ayah_in_surah": 24,
+   "verse_key": "72:24",
+   "page": 573,
+   "juz": 29
+  },
+  {
+   "global_number": 5472,
+   "surah": 72,
+   "ayah_in_surah": 25,
+   "verse_key": "72:25",
+   "page": 573,
+   "juz": 29
+  },
+  {
+   "global_number": 5473,
+   "surah": 72,
+   "ayah_in_surah": 26,
+   "verse_key": "72:26",
+   "page": 573,
+   "juz": 29
+  },
+  {
+   "global_number": 5474,
+   "surah": 72,
+   "ayah_in_surah": 27,
+   "verse_key": "72:27",
+   "page": 573,
+   "juz": 29
+  },
+  {
+   "global_number": 5475,
+   "surah": 72,
+   "ayah_in_surah": 28,
+   "verse_key": "72:28",
+   "page": 573,
+   "juz": 29
+  },
+  {
+   "global_number": 5476,
+   "surah": 73,
+   "ayah_in_surah": 1,
+   "verse_key": "73:1",
+   "page": 574,
+   "juz": 29
+  },
+  {
+   "global_number": 5477,
+   "surah": 73,
+   "ayah_in_surah": 2,
+   "verse_key": "73:2",
+   "page": 574,
+   "juz": 29
+  },
+  {
+   "global_number": 5478,
+   "surah": 73,
+   "ayah_in_surah": 3,
+   "verse_key": "73:3",
+   "page": 574,
+   "juz": 29
+  },
+  {
+   "global_number": 5479,
+   "surah": 73,
+   "ayah_in_surah": 4,
+   "verse_key": "73:4",
+   "page": 574,
+   "juz": 29
+  },
+  {
+   "global_number": 5480,
+   "surah": 73,
+   "ayah_in_surah": 5,
+   "verse_key": "73:5",
+   "page": 574,
+   "juz": 29
+  },
+  {
+   "global_number": 5481,
+   "surah": 73,
+   "ayah_in_surah": 6,
+   "verse_key": "73:6",
+   "page": 574,
+   "juz": 29
+  },
+  {
+   "global_number": 5482,
+   "surah": 73,
+   "ayah_in_surah": 7,
+   "verse_key": "73:7",
+   "page": 574,
+   "juz": 29
+  },
+  {
+   "global_number": 5483,
+   "surah": 73,
+   "ayah_in_surah": 8,
+   "verse_key": "73:8",
+   "page": 574,
+   "juz": 29
+  },
+  {
+   "global_number": 5484,
+   "surah": 73,
+   "ayah_in_surah": 9,
+   "verse_key": "73:9",
+   "page": 574,
+   "juz": 29
+  },
+  {
+   "global_number": 5485,
+   "surah": 73,
+   "ayah_in_surah": 10,
+   "verse_key": "73:10",
+   "page": 574,
+   "juz": 29
+  },
+  {
+   "global_number": 5486,
+   "surah": 73,
+   "ayah_in_surah": 11,
+   "verse_key": "73:11",
+   "page": 574,
+   "juz": 29
+  },
+  {
+   "global_number": 5487,
+   "surah": 73,
+   "ayah_in_surah": 12,
+   "verse_key": "73:12",
+   "page": 574,
+   "juz": 29
+  },
+  {
+   "global_number": 5488,
+   "surah": 73,
+   "ayah_in_surah": 13,
+   "verse_key": "73:13",
+   "page": 574,
+   "juz": 29
+  },
+  {
+   "global_number": 5489,
+   "surah": 73,
+   "ayah_in_surah": 14,
+   "verse_key": "73:14",
+   "page": 574,
+   "juz": 29
+  },
+  {
+   "global_number": 5490,
+   "surah": 73,
+   "ayah_in_surah": 15,
+   "verse_key": "73:15",
+   "page": 574,
+   "juz": 29
+  },
+  {
+   "global_number": 5491,
+   "surah": 73,
+   "ayah_in_surah": 16,
+   "verse_key": "73:16",
+   "page": 574,
+   "juz": 29
+  },
+  {
+   "global_number": 5492,
+   "surah": 73,
+   "ayah_in_surah": 17,
+   "verse_key": "73:17",
+   "page": 574,
+   "juz": 29
+  },
+  {
+   "global_number": 5493,
+   "surah": 73,
+   "ayah_in_surah": 18,
+   "verse_key": "73:18",
+   "page": 574,
+   "juz": 29
+  },
+  {
+   "global_number": 5494,
+   "surah": 73,
+   "ayah_in_surah": 19,
+   "verse_key": "73:19",
+   "page": 574,
+   "juz": 29
+  },
+  {
+   "global_number": 5495,
+   "surah": 73,
+   "ayah_in_surah": 20,
+   "verse_key": "73:20",
+   "page": 575,
+   "juz": 29
+  },
+  {
+   "global_number": 5496,
+   "surah": 74,
+   "ayah_in_surah": 1,
+   "verse_key": "74:1",
+   "page": 575,
+   "juz": 29
+  },
+  {
+   "global_number": 5497,
+   "surah": 74,
+   "ayah_in_surah": 2,
+   "verse_key": "74:2",
+   "page": 575,
+   "juz": 29
+  },
+  {
+   "global_number": 5498,
+   "surah": 74,
+   "ayah_in_surah": 3,
+   "verse_key": "74:3",
+   "page": 575,
+   "juz": 29
+  },
+  {
+   "global_number": 5499,
+   "surah": 74,
+   "ayah_in_surah": 4,
+   "verse_key": "74:4",
+   "page": 575,
+   "juz": 29
+  },
+  {
+   "global_number": 5500,
+   "surah": 74,
+   "ayah_in_surah": 5,
+   "verse_key": "74:5",
+   "page": 575,
+   "juz": 29
+  },
+  {
+   "global_number": 5501,
+   "surah": 74,
+   "ayah_in_surah": 6,
+   "verse_key": "74:6",
+   "page": 575,
+   "juz": 29
+  },
+  {
+   "global_number": 5502,
+   "surah": 74,
+   "ayah_in_surah": 7,
+   "verse_key": "74:7",
+   "page": 575,
+   "juz": 29
+  },
+  {
+   "global_number": 5503,
+   "surah": 74,
+   "ayah_in_surah": 8,
+   "verse_key": "74:8",
+   "page": 575,
+   "juz": 29
+  },
+  {
+   "global_number": 5504,
+   "surah": 74,
+   "ayah_in_surah": 9,
+   "verse_key": "74:9",
+   "page": 575,
+   "juz": 29
+  },
+  {
+   "global_number": 5505,
+   "surah": 74,
+   "ayah_in_surah": 10,
+   "verse_key": "74:10",
+   "page": 575,
+   "juz": 29
+  },
+  {
+   "global_number": 5506,
+   "surah": 74,
+   "ayah_in_surah": 11,
+   "verse_key": "74:11",
+   "page": 575,
+   "juz": 29
+  },
+  {
+   "global_number": 5507,
+   "surah": 74,
+   "ayah_in_surah": 12,
+   "verse_key": "74:12",
+   "page": 575,
+   "juz": 29
+  },
+  {
+   "global_number": 5508,
+   "surah": 74,
+   "ayah_in_surah": 13,
+   "verse_key": "74:13",
+   "page": 575,
+   "juz": 29
+  },
+  {
+   "global_number": 5509,
+   "surah": 74,
+   "ayah_in_surah": 14,
+   "verse_key": "74:14",
+   "page": 575,
+   "juz": 29
+  },
+  {
+   "global_number": 5510,
+   "surah": 74,
+   "ayah_in_surah": 15,
+   "verse_key": "74:15",
+   "page": 575,
+   "juz": 29
+  },
+  {
+   "global_number": 5511,
+   "surah": 74,
+   "ayah_in_surah": 16,
+   "verse_key": "74:16",
+   "page": 575,
+   "juz": 29
+  },
+  {
+   "global_number": 5512,
+   "surah": 74,
+   "ayah_in_surah": 17,
+   "verse_key": "74:17",
+   "page": 575,
+   "juz": 29
+  },
+  {
+   "global_number": 5513,
+   "surah": 74,
+   "ayah_in_surah": 18,
+   "verse_key": "74:18",
+   "page": 576,
+   "juz": 29
+  },
+  {
+   "global_number": 5514,
+   "surah": 74,
+   "ayah_in_surah": 19,
+   "verse_key": "74:19",
+   "page": 576,
+   "juz": 29
+  },
+  {
+   "global_number": 5515,
+   "surah": 74,
+   "ayah_in_surah": 20,
+   "verse_key": "74:20",
+   "page": 576,
+   "juz": 29
+  },
+  {
+   "global_number": 5516,
+   "surah": 74,
+   "ayah_in_surah": 21,
+   "verse_key": "74:21",
+   "page": 576,
+   "juz": 29
+  },
+  {
+   "global_number": 5517,
+   "surah": 74,
+   "ayah_in_surah": 22,
+   "verse_key": "74:22",
+   "page": 576,
+   "juz": 29
+  },
+  {
+   "global_number": 5518,
+   "surah": 74,
+   "ayah_in_surah": 23,
+   "verse_key": "74:23",
+   "page": 576,
+   "juz": 29
+  },
+  {
+   "global_number": 5519,
+   "surah": 74,
+   "ayah_in_surah": 24,
+   "verse_key": "74:24",
+   "page": 576,
+   "juz": 29
+  },
+  {
+   "global_number": 5520,
+   "surah": 74,
+   "ayah_in_surah": 25,
+   "verse_key": "74:25",
+   "page": 576,
+   "juz": 29
+  },
+  {
+   "global_number": 5521,
+   "surah": 74,
+   "ayah_in_surah": 26,
+   "verse_key": "74:26",
+   "page": 576,
+   "juz": 29
+  },
+  {
+   "global_number": 5522,
+   "surah": 74,
+   "ayah_in_surah": 27,
+   "verse_key": "74:27",
+   "page": 576,
+   "juz": 29
+  },
+  {
+   "global_number": 5523,
+   "surah": 74,
+   "ayah_in_surah": 28,
+   "verse_key": "74:28",
+   "page": 576,
+   "juz": 29
+  },
+  {
+   "global_number": 5524,
+   "surah": 74,
+   "ayah_in_surah": 29,
+   "verse_key": "74:29",
+   "page": 576,
+   "juz": 29
+  },
+  {
+   "global_number": 5525,
+   "surah": 74,
+   "ayah_in_surah": 30,
+   "verse_key": "74:30",
+   "page": 576,
+   "juz": 29
+  },
+  {
+   "global_number": 5526,
+   "surah": 74,
+   "ayah_in_surah": 31,
+   "verse_key": "74:31",
+   "page": 576,
+   "juz": 29
+  },
+  {
+   "global_number": 5527,
+   "surah": 74,
+   "ayah_in_surah": 32,
+   "verse_key": "74:32",
+   "page": 576,
+   "juz": 29
+  },
+  {
+   "global_number": 5528,
+   "surah": 74,
+   "ayah_in_surah": 33,
+   "verse_key": "74:33",
+   "page": 576,
+   "juz": 29
+  },
+  {
+   "global_number": 5529,
+   "surah": 74,
+   "ayah_in_surah": 34,
+   "verse_key": "74:34",
+   "page": 576,
+   "juz": 29
+  },
+  {
+   "global_number": 5530,
+   "surah": 74,
+   "ayah_in_surah": 35,
+   "verse_key": "74:35",
+   "page": 576,
+   "juz": 29
+  },
+  {
+   "global_number": 5531,
+   "surah": 74,
+   "ayah_in_surah": 36,
+   "verse_key": "74:36",
+   "page": 576,
+   "juz": 29
+  },
+  {
+   "global_number": 5532,
+   "surah": 74,
+   "ayah_in_surah": 37,
+   "verse_key": "74:37",
+   "page": 576,
+   "juz": 29
+  },
+  {
+   "global_number": 5533,
+   "surah": 74,
+   "ayah_in_surah": 38,
+   "verse_key": "74:38",
+   "page": 576,
+   "juz": 29
+  },
+  {
+   "global_number": 5534,
+   "surah": 74,
+   "ayah_in_surah": 39,
+   "verse_key": "74:39",
+   "page": 576,
+   "juz": 29
+  },
+  {
+   "global_number": 5535,
+   "surah": 74,
+   "ayah_in_surah": 40,
+   "verse_key": "74:40",
+   "page": 576,
+   "juz": 29
+  },
+  {
+   "global_number": 5536,
+   "surah": 74,
+   "ayah_in_surah": 41,
+   "verse_key": "74:41",
+   "page": 576,
+   "juz": 29
+  },
+  {
+   "global_number": 5537,
+   "surah": 74,
+   "ayah_in_surah": 42,
+   "verse_key": "74:42",
+   "page": 576,
+   "juz": 29
+  },
+  {
+   "global_number": 5538,
+   "surah": 74,
+   "ayah_in_surah": 43,
+   "verse_key": "74:43",
+   "page": 576,
+   "juz": 29
+  },
+  {
+   "global_number": 5539,
+   "surah": 74,
+   "ayah_in_surah": 44,
+   "verse_key": "74:44",
+   "page": 576,
+   "juz": 29
+  },
+  {
+   "global_number": 5540,
+   "surah": 74,
+   "ayah_in_surah": 45,
+   "verse_key": "74:45",
+   "page": 576,
+   "juz": 29
+  },
+  {
+   "global_number": 5541,
+   "surah": 74,
+   "ayah_in_surah": 46,
+   "verse_key": "74:46",
+   "page": 576,
+   "juz": 29
+  },
+  {
+   "global_number": 5542,
+   "surah": 74,
+   "ayah_in_surah": 47,
+   "verse_key": "74:47",
+   "page": 576,
+   "juz": 29
+  },
+  {
+   "global_number": 5543,
+   "surah": 74,
+   "ayah_in_surah": 48,
+   "verse_key": "74:48",
+   "page": 577,
+   "juz": 29
+  },
+  {
+   "global_number": 5544,
+   "surah": 74,
+   "ayah_in_surah": 49,
+   "verse_key": "74:49",
+   "page": 577,
+   "juz": 29
+  },
+  {
+   "global_number": 5545,
+   "surah": 74,
+   "ayah_in_surah": 50,
+   "verse_key": "74:50",
+   "page": 577,
+   "juz": 29
+  },
+  {
+   "global_number": 5546,
+   "surah": 74,
+   "ayah_in_surah": 51,
+   "verse_key": "74:51",
+   "page": 577,
+   "juz": 29
+  },
+  {
+   "global_number": 5547,
+   "surah": 74,
+   "ayah_in_surah": 52,
+   "verse_key": "74:52",
+   "page": 577,
+   "juz": 29
+  },
+  {
+   "global_number": 5548,
+   "surah": 74,
+   "ayah_in_surah": 53,
+   "verse_key": "74:53",
+   "page": 577,
+   "juz": 29
+  },
+  {
+   "global_number": 5549,
+   "surah": 74,
+   "ayah_in_surah": 54,
+   "verse_key": "74:54",
+   "page": 577,
+   "juz": 29
+  },
+  {
+   "global_number": 5550,
+   "surah": 74,
+   "ayah_in_surah": 55,
+   "verse_key": "74:55",
+   "page": 577,
+   "juz": 29
+  },
+  {
+   "global_number": 5551,
+   "surah": 74,
+   "ayah_in_surah": 56,
+   "verse_key": "74:56",
+   "page": 577,
+   "juz": 29
+  },
+  {
+   "global_number": 5552,
+   "surah": 75,
+   "ayah_in_surah": 1,
+   "verse_key": "75:1",
+   "page": 577,
+   "juz": 29
+  },
+  {
+   "global_number": 5553,
+   "surah": 75,
+   "ayah_in_surah": 2,
+   "verse_key": "75:2",
+   "page": 577,
+   "juz": 29
+  },
+  {
+   "global_number": 5554,
+   "surah": 75,
+   "ayah_in_surah": 3,
+   "verse_key": "75:3",
+   "page": 577,
+   "juz": 29
+  },
+  {
+   "global_number": 5555,
+   "surah": 75,
+   "ayah_in_surah": 4,
+   "verse_key": "75:4",
+   "page": 577,
+   "juz": 29
+  },
+  {
+   "global_number": 5556,
+   "surah": 75,
+   "ayah_in_surah": 5,
+   "verse_key": "75:5",
+   "page": 577,
+   "juz": 29
+  },
+  {
+   "global_number": 5557,
+   "surah": 75,
+   "ayah_in_surah": 6,
+   "verse_key": "75:6",
+   "page": 577,
+   "juz": 29
+  },
+  {
+   "global_number": 5558,
+   "surah": 75,
+   "ayah_in_surah": 7,
+   "verse_key": "75:7",
+   "page": 577,
+   "juz": 29
+  },
+  {
+   "global_number": 5559,
+   "surah": 75,
+   "ayah_in_surah": 8,
+   "verse_key": "75:8",
+   "page": 577,
+   "juz": 29
+  },
+  {
+   "global_number": 5560,
+   "surah": 75,
+   "ayah_in_surah": 9,
+   "verse_key": "75:9",
+   "page": 577,
+   "juz": 29
+  },
+  {
+   "global_number": 5561,
+   "surah": 75,
+   "ayah_in_surah": 10,
+   "verse_key": "75:10",
+   "page": 577,
+   "juz": 29
+  },
+  {
+   "global_number": 5562,
+   "surah": 75,
+   "ayah_in_surah": 11,
+   "verse_key": "75:11",
+   "page": 577,
+   "juz": 29
+  },
+  {
+   "global_number": 5563,
+   "surah": 75,
+   "ayah_in_surah": 12,
+   "verse_key": "75:12",
+   "page": 577,
+   "juz": 29
+  },
+  {
+   "global_number": 5564,
+   "surah": 75,
+   "ayah_in_surah": 13,
+   "verse_key": "75:13",
+   "page": 577,
+   "juz": 29
+  },
+  {
+   "global_number": 5565,
+   "surah": 75,
+   "ayah_in_surah": 14,
+   "verse_key": "75:14",
+   "page": 577,
+   "juz": 29
+  },
+  {
+   "global_number": 5566,
+   "surah": 75,
+   "ayah_in_surah": 15,
+   "verse_key": "75:15",
+   "page": 577,
+   "juz": 29
+  },
+  {
+   "global_number": 5567,
+   "surah": 75,
+   "ayah_in_surah": 16,
+   "verse_key": "75:16",
+   "page": 577,
+   "juz": 29
+  },
+  {
+   "global_number": 5568,
+   "surah": 75,
+   "ayah_in_surah": 17,
+   "verse_key": "75:17",
+   "page": 577,
+   "juz": 29
+  },
+  {
+   "global_number": 5569,
+   "surah": 75,
+   "ayah_in_surah": 18,
+   "verse_key": "75:18",
+   "page": 577,
+   "juz": 29
+  },
+  {
+   "global_number": 5570,
+   "surah": 75,
+   "ayah_in_surah": 19,
+   "verse_key": "75:19",
+   "page": 577,
+   "juz": 29
+  },
+  {
+   "global_number": 5571,
+   "surah": 75,
+   "ayah_in_surah": 20,
+   "verse_key": "75:20",
+   "page": 578,
+   "juz": 29
+  },
+  {
+   "global_number": 5572,
+   "surah": 75,
+   "ayah_in_surah": 21,
+   "verse_key": "75:21",
+   "page": 578,
+   "juz": 29
+  },
+  {
+   "global_number": 5573,
+   "surah": 75,
+   "ayah_in_surah": 22,
+   "verse_key": "75:22",
+   "page": 578,
+   "juz": 29
+  },
+  {
+   "global_number": 5574,
+   "surah": 75,
+   "ayah_in_surah": 23,
+   "verse_key": "75:23",
+   "page": 578,
+   "juz": 29
+  },
+  {
+   "global_number": 5575,
+   "surah": 75,
+   "ayah_in_surah": 24,
+   "verse_key": "75:24",
+   "page": 578,
+   "juz": 29
+  },
+  {
+   "global_number": 5576,
+   "surah": 75,
+   "ayah_in_surah": 25,
+   "verse_key": "75:25",
+   "page": 578,
+   "juz": 29
+  },
+  {
+   "global_number": 5577,
+   "surah": 75,
+   "ayah_in_surah": 26,
+   "verse_key": "75:26",
+   "page": 578,
+   "juz": 29
+  },
+  {
+   "global_number": 5578,
+   "surah": 75,
+   "ayah_in_surah": 27,
+   "verse_key": "75:27",
+   "page": 578,
+   "juz": 29
+  },
+  {
+   "global_number": 5579,
+   "surah": 75,
+   "ayah_in_surah": 28,
+   "verse_key": "75:28",
+   "page": 578,
+   "juz": 29
+  },
+  {
+   "global_number": 5580,
+   "surah": 75,
+   "ayah_in_surah": 29,
+   "verse_key": "75:29",
+   "page": 578,
+   "juz": 29
+  },
+  {
+   "global_number": 5581,
+   "surah": 75,
+   "ayah_in_surah": 30,
+   "verse_key": "75:30",
+   "page": 578,
+   "juz": 29
+  },
+  {
+   "global_number": 5582,
+   "surah": 75,
+   "ayah_in_surah": 31,
+   "verse_key": "75:31",
+   "page": 578,
+   "juz": 29
+  },
+  {
+   "global_number": 5583,
+   "surah": 75,
+   "ayah_in_surah": 32,
+   "verse_key": "75:32",
+   "page": 578,
+   "juz": 29
+  },
+  {
+   "global_number": 5584,
+   "surah": 75,
+   "ayah_in_surah": 33,
+   "verse_key": "75:33",
+   "page": 578,
+   "juz": 29
+  },
+  {
+   "global_number": 5585,
+   "surah": 75,
+   "ayah_in_surah": 34,
+   "verse_key": "75:34",
+   "page": 578,
+   "juz": 29
+  },
+  {
+   "global_number": 5586,
+   "surah": 75,
+   "ayah_in_surah": 35,
+   "verse_key": "75:35",
+   "page": 578,
+   "juz": 29
+  },
+  {
+   "global_number": 5587,
+   "surah": 75,
+   "ayah_in_surah": 36,
+   "verse_key": "75:36",
+   "page": 578,
+   "juz": 29
+  },
+  {
+   "global_number": 5588,
+   "surah": 75,
+   "ayah_in_surah": 37,
+   "verse_key": "75:37",
+   "page": 578,
+   "juz": 29
+  },
+  {
+   "global_number": 5589,
+   "surah": 75,
+   "ayah_in_surah": 38,
+   "verse_key": "75:38",
+   "page": 578,
+   "juz": 29
+  },
+  {
+   "global_number": 5590,
+   "surah": 75,
+   "ayah_in_surah": 39,
+   "verse_key": "75:39",
+   "page": 578,
+   "juz": 29
+  },
+  {
+   "global_number": 5591,
+   "surah": 75,
+   "ayah_in_surah": 40,
+   "verse_key": "75:40",
+   "page": 578,
+   "juz": 29
+  },
+  {
+   "global_number": 5592,
+   "surah": 76,
+   "ayah_in_surah": 1,
+   "verse_key": "76:1",
+   "page": 578,
+   "juz": 29
+  },
+  {
+   "global_number": 5593,
+   "surah": 76,
+   "ayah_in_surah": 2,
+   "verse_key": "76:2",
+   "page": 578,
+   "juz": 29
+  },
+  {
+   "global_number": 5594,
+   "surah": 76,
+   "ayah_in_surah": 3,
+   "verse_key": "76:3",
+   "page": 578,
+   "juz": 29
+  },
+  {
+   "global_number": 5595,
+   "surah": 76,
+   "ayah_in_surah": 4,
+   "verse_key": "76:4",
+   "page": 578,
+   "juz": 29
+  },
+  {
+   "global_number": 5596,
+   "surah": 76,
+   "ayah_in_surah": 5,
+   "verse_key": "76:5",
+   "page": 578,
+   "juz": 29
+  },
+  {
+   "global_number": 5597,
+   "surah": 76,
+   "ayah_in_surah": 6,
+   "verse_key": "76:6",
+   "page": 579,
+   "juz": 29
+  },
+  {
+   "global_number": 5598,
+   "surah": 76,
+   "ayah_in_surah": 7,
+   "verse_key": "76:7",
+   "page": 579,
+   "juz": 29
+  },
+  {
+   "global_number": 5599,
+   "surah": 76,
+   "ayah_in_surah": 8,
+   "verse_key": "76:8",
+   "page": 579,
+   "juz": 29
+  },
+  {
+   "global_number": 5600,
+   "surah": 76,
+   "ayah_in_surah": 9,
+   "verse_key": "76:9",
+   "page": 579,
+   "juz": 29
+  },
+  {
+   "global_number": 5601,
+   "surah": 76,
+   "ayah_in_surah": 10,
+   "verse_key": "76:10",
+   "page": 579,
+   "juz": 29
+  },
+  {
+   "global_number": 5602,
+   "surah": 76,
+   "ayah_in_surah": 11,
+   "verse_key": "76:11",
+   "page": 579,
+   "juz": 29
+  },
+  {
+   "global_number": 5603,
+   "surah": 76,
+   "ayah_in_surah": 12,
+   "verse_key": "76:12",
+   "page": 579,
+   "juz": 29
+  },
+  {
+   "global_number": 5604,
+   "surah": 76,
+   "ayah_in_surah": 13,
+   "verse_key": "76:13",
+   "page": 579,
+   "juz": 29
+  },
+  {
+   "global_number": 5605,
+   "surah": 76,
+   "ayah_in_surah": 14,
+   "verse_key": "76:14",
+   "page": 579,
+   "juz": 29
+  },
+  {
+   "global_number": 5606,
+   "surah": 76,
+   "ayah_in_surah": 15,
+   "verse_key": "76:15",
+   "page": 579,
+   "juz": 29
+  },
+  {
+   "global_number": 5607,
+   "surah": 76,
+   "ayah_in_surah": 16,
+   "verse_key": "76:16",
+   "page": 579,
+   "juz": 29
+  },
+  {
+   "global_number": 5608,
+   "surah": 76,
+   "ayah_in_surah": 17,
+   "verse_key": "76:17",
+   "page": 579,
+   "juz": 29
+  },
+  {
+   "global_number": 5609,
+   "surah": 76,
+   "ayah_in_surah": 18,
+   "verse_key": "76:18",
+   "page": 579,
+   "juz": 29
+  },
+  {
+   "global_number": 5610,
+   "surah": 76,
+   "ayah_in_surah": 19,
+   "verse_key": "76:19",
+   "page": 579,
+   "juz": 29
+  },
+  {
+   "global_number": 5611,
+   "surah": 76,
+   "ayah_in_surah": 20,
+   "verse_key": "76:20",
+   "page": 579,
+   "juz": 29
+  },
+  {
+   "global_number": 5612,
+   "surah": 76,
+   "ayah_in_surah": 21,
+   "verse_key": "76:21",
+   "page": 579,
+   "juz": 29
+  },
+  {
+   "global_number": 5613,
+   "surah": 76,
+   "ayah_in_surah": 22,
+   "verse_key": "76:22",
+   "page": 579,
+   "juz": 29
+  },
+  {
+   "global_number": 5614,
+   "surah": 76,
+   "ayah_in_surah": 23,
+   "verse_key": "76:23",
+   "page": 579,
+   "juz": 29
+  },
+  {
+   "global_number": 5615,
+   "surah": 76,
+   "ayah_in_surah": 24,
+   "verse_key": "76:24",
+   "page": 579,
+   "juz": 29
+  },
+  {
+   "global_number": 5616,
+   "surah": 76,
+   "ayah_in_surah": 25,
+   "verse_key": "76:25",
+   "page": 579,
+   "juz": 29
+  },
+  {
+   "global_number": 5617,
+   "surah": 76,
+   "ayah_in_surah": 26,
+   "verse_key": "76:26",
+   "page": 580,
+   "juz": 29
+  },
+  {
+   "global_number": 5618,
+   "surah": 76,
+   "ayah_in_surah": 27,
+   "verse_key": "76:27",
+   "page": 580,
+   "juz": 29
+  },
+  {
+   "global_number": 5619,
+   "surah": 76,
+   "ayah_in_surah": 28,
+   "verse_key": "76:28",
+   "page": 580,
+   "juz": 29
+  },
+  {
+   "global_number": 5620,
+   "surah": 76,
+   "ayah_in_surah": 29,
+   "verse_key": "76:29",
+   "page": 580,
+   "juz": 29
+  },
+  {
+   "global_number": 5621,
+   "surah": 76,
+   "ayah_in_surah": 30,
+   "verse_key": "76:30",
+   "page": 580,
+   "juz": 29
+  },
+  {
+   "global_number": 5622,
+   "surah": 76,
+   "ayah_in_surah": 31,
+   "verse_key": "76:31",
+   "page": 580,
+   "juz": 29
+  },
+  {
+   "global_number": 5623,
+   "surah": 77,
+   "ayah_in_surah": 1,
+   "verse_key": "77:1",
+   "page": 580,
+   "juz": 29
+  },
+  {
+   "global_number": 5624,
+   "surah": 77,
+   "ayah_in_surah": 2,
+   "verse_key": "77:2",
+   "page": 580,
+   "juz": 29
+  },
+  {
+   "global_number": 5625,
+   "surah": 77,
+   "ayah_in_surah": 3,
+   "verse_key": "77:3",
+   "page": 580,
+   "juz": 29
+  },
+  {
+   "global_number": 5626,
+   "surah": 77,
+   "ayah_in_surah": 4,
+   "verse_key": "77:4",
+   "page": 580,
+   "juz": 29
+  },
+  {
+   "global_number": 5627,
+   "surah": 77,
+   "ayah_in_surah": 5,
+   "verse_key": "77:5",
+   "page": 580,
+   "juz": 29
+  },
+  {
+   "global_number": 5628,
+   "surah": 77,
+   "ayah_in_surah": 6,
+   "verse_key": "77:6",
+   "page": 580,
+   "juz": 29
+  },
+  {
+   "global_number": 5629,
+   "surah": 77,
+   "ayah_in_surah": 7,
+   "verse_key": "77:7",
+   "page": 580,
+   "juz": 29
+  },
+  {
+   "global_number": 5630,
+   "surah": 77,
+   "ayah_in_surah": 8,
+   "verse_key": "77:8",
+   "page": 580,
+   "juz": 29
+  },
+  {
+   "global_number": 5631,
+   "surah": 77,
+   "ayah_in_surah": 9,
+   "verse_key": "77:9",
+   "page": 580,
+   "juz": 29
+  },
+  {
+   "global_number": 5632,
+   "surah": 77,
+   "ayah_in_surah": 10,
+   "verse_key": "77:10",
+   "page": 580,
+   "juz": 29
+  },
+  {
+   "global_number": 5633,
+   "surah": 77,
+   "ayah_in_surah": 11,
+   "verse_key": "77:11",
+   "page": 580,
+   "juz": 29
+  },
+  {
+   "global_number": 5634,
+   "surah": 77,
+   "ayah_in_surah": 12,
+   "verse_key": "77:12",
+   "page": 580,
+   "juz": 29
+  },
+  {
+   "global_number": 5635,
+   "surah": 77,
+   "ayah_in_surah": 13,
+   "verse_key": "77:13",
+   "page": 580,
+   "juz": 29
+  },
+  {
+   "global_number": 5636,
+   "surah": 77,
+   "ayah_in_surah": 14,
+   "verse_key": "77:14",
+   "page": 580,
+   "juz": 29
+  },
+  {
+   "global_number": 5637,
+   "surah": 77,
+   "ayah_in_surah": 15,
+   "verse_key": "77:15",
+   "page": 580,
+   "juz": 29
+  },
+  {
+   "global_number": 5638,
+   "surah": 77,
+   "ayah_in_surah": 16,
+   "verse_key": "77:16",
+   "page": 580,
+   "juz": 29
+  },
+  {
+   "global_number": 5639,
+   "surah": 77,
+   "ayah_in_surah": 17,
+   "verse_key": "77:17",
+   "page": 580,
+   "juz": 29
+  },
+  {
+   "global_number": 5640,
+   "surah": 77,
+   "ayah_in_surah": 18,
+   "verse_key": "77:18",
+   "page": 580,
+   "juz": 29
+  },
+  {
+   "global_number": 5641,
+   "surah": 77,
+   "ayah_in_surah": 19,
+   "verse_key": "77:19",
+   "page": 580,
+   "juz": 29
+  },
+  {
+   "global_number": 5642,
+   "surah": 77,
+   "ayah_in_surah": 20,
+   "verse_key": "77:20",
+   "page": 581,
+   "juz": 29
+  },
+  {
+   "global_number": 5643,
+   "surah": 77,
+   "ayah_in_surah": 21,
+   "verse_key": "77:21",
+   "page": 581,
+   "juz": 29
+  },
+  {
+   "global_number": 5644,
+   "surah": 77,
+   "ayah_in_surah": 22,
+   "verse_key": "77:22",
+   "page": 581,
+   "juz": 29
+  },
+  {
+   "global_number": 5645,
+   "surah": 77,
+   "ayah_in_surah": 23,
+   "verse_key": "77:23",
+   "page": 581,
+   "juz": 29
+  },
+  {
+   "global_number": 5646,
+   "surah": 77,
+   "ayah_in_surah": 24,
+   "verse_key": "77:24",
+   "page": 581,
+   "juz": 29
+  },
+  {
+   "global_number": 5647,
+   "surah": 77,
+   "ayah_in_surah": 25,
+   "verse_key": "77:25",
+   "page": 581,
+   "juz": 29
+  },
+  {
+   "global_number": 5648,
+   "surah": 77,
+   "ayah_in_surah": 26,
+   "verse_key": "77:26",
+   "page": 581,
+   "juz": 29
+  },
+  {
+   "global_number": 5649,
+   "surah": 77,
+   "ayah_in_surah": 27,
+   "verse_key": "77:27",
+   "page": 581,
+   "juz": 29
+  },
+  {
+   "global_number": 5650,
+   "surah": 77,
+   "ayah_in_surah": 28,
+   "verse_key": "77:28",
+   "page": 581,
+   "juz": 29
+  },
+  {
+   "global_number": 5651,
+   "surah": 77,
+   "ayah_in_surah": 29,
+   "verse_key": "77:29",
+   "page": 581,
+   "juz": 29
+  },
+  {
+   "global_number": 5652,
+   "surah": 77,
+   "ayah_in_surah": 30,
+   "verse_key": "77:30",
+   "page": 581,
+   "juz": 29
+  },
+  {
+   "global_number": 5653,
+   "surah": 77,
+   "ayah_in_surah": 31,
+   "verse_key": "77:31",
+   "page": 581,
+   "juz": 29
+  },
+  {
+   "global_number": 5654,
+   "surah": 77,
+   "ayah_in_surah": 32,
+   "verse_key": "77:32",
+   "page": 581,
+   "juz": 29
+  },
+  {
+   "global_number": 5655,
+   "surah": 77,
+   "ayah_in_surah": 33,
+   "verse_key": "77:33",
+   "page": 581,
+   "juz": 29
+  },
+  {
+   "global_number": 5656,
+   "surah": 77,
+   "ayah_in_surah": 34,
+   "verse_key": "77:34",
+   "page": 581,
+   "juz": 29
+  },
+  {
+   "global_number": 5657,
+   "surah": 77,
+   "ayah_in_surah": 35,
+   "verse_key": "77:35",
+   "page": 581,
+   "juz": 29
+  },
+  {
+   "global_number": 5658,
+   "surah": 77,
+   "ayah_in_surah": 36,
+   "verse_key": "77:36",
+   "page": 581,
+   "juz": 29
+  },
+  {
+   "global_number": 5659,
+   "surah": 77,
+   "ayah_in_surah": 37,
+   "verse_key": "77:37",
+   "page": 581,
+   "juz": 29
+  },
+  {
+   "global_number": 5660,
+   "surah": 77,
+   "ayah_in_surah": 38,
+   "verse_key": "77:38",
+   "page": 581,
+   "juz": 29
+  },
+  {
+   "global_number": 5661,
+   "surah": 77,
+   "ayah_in_surah": 39,
+   "verse_key": "77:39",
+   "page": 581,
+   "juz": 29
+  },
+  {
+   "global_number": 5662,
+   "surah": 77,
+   "ayah_in_surah": 40,
+   "verse_key": "77:40",
+   "page": 581,
+   "juz": 29
+  },
+  {
+   "global_number": 5663,
+   "surah": 77,
+   "ayah_in_surah": 41,
+   "verse_key": "77:41",
+   "page": 581,
+   "juz": 29
+  },
+  {
+   "global_number": 5664,
+   "surah": 77,
+   "ayah_in_surah": 42,
+   "verse_key": "77:42",
+   "page": 581,
+   "juz": 29
+  },
+  {
+   "global_number": 5665,
+   "surah": 77,
+   "ayah_in_surah": 43,
+   "verse_key": "77:43",
+   "page": 581,
+   "juz": 29
+  },
+  {
+   "global_number": 5666,
+   "surah": 77,
+   "ayah_in_surah": 44,
+   "verse_key": "77:44",
+   "page": 581,
+   "juz": 29
+  },
+  {
+   "global_number": 5667,
+   "surah": 77,
+   "ayah_in_surah": 45,
+   "verse_key": "77:45",
+   "page": 581,
+   "juz": 29
+  },
+  {
+   "global_number": 5668,
+   "surah": 77,
+   "ayah_in_surah": 46,
+   "verse_key": "77:46",
+   "page": 581,
+   "juz": 29
+  },
+  {
+   "global_number": 5669,
+   "surah": 77,
+   "ayah_in_surah": 47,
+   "verse_key": "77:47",
+   "page": 581,
+   "juz": 29
+  },
+  {
+   "global_number": 5670,
+   "surah": 77,
+   "ayah_in_surah": 48,
+   "verse_key": "77:48",
+   "page": 581,
+   "juz": 29
+  },
+  {
+   "global_number": 5671,
+   "surah": 77,
+   "ayah_in_surah": 49,
+   "verse_key": "77:49",
+   "page": 581,
+   "juz": 29
+  },
+  {
+   "global_number": 5672,
+   "surah": 77,
+   "ayah_in_surah": 50,
+   "verse_key": "77:50",
+   "page": 581,
+   "juz": 29
+  }
+ ]
+}

@@ -1,0 +1,27 @@
+{
+ "meta": {
+  "surah": 55,
+  "surah_name": "Ar-Rahmaan",
+  "surah_name_arabic": "الرَّحۡمَٰن",
+  "revelation_type": "Medinan",
+  "juz": [
+   27
+  ],
+  "total_ayahs": 78,
+  "page_range": [
+   531,
+   534
+  ],
+  "ayahs_per_juz": {
+   "27": 78
+  },
+  "verification_status": {
+   "verse_text": "pending_etl",
+   "morphology": "pending_etl",
+   "wazn": "pending_etl"
+  },
+  "content_status": "scaffold",
+  "note": "Meta-complete scaffold. Verse/word/morphology/tafsir/wazn content to be populated by the ETL pipeline (KodeKoot) per the progressive-annotation convention in ARCHITECTURE.md. No verses synthesized."
+ },
+ "ayahs": []
+}

@@ -1,0 +1,221 @@
+{
+  "meta": {
+    "description": "Content layer schema for Tafsir progressive disclosure architecture",
+    "version": "1.0",
+    "last_updated": "2026-08-22",
+    "complexity_levels": {
+      "1": {
+        "name": "READ",
+        "description": "Arabic text + word-by-word translation, tap word for basic info",
+        "content_layers": ["verse_text", "word_translation"]
+      },
+      "2": {
+        "name": "STUDY",
+        "description": "Tafsir excerpt, morphological pattern, occurrences",
+        "content_layers": ["verse_text", "word_translation", "tafsir_excerpt", "morphology", "wazn", "occurrences"]
+      },
+      "3": {
+        "name": "EXPLORE",
+        "description": "Historical context, cross-references, thematic tags",
+        "content_layers": ["verse_text", "word_translation", "tafsir_excerpt", "morphology", "wazn", "occurrences", "asbab_al_nuzul", "cross_references", "thematic_tags"]
+      },
+      "4": {
+        "name": "DEEP",
+        "description": "Full tafsir, multi-edition comparison, detailed grammar",
+        "content_layers": ["verse_text", "word_translation", "tafsir_excerpt", "morphology", "wazn", "occurrences", "asbab_al_nuzul", "cross_references", "thematic_tags", "full_tafsir", "multi_edition_comparison", "detailed_grammar", "practical_application", "per_page_analysis"]
+      }
+    }
+  },
+  "content_layers": {
+    "verse_text": {
+      "layer_id": "verse_text",
+      "layer_type": "primary",
+      "scope": "verse",
+      "source_ids": ["corpus-quran-com"],
+      "verification_status": "verified",
+      "complexity_level": 1,
+      "description": "Canonical Arabic text of the verse"
+    },
+    "word_translation": {
+      "layer_id": "word_translation",
+      "layer_type": "primary",
+      "scope": "verse",
+      "source_ids": ["corpus-quran-com", "quran-foundation"],
+      "verification_status": "verified",
+      "complexity_level": 1,
+      "description": "Word-by-word translation"
+    },
+    "tafsir_excerpt": {
+      "layer_id": "tafsir_excerpt",
+      "layer_type": "commentary",
+      "scope": "verse",
+      "source_ids": ["spa5k-en-al-jalalayn", "spa5k-en-tafisr-ibn-kathir", "qul-tarteel"],
+      "verification_status": "sourced",
+      "complexity_level": 2,
+      "description": "Verse-level tafsir commentary from selected source"
+    },
+    "morphology": {
+      "layer_id": "morphology",
+      "layer_type": "linguistic",
+      "scope": "word",
+      "source_ids": ["corpus-quran-com", "quran-morphology"],
+      "verification_status": "verified",
+      "complexity_level": 2,
+      "description": "Morphological analysis per word (POS, grammar role)"
+    },
+    "wazn": {
+      "layer_id": "wazn",
+      "layer_type": "linguistic",
+      "scope": "word",
+      "source_ids": ["manual-annotation", "masaq-dataset"],
+      "verification_status": "verified",
+      "complexity_level": 2,
+      "description": "Morphological pattern (wazn) with root-letter templating and explanation"
+    },
+    "occurrences": {
+      "layer_id": "occurrences",
+      "layer_type": "statistical",
+      "scope": "root",
+      "source_ids": ["corpus-quran-com"],
+      "verification_status": "verified",
+      "complexity_level": 2,
+      "description": "Total occurrences of root across Quran with form breakdown"
+    },
+    "asbab_al_nuzul": {
+      "layer_id": "asbab_al_nuzul",
+      "layer_type": "historical_context",
+      "scope": "verse",
+      "source_ids": ["asbab-dataset-mostafaahmed97", "spa5k-asbab-al-wahidi"],
+      "verification_status": "sourced",
+      "complexity_level": 3,
+      "description": "Occasions of revelation — historical context for the verse",
+      "coverage_note": "~9-13% of Quran has authenticated asbab al-nuzul",
+      "absence_behavior": "show_nothing"
+    },
+    "cross_references": {
+      "layer_id": "cross_references",
+      "layer_type": "intertextual",
+      "scope": "verse",
+      "source_ids": ["munim-sirry-crossref", "iqsaweb-crossref"],
+      "verification_status": "sourced",
+      "complexity_level": 3,
+      "description": "Related Quran verses, Hadith, and scholarly works",
+      "data_path": "data/cross-references.json"
+    },
+    "thematic_tags": {
+      "layer_id": "thematic_tags",
+      "layer_type": "analytical",
+      "scope": "verse",
+      "source_ids": ["qul-mutashabihat", "thematic-annotation-dataset"],
+      "verification_status": "sourced",
+      "complexity_level": 3,
+      "description": "Contemporary themes linked to the verse (e.g., bioethics, economic justice)",
+      "data_path": "data/themes.json"
+    },
+    "full_tafsir": {
+      "layer_id": "full_tafsir",
+      "layer_type": "commentary",
+      "scope": "verse",
+      "source_ids": ["spa5k-en-al-jalalayn", "spa5k-en-tafisr-ibn-kathir"],
+      "verification_status": "sourced",
+      "complexity_level": 4,
+      "description": "Complete tafsir text (not excerpt)"
+    },
+    "multi_edition_comparison": {
+      "layer_id": "multi_edition_comparison",
+      "layer_type": "analytical",
+      "scope": "verse",
+      "source_ids": ["spa5k-en-al-jalalayn", "spa5k-en-tafisr-ibn-kathir", "qul-tarteel"],
+      "verification_status": "sourced",
+      "complexity_level": 4,
+      "description": "Side-by-side comparison of multiple tafsir editions"
+    },
+    "detailed_grammar": {
+      "layer_id": "detailed_grammar",
+      "layer_type": "linguistic",
+      "scope": "word",
+      "source_ids": ["corpus-quran-com"],
+      "verification_status": "verified",
+      "complexity_level": 4,
+      "description": "Full grammatical analysis including I'rab and syntactic role"
+    },
+    "practical_application": {
+      "layer_id": "practical_application",
+      "layer_type": "applied",
+      "scope": "verse",
+      "source_ids": ["user-provided"],
+      "verification_status": "sourced",
+      "complexity_level": 4,
+      "description": "How to apply the verse's lessons in daily life",
+      "data_path": "data/practical-application.json",
+      "status": "awaiting_content"
+    },
+    "per_page_analysis": {
+      "layer_id": "per_page_analysis",
+      "layer_type": "analytical",
+      "scope": "page",
+      "source_ids": ["user-provided"],
+      "verification_status": "sourced",
+      "complexity_level": 4,
+      "description": "Thematic analysis of a full page of Quran",
+      "data_path": "data/per-page-analysis.json",
+      "status": "awaiting_content"
+    }
+  },
+  "scope_query_architecture": {
+    "verse": {
+      "query_parameters": ["verse_key"],
+      "example": "GET /content?scope=verse&verse_key=2:190&level=3"
+    },
+    "page": {
+      "query_parameters": ["page_number"],
+      "example": "GET /content?scope=page&page_number=2&level=4"
+    },
+    "surah": {
+      "query_parameters": ["surah_number"],
+      "example": "GET /content?scope=surah&surah_number=2&level=4"
+    }
+  },
+  "source_registry": {
+    "spa5k-en-al-jalalayn": {
+      "source_id": "spa5k-en-al-jalalayn",
+      "source_type": "tafsir",
+      "tradition": "sunni-classical",
+      "author": "Jalal ad-Din al-Mahalli & Jalal ad-Din as-Suyuti",
+      "language": "english",
+      "methodology": "Concise linguistic and narrative commentary",
+      "license_type": "public_domain",
+      "completeness": 1.0
+    },
+    "spa5k-en-tafisr-ibn-kathir": {
+      "source_id": "spa5k-en-tafisr-ibn-kathir",
+      "source_type": "tafsir",
+      "tradition": "sunni-classical",
+      "author": "Hafiz Ibn Kathir",
+      "language": "english",
+      "methodology": "Hadith-based tafsir with narrative and legal analysis",
+      "license_type": "public_domain",
+      "completeness": 1.0
+    },
+    "corpus-quran-com": {
+      "source_id": "corpus-quran-com",
+      "source_type": "linguistic",
+      "tradition": "academic",
+      "author": "Various scholars",
+      "language": "arabic",
+      "methodology": "Full morphological, syntactic, and semantic annotation",
+      "license_type": "cc",
+      "completeness": 1.0
+    },
+    "manual-annotation": {
+      "source_id": "manual-annotation",
+      "source_type": "linguistic",
+      "tradition": "academic",
+      "author": "Sheikh Al-Jabr / Manual research",
+      "language": "arabic",
+      "methodology": "Expert-verified wazn annotations with root-letter templating",
+      "license_type": "public_domain",
+      "completeness": 0.0047
+    }
+  }
+}

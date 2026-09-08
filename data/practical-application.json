@@ -1,0 +1,12 @@
+{
+  "meta": {
+    "description": "Practical application content — how to apply Quranic lessons in daily life",
+    "status": "awaiting_content",
+    "scope": "verse",
+    "source": "user-provided",
+    "verification_status": "sourced",
+    "complexity_level": 4,
+    "instructions": "Replace this file with user-provided practical application content. Each entry should connect a verse's teachings to actionable daily-life guidance for Muslims."
+  },
+  "applications": []
+}

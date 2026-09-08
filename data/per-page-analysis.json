@@ -1,0 +1,12 @@
+{
+  "meta": {
+    "description": "Per-page thematic analysis — awaiting user-provided content",
+    "status": "awaiting_content",
+    "scope": "page",
+    "source": "user-provided",
+    "verification_status": "sourced",
+    "complexity_level": 4,
+    "instructions": "Replace this file with user-provided per-page analysis. Each entry should cover a full page of Quran with thematic flow, key turning points, and how adjacent ayahs build a coherent message."
+  },
+  "pages": []
+}

@@ -1,0 +1,29 @@
+{
+ "meta": {
+  "surah": 11,
+  "surah_name": "Hud",
+  "surah_name_arabic": "هُودٍ",
+  "revelation_type": "Meccan",
+  "juz": [
+   11,
+   12
+  ],
+  "total_ayahs": 123,
+  "page_range": [
+   221,
+   235
+  ],
+  "ayahs_per_juz": {
+   "11": 5,
+   "12": 118
+  },
+  "verification_status": {
+   "verse_text": "pending_etl",
+   "morphology": "pending_etl",
+   "wazn": "pending_etl"
+  },
+  "content_status": "scaffold",
+  "note": "Meta-complete scaffold. Verse/word/morphology/tafsir/wazn content to be populated by the ETL pipeline (KodeKoot) per the progressive-annotation convention in ARCHITECTURE.md. No verses synthesized."
+ },
+ "ayahs": []
+}

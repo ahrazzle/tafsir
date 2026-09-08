@@ -1,0 +1,29 @@
+{
+ "meta": {
+  "surah": 27,
+  "surah_name": "An-Naml",
+  "surah_name_arabic": "النَّمۡلِ",
+  "revelation_type": "Meccan",
+  "juz": [
+   19,
+   20
+  ],
+  "total_ayahs": 93,
+  "page_range": [
+   377,
+   385
+  ],
+  "ayahs_per_juz": {
+   "19": 55,
+   "20": 38
+  },
+  "verification_status": {
+   "verse_text": "pending_etl",
+   "morphology": "pending_etl",
+   "wazn": "pending_etl"
+  },
+  "content_status": "scaffold",
+  "note": "Meta-complete scaffold. Verse/word/morphology/tafsir/wazn content to be populated by the ETL pipeline (KodeKoot) per the progressive-annotation convention in ARCHITECTURE.md. No verses synthesized."
+ },
+ "ayahs": []
+}

@@ -1,0 +1,27 @@
+{
+ "meta": {
+  "surah": 26,
+  "surah_name": "Ash-Shu'araa",
+  "surah_name_arabic": "الشُّعَرَاءِ",
+  "revelation_type": "Meccan",
+  "juz": [
+   19
+  ],
+  "total_ayahs": 227,
+  "page_range": [
+   367,
+   376
+  ],
+  "ayahs_per_juz": {
+   "19": 227
+  },
+  "verification_status": {
+   "verse_text": "pending_etl",
+   "morphology": "pending_etl",
+   "wazn": "pending_etl"
+  },
+  "content_status": "scaffold",
+  "note": "Meta-complete scaffold. Verse/word/morphology/tafsir/wazn content to be populated by the ETL pipeline (KodeKoot) per the progressive-annotation convention in ARCHITECTURE.md. No verses synthesized."
+ },
+ "ayahs": []
+}

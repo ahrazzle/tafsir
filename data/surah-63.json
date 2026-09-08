@@ -1,0 +1,27 @@
+{
+ "meta": {
+  "surah": 63,
+  "surah_name": "Al-Munaafiqoon",
+  "surah_name_arabic": "المُنَافِقُونَ",
+  "revelation_type": "Medinan",
+  "juz": [
+   28
+  ],
+  "total_ayahs": 11,
+  "page_range": [
+   554,
+   555
+  ],
+  "ayahs_per_juz": {
+   "28": 11
+  },
+  "verification_status": {
+   "verse_text": "pending_etl",
+   "morphology": "pending_etl",
+   "wazn": "pending_etl"
+  },
+  "content_status": "scaffold",
+  "note": "Meta-complete scaffold. Verse/word/morphology/tafsir/wazn content to be populated by the ETL pipeline (KodeKoot) per the progressive-annotation convention in ARCHITECTURE.md. No verses synthesized."
+ },
+ "ayahs": []
+}

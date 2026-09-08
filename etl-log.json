@@ -1,0 +1,36 @@
+{
+  "fetched": [
+    "spa5k-en-al-jalalayn/s1: 0 merged",
+    "spa5k-en-tafisr-ibn-kathir/s1: 0 merged",
+    "spa5k-en-maarif/s1: 7 merged",
+    "spa5k-ar-tabari/s1: 7 merged",
+    "spa5k-ar-qurtubi/s1: 7 merged",
+    "spa5k-ar-saddi/s1: 7 merged",
+    "spa5k-ar-baghawi/s1: 7 merged",
+    "spa5k-ar-muyassar/s1: 7 merged",
+    "spa5k-en-tazkirul/s1: 7 merged",
+    "spa5k-en-zilal/s1: 7 merged",
+    "spa5k-ar-baydawi/s1: 7 merged",
+    "spa5k-ar-alusi/s1: 7 merged",
+    "spa5k-en-al-jalalayn/s2: 141 merged",
+    "spa5k-en-tafisr-ibn-kathir/s2: 141 merged",
+    "spa5k-en-maarif/s2: 141 merged",
+    "spa5k-ar-tabari/s2: 141 merged",
+    "spa5k-ar-qurtubi/s2: 141 merged",
+    "spa5k-ar-saddi/s2: 138 merged",
+    "spa5k-ar-baghawi/s2: 141 merged",
+    "spa5k-ar-muyassar/s2: 141 merged",
+    "spa5k-en-tazkirul/s2: 141 merged",
+    "spa5k-en-zilal/s2: 141 merged",
+    "spa5k-ar-baydawi/s2: 141 merged",
+    "spa5k-ar-alusi/s2: 141 merged"
+  ],
+  "skipped": [
+    "spa5k-ar-tahrir/s1: fetch failed",
+    "spa5k-ar-tahrir/s2: fetch failed"
+  ],
+  "gaps": [
+    "spa5k-ar-saddi/s2: missing ayahs [107, 109, 111] (total 3)"
+  ],
+  "errors": []
+}

@@ -1,0 +1,29 @@
+{
+ "meta": {
+  "surah": 51,
+  "surah_name": "Adh-Dhaariyat",
+  "surah_name_arabic": "الذَّارِيَاتِ",
+  "revelation_type": "Meccan",
+  "juz": [
+   26,
+   27
+  ],
+  "total_ayahs": 60,
+  "page_range": [
+   520,
+   523
+  ],
+  "ayahs_per_juz": {
+   "26": 30,
+   "27": 30
+  },
+  "verification_status": {
+   "verse_text": "pending_etl",
+   "morphology": "pending_etl",
+   "wazn": "pending_etl"
+  },
+  "content_status": "scaffold",
+  "note": "Meta-complete scaffold. Verse/word/morphology/tafsir/wazn content to be populated by the ETL pipeline (KodeKoot) per the progressive-annotation convention in ARCHITECTURE.md. No verses synthesized."
+ },
+ "ayahs": []
+}

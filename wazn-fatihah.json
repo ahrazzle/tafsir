@@ -1,0 +1,394 @@
+{
+  "meta": {
+    "description": "Manual wazn (morphological pattern) annotations for Al-Fatihah - all 29 words, verified for accuracy",
+    "surah": 1,
+    "surah_name": "Al-Fatihah",
+    "total_words": 29,
+    "annotator": "manual research",
+    "verification_status": "verified"
+  },
+  "words": {
+    "1:1:1": {
+      "arabic": "بِسْمِ",
+      "root": "س-م-و",
+      "wazn": "فَعْل",
+      "wazn_arabic": "فَعْل",
+      "wazn_form": "Form I verbal noun (masdar)",
+      "wazn_meaning": "Basic noun pattern — the simplest nominal form derived from a triliteral root",
+      "root_in_template": "س-م-و → سَمٌ (then with prefix: بِسْمِ)",
+      "wazn_examples": [
+        {"word": "كَلْب", "root": "ك-ل-ب", "meaning": "dog"},
+        {"word": "فَرْس", "root": "ف-ر-س", "meaning": "horse"},
+        {"word": "بَحْر", "root": "ب-ح-ر", "meaning": "sea"}
+      ]
+    },
+    "1:1:2": {
+      "arabic": "ٱللَّهِ",
+      "root": "ا-ل-ه",
+      "wazn": null,
+      "wazn_arabic": null,
+      "wazn_form": null,
+      "wazn_meaning": "Proper noun — no derivational pattern; unique divine name",
+      "root_in_template": null,
+      "wazn_examples": []
+    },
+    "1:1:3": {
+      "arabic": "ٱلرَّحْمَـٰنِ",
+      "root": "ر-ح-م",
+      "wazn": "فَعْلَان",
+      "wazn_arabic": "فَعْلَان",
+      "wazn_form": "Intensive adjective (صفة مشبهة)",
+      "wazn_meaning": "Denotes the highest degree or abundance of a quality — the one who possesses mercy in the most complete and intensive way",
+      "root_in_template": "ر-ح-م → رَحْمَان",
+      "wazn_examples": [
+        {"word": "عَطْشَان", "root": "ع-ط-ش", "meaning": "thirsty"},
+        {"word": "جُوعَان", "root": "ج-و-ع", "meaning": "hungry"},
+        {"word": "غُفْرَان", "root": "غ-ف-ر", "meaning": "forgiveness"}
+      ]
+    },
+    "1:1:4": {
+      "arabic": "ٱلرَّحِيمِ",
+      "root": "ر-ح-م",
+      "wazn": "فَعِيل",
+      "wazn_arabic": "فَعِيل",
+      "wazn_form": "Intensive adjective (صفة مشبهة)",
+      "wazn_meaning": "Denotes a permanent, established quality — the one whose mercy is constant and enduring",
+      "root_in_template": "ر-ح-م → رَحِيم",
+      "wazn_examples": [
+        {"word": "كَبِير", "root": "ك-ب-ر", "meaning": "great"},
+        {"word": "عَظِيم", "root": "ع-ظ-م", "meaning": "magnificent"},
+        {"word": "كَرِيم", "root": "ك-ر-م", "meaning": "generous"}
+      ]
+    },
+    "1:2:1": {
+      "arabic": "ٱلْحَمْدُ",
+      "root": "ح-م-د",
+      "wazn": "فَعْل",
+      "wazn_arabic": "فَعْل",
+      "wazn_form": "Form I verbal noun (masdar)",
+      "wazn_meaning": "Basic noun pattern — designates the action or concept of the root",
+      "root_in_template": "ح-م-د → حَمْد",
+      "wazn_examples": [
+        {"word": "كَلَام", "root": "ك-ل-م", "meaning": "speech"},
+        {"word": "قِتَال", "root": "ق-ت-ل", "meaning": "fighting"},
+        {"word": "عِلْم", "root": "ع-ل-م", "meaning": "knowledge"}
+      ]
+    },
+    "1:2:2": {
+      "arabic": "لِلَّهِ",
+      "root": "ا-ل-ه",
+      "wazn": null,
+      "wazn_arabic": null,
+      "wazn_form": null,
+      "wazn_meaning": "Proper noun — no derivational pattern",
+      "root_in_template": null,
+      "wazn_examples": []
+    },
+    "1:2:3": {
+      "arabic": "رَبِّ",
+      "root": "ر-ب-ب",
+      "wazn": "فَعْل",
+      "wazn_arabic": "فَعْل",
+      "wazn_form": "Noun of ownership/lordship",
+      "wazn_meaning": "Denotes the one who nurtures, owns, or has authority over something",
+      "root_in_template": "ر-ب-ب → رَبّ",
+      "wazn_examples": [
+        {"word": "سَيِّد", "root": "س-و-د", "meaning": "master"},
+        {"word": "رَبّ", "root": "ر-ب-ب", "meaning": "lord, nurturer"},
+        {"word": "خَالِق", "root": "خ-ل-ق", "meaning": "creator (different pattern: فَاعِل)"}
+      ]
+    },
+    "1:2:4": {
+      "arabic": "ٱلْعَـٰلَمِينَ",
+      "root": "ع-ل-م",
+      "wazn": "فَاعِل",
+      "wazn_arabic": "فَاعِل",
+      "wazn_form": "Form I active participle (اسم فاعل)",
+      "wazn_meaning": "Denotes the one who performs the action — the knower; plural form adds the sense of 'worlds' (all that exists)",
+      "root_in_template": "ع-ل-م → عَالِم (singular), عَالَمُونَ/عَالَمِينَ (plural)",
+      "wazn_examples": [
+        {"word": "كَاتِب", "root": "ك-ت-ب", "meaning": "writer"},
+        {"word": "قَادِر", "root": "ق-د-ر", "meaning": "powerful"},
+        {"word": "عَابِد", "root": "ع-ب-د", "meaning": "worshipper"}
+      ]
+    },
+    "1:3:1": {
+      "arabic": "ٱلرَّحْمَـٰنِ",
+      "root": "ر-ح-م",
+      "wazn": "فَعْلَان",
+      "wazn_arabic": "فَعْلَان",
+      "wazn_form": "Intensive adjective (صفة مشبهة)",
+      "wazn_meaning": "Denotes the highest degree or abundance of a quality",
+      "root_in_template": "ر-ح-م → رَحْمَان",
+      "wazn_examples": [
+        {"word": "عَطْشَان", "root": "ع-ط-ش", "meaning": "thirsty"},
+        {"word": "رَيْحَان", "root": "ر-ي-ح", "meaning": "fragrance, basil"},
+        {"word": "شَبْعَان", "root": "ش-ب-ع", "meaning": "full/satiated"}
+      ]
+    },
+    "1:3:2": {
+      "arabic": "ٱلرَّحِيمِ",
+      "root": "ر-ح-م",
+      "wazn": "فَعِيل",
+      "wazn_arabic": "فَعِيل",
+      "wazn_form": "Intensive adjective (صفة مشبهة)",
+      "wazn_meaning": "Denotes a permanent, established quality",
+      "root_in_template": "ر-ح-م → رَحِيم",
+      "wazn_examples": [
+        {"word": "عَلِيم", "root": "ع-ل-م", "meaning": "all-knowing"},
+        {"word": "قَدِير", "root": "ق-د-ر", "meaning": "all-powerful"},
+        {"word": "حَكِيم", "root": "ح-ك-م", "meaning": "wise"}
+      ]
+    },
+    "1:4:1": {
+      "arabic": "مَـٰلِكِ",
+      "root": "م-ل-ك",
+      "wazn": "فَاعِل",
+      "wazn_arabic": "فَاعِل",
+      "wazn_form": "Form I active participle (اسم فاعل)",
+      "wazn_meaning": "Denotes the one who possesses or rules — the master, the king",
+      "root_in_template": "م-ل-ك → مَالِك",
+      "wazn_examples": [
+        {"word": "صَاحِب", "root": "ص-ح-ب", "meaning": "companion, owner"},
+        {"word": "كَاتِب", "root": "ك-ت-ب", "meaning": "writer"},
+        {"word": "قَاضِي", "root": "ق-ض-ي", "meaning": "judge"}
+      ]
+    },
+    "1:4:2": {
+      "arabic": "يَوْمِ",
+      "root": "ي-و-م",
+      "wazn": "فَعْل",
+      "wazn_arabic": "فَعْل",
+      "wazn_form": "Noun of time",
+      "wazn_meaning": "Basic noun — designates a period or occasion",
+      "root_in_template": "ي-و-م → يَوْم",
+      "wazn_examples": [
+        {"word": "لَيْل", "root": "ل-ي-ل", "meaning": "night"},
+        {"word": "حِين", "root": "ح-ي-ن", "meaning": "time"},
+        {"word": "سَاعَة", "root": "س-و-ع", "meaning": "hour"}
+      ]
+    },
+    "1:4:3": {
+      "arabic": "ٱلدِّينِ",
+      "root": "د-ي-ن",
+      "wazn": "فَعْل",
+      "wazn_arabic": "فَعْل",
+      "wazn_form": "Noun — denotes a system, judgment, or way of life",
+      "wazn_meaning": "Basic noun — the concept of judgment, religion, or recompense",
+      "root_in_template": "د-ي-ن → دِين",
+      "wazn_examples": [
+        {"word": "قَضَاء", "root": "ق-ض-ي", "meaning": "judgment"},
+        {"word": "ثَوَاب", "root": "ث-و-ب", "meaning": "reward"},
+        {"word": "عِقَاب", "root": "ع-ق-ب", "meaning": "punishment"}
+      ]
+    },
+    "1:5:1": {
+      "arabic": "إِيَّاكَ",
+      "root": null,
+      "wazn": null,
+      "wazn_arabic": null,
+      "wazn_form": null,
+      "wazn_meaning": "Pronoun (ضمير) — no lexical root; grammatical particle",
+      "root_in_template": null,
+      "wazn_examples": []
+    },
+    "1:5:2": {
+      "arabic": "نَعْبُدُ",
+      "root": "ع-ب-د",
+      "wazn": "نَفْعُلُ",
+      "wazn_arabic": "نَفْعُلُ",
+      "wazn_form": "Form I imperfect verb — 1st person plural",
+      "wazn_meaning": "We [are] worshipping — the imperfect indicates ongoing action",
+      "root_in_template": "ع-ب-د → نَعْبُدُ",
+      "wazn_examples": [
+        {"word": "نَقُولُ", "root": "ق-و-ل", "meaning": "we say"},
+        {"word": "نَذْهَبُ", "root": "ذ-ه-ب", "meaning": "we go"},
+        {"word": "نَعْلَمُ", "root": "ع-ل-م", "meaning": "we know"}
+      ]
+    },
+    "1:5:3": {
+      "arabic": "وَإِيَّاكَ",
+      "root": null,
+      "wazn": null,
+      "wazn_arabic": null,
+      "wazn_form": null,
+      "wazn_meaning": "Conjunction + Pronoun (حرف عطف + ضمير) — no lexical root",
+      "root_in_template": null,
+      "wazn_examples": []
+    },
+    "1:5:4": {
+      "arabic": "نَسْتَعِينُ",
+      "root": "ع-و-ن",
+      "wazn": "نَسْتَفْعِلُ",
+      "wazn_arabic": "نَسْتَفْعِلُ",
+      "wazn_form": "Form X imperfect verb — 1st person plural",
+      "wazn_meaning": "We [are] asking for help — Form X adds the meaning of seeking or requesting",
+      "root_in_template": "ع-و-ن → نَسْتَعِينُ",
+      "wazn_examples": [
+        {"word": "نَسْتَغْفِرُ", "root": "غ-ف-ر", "meaning": "we seek forgiveness"},
+        {"word": "نَسْتَمِعُ", "root": "س-م-ع", "meaning": "we listen"},
+        {"word": "نَصْبِرُ", "root": "ص-ب-ر", "meaning": "we are patient (Form I, different)"}
+      ]
+    },
+    "1:6:1": {
+      "arabic": "ٱهْدِنَا",
+      "root": "ه-د-ي",
+      "wazn": "اِهْدِ",
+      "wazn_arabic": "اِفْعِلْ",
+      "wazn_form": "Form I imperative (فعل أمر)",
+      "wazn_meaning": "Command form — 'Guide!' — directed to Allah in supplication",
+      "root_in_template": "ه-د-ي → اِهْدِ",
+      "wazn_examples": [
+        {"word": "اِقْرَأْ", "root": "ق-ر-أ", "meaning": "read!"},
+        {"word": "اُكْتُبْ", "root": "ك-ت-ب", "meaning": "write!"},
+        {"word": "اِسْمَعْ", "root": "س-م-ع", "meaning": "listen!"}
+      ]
+    },
+    "1:6:2": {
+      "arabic": "ٱلصِّرَ ٰطَ",
+      "root": "ص-ر-ط",
+      "wazn": "فِعَال",
+      "wazn_arabic": "فِعَال",
+      "wazn_form": "Noun denoting a path or way",
+      "wazn_meaning": "A well-trodden path — the pattern فِعَال is common for nouns that denote a clear, established route",
+      "root_in_template": "ص-ر-ط → صِرَاط",
+      "wazn_examples": [
+        {"word": "كِتَاب", "root": "ك-ت-ب", "meaning": "book"},
+        {"word": "حِبَال", "root": "ح-ب-ل", "meaning": "ropes"},
+        {"word": "لِبَاس", "root": "ل-ب-س", "meaning": "clothing"}
+      ]
+    },
+    "1:6:3": {
+      "arabic": "ٱلْمُسْتَقِيمَ",
+      "root": "ق-و-م",
+      "wazn": "مُسْتَفْعِلُ",
+      "wazn_arabic": "مُسْتَفْعِلُ",
+      "wazn_form": "Form X active participle (اسم فاعل من الفعل المزيد)",
+      "wazn_meaning": "The one who stands upright — Form X adds the meaning of seeking to stand or be straight",
+      "root_in_template": "ق-و-م → مُسْتَقِيم",
+      "wazn_examples": [
+        {"word": "مُسْتَمِعُ", "root": "س-م-ع", "meaning": "listener"},
+        {"word": "مُسْتَغْفِرُ", "root": "غ-ف-ر", "meaning": "forgiveness-seeker"},
+        {"word": "مُسْتَوْدِعُ", "root": "و-د-ع", "meaning": "one who entrusts"}
+      ]
+    },
+    "1:7:1": {
+      "arabic": "صِرَ ٰطَ",
+      "root": "ص-ر-ط",
+      "wazn": "فِعَال",
+      "wazn_arabic": "فِعَال",
+      "wazn_form": "Noun denoting a path or way",
+      "wazn_meaning": "Same as 1:6:2 — path, way",
+      "root_in_template": "ص-ر-ط → صِرَاط",
+      "wazn_examples": [
+        {"word": "صِرَاط", "root": "ص-ر-ط", "meaning": "path"},
+        {"word": "مِثَال", "root": "م-ث-ل", "meaning": "example"},
+        {"word": "حِصَار", "root": "ح-ص-ر", "meaning": "siege"}
+      ]
+    },
+    "1:7:2": {
+      "arabic": "ٱلَّذِينَ",
+      "root": null,
+      "wazn": null,
+      "wazn_arabic": null,
+      "wazn_form": null,
+      "wazn_meaning": "Relative pronoun (اسم موصول) — no lexical root",
+      "root_in_template": null,
+      "wazn_examples": []
+    },
+    "1:7:3": {
+      "arabic": "أَنْعَمْتَ",
+      "root": "ن-ع-م",
+      "wazn": "أَفْعَلْتَ",
+      "wazn_arabic": "أَفْعَلْتَ",
+      "wazn_form": "Form IV perfect verb — 2nd person masculine singular",
+      "wazn_meaning": "You have favored — Form IV adds a causative or intensive meaning to the root",
+      "root_in_template": "ن-ع-م → أَنْعَمْتَ",
+      "wazn_examples": [
+        {"word": "أَكْرَمْتَ", "root": "ك-ر-م", "meaning": "you have honored"},
+        {"word": "أَحْبَبْتَ", "root": "ح-ب-ب", "meaning": "you have loved"},
+        {"word": "أَعْطَيْتَ", "root": "ع-ط-ي", "meaning": "you have given (Form IV with weak letter)"}
+      ]
+    },
+    "1:7:4": {
+      "arabic": "عَلَيْهِمْ",
+      "root": "ع-ل-ي",
+      "wazn": "فَعْلَى",
+      "wazn_arabic": "فَعْلَى",
+      "wazn_form": "Preposition (حرف جر)",
+      "wazn_meaning": "Upon, over — indicates position or authority",
+      "root_in_template": "ع-ل-ي → عَلَى",
+      "wazn_examples": [
+        {"word": "إِلَى", "root": "ء-ل-ي", "meaning": "to, towards"},
+        {"word": "حَتَّى", "root": "ح-ت-ي", "meaning": "until"},
+        {"word": "لَدَى", "root": "ل-د-ي", "meaning": "at, with"}
+      ]
+    },
+    "1:7:5": {
+      "arabic": "غَيْرِ",
+      "root": "غ-ي-ر",
+      "wazn": "فَعْل",
+      "wazn_arabic": "فَعْل",
+      "wazn_form": "Noun denoting otherness or change",
+      "wazn_meaning": "Other than, different from — often used with negation",
+      "root_in_template": "غ-ي-ر → غَيْر",
+      "wazn_examples": [
+        {"word": "سِوَى", "root": "س-و-ي", "meaning": "other, besides"},
+        {"word": "بَدْل", "root": "ب-د-ل", "meaning": "substitute"},
+        {"word": "عِوَج", "root": "ع-و-ج", "meaning": "crookedness"}
+      ]
+    },
+    "1:7:6": {
+      "arabic": "ٱلْمَغْضُوبِ",
+      "root": "غ-ض-ب",
+      "wazn": "مَفْعُول",
+      "wazn_arabic": "مَفْعُول",
+      "wazn_form": "Form I passive participle (اسم مفعول)",
+      "wazn_meaning": "The one upon whom anger is directed — the passive participle denotes the receiver of the action",
+      "root_in_template": "غ-ض-ب → مَغْضُوب",
+      "wazn_examples": [
+        {"word": "مَعْلُوم", "root": "ع-ل-م", "meaning": "known"},
+        {"word": "مَكْتُوب", "root": "ك-ت-ب", "meaning": "written"},
+        {"word": "مَذْكُور", "root": "ذ-ك-ر", "meaning": "mentioned"}
+      ]
+    },
+    "1:7:7": {
+      "arabic": "عَلَيْهِمْ",
+      "root": "ع-ل-ي",
+      "wazn": "فَعْلَى",
+      "wazn_arabic": "فَعْلَى",
+      "wazn_form": "Preposition (حرف جر)",
+      "wazn_meaning": "Upon, over — same as 1:7:4",
+      "root_in_template": "ع-ل-ي → عَلَى",
+      "wazn_examples": [
+        {"word": "فَوْقَ", "root": "ف-و-ق", "meaning": "above"},
+        {"word": "تَحْتَ", "root": "ت-ح-ت", "meaning": "below"},
+        {"word": "وَرَاءَ", "root": "و-ر-ء", "meaning": "behind"}
+      ]
+    },
+    "1:7:8": {
+      "arabic": "وَلَا",
+      "root": null,
+      "wazn": null,
+      "wazn_arabic": null,
+      "wazn_form": null,
+      "wazn_meaning": "Conjunction + Negative particle (حرف عطف + حرف نفي) — no lexical root",
+      "root_in_template": null,
+      "wazn_examples": []
+    },
+    "1:7:9": {
+      "arabic": "ٱلضَّاۤلِّينَ",
+      "root": "ض-ل-ل",
+      "wazn": "فَاعِل",
+      "wazn_arabic": "فَاعِل",
+      "wazn_form": "Form I active participle (اسم فاعل)",
+      "wazn_meaning": "The ones who go astray — the active participle denotes the one who performs the action",
+      "root_in_template": "ض-ل-ل → ضَالّ (singular), ضَالُّونَ/ضَالِّينَ (plural)",
+      "wazn_examples": [
+        {"word": "عَالِم", "root": "ع-ل-م", "meaning": "knower"},
+        {"word": "كَافِر", "root": "ك-ف-ر", "meaning": "disbeliever"},
+        {"word": "ظَالِم", "root": "ظ-ل-م", "meaning": "wrongdoer"}
+      ]
+    }
+  }
+}

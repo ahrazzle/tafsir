@@ -1,0 +1,27 @@
+{
+ "meta": {
+  "surah": 85,
+  "surah_name": "Al-Burooj",
+  "surah_name_arabic": "البُرُوجِ",
+  "revelation_type": "Meccan",
+  "juz": [
+   30
+  ],
+  "total_ayahs": 22,
+  "page_range": [
+   590,
+   590
+  ],
+  "ayahs_per_juz": {
+   "30": 22
+  },
+  "verification_status": {
+   "verse_text": "pending_etl",
+   "morphology": "pending_etl",
+   "wazn": "pending_etl"
+  },
+  "content_status": "scaffold",
+  "note": "Meta-complete scaffold. Verse/word/morphology/tafsir/wazn content to be populated by the ETL pipeline (KodeKoot) per the progressive-annotation convention in ARCHITECTURE.md. No verses synthesized."
+ },
+ "ayahs": []
+}
