@@ -339,34 +339,48 @@ function populateSelectors() {
 }
 
 // ─── Load data file ────────────────────────────────────────────────
-// Returns the parsed data, or null if the file doesn't exist (honest scaffold
-// path). Never throws — a missing file is a "not built yet" state, not an error.
+// Missing or failed files are load errors. Successfully loaded empty datasets
+// remain honest scaffolds; a network failure must not masquerade as coverage.
 async function loadSurah(num) {
   const info = NAV.surahs[num];
   if (loadedData[num]) return loadedData[num];
-  statusEl.textContent = `Loading ${info.name}…`;
+  const res = await fetch(info.file, { signal: AbortSignal.timeout(10000) });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const data = await res.json();
+  if (!data || !Array.isArray(data.ayahs)) throw new Error('Invalid surah data');
+  loadedData[num] = data;
+  data.ayahs.forEach(a => { if (a.page) BUILT_PAGES.add(String(a.page)); });
+  return data;
+}
+
+let renderRequest = 0;
+async function renderCurrentSelection() {
+  if (!NAV) return;
+  const request = ++renderRequest;
+  const surah = currentSurah, page = currentPage;
   statusEl.className = 'status loading';
+  statusEl.textContent = `Loading ${NAV.surahs[surah].name}…`;
   try {
-    const res = await fetch(info.file);
-    if (!res.ok) return null;  // 404 → not built yet → scaffold
-    const data = await res.json();
-    loadedData[num] = data;
-    // Record real page coverage from the file itself (the honest "built" signal).
-    if (data.ayahs && data.ayahs.length) {
-      data.ayahs.forEach(a => { if (a.page) BUILT_PAGES.add(String(a.page)); });
-    }
-    return data;
-  } catch (e) {
-    statusEl.textContent = `Failed to load ${info.file}. Serve over HTTP (python3 -m http.server 8000) or verify file exists.`;
+    const data = await loadSurah(surah);
+    if (request !== renderRequest) return;
+    await renderVerses(data, page, request, surah);
+  } catch {
+    if (request !== renderRequest) return;
+    verseList.replaceChildren();
     statusEl.className = 'status error';
-    return null;
+    statusEl.textContent = `Could not load ${NAV.surahs[surah].name}. Check your connection and try again. `;
+    const retry = document.createElement('button');
+    retry.type = 'button';
+    retry.textContent = 'Retry';
+    retry.addEventListener('click', () => { void renderCurrentSelection(); });
+    statusEl.appendChild(retry);
   }
 }
 
 async function loadTajweed(surahNum) {
   if (tajweedCache[surahNum]) return tajweedCache[surahNum];
   try {
-    const res = await fetch(`data/tajweed-${surahNum}.json`);
+    const res = await fetch(`data/tajweed-${surahNum}.json`, { signal: AbortSignal.timeout(10000) });
     if (!res.ok) return null;
     const d = await res.json();
     tajweedCache[surahNum] = d;
@@ -435,8 +449,9 @@ function renderScaffoldNotice(surahInfo) {
 // Readiness is DERIVED at runtime from whether the data file actually loaded,
 // never from a hardcoded 'content' flag. A file that fetched successfully with
 // ayahs renders content; anything else renders the honest scaffold.
-async function renderVerses(data, filterPage) {
-  const info = NAV.surahs[currentSurah];
+async function renderVerses(data, filterPage, request, surah) {
+  if (request !== renderRequest) return;
+  const info = NAV.surahs[surah];
   const hasContent = data && data.ayahs && data.ayahs.length > 0;
   if (!hasContent) { renderScaffoldNotice(info); return; }
   // A page within a content surah but outside the built coverage (e.g. a page
@@ -450,7 +465,8 @@ async function renderVerses(data, filterPage) {
   statusEl.className = 'status';
   statusEl.textContent = '';
 
-  const tjData = settings.tajweed ? await loadTajweed(currentSurah) : null;
+  const tjData = settings.tajweed ? await loadTajweed(surah) : null;
+  if (request !== renderRequest) return;
 
   const ayahs = data.ayahs.filter(a => !filterPage || a.page === filterPage);
   const section = document.createElement('div');
@@ -860,7 +876,7 @@ function pageStep(dir) {
   updatePageNav();
   // Load the surah file on demand (cached thereafter); a page outside built
   // coverage renders the scaffold state via renderVerses' content guard.
-  loadSurah(currentSurah).then(data => renderVerses(data, currentPage)).catch(() => {});
+  void renderCurrentSelection();
 }
 
 // Keyboard arrow navigation — continuous across surah boundaries.
@@ -868,9 +884,9 @@ document.addEventListener('keydown', e => {
   // Don't hijack arrow keys while typing in an input/textarea, or when the
   // study pane (which may contain text fields) is open.
   const t = e.target;
-  const isTyping = t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable);
+  const isTyping = t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.tagName === 'SELECT' || t.isContentEditable);
   if (isTyping) return;
-  if (isPaneOpen) return;
+  if (isPaneOpen || (settingsPanel && !settingsPanel.hidden)) return;
   if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { e.preventDefault(); pageStep(1); }
   else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); pageStep(-1); }
 });
@@ -879,11 +895,11 @@ document.addEventListener('keydown', e => {
 if (juzSelect) juzSelect.addEventListener('change', async () => {
   currentJuz = parseInt(juzSelect.value); currentSurah = NAV.juz[currentJuz].surahs[0]; currentPage = null;
   populateSelectors();
-  try { renderVerses(await loadSurah(currentSurah), null); } catch (e) {}
+  void renderCurrentSelection();
 });
 if (surahSelect) surahSelect.addEventListener('change', async () => {
   currentSurah = parseInt(surahSelect.value); currentPage = null; populateSelectors();
-  try { renderVerses(await loadSurah(currentSurah), null); } catch (e) {}
+  void renderCurrentSelection();
 });
 if (pageSelect) pageSelect.addEventListener('change', async () => {
   currentPage = pageSelect.value ? parseInt(pageSelect.value) : null;
@@ -895,7 +911,7 @@ if (pageSelect) pageSelect.addEventListener('change', async () => {
       populateSelectors();
     }
   }
-  try { renderVerses(await loadSurah(currentSurah), currentPage); } catch (e) {}
+  void renderCurrentSelection();
 });
 
 // ─── Settings handlers ─────────────────────────────────────────────
@@ -904,15 +920,15 @@ if (tajweedToggle) tajweedToggle.addEventListener('change', () => {
   if (tajweedStyleSel) tajweedStyleSel.disabled = !settings.tajweed;
   renderTajweedLegend();
   saveSettings();
-  try { renderVerses(loadedData[currentSurah], currentPage); } catch (e) {}
+  void renderCurrentSelection();
 });
 if (tajweedStyleSel) tajweedStyleSel.addEventListener('change', () => {
   settings.tajweedStyle = tajweedStyleSel.value;
   renderTajweedLegend();
   saveSettings();
-  try { renderVerses(loadedData[currentSurah], currentPage); } catch (e) {}
+  void renderCurrentSelection();
 });
-if (scriptSel) scriptSel.addEventListener('change', () => { settings.script = scriptSel.value; applyTheme(); try { renderVerses(loadedData[currentSurah], currentPage); } catch (e) {} });
+if (scriptSel) scriptSel.addEventListener('change', () => { settings.script = scriptSel.value; applyTheme(); void renderCurrentSelection(); });
 if (themeSel) themeSel.addEventListener('change', () => { settings.theme = themeSel.value; applyTheme(); });
 if (inkSel) inkSel.addEventListener('change', () => { settings.ink = inkSel.value; applyTheme(); });
 
@@ -1026,12 +1042,10 @@ if (customInk) customInk.addEventListener('input', () => {
     // Load the populated surahs eagerly so BUILT_PAGES + derived readiness are
     // accurate on first render. loadSurah returns null (not throw) for missing
     // files, so no catch needed — the scaffold path handles it.
-    await loadSurah(1);
-    await loadSurah(2);
-    await loadSurah(3);
+    await Promise.allSettled([loadSurah(1), loadSurah(2), loadSurah(3)]);
     populateJuzSelect();
     populateSelectors();
-    renderVerses(await loadSurah(currentSurah), null);
+    await renderCurrentSelection();
   } catch (e) {
     statusEl.className = 'status error';
     statusEl.textContent = 'Failed to load navigation.json. Serve over HTTP (python3 -m http.server 8000).';
